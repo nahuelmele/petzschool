@@ -318,7 +318,7 @@ function ipdata($ip){
 }
 
 
-//enable what caoutry I want in localhost
+// Enable IP country override when testing locally
 function ipfakef(){
 $ipfake = "";
 //$ipfake = "200.93.240.0"; // URUAGUAY
