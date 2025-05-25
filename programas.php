@@ -1,9 +1,27 @@
-<?php header("Cache-Control: no-cache");
-include "inc/functions.php";
-//$testing = true;
-
-$datePublished = "2021-06-24";
-$dateModified = "2021-06-30";
+<?php
+header("Cache-Control: no-cache");
+include "inc/functions.php";
+//$testing = true;
+
+$datePublished = "2021-06-24";
+$dateModified = "2021-06-30";
+$imgShare = "share.jpg";
+$currency = getCurrency();
+
+$des = "✓ Petz School - Programas hechos con amor para tu mascosta.";
+$tit = "Petz School - Programas";
+
+/* esto es para si pasamos parametro test no cargamos pixel */
+$testPar = false;
+
+if( isset( $_GET["test"] ) ){
+        $testPar = true;
+}
+
+if( !$testing && !$testPar ){
+        ob_start('comprimir_pagina');
+}
+
 $imgShare = "share.jpg";
 $currency = getCurrency();
 
