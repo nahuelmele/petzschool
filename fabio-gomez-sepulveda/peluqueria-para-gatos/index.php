@@ -4,8 +4,10 @@ header("Cache-Control: no-cache");
 
 //base de donde esta la landing con respecto al root para los includes
 $base = "../../";
+
 $dirLanding = "peluqueria-para-gatos";
 $assetDir = "peluqueria-para-perros";
+
 $nombredelcurso = "Peluquería para Gatos";
 $autor = "Fabio Gomez Sepulveda";
 $autorSlug = "fabio-gomez-sepulveda";
@@ -81,7 +83,7 @@ $datePublished = "2022-08-30";
 $dateModified = "2022-08-31";
 
 // nombre de imagen para compartir.
-$imgShare = "compartir-".$assetDir.".jpg";
+$imgShare = "compartir-".$dirLanding.".jpg";
 
 // cuantas alumnas felicies hay
 $alumnasfelices = 7;
@@ -129,7 +131,8 @@ $modalMesageCheckout = false;
 
 // Link Producto, chechout limpio para crashing
 
-$linkProducto = "https://pay.hotmart.com/A43208214N?checkoutMode=10&ref=C68603072E&bid=1748211318374";
+
+$linkProducto = "https://go.hotmart.com/K53197775W?ap=f1ce";
 
 
 //De aca para abajo no hay que tocar nada
@@ -164,12 +167,7 @@ if( !$testing && !$testPar )
 <html lang="es-ES">
 	<head>
 
-                <?php
-                $dirLandingTemp = $dirLanding;
-                $dirLanding = $assetDir;
-                include_once ($base . "inc/header-landing.php");
-                $dirLanding = $dirLandingTemp;
-                ?>
+		<?php include_once ($base . "inc/header-landing.php"); ?>
 		
 	</head>
     <body id="page-top" class="<?= $dirLanding ?>">
@@ -231,8 +229,6 @@ if( !$testing && !$testPar )
 					</p>
 				</div>
 
-                                <img src="/img/landings/<?= $assetDir ?>/<?= $assetDir ?>-ico.svg" class="icon" alt="tijeras grooming <?= $nombredelcurso ?>" width="82" height="82" />
-                                <img src="/img/landings/<?= $assetDir ?>/<?= $assetDir ?>-ico.svg" class="icon last" alt="tijeras grooming <?= $nombredelcurso ?>" width="82" height="82" />
 
 			</div>
 		</section>
@@ -266,6 +262,7 @@ if( !$testing && !$testPar )
     
 			<div class="container">
 				<div>
+
                                         <div>
                                                 <p><b>Parte 1:</b> Introducción a la peluquería felina, consejos antes del baño y herramientas iniciales.</p>
                                                 <p><b>Parte 2:</b> La piel del gato y la cosmética. Conociendo a los gatos.</p>
@@ -303,12 +300,9 @@ if( !$testing && !$testPar )
 				<p>Así como ellos, tu <b>adquirirás las habilidades</b> y competencias para realizar <b>espectaculares cortes</b>.</p>
 			</div>
 
-                        <?php
-                        $dirLandingTemp = $dirLanding;
-                        $dirLanding = $assetDir;
-                        include_once ($base . "inc/landings/muestras.php");
-                        $dirLanding = $dirLandingTemp;
-                        ?>
+
+			<?php include_once ($base . "inc/landings/muestras.php"); ?>
+
 
 		</section>
 
@@ -546,7 +540,7 @@ if( !$testing && !$testPar )
 			</div>
 
 			<div class="container" itemscope itemtype="https://schema.org/Person">
-                                <meta itemprop="jobTitle" content="Estilista felino, Handler felino, Groomer felino">
+<meta itemprop="jobTitle" content="Estilista felino, Handler felino, Groomer felino">
 				<div>
 					<div></div>
 					<div>
@@ -563,7 +557,6 @@ if( !$testing && !$testPar )
 					<div>
 						<img 
 							src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                        data-src="/img/landings/<?= $assetDir ?>/<?= $autorSlug ?>-<?= $assetDir ?>.jpg"
 							class="center-block img-rounded lazyload"  
 							alt="<?= $autor ?> de <?= $nombredelcurso ?>"
 							title="<?= $autor ?> de <?= $nombredelcurso ?>" 
@@ -576,6 +569,7 @@ if( !$testing && !$testPar )
 					<div itemprop="description">
 						<p>
                                                         Desarrollado por <b>Fabio Ernesto Gomez Sepulveda</b>, <u>estilista felino profesional, handler, ponente internacional</u> y escultor con participación en uno de los congresos más grandes e importantes del mundo de las mascotas. <b>Ganador de múltiples Best In Show</b> en diferentes competencias de belleza y de peluquería felina.
+
 						</p>
 
 						<p>
@@ -584,7 +578,9 @@ if( !$testing && !$testPar )
                 
 						<div>
 							<p>
+
                                                                 Estudiar peluquería felina nunca fue tan fácil. Aprende un arte que puedas <b>desempeñar en cualquier lugar</b>.
+
 							</p>
 						</div>				
 					</div>
@@ -595,10 +591,7 @@ if( !$testing && !$testPar )
 		<?php
 
         $subtitleAlumnas = ['subtitle' => ''];
-        $dirLandingTemp = $dirLanding;
-        $dirLanding = $assetDir;
-        include_once ($base . "inc/landings/alumnasfelices.php");
-        $dirLanding = $dirLandingTemp;
+include_once ($base . "inc/landings/alumnasfelices.php");
 
         ?>
 
@@ -614,7 +607,9 @@ if( !$testing && !$testPar )
 			<div class="back1080">
 				<img 
 					src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+
                                         data-src="/img/landings/<?= $assetDir ?>/diploma.png"
+
 					class="lazyload"  
 					alt="Certificado como profesional en <?= $nombredelcurso ?> avalado por <?= $autor ?>" 
 					title="Certificado como profesional en <?= $nombredelcurso ?> avalado por <?= $autor ?>" 
@@ -629,6 +624,7 @@ if( !$testing && !$testPar )
 					<p itemprop="description">
 						<span>Al finalizar el curso podrás imprimir tu <b>certificado de conclusión digital</b> y colgarlo donde tu quieras.</span>
                                                 <span>Estamos seguros que cuando lo hagas sentirás la satisfacción de saber que estás listo para <b>realizar increíbles cortes felinos</b> y crear tu propio negocio en esta bonita actividad.</span>
+
 					</p>
 
 				</div>
@@ -642,6 +638,7 @@ if( !$testing && !$testPar )
 					<h2 id="video-adicional-heading" itemprop="name">Fabio responde</h2>
 					<p itemprop="description">
                                                 <b>¿Se puede hacer un curso de peluquería para gatos online?</b>
+
 					</p>
 				</div>        
 
@@ -663,6 +660,7 @@ if( !$testing && !$testPar )
                 $dirLanding = $dirLandingTemp;
                 ?>
 
+
 		<?php
 
         $params = ['class' => 'bgYellow', 'text' => '<b class="blockMobile">APRESÚRATE.</b> Últimos Cupos y CERRAMOS ACCESOS', 'section' => true ];
@@ -677,6 +675,7 @@ if( !$testing && !$testPar )
                 $dirLanding = $dirLandingTemp;
                 ?>
 
+
 		<?php
 
 		$params = ['class' => 'bgWhite', 'text' => '<b>SIN RIESGOS</b>. Pruébanos por 7 días', 'section' => true ];
@@ -690,6 +689,7 @@ if( !$testing && !$testPar )
                 include_once ($base . "inc/landings/footer-landing.php");
                 $dirLanding = $dirLandingTemp;
                 ?>
+
 		
    </body>
 
