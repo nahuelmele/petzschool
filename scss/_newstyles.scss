@@ -1,0 +1,292 @@
+body.pasteleria-canina-y-felina {
+
+    section#first-scroll {
+        background-image: url("../img/landings/pasteleria-canina-y-felina/pasteleria-canina-y-felina.webp");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    img.icon {
+        left: -150px;
+        top: 47px;
+        transform: rotate(-46deg);
+        width:120px;
+
+        &.last {
+            right: -150px;
+            top: 47px;
+            transform: rotate(46deg);
+            left: unset;
+        }
+    }
+}
+
+body.mascotas-sanas {
+    section#first-scroll {
+        background-image: url("../img/landings/mascotas-sanas/mascotas-sanas.webp");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+body.reposteria-de-halloween {
+
+    .spinner > div {
+        height: 50px;
+        width: 50px;
+        background-image: url('../img/landings/reposteria-de-halloween/calabera.png');
+    }
+
+    section#first-scroll {
+        background-image: url("../img/landings/reposteria-de-halloween/reposteria-de-halloween.webp");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    img.icon {
+        left: -122px;
+        top: 70px;
+        transform: rotate(-46deg);
+
+        &.last {
+            right: -122px;
+            top: 70px;
+            transform: rotate(46deg);
+            left: unset;
+        }
+    }
+
+    section.bajada {
+        &.principal {
+            .sub-header {
+                h2 {
+                    span {
+                        display: block;
+
+                        &:nth-of-type(2) {
+                            margin-top: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section#muestras {
+        padding-top: 60px;
+    }
+}
+
+body.petlados {
+
+    section#first-scroll {
+        background-image: url("../img/landings/petlados/petlados.webp");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+
+    img.icon {
+        left: -85px;
+        top: 14px;
+        transform: rotate(-18deg);
+        width: 45px;
+
+        &.last {
+            right: -85px;
+            top: 14px;
+            transform: rotate(18deg);
+            left: unset;
+        }
+    }
+}
+
+body.petlicias-navidenas {
+
+    .spinner > div {
+        height: 50px;
+        width: 50px;
+        background-image: url('../img/landings/petlicias-navidenas/arbolito.png');
+    }
+
+    section#first-scroll {
+        background-image: url("../img/landings/petlicias-navidenas/petlicias-navidenas.webp");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    img.icon {
+        left: -122px;
+        top: 70px;
+        transform: rotate(-46deg);
+        width: 100px;
+
+        &.last {
+            right: -122px;
+            top: 70px;
+            transform: rotate(46deg);
+            left: unset;
+        }
+    }
+
+    section.bajada {
+        &.principal {
+            .sub-header {
+                h2 {
+                    span {
+                        display: block;
+
+                        &:nth-of-type(2) {
+                            margin-top: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section#muestras {
+        padding-top: 60px;
+    }
+}
+
+body.peluqueria-para-perros {
+
+    section#first-scroll {
+        background-image: url("../img/landings/peluqueria-para-perros/peluqueria-para-perros.webp");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    img.icon {
+        left: -113px;
+        top: 56px;
+        transform: rotate(-4deg);
+
+        &.last {
+            right: -113px;
+            top: 56px;
+            transform: rotate(90deg);
+            left: unset;
+        }
+    }
+
+}
+
+body.dieta-barf {
+
+    section#first-scroll {
+        background-image: url("../img/landings/dieta-barf/dieta-barf.webp");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    img.icon {
+        left: -113px;
+        top: 56px;
+        transform: rotate(-4deg);
+        width: 82px;
+
+        &.last {
+            right: -113px;
+            top: 56px;
+            transform: rotate(-60deg);
+            left: unset;
+        }
+    }
+}
+
+body.educanino {
+
+    section#first-scroll {
+        background-image: url("../img/landings/educanino/educanino.webp");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+body.costura-canina-y-felina {
+
+    section#first-scroll {
+        background-image: url("../img/landings/costura-canina-y-felina/costura-canina-y-felina.webp");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    section.bajada {
+        &.principal {
+            .sub-header {
+
+                @media (max-width: $break27) {
+                    padding: 25px 6px 25px;
+                }
+
+                h2 {
+                    span {
+                        @media (max-width: $break16) {
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section#aprender {
+
+        @media (max-width: $break9) {
+            padding: 60px 0 45px;
+        }
+
+        @media (max-width: $break14) {
+            padding: 45px 0 45px;
+        }
+
+        @media (max-width: $break27) {
+            padding: 30px 0 40px;
+        }
+    }
+
+    img.icon {
+        left: -113px;
+        top: 56px;
+        transform: rotate(-4deg);
+        width: 82px;
+
+        &.last {
+            right: -113px;
+            top: 56px;
+            transform: rotate(90deg);
+            left: unset;
+        }
+    }
+}
+
+body.primeros-auxilios-para-perros {
+
+    .spinner > div {
+        height: 50px;
+        width: 50px;
+        background-image: url('../img/landings/primeros-auxilios-para-perros/preloader-primeros-auxilios-perros-ico.svg');
+    }
+
+    section#first-scroll {
+        background-image: url("../img/landings/primeros-auxilios-para-perros/primeros-auxilios-para-perros.webp");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    img.icon {
+        left: -150px;
+        top: 47px;
+        transform: rotate(-46deg);
+        width: 80px;
+
+        &.last {
+            right: -150px;
+            top: 47px;
+            transform: rotate(46deg);
+            left: unset;
+        }
+    }
+}

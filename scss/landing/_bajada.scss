@@ -1,0 +1,172 @@
+section.bajada {
+    padding: 0;
+
+    .sub-header {
+        background: $black;
+        background-image: url(../img/pattern.png);
+        background-size: auto;
+        color: $white;
+        font-size: 80px;
+        margin-bottom: 0;
+        padding: 40px;
+        text-align: center;
+
+        @media (max-width: $break14) {
+            padding: 15px 15px 40px 15px;
+        }
+
+        @media (max-width: $break27) {
+            padding: 15px 15px 30px 15px;
+        }
+
+        h2 {
+            color: $white;
+            font-size: 34px;
+            letter-spacing: 1px;
+            margin: 0 auto 10px;
+            max-width: 767px;
+            text-align: center;
+            text-transform: none;
+
+            @media (max-width: $break14) {
+                font-size: 30px;
+                max-width: unset;
+                margin: 25px auto 10px;
+            }
+
+            @media (max-width: $break27) {
+                font-size: 25px;
+                letter-spacing: .4px;
+                margin: 15px auto 10px;
+            }
+        }
+
+        p:not(.modActiontxt) {
+            font-family: $lato;
+            font-size: 22px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            line-height: 36px;
+            margin: 0 auto;
+            max-width: 857px;
+            padding: 0;
+            text-align: center;
+            text-transform: inherit;
+
+            @media (max-width: $break14) {
+                font-size: 18px;
+                line-height: 29px;
+            }
+
+            @media (max-width: $break22) {
+                text-align: left;
+            }
+
+            @media (max-width: $break27) {
+                font-size: 18px;
+                line-height: 24px;
+            }
+
+            span {
+                color: $white;
+                font-family: $lato;
+                font-size: 22px;
+                font-weight: 400;
+                letter-spacing: 0.4px;
+                text-transform: none;
+
+                @media (max-width: $break14) {
+                    font-size: 20px;
+                    line-height: 32px;
+                }
+
+                @media (max-width: $break22) {
+                    font-size: 20px;
+                    line-height: 32px;
+                    display: block;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+
+    &.principal {
+        .sub-header {
+
+            @media (max-width: $break14) {
+                padding: 30px 15px;
+            }
+
+            @media (max-width: $break27) {
+                padding: 6px 6px 25px;
+            }
+
+            h2 {
+                color: $white;
+                font-family: $lato;
+                font-size: 24px;
+                font-weight: 400;
+                letter-spacing: 1px;
+                line-height: 42px;
+                margin: 0 auto;
+                max-width: 857px;
+                padding: 0;
+                text-align: center;
+                text-transform: none;
+
+                @media (max-width: $break6) {
+                    font-size: 22px;
+                    line-height: 36px;
+                    max-width: unset;
+                }
+
+                @media (max-width: $break9) {
+                    font-size: 22px;
+                }
+
+                @media (max-width: $break14) {
+                    line-height: 30px;
+                }
+
+                @media (max-width: $break18) {
+                    line-height: 34px;
+                }
+
+                @media (max-width: $break21) {
+                    line-height: 29px;
+                }
+
+                @media (max-width: $break22) {
+                    line-height: 26px;
+                }
+
+                @media (max-width: $break27) {
+                    font-size: 20px;
+                    letter-spacing: .4px;
+                }
+
+                span {
+                    color: $white;
+                    font-family: $baloo-thambi;
+                    font-size: 32px;
+                    font-weight: 700;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+
+                    @media (max-width: $break6) {
+                        font-size: 26px;
+                    }
+
+                    @media (max-width: $break16) {
+                        display: block;
+                        margin-top: 20px;
+                    }
+
+                    @media (max-width: $break18) {
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+    }
+}

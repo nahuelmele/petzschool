@@ -1,0 +1,145 @@
+@keyframes dog-bones-falling {
+    0% {
+        background-position: 94% -100px, 96% 100px, 99% -300px;
+    }
+
+    to {
+        background-position: 94% 500px, 96% 100px, 99% 500px;
+    }
+}
+
+@keyframes rocking {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(2deg);
+    }
+
+    75% {
+        transform: rotate(-2deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        background-position: top;
+        -moz-background-size: 0 auto;
+        -o-background-size: 0 auto;
+        -webkit-background-size: 0 auto;
+        background-size: 0 auto;
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0;
+    }
+
+    50% {
+        -moz-background-size: 75% auto;
+        -o-background-size: 75% auto;
+        -webkit-background-size: 75% auto;
+        background-size: 75% auto;
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    to {
+        background-position: bottom;
+        -moz-background-size: 0 auto;
+        -o-background-size: 0 auto;
+        -webkit-background-size: 0 auto;
+        background-size: 0 auto;
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes pulse {
+    0% {
+        background-position: top;
+        -moz-background-size: 0 auto;
+        -o-background-size: 0 auto;
+        -webkit-background-size: 0 auto;
+        background-size: 0 auto;
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0;
+    }
+
+    50% {
+        -moz-background-size: 75% auto;
+        -o-background-size: 75% auto;
+        -webkit-background-size: 75% auto;
+        background-size: 75% auto;
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    to {
+        background-position: bottom;
+        -moz-background-size: 0 auto;
+        -o-background-size: 0 auto;
+        -webkit-background-size: 0 auto;
+        background-size: 0 auto;
+        opacity: 0;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        background-position: top;
+        -moz-background-size: 0 auto;
+        -o-background-size: 0 auto;
+        -webkit-background-size: 0 auto;
+        background-size: 0 auto;
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0;
+    }
+
+    50% {
+        -moz-background-size: 75% auto;
+        -o-background-size: 75% auto;
+        -webkit-background-size: 75% auto;
+        background-size: 75% auto;
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    to {
+        background-position: bottom;
+        -moz-background-size: 0 auto;
+        -o-background-size: 0 auto;
+        -webkit-background-size: 0 auto;
+        background-size: 0 auto;
+        opacity: 0;
+    }
+}
+
+@keyframes beat {
+    to {
+        transform: scale(1.1);
+    }
+}

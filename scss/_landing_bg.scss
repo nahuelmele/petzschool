@@ -1,0 +1,4390 @@
+/* Inicio general */
+
+
+body {
+    color: #000000;
+}
+
+img {
+    height: auto !important;
+}
+
+ul.custom li.title:before {
+    content: '';
+}
+
+/* Inicio general */
+
+body {
+    color: #000000;
+}
+
+img {
+    height: auto !important;
+}
+
+ul.custom li.title:before {
+    content: '';
+}
+
+.owl-dots {
+    margin-top: 30px;
+}
+
+.coverImg img {
+    width: 100%;
+    height: auto;
+}
+
+.callToAction .btnAction:active:focus,
+.callToAction .btnAction:active:hover {
+    color: #fff;
+    background-color: #ef5030;
+    box-shadow: inset 9px 0 0 0 #f19f1f;
+    border-color: unset;
+    animation: rocking 2s infinite !important;
+    animation-timing-function: cubic-bezier(0, 0, 0.58, 1) !important;
+    transition: .2s !important;
+}
+
+.btn-default.focus, .btn-default:focus {
+    color: #fff !important;
+    background-color: #ef5030;
+    border-color: unset;
+}
+
+.section-heading h3:before, .section-heading h3:after,
+.section-heading h4:before, .section-heading h4:after {
+    position: relative;
+    content: '';
+    width: 97px;
+    opacity: 0.2;
+    height: 2px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 20px;
+}
+
+.section-heading h3:before, .section-heading h3:after,
+.section-heading h4:before, .section-heading h4:after {
+    background-color: #F19F1F;
+}
+
+.section-heading h3,
+.section-heading h4 {
+    color: #108896;
+}
+
+.section-heading h4 {
+    margin: 0;
+}
+
+.bgWhite {
+    background: #fff !important;
+}
+
+.alert.alert-success:before,
+.alert.alert-warning:before {
+    content: "";
+    background-image: url("../img/bone.svg");
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    left: 0px;
+    margin-top: -43px;
+}
+
+.bgPosition {
+    background-position: 0px 70%, 99% 70%;
+}
+
+.bgPosition2 {
+    background-position: 0px 22.1713%, 99% 22.1713%;
+}
+
+.bg-pattern {
+    background-image: url("../img/cartoonbones1.png"), url("../img/cartoonbones2.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: left top, right top;
+}
+
+
+/* Fin general */
+
+/* Inicio Seccion hero con video y titulo */
+
+.btn-default.focus, .btn-default:focus {
+    color: #fff;
+    background-color: #ef5030;
+    border-color: unset;
+}
+
+.descuento {
+    background: #ef5030;
+    padding: 10px;
+    text-align: center;
+}
+
+.descuento img {
+    text-align: center;
+    width: 100%;
+    max-width: 1068px;
+}
+
+body .ea-buttonRocking {
+    animation: rocking 2s infinite !important;
+    animation-timing-function: cubic-bezier(0, 0, 0.58, 1) !important;
+    transition: .2s !important;
+}
+
+.ea-buttonRocking:hover {
+    animation: none !important;
+}
+
+.modcups {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.apresu {
+    max-width: 480px;
+    margin: 40px auto 5px auto;
+    text-align: center;
+    width: 100%;
+}
+
+.apresu img {
+    width: 100%;
+}
+
+.modActiontxt {
+    text-align: center;
+    line-height: unset;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.headerdiv .btn {
+    font-size: 26px;
+}
+
+.headerdiv .newUpdate {
+    color: #fff;
+    padding-bottom: 0px !important;
+    text-align: center;
+    font-size: 18px !important;
+    margin: 30px 0 0 0;
+}
+
+.headerdiv .newUpdate span {
+    color: #fff;
+}
+
+.slider-container2 {
+    margin-top: 0;
+    padding: 0;
+}
+
+.slider2 {
+    /*background-image: url("../img/landings/costura-canina-y-felina/costura-canina-y-felina.webp");
+    background-position: center;
+    background-size: cover;*/
+}
+
+.slide2 {
+    background-color: rgba(16, 136, 150, 0.85);
+    padding: 80px 0 40px 0;
+}
+
+.slide__text2 {
+    text-align: center;
+    max-width: 1080px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slide__overlay2 {
+    height: 100%;
+    opacity: 0.85 !important;
+    background-color: #108896;
+}
+
+.slide__text-heading2 {
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+}
+
+.slide__text2 h1 {
+    color: #fff;
+}
+
+.slide__text2 h1 span {
+    font-style: italic;
+    font-size: 26px !important;
+    display: block;
+    text-shadow: unset;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+.lead2 {
+    font-size: 57px;
+    font-weight: bold;
+    margin: 30px 0 10px 0;
+    font-family: 'Baloo Thambi', sans-serif;
+    line-height: 66px;
+    letter-spacing: 1px;
+}
+
+.lead2.h1newUpdate {
+    margin: 70px 0 10px 0;
+}
+
+
+.headerdiv.cutomheaderdiv .subtitIcon.ofexl {
+    margin-top: 20px;
+}
+
+.headerdiv.cutomheaderdiv .subtitIcon.ofexl i {
+    font-size: 20px;
+}
+
+.headerdiv.cutomheaderdiv .subtitIcon.ofexl p {
+    font-size: 16px !important;
+}
+
+.headerdiv.cutomheaderdiv .lead2 {
+    margin: 10px 0 20px 0;
+}
+
+
+.countdownFixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.owl-dots {
+    margin-top: 30px;
+}
+
+.coverImg img {
+    width: 100%;
+    height: auto;
+}
+
+.callToAction .btnAction:active:focus,
+.callToAction .btnAction:active:hover {
+    color: #fff;
+    background-color: #ef5030;
+    box-shadow: inset 9px 0 0 0 #f19f1f;
+    border-color: unset;
+    animation: rocking 2s infinite !important;
+    animation-timing-function: cubic-bezier(0, 0, 0.58, 1) !important;
+    transition: .2s !important;
+}
+
+.btn-default.focus, .btn-default:focus {
+    color: #fff !important;
+    background-color: #ef5030;
+    border-color: unset;
+}
+
+.section-heading h3:before, .section-heading h3:after,
+.section-heading h4:before, .section-heading h4:after {
+    position: relative;
+    content: '';
+    width: 97px;
+    opacity: 0.2;
+    height: 2px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 20px;
+}
+
+.section-heading h3:before, .section-heading h3:after,
+.section-heading h4:before, .section-heading h4:after {
+    background-color: #F19F1F;
+}
+
+.section-heading h3,
+.section-heading h4 {
+    color: #108896;
+}
+
+.section-heading h4 {
+    margin: 0;
+}
+
+.bgWhite {
+    background: #fff !important;
+}
+
+.alert.alert-success:before,
+.alert.alert-warning:before {
+    content: "";
+    background-image: url("../img/bone.svg");
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    left: 0px;
+    margin-top: -43px;
+}
+
+.bgPosition {
+    background-position: 0px 70%, 99% 70%;
+}
+
+.bgPosition2 {
+    background-position: 0px 22.1713%, 99% 22.1713%;
+}
+
+.bg-pattern {
+    background-image: url("../img/cartoonbones1.png"), url("../img/cartoonbones2.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: left top, right top;
+}
+
+
+/* Fin general */
+
+/* Inicio Seccion hero con video y titulo */
+
+.btn-default.focus, .btn-default:focus {
+    color: #fff;
+    background-color: #ef5030;
+    border-color: unset;
+}
+
+.descuento {
+    background: #ef5030;
+    padding: 10px;
+    text-align: center;
+}
+
+.descuento img {
+    text-align: center;
+    width: 100%;
+    max-width: 1068px;
+}
+
+body .ea-buttonRocking {
+    animation: rocking 2s infinite !important;
+    animation-timing-function: cubic-bezier(0, 0, 0.58, 1) !important;
+    transition: .2s !important;
+}
+
+.ea-buttonRocking:hover {
+    animation: none !important;
+}
+
+.modcups {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.apresu {
+    max-width: 480px;
+    margin: 40px auto 5px auto;
+    text-align: center;
+    width: 100%;
+}
+
+.apresu img {
+    width: 100%;
+}
+
+.modActiontxt {
+    text-align: center;
+    line-height: unset;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.headerdiv .btn {
+    font-size: 26px;
+}
+
+.headerdiv .newUpdate {
+    color: #fff;
+    padding-bottom: 0px !important;
+    text-align: center;
+    font-size: 18px !important;
+    margin: 30px 0 0 0;
+}
+
+.headerdiv .newUpdate span {
+    color: #fff;
+}
+
+.slider-container2 {
+    margin-top: 0;
+    padding: 0;
+}
+
+.slider2 {
+    /*background-image: url("../img/landings/costura-canina-y-felina/costura-canina-y-felina.webp");
+    background-position: center;
+    background-size: cover;*/
+}
+
+.slide2 {
+    background-color: rgba(16, 136, 150, 0.85);
+    padding: 80px 0 40px 0;
+}
+
+.slide__text2 {
+    text-align: center;
+    max-width: 1080px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slide__overlay2 {
+    height: 100%;
+    opacity: 0.85 !important;
+    background-color: #108896;
+}
+
+.slide__text-heading2 {
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+}
+
+.slide__text2 h1 {
+    color: #fff;
+}
+
+.slide__text2 h1 span {
+    font-style: italic;
+    font-size: 26px !important;
+    display: block;
+    text-shadow: unset;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+.lead2 {
+    font-size: 57px;
+    font-weight: bold;
+    margin: 30px 0 10px 0;
+    font-family: 'Baloo Thambi', sans-serif;
+    line-height: 66px;
+    letter-spacing: 1px;
+}
+
+.lead2.h1newUpdate {
+    margin: 70px 0 10px 0;
+}
+
+
+.headerdiv.cutomheaderdiv .subtitIcon.ofexl {
+    margin-top: 20px;
+}
+
+.headerdiv.cutomheaderdiv .subtitIcon.ofexl i {
+    font-size: 20px;
+}
+
+.headerdiv.cutomheaderdiv .subtitIcon.ofexl p {
+    font-size: 16px !important;
+}
+
+.headerdiv.cutomheaderdiv .lead2 {
+    margin: 10px 0 20px 0;
+}
+
+
+.countdownFixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    opacity: 1;
+    padding: 0;
+}
+
+.countdownFixedFromBegin {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    opacity: 1;
+    padding: 0;
+}
+
+.backRojo {
+    background: rgba(16,136,150,1);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.countCupos {
+    font-family: 'Baloo Thambi', sans-serif;
+    font-size: 15px;
+    margin-right: 11px;
+    letter-spacing: 0px;
+}
+
+
+body .parallax-object1 {
+    margin-top: 380px;
+    z-index: 1;
+}
+
+.review-profile-stars {
+    width: 120px;
+    margin: 0 auto 10px auto;
+    text-align: center;
+}
+
+.review-profile-stars img {
+    width: 100%;
+}
+
+.politicasPages p.descargo {
+    margin: 10px 0 20px 0;
+}
+
+
+.preseproConte {
+    font-size: 18px !important;
+    color: #fff !important;
+    max-width: 575px;
+    letter-spacing: 0px;
+    width: 100%;
+    margin: 0 auto 15px auto;
+    position: relative;
+}
+
+.peopleseeingIntMobile {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+    color: #fff;
+    display: none;
+}
+
+
+.emprendto {
+    color: #fff;
+    padding-bottom: 0px !important;
+    text-align: center;
+    font-size: 20px !important;
+    margin: 0;
+}
+
+
+.boxShadowVideo {
+    position: relative;
+    box-shadow: rgba(85,91,255,1) 0px 0px 0px 6px, rgba(241,159,31,1) 0px 0px 0px 12px, rgba(239,80,48,1) 0px 0px 0px 18px;
+    box-shadow: rgba(0,0,0,0.25) 0px 54px 55px, rgba(0,0,0,0.12) 0px -12px 30px, rgba(0,0,0,0.12) 0px 4px 6px, rgba(0,0,0,0.17) 0px 12px 13px, rgba(0,0,0,0.9) 0px -3px 5px;
+}
+
+
+@keyframes rocking {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    25% {
+        transform: rotate(0deg)
+    }
+
+    50% {
+        transform: rotate(2deg)
+    }
+
+    75% {
+        transform: rotate(-2deg)
+    }
+
+    100% {
+        transform: rotate(0deg)
+    }
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        opacity: 0;
+        background-position: center top;
+        -moz-background-size: 0 auto;
+        -o-background-size: 0 auto;
+        -webkit-background-size: 0 auto;
+        background-size: 0 auto;
+    }
+
+    10% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+        -moz-background-size: 75% auto;
+        -o-background-size: 75% auto;
+        -webkit-background-size: 75% auto;
+        background-size: 75% auto;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+        background-position: center bottom;
+        -moz-background-size: 0 auto;
+        -o-background-size: 0 auto;
+        -webkit-background-size: 0 auto;
+        background-size: 0 auto;
+    }
+}
+
+@-moz-keyframes pulse {
+    0% {
+        opacity: 0;
+        background-position: center top;
+        -moz-background-size: 0 auto;
+        -o-background-size: 0 auto;
+        -webkit-background-size: 0 auto;
+        background-size: 0 auto;
+    }
+
+    10% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+        -moz-background-size: 75% auto;
+        -o-background-size: 75% auto;
+        -webkit-background-size: 75% auto;
+        background-size: 75% auto;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+        background-position: center bottom;
+        -moz-background-size: 0 auto;
+        -o-background-size: 0 auto;
+        -webkit-background-size: 0 auto;
+        background-size: 0 auto;
+    }
+}
+
+@-ms-keyframes pulse {
+    0% {
+        opacity: 0;
+        background-position: center top;
+        -moz-background-size: 0 auto;
+        -o-background-size: 0 auto;
+        -webkit-background-size: 0 auto;
+        background-size: 0 auto;
+    }
+
+    10% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+        -moz-background-size: 75% auto;
+        -o-background-size: 75% auto;
+        -webkit-background-size: 75% auto;
+        background-size: 75% auto;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+        background-position: center bottom;
+        -moz-background-size: 0 auto;
+        -o-background-size: 0 auto;
+        -webkit-background-size: 0 auto;
+        background-size: 0 auto;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0;
+        background-position: center top;
+        -moz-background-size: 0 auto;
+        -o-background-size: 0 auto;
+        -webkit-background-size: 0 auto;
+        background-size: 0 auto;
+    }
+
+    10% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+        -moz-background-size: 75% auto;
+        -o-background-size: 75% auto;
+        -webkit-background-size: 75% auto;
+        background-size: 75% auto;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+        background-position: center bottom;
+        -moz-background-size: 0 auto;
+        -o-background-size: 0 auto;
+        -webkit-background-size: 0 auto;
+        background-size: 0 auto;
+    }
+}
+
+.scroll-down {
+    margin: 0;
+    border: 0 none;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    margin-left: 0;
+    margin-top: 7px;
+    z-index: 1;
+}
+
+.scroll-down a {
+    display: block;
+    opacity: 0;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    line-height: 0;
+    font-size: 0;
+    color: transparent;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
+    -moz-background-size: 0 auto;
+    -o-background-size: 0 auto;
+    -webkit-background-size: 0 auto;
+    background-size: 0 auto;
+    -webkit-animation: pulse 1.5s 0s infinite normal ease forwards;
+    -moz-animation: pulse 1.5s 0s infinite normal ease forwards;
+    -o-animation: pulse 1.5s 0s infinite normal ease forwards;
+    animation: pulse 1.5s 0s infinite normal ease forwards;
+    background-image: url("../img/arrow-down.svg");
+    background-repeat: no-repeat;
+}
+
+.scroll-down a:before, .scroll-down a:after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("../img/arrow-down.svg") no-repeat center top;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+}
+
+.scroll-down a:before {
+    -webkit-animation: pulse 1.5s 0.25s infinite normal ease forwards;
+    -moz-animation: pulse 1.5s 0.25s infinite normal ease forwards;
+    -o-animation: pulse 1.5s 0.25s infinite normal ease forwards;
+    animation: pulse 1.5s 0.25s infinite normal ease forwards;
+}
+
+.scroll-down a:after {
+    -webkit-animation: pulse 1.5s 0.5s infinite normal ease forwards;
+    -moz-animation: pulse 1.5s 0.5s infinite normal ease forwards;
+    -o-animation: pulse 1.5s 0.5s infinite normal ease forwards;
+    animation: pulse 1.5s 0.5s infinite normal ease forwards;
+}
+
+.conteArrow {
+    position: relative;
+    height: 120px;
+    text-align: center;
+    margin: 0 auto;
+    width: 120px;
+    margin-top: -35px;
+}
+
+.subtitIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subtitIcon i {
+    color: #ffffff;
+    font-size: 40px;
+    margin-right: 10px;
+}
+
+.ribbons50off {
+    position: absolute;
+    top: -55px;
+    left: -44px;
+    z-index: 1;
+}
+
+.ribbons50off img {
+    width: 126px;
+    transform: rotate(-34deg);
+}
+
+
+body .navbar-fixed-bottom, body .navbar-fixed-top {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    top: 69px;
+}
+
+.cupCakes {
+    position: absolute;
+    z-index: 1;
+    left: -113px;
+    top: 56px;
+    transform: rotate(-4deg);
+    opacity: 1;
+}
+
+.cupCakes.second {
+    right: -113px;
+    top: 56px;
+    transform: rotate(90deg);
+    left: unset;
+}
+
+.cupCakes img {
+    width: 82px;
+}
+
+.cupCakes.dog {
+    left: -175px;
+    top: unset;
+    transform: unset;
+    opacity: 1;
+    bottom: -86px;
+    z-index: 1;
+}
+
+
+.cupCakes.dog img {
+    width: 200px;
+}
+
+.cupCakes.cat img {
+    width: 100%;
+}
+
+.cupCakes.cat {
+    right: -150px;
+    top: unset;
+    transform: unset;
+    opacity: 1;
+    bottom: -75px;
+}
+
+
+.cupCakes.globosEnd {
+    right: -150px;
+    top: 30%;
+    transform: unset;
+    left: unset;
+    bottom: unset;
+}
+
+.cupCakes.globosEnd img {
+    width: auto;
+}
+
+.cupCakes.globosEnd1 {
+    top: 40%;
+    transform: unset;
+}
+
+
+.heart {
+    animation: beat .4s infinite alternate;
+    transform-origin: center;
+}
+
+/* Heart beat animation */
+@keyframes beat {
+    to {
+        transform: scale(1.1);
+    }
+}
+
+.optesumVid {
+    text-align: center;
+    line-height: unset;
+    font-size: 16px;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    margin: 35px 0 1px 0;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.optesumVid .fconLover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.optesumVid .cantv {
+    font-size: 24px;
+    width: 90px;
+    vertical-align: sub;
+    text-align: center;
+    font-family: 'Baloo Thambi', sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #fff;
+    border-radius: 100%;
+    border: 4px solid #fff;
+    background: #108896;
+    padding-left: 14px;
+    padding-right: 14px;
+    margin: 0 10px;
+}
+
+
+.optesumVid .faltu {
+    margin-left: 10px;
+}
+
+
+/* Fin Seccion hero con video y titulo */
+
+/* Inicio coutdown */
+
+#timer {
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Baloo Thambi', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: normal;
+}
+
+.days, .hours, .minutes, .seconds {
+    display: inline-block;
+    padding: 2px 6px 6px 6px;
+    width: 48px;
+    border-radius: 5px;
+}
+
+.days {
+    background: #ef5030;
+}
+
+.hours {
+    background: #183059;
+    color: #ffffff;
+}
+
+.minutes {
+    background: #555bff;
+}
+
+.seconds {
+    background: #f19f1f;
+}
+
+.numbers {
+    font-family: 'Baloo Thambi', sans-serif;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    height: 27px;
+}
+
+/* Fin coutdown */
+
+
+/* Inicio cartel fixed rojo debajo del countdown */
+
+.peopleseeing {
+    text-align: center;
+    background: #000;
+    padding: 16px 0 14px 0;
+    display: none;
+    background: #e08e1f;
+    font-family: 'Lato', sans-serif;
+    color: #fff;
+    background-image: url("../img/pattern.png");
+    box-shadow: rgba(17,17,26,0.1) 0px 0px 16px;
+}
+
+.peopleseeingBlock {
+    display: block;
+}
+
+.centerdiv {
+    text-align: center;
+}
+
+.peopleseeingInt {
+    font-weight: normal;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    letter-spacing: 0.4px;
+    font-size: 17px;
+}
+
+/* Fin cartel fixed rojo debajo del countdown */
+
+/* Inicio seccion precepto principal debajo del video */
+
+.bajadaVideo {
+    padding: 0 !important
+}
+
+.bajadaVideo .sub-header {
+    border-radius: unset !important;
+    font-size: 80px;
+    padding: 40px;
+    margin-bottom: 0;
+    text-align: center;
+    border-radius: 20px;
+    color: #fff;
+    background: #000;
+    background-image: url("../img/pattern.png");
+    background-size: auto;
+}
+
+.bajadaVideo .sub-header .btn,
+.btnAction {
+    font-size: 29px;
+    text-transform: capitalize;
+}
+
+.callToAction .btnAction.specialFOnt {
+    font-size: 40px;
+    text-transform: initial !important;
+    padding: 20px 50px;
+}
+
+.bajadaVideo .sub-header h2 {
+    font-family: 'Lato', sans-serif;
+    padding: 0;
+    letter-spacing: 1px;
+    font-size: 24px;
+    max-width: 857px;
+    font-weight: normal;
+    text-align: center;
+    line-height: 42px;
+    margin: 0 auto;
+    color: #fff;
+    text-transform: initial;
+}
+
+.bajadaVideo .sub-header h2 span {
+    font-family: 'Baloo Thambi', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.modActiontxt {
+    text-align: center;
+    font-size: 12px;
+    font-weight: normal;
+    margin: 5px auto 0 auto;
+}
+
+/* Fin seccion precepto principal debajo del video */
+
+/* Inicio "que vas a lograr" */
+
+#stats.contenidoAprender {
+    padding: 60px 0px;
+    background-image: url("../img/bones.png"), url("../img/stats.webp"), url("../img/bones1.png");
+    animation: dog-bones-falling 9s linear infinite;
+    animation-direction: normal;
+    background-repeat: no-repeat;
+}
+
+#stats.contenidoAprender h3 {
+    font-size: 45px;
+    color: #108896;
+}
+
+#stats .conteTodo {
+    margin: 0 auto;
+}
+
+#stats .cUlModText {
+    width: calc( 100% - 60px );
+    font-size: 18px;
+    padding: 2px 0 17px 0;
+    line-height: 24px;
+}
+
+#stats .conteUlMod:last-of-type .cUlModIcon {
+    margin-top: 10px;
+}
+
+/* Fin "que vas a lograr" */
+
+
+/* Inicio "muestras de las alumnas" */
+
+#services {
+    background: #ffefd5;
+    padding-top: 0;
+    padding-bottom: 60px;
+}
+
+#services .section-heading h4 {
+    font-size: 36px;
+    text-transform: initial;
+}
+
+/* Fin "muestras de las alumnas" */
+
+
+/* Inicio "primer call to action" */
+
+.callToAction {
+    background: #ffefd5;
+    padding-top: 0;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+.callToAction .section-heading h2 {
+    font-size: 36px;
+    text-transform: initial;
+}
+
+.callToAction .btnAction {
+    font-size: 29px;
+    text-transform: capitalize;
+}
+
+.callToAction .apresu {
+    max-width: 480px;
+    margin: 10px auto 5px auto;
+    text-align: center;
+    width: 100%;
+}
+
+/* Fin "primer call to action" */
+
+
+/* Inicio bajada "que vas a lograr" */
+
+.bajadaLograr {
+    padding: 0 !important
+}
+
+.bajadaLograr .sub-header {
+    border-radius: unset !important;
+    font-size: 80px;
+    padding: 40px;
+    margin-bottom: 0;
+    text-align: center;
+    border-radius: 20px;
+    color: #fff;
+    background: #000;
+    background-image: url("../img/pattern.png");
+    background-size: auto;
+}
+
+.bajadaLograr .sub-header .btn {
+    font-size: 29px;
+    text-transform: capitalize;
+}
+
+.bajadaLograr .sub-header p {
+    font-family: 'Lato', sans-serif;
+    padding: 0;
+    font-size: 17px;
+    max-width: 857px;
+    font-weight: normal;
+    text-align: center;
+    line-height: 30px;
+    margin: 0 auto;
+    letter-spacing: 0;
+}
+
+.bajadaLograr .sub-header p span {
+    font-family: 'Baloo Thambi', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+.bajadaLograr .sub-header h2 {
+    color: #fff;
+    font-size: 34px;
+    text-transform: initial;
+    letter-spacing: 1px;
+    max-width: 767px;
+    text-align: center;
+    margin: 0 auto 10px auto;
+}
+
+
+.bajadaLograr.segundaSection .sub-header h2 span {
+    color: #ffffff;
+}
+
+.bajadaLograr.segundaSection .sub-header p {
+    font-family: 'Lato', sans-serif;
+    padding: 0;
+    letter-spacing: 1px;
+    font-size: 22px;
+    max-width: 857px;
+    font-weight: normal;
+    text-align: center;
+    line-height: 36px;
+    margin: 0 auto;
+    text-transform: inherit;
+}
+
+.bajadaLograr.segundaSection .sub-header p span {
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 1px;
+    font-size: 22px;
+    font-weight: normal;
+    text-transform: initial;
+}
+
+/* Fin bajada "que vas a lograr" */
+
+
+/* Inicio "contenido programa" */
+
+#elements.contenidoPrograma .containerDesk {
+    display: block;
+}
+
+#elements.contenidoPrograma .containerMobile768 {
+    display: none;
+}
+
+#elements.contenidoPrograma {
+    padding: 60px 0 0 0;
+}
+
+#elements.contenidoPrograma ul {
+    width: auto;
+    margin: 0 auto;
+}
+
+#elements.contenidoPrograma ul li {
+    color: #000000;
+}
+
+#elements.contenidoPrograma ul li span {
+    font-weight: bold;
+    color: #108896;
+}
+
+
+#elements.contenidoPrograma h2 {
+    font-size: 45px;
+}
+
+#elements.contenidoPrograma .panel-group {
+    margin-bottom: 0;
+}
+
+#elements.contenidoPrograma .panel-group .accordion__item .panel-heading h4 a {
+    background-color: #108896;
+}
+
+#elements.contenidoPrograma .panel-group:has(.active) .panel-heading h4 a {
+    background-color: #ef5030;
+}
+
+#elements.contenidoPrograma .panel-group .accordion__item .panel-heading h4 a:hover {
+    background-color: #ef5030;
+}
+
+#elements.contenidoPrograma .panel-group .panel-heading {
+}
+
+#elements.contenidoPrograma .panel-group .panel-heading h4 {
+}
+
+#elements.contenidoPrograma .panel-group .panel-heading h4 a {
+    cursor: pointer;
+    padding: 15px 20px;
+}
+
+/* Fin "contenido programa" */
+
+
+/* Inicio "solo por hoy 50% off" */
+
+.dispo {
+    padding: 0 !important;
+    display: block;
+    clear: both;
+}
+
+#elements.dispo h2.sub-header {
+    border-radius: unset !important;
+    border-bottom: unset !important;
+    font-size: 80px;
+    background-image: url("../img/pattern.png");
+    background-size: auto;
+    padding: 26px;
+    margin-bottom: 0 !important;
+    background-color: #EF5030 !important;
+    text-align: center !important;
+    color: #fff !important;
+}
+
+.dispo h2.sub-header p {
+    font-family: 'Lato', sans-serif;
+    margin: -10px 0 0 0;
+    padding: 0;
+    letter-spacing: 1px;
+    font-size: 22px;
+    text-transform: initial !important;
+}
+
+.dispo h2.sub-header p span {
+    font-weight: bold;
+    color: #fff;
+    font-size: 110%;
+}
+
+/* Fin solo por hoy 50 off */
+/* Inicio seccion con quien lo vas a lograr */
+#adoption.quienLograr {
+    background-color: #ffefd5;
+}
+
+#adoption.quienLograr .pet-adopt-info h6 {
+    display: inline;
+    position: relative;
+    margin: 30px;
+}
+
+#adoption.quienLograr .pet-adopt-info h6:before {
+    content: "";
+    background-image: url("../img/ico-huella-red.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    left: -26px;
+    height: 20px;
+    width: 20px;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+#adoption.quienLograr .pet-adopt-info h6:after {
+    content: "";
+    display: none;
+}
+
+#adoption.quienLograr .textint p {
+    line-height: 30px;
+}
+
+#adoption.quienLograr .section-heading h2 {
+    font-size: 45px;
+}
+
+#adoption.quienLograr .textint h4 {
+    font-size: 30px;
+}
+
+#adoption.quienLograr .alert-success {
+    margin: 40px 0 20px 0;
+}
+
+
+#services.tes {
+    background: #ffefd5;
+    padding-top: 0;
+    padding-bottom: 60px;
+}
+
+#services.tes .section-heading h4 {
+    font-size: 36px;
+    text-transform: initial;
+}
+
+#services.tes #owl-reviews1 img {
+    max-width: 294px;
+}
+
+/* Fin seccion con quien lo vas a lograr */
+
+
+/* Inicio seccion "Bonos" */
+
+#pricing .price-table .plan {
+    margin-bottom: 20px;
+    padding: 0px 0px 30px;
+}
+
+#pricing .price-table .plan:hover {
+    margin-top: 0px;
+}
+
+#pricing .price-table .plan:hover .img-responsive {
+    transform: scale(1.05);
+}
+
+#pricing .price-table header {
+    position: relative;
+    padding: 30px 20px 20px 20px;
+    text-align: center;
+}
+
+#pricing .section-heading h3 {
+    font-size: 45px;
+}
+
+#pricing .img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    width: 80%;
+}
+
+#pricing h5 {
+    font-size: 1.6em;
+    margin: 0;
+    font-family: 'Baloo Thambi', sans-serif;
+    color: #292929;
+    letter-spacing: -0.4px;
+    margin-bottom: 0;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+#pricing .price-table .plan-cost {
+    margin: 0;
+}
+
+#pricing .price-table .plan-features {
+    padding: 0 15px 0 15px;
+    margin: 0;
+    text-align: center;
+    line-height: 24px;
+}
+
+#pricing .price-table .plan-features span {
+    display: block;
+    font-family: 'Baloo Thambi', sans-serif;
+    font-size: 22px;
+    padding: 0;
+    margin-bottom: 3px;
+}
+
+#pricing .plan-cost .plan-price {
+    text-decoration: line-through;
+    font-family: 'Lato', sans-serif;
+    color: #EF5030;
+    font-size: 28px;
+    font-style: normal;
+    vertical-align: middle;
+    font-weight: bold;
+    display: block;
+}
+
+/* Fin seccion "Bonos" */
+
+
+/* Inicio seccion "Certificate como profesional" */
+
+#adoption.cetifi {
+    padding: 10px 0 0px 0;
+    color: #fff;
+    background: #000;
+    background-image: url("../img/pattern.png");
+    background-size: auto;
+}
+
+#adoption.cetifi .textint p span {
+    color: #fff;
+}
+
+#adoption.cetifi .row {
+    display: flex;
+    align-items: center;
+}
+
+#adoption.cetifi .row img {
+    width: 354px;
+}
+
+#adoption.cetifi .row h2 {
+    color: #ffffff;
+    font-size: 34px;
+    text-transform: initial;
+}
+
+
+/* Fin seccion "Certificate como profesional" */
+
+
+/* Inicio seccion "Beneficios y precios" */
+
+.adebe {
+    padding: 0 !important;
+    display: block;
+    clear: both;
+}
+
+#elements.adebe h3.sub-header {
+    border-radius: unset !important;
+    border-bottom: unset !important;
+    font-size: 44px;
+    background-image: url("../img/pattern.png");
+    background-size: auto;
+    padding: 26px;
+}
+
+.adebe h3.sub-header p {
+    font-family: 'Lato', sans-serif;
+    margin: 0 0 20px 0;
+    padding: 0;
+    letter-spacing: 1px;
+    font-size: 22px;
+    color: #fff;
+}
+
+.adebe h3.sub-header p span {
+    color: #fff;
+}
+
+
+#beneficios,
+#costura-canina-y-felina,
+#costura-canina-y-felina-2,
+#costura-canina-y-felina-3,
+#costura-canina-y-felina-4 {
+    padding: 0;
+}
+
+.backWhite {
+    background-color: #fff;
+    color: #000;
+}
+
+
+.back768 {
+    padding: 0 10px;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 768px;
+}
+
+.optesum {
+    text-align: center;
+    line-height: 35px;
+    font-size: 26px;
+    color: #000;
+    font-weight: normal;
+    margin-bottom: 20px;
+    font-family: 'Baloo Thambi', sans-serif;
+}
+
+.optesum.lastUpdate {
+    margin-top: 20px;
+    font-weight: 100;
+    letter-spacing: 0.2px;
+    font-size: 22px;
+}
+
+.optesum.todo199 {
+    margin-bottom: 10px;
+}
+
+.opte {
+    color: #0097a6;
+    font-weight: 200;
+    text-align: center;
+    line-height: 48px;
+    font-size: 38px;
+    margin-bottom: 20px;
+    margin-top: 60px;
+    font-family: 'Baloo Thambi', sans-serif;
+    letter-spacing: 0px;
+}
+
+#costura-canina-y-felina .opte {
+    margin-top: 0;
+}
+
+
+.carItem {
+    max-width: 694px;
+    margin: 40px auto;
+}
+
+.carItem .checkItem {
+    display: inline-block;
+    width: 48px;
+    vertical-align: top;
+    padding-top: 13px;
+}
+
+.carItem .checkItem img {
+    width: inherit;
+}
+
+.carItem .contentItem {
+    display: inline-block;
+    width: calc( 100% - 101px );
+    text-align: left;
+    padding-left: 15px;
+}
+
+.carItem .contentItem .carITit {
+    font-size: 25px;
+    color: #000000;
+    font-weight: normal;
+    line-height: 28px;
+    margin-bottom: 6px;
+    margin-top: 5px;
+    letter-spacing: 0;
+}
+
+.pmod, .carIDes p, .ulMod .ulModtoogle .conteUlModPanel .cUlModText .cUlModTextcon p, #opiniones-emprende-cosmetica .owl-carousel .desTesti p, #opiniones-emprende-cosmetica .owl-carousel .nameTesti, .sumarytesttext p {
+    font-weight: normal;
+    font-size: 17px;
+    text-align: left;
+    color: #000;
+    padding: 0 0 0px 0;
+    line-height: 30px;
+}
+
+.back540 {
+    padding: 0 10px;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 540px;
+}
+
+.conteTodo {
+    margin: 30px auto 40px auto;
+}
+
+.conteUlMod {
+    margin: 0;
+}
+
+.cUlModIcon, .cUlModText {
+    display: inline-block;
+}
+
+.cUlModIcon {
+    content: "";
+    background: url(../img/ico-huella.svg) no-repeat;
+    background-size: 31px 28px;
+    margin-top: 0;
+    margin-right: 7px;
+    vertical-align: top;
+    width: 31px;
+    height: 28px;
+}
+
+.cUlModText {
+    font-weight: normal;
+    width: calc( 100% - 45px );
+    font-size: 17px;
+    text-align: left;
+    color: #000;
+    padding: 0 0 10px 0;
+    line-height: 30px;
+}
+
+.accesobo {
+    border: 8px dotted red;
+    border-radius: 7px;
+    font-weight: 400;
+    padding: 26px;
+    color: #000;
+    font-size: 20px;
+    line-height: 35px;
+    text-align: center;
+    margin: 0 0 25px 0;
+}
+
+.downArrow {
+    width: 111px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.redspa {
+    color: #EF5030 !important;
+}
+
+.des75 {
+    margin-top: -40px;
+}
+
+.off75 {
+    text-align: center;
+    font-size: 110px !important;
+    font-weight: bold;
+    color: #EF5030 !important;
+    font-family: Poppins;
+}
+
+.off75 span {
+    color: #EF5030 !important;
+}
+
+.off75:after {
+    content: "";
+    background: url(../img/regalo2.webp) no-repeat;
+    background-size: 88px 110px;
+    margin-top: 20px;
+    margin-left: 0px;
+    vertical-align: top;
+    width: 88px;
+    height: 110px;
+    display: inline-block;
+}
+
+.coverImg {
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.coverImg img {
+    width: 100%;
+}
+
+.pagosmonto {
+    color: #000000;
+    margin-top: 40px !important;
+    margin-bottom: 15px;
+    text-shadow: unset;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    font-family: Poppins;
+}
+
+.pagosmonto .upa {
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: normal;
+    font-family: 'Baloo Thambi', sans-serif;
+}
+
+.pagosmonto .ptrought {
+    color: #EF5030 !important;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 80%;
+    font-weight: normal;
+    font-family: 'Baloo Thambi', sans-serif;
+}
+
+.pagosmonto .pnormal {
+    color: #0097a6 !important;
+    font-size: 98px;
+    font-weight: bold;
+    letter-spacing: -5px;
+    display: block;
+    vertical-align: middle;
+    margin-top: -20px;
+    margin-bottom: 0;
+}
+
+.martopcustom0 {
+    margin-top: 0;
+}
+
+.modAction.martopcustom0.callToAction {
+    padding-top: 0px;
+    padding-bottom: 25px;
+}
+
+.modActiontxt {
+    text-align: center;
+    line-height: unset;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.itemscosas {
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.itemscosas .cUlModIcon {
+    margin-top: 6px;
+}
+
+.alicenter {
+    text-align: center;
+}
+
+.asdapagos {
+    margin-top: 0;
+}
+
+.confirmados {
+    letter-spacing: 0px;
+    margin-bottom: 0px;
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.progressBar {
+    background-color: #EBECF1;
+    text-align: center;
+    color: white;
+    border-radius: 6px;
+    box-shadow: 0px 0px 10px #d4bebe;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.myprogressBar {
+    width: 1%;
+    height: inherit;
+    background-color: #EF5030;
+    font-weight: bold;
+    text-align: left;
+    padding: 5px 10px 7px 17px;
+    border-radius: 6px 0 0 6px;
+    font-size: 20px;
+}
+
+.conteTodo {
+    margin: 40px auto;
+}
+
+.conteTodoPagosCu {
+    margin: 0 auto 25px auto;
+    text-align: left;
+    max-width: 419px;
+}
+
+.conteTodoPagosCu ul li {
+    padding: 0;
+    line-height: 29px;
+    font-size: 18px;
+}
+
+.conteUlMod {
+    margin: 0;
+}
+
+.back1080 {
+    padding: 0 10px;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 1100px;
+}
+
+.itemBenefis {
+    border: 1px solid rgb(0, 151, 166);
+    width: 21%;
+    display: inline-block;
+    margin-right: 10px;
+    border-radius: 10px;
+    padding: 15px 7px;
+    vertical-align: bottom;
+    margin-bottom: 50px;
+}
+
+.itemIcon {
+    width: 60px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.itemInfo {
+    width: calc( 100% - 75px );
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+}
+
+.itemTitle {
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.itemContent {
+    color: #000;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.comrasegura {
+    width: 37px;
+}
+
+.comrasegura img {
+    width: inherit;
+}
+
+.itemInfo {
+    width: calc( 100% - 75px );
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+}
+
+
+.pricesectionlast .alert.alert-warning {
+    padding: 30px 45px 35px 45px;
+    margin: 0px 0px 20px 0px;
+    font-size: 20px;
+    position: relative;
+    color: #000;
+    line-height: 34px;
+}
+
+
+.pricesectionlast .alert:before {
+    content: "";
+    left: -14px;
+}
+
+.cudisponi {
+    margin-top: 8px;
+    font-size: 24px;
+}
+
+
+/* Fin seccion "Beneficios y precios" */
+
+
+/* Inicio seccion quieres dar un vistazo */
+
+#como-es-el-curso-por-dentro.videodentro, #adoption.videodentro {
+    padding: 60px 0 60px 0;
+    background-color: #fff;
+}
+
+#adoption.videodentro {
+    background-color: #ffefd5;
+}
+
+#como-es-el-curso-por-dentro.videodentro h3, #adoption.videodentro h3 {
+    font-size: 40px;
+    margin-bottom: 0;
+    text-transform: inherit;
+}
+
+#como-es-el-curso-por-dentro.videodentro .boxShadowVideo, #adoption.videodentro .boxShadowVideo {
+}
+
+#como-es-el-curso-por-dentro.videodentro .section-heading, #adoption.videodentro .section-heading {
+    margin-bottom: 35px;
+}
+
+/* Fin seccion quieres dar un vistazo */
+
+/* Inicio seccion "diana nos muestra" */
+
+#dianaTesti.dianaTestiClass {
+    padding: 60px 0 60px 0;
+    background-color: #ffefd5;
+}
+
+#dianaTesti.dianaTestiClass h3 {
+    font-size: 38px;
+    margin-bottom: 0;
+    text-transform: inherit;
+}
+
+#dianaTesti.dianaTestiClass .boxShadowVideo {
+}
+
+#dianaTesti.dianaTestiClass .section-heading {
+    margin-bottom: 35px;
+}
+
+#dianaTesti.dianaTestiClass .section-heading p {
+    font-size: 20px;
+    margin: 15px 0 50px 0;
+}
+
+/* Fin seccion "diana nos muestra" */
+
+
+/* Inicio seccion "garantia" */
+
+.bajadaLograrGarantia {
+    padding: 0 !important;
+}
+
+.bajadaLograrGarantia .sub-header {
+    border-radius: unset !important;
+    font-size: 80px;
+    padding: 50px 40px 80px 40px;
+    margin-bottom: 0;
+    text-align: center;
+    border-radius: 20px;
+    color: #fff;
+    border-bottom: 0 none !important;
+    background: #000;
+    background-image: url("../img/pattern.png");
+    background-size: auto;
+}
+
+.bajadaLograrGarantia .sub-header h3 {
+    color: #fff;
+    font-size: 34px;
+    text-transform: initial;
+    letter-spacing: 1px;
+    max-width: 767px;
+    text-align: center;
+    margin: 0 auto 10px auto;
+}
+
+.bajadaLograrGarantia .sub-header .btn {
+    font-size: 29px;
+    text-transform: capitalize;
+}
+
+.bajadaLograrGarantia .sub-header p {
+    font-family: 'Lato', sans-serif;
+    padding: 0;
+    font-size: 17px;
+    max-width: 857px;
+    font-weight: normal;
+    text-align: center;
+    line-height: 30px;
+    margin: 0 auto;
+    letter-spacing: 0;
+}
+
+.bajadaLograrGarantia .sub-header p span {
+    font-family: 'Baloo Thambi', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+.bajadaLograrGarantiaSec {
+    border-radius: unset;
+    padding: 20px 0 45px 0;
+    background-color: #ffefd5;
+}
+
+.bajadaLograrGarantiaSec .backOrange {
+    background: #ef5030;
+    color: #fff;
+}
+
+.bajadaLograrGarantiaSec .backgarancont {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    box-shadow: 0px 0px 10px #5f5959;
+    margin-top: -74px;
+    margin-bottom: 40px;
+    background-image: url("../img/pattern.png");
+    background-size: auto;
+}
+
+.bajadaLograrGarantiaSec .garatit {
+    font-size: 34px;
+    font-weight: bold;
+    line-height: 48px;
+    width: 96%;
+    margin: 0 auto;
+    font-family: 'Baloo Thambi', sans-serif;
+    text-transform: inherit;
+    color: #fff;
+    letter-spacing: 1.4px;
+}
+
+.bajadaLograrGarantiaSec .garatitimg {
+    margin: 20px auto 0px auto;
+    width: 250px;
+}
+
+
+.bajadaLograrGarantiaSec .gatpa {
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 50px;
+    line-height: 32px;
+    width: 94%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bajadaLograrGarantiaSec .gar7 {
+    font-size: 50px;
+    line-height: 56px;
+    text-transform: inherit;
+    color: #fff;
+    font-family: 'Baloo Thambi', sans-serif;
+    letter-spacing: 1.4px;
+}
+
+.bajadaLograrGarantiaSec .letpe {
+    font-weight: bold;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+
+/* Fin seccion "garantia" */
+
+
+/* Inicio seccion "testimonials" */
+
+#testimonials .section-heading h3 {
+    font-size: 45px;
+}
+
+#testimonials .review .review-caption h4 {
+    font-size: 20px;
+    margin: 0;
+    font-family: 'Baloo Thambi', sans-serif;
+    color: #000;
+    letter-spacing: -0.4px;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-transform: uppercase;
+}
+
+
+/* Fin seccion "testimonials" */
+
+
+
+/* Inicio seccion "Preguntas Frecuentes" */
+
+#about-index.frecup .section-heading h3 {
+    font-size: 40px;
+    margin-bottom: 0;
+    text-transform: inherit;
+}
+
+#about-index.frecup {
+    padding: 60px 0px 60px 0px;
+    background-color: #ffefd5;
+}
+
+#about-index.frecup .panel-heading a,
+.containerMobile768 .panel-heading a,
+#elements.contenidoPrograma .panel-heading a {
+    cursor: pointer;
+}
+
+#about-index.frecup .panel-group .panel.active .panel-heading [data-toggle="collapse"]:after,
+.containerMobile768.panel-group .panel.active .panel-heading [data-toggle="collapse"]:after,
+#elements.contenidoPrograma .panel-group .panel.active .panel-heading [data-toggle="collapse"]:after {
+    transform: rotate(0deg);
+}
+
+#about-index.frecup .panel-group .panel.active .panel-heading a,
+#elements.contenidoPrograma .panel-group .panel.active .panel-heading a {
+    background-color: #EF5030;
+}
+
+#elements.contenidoPrograma .panel-group .panel.active .panel-heading a {
+    background-color: #EF5030 !important;
+}
+
+.containerMobile768.panel-group .panel.active .panel-heading a,
+.containerMobile768.panel-group .panel .panel-heading a:hover,
+.containerMobile768.panel-group .panel .panel-heading a.collapsed,
+#elements.contenidoPrograma .panel-group .panel.active .panel-heading a,
+#elements.contenidoPrograma .panel-group .panel .panel-heading a:hover,
+#elements.contenidoPrograma .panel-group .panel .panel-heading a.collapsed {
+    background-color: #108896;
+}
+
+.containerMobile768.panel-group .panel-heading .accordion-toggle,
+#elements.contenidoPrograma .panel-group .panel-heading .accordion-toggle {
+    position: relative;
+    padding-right: 40px;
+    padding-left: 10px;
+}
+
+.containerMobile768.panel-group .panel-heading .accordion-toggle br,
+#elements.contenidoPrograma .panel-group .panel-heading .accordion-toggle br {
+    display: none;
+}
+
+.containerMobile768.panel-group .panel-heading .accordion-toggle:after,
+#elements.contenidoPrograma .panel-group .panel-heading .accordion-toggle:after {
+    display: block;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    right: 10px;
+    margin: auto;
+    width: 20px;
+    height: 20px;
+}
+
+/* Fin seccion "Preguntas Frecuentes" */
+
+
+/* Inicio seccion "PROOF" */
+
+.fixed-proof {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100000;
+}
+
+.pop-proof {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    position: relative;
+    border: 1px solid rgba(216,217,226,.5);
+    box-shadow: 10px 20px 40px 0 rgba(36,35,40,0.1);
+    padding: 0 0 0 6px;
+    height: 68px;
+    background-color: #fff;
+    width: 270px;
+    margin: 0 0 10px 10px;
+    border-radius: 50px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: -80px;
+    z-index: 1000000;
+}
+
+.pull-left {
+    vertical-align: middle;
+    display: block;
+    width: 56px;
+    height: 56px;
+}
+
+.img-proof {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 10px;
+}
+
+.img-proof img {
+    vertical-align: top;
+    margin-left: 0;
+    padding-top: 0;
+    width: 100%;
+}
+
+.top-proof {
+    font-family: 'Baloo Thambi', sans-serif;
+    text-align: left;
+    padding-right: 0;
+}
+
+.peopleViewing {
+    background: #ef5030;
+    height: -webkit-fill-available;
+    width: 100%;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+    padding-top: 4px;
+    border: 8px solid #ccc;
+}
+
+.title-proof {
+    font-size: 12px;
+    font-family: 'Lato', sans-serif;
+    display: inline-block;
+    margin-left: 0;
+    margin-bottom: 0px;
+    padding: 0;
+    line-height: unset;
+    font-weight: normal;
+    color: #000000;
+    letter-spacing: 0.2px;
+}
+
+.title-proof .racaper {
+    width: 18px !important;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.title-proof .racaperemprend {
+    display: inline-block;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+}
+
+.instiproff {
+    margin-top: 0px;
+    margin-bottom: 2px;
+    font-weight: 200;
+    color: #000000;
+    line-height: 14px;
+    font-family: 'Baloo Thambi', sans-serif;
+    font-size: 15px !important;
+    letter-spacing: -0.6px;
+}
+
+.what-proof {
+    line-height: unset;
+    font-size: 10px;
+    padding-bottom: 4px;
+    vertical-align: text-top;
+    font-weight: normal;
+    font-family: 'Lato', sans-serif;
+    color: #000000;
+    letter-spacing: 0.2px;
+}
+
+.what-proof img {
+    vertical-align: top;
+    margin-left: 3px;
+    padding-top: 2px;
+}
+
+/* Fin seccion "PROOF" */
+
+
+
+/* Inicio Nav Timer CSS */
+
+body .noTimerNoNav .slide2 {
+    padding: 20px 0 40px 0;
+}
+
+body .hasTimerNav .slider2 {
+    padding: 90px 0 0 0;
+}
+
+body nav.hasTimerNavInNav {
+    top: 103px;
+}
+
+body nav.hasTimerNavInNav2 {
+    top: 0;
+}
+
+body nav.hasTimerNavInNav2 + .slider-container2 .slide2 {
+    padding: 100px 0 40px 0;
+}
+
+
+#adoption.quienLograr .col-md-5.imgDiana {
+    margin-top: -105px;
+}
+
+#adoption.quienLograr .col-md-5.imgDiana img {
+    width: 100%;
+}
+
+/* Fin Nav Timer CSS */
+
+/* Inicio HasRecibidoUnDescuento */
+
+
+/* Fin HasRecibidoUnDescuento */
+
+.recides {
+    width: auto;
+    position: fixed;
+    right: 10px;
+    z-index: 1000;
+    top: 0;
+    display: none;
+}
+
+.recides .alert.alert-success {
+    position: relative;
+}
+
+.recides .alert.alert-success .close {
+    position: absolute;
+    top: 5px;
+    right: 12px;
+}
+
+.recides .alert.alert-success:before {
+    display: none;
+}
+
+/* Inicio Responsive */
+
+@media (max-width: 1360px) {
+
+    .cupCakes {
+        display: none;
+    }
+}
+
+@media (max-width: 1199px) {
+
+    #stats .container {
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+
+    #pricing .price-table .col-lg-4 {
+        width: 33.33333333%;
+    }
+
+    #elements.contenidoPrograma ul {
+        width: auto;
+    }
+
+    #adoption.quienLograr .container .row {
+        display: flex;
+        align-items: center;
+    }
+
+    .slide__text2 {
+        max-width: 992px;
+    }
+}
+
+
+@media (max-width: 1100px) {
+
+    .slide__text2 {
+        padding-right: 15px;
+        padding-left: 15px;
+        max-width: unset;
+    }
+
+    .ribbons50off {
+        top: -54px;
+        left: -16px;
+    }
+
+    #stats.contenidoAprender {
+        background-image: unset;
+        animation: unset;
+        animation-direction: unset;
+        background-repeat: unset;
+    }
+
+    #stats.contenidoAprender .container {
+        padding: 0 15px;
+        margin: 0 auto;
+        max-width: 767px;
+        width: 100%;
+    }
+
+    #stats.contenidoAprender .container .col-lg-9 {
+        width: 100%;
+    }
+
+    #about-index.frecup {
+        padding: 60px 0px 15px 0px;
+    }
+
+    #about-index.frecup .row .col-md-6.col-lg-5 {
+        display: none;
+    }
+
+    #about-index.frecup .row .col-md-6 {
+        width: 100%;
+    }
+
+    #testimonials.pages {
+        padding: 60px 0 60px;
+    }
+
+    .bajadaVideo .sub-header h2 {
+        font-size: 22px;
+        max-width: unset;
+        line-height: 36px;
+    }
+
+    .bajadaVideo .sub-header h2 span {
+        font-size: 26px;
+    }
+
+    section.pages {
+        padding: 60px 0 60px;
+    }
+
+    #adoption.quienLograr {
+        padding: 60px 0 30px;
+    }
+
+    #adoption.quienLograr .section-heading {
+        margin-bottom: 0 !important;
+    }
+}
+
+@media (max-width: 1060px) {
+
+    #costura-canina-y-felina-4 {
+        margin: 0 auto 60px auto;
+        text-align: center;
+        max-width: 586px;
+    }
+
+    #costura-canina-y-felina-4 .back1080.back480Mobile {
+        padding: 0 10px;
+        display: inline-flex;
+        flex-wrap: wrap;
+    }
+
+    #costura-canina-y-felina-4 .back1080.back480Mobile .itemBenefis {
+        width: calc( 50% - 10px );
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    #costura-canina-y-felina-4 .back1080.back480Mobile .itemBenefis:nth-of-type(2),
+    #costura-canina-y-felina-4 .back1080.back480Mobile .itemBenefis:nth-of-type(4) {
+        margin-right: 0;
+    }
+
+    .recides {
+    }
+
+    .recides .alert.alert-success {
+        font-size: 14px;
+        padding: 16px;
+        border-radius: 10px;
+    }
+
+    .recides .alert.alert-success .close {
+        top: -1px;
+        right: 5px;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .recides {
+        right: unset;
+        top: 22px;
+        left: 10px;
+    }
+
+    .lead2 {
+        font-size: 52px !important;
+        margin: 15px 0 10px 0;
+        line-height: 60px;
+    }
+
+    .lead2.h1newUpdate {
+        margin: 85px 0 10px 0;
+    }
+
+    .bajadaVideo .sub-header h2 {
+        font-size: 22px !important;
+    }
+
+    #adoption.cetifi .section-heading {
+        margin-bottom: 0;
+    }
+
+    #testimonials.pages .section-heading {
+        margin-bottom: 0;
+    }
+
+    #stats.contenidoAprender {
+        padding: 60px 0px 30px 0px;
+    }
+
+    #elements.contenidoPrograma h3,
+    #adoption.cetifi h3,
+    #adoption.quienLograr h3,
+    #pricing .section-heading h3,
+    #stats.contenidoAprender h3 {
+        font-size: 40px !important;
+    }
+
+    #pricing .section-heading {
+        margin-bottom: 40px;
+    }
+
+    #pricing h5 {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    #pricing .price-table header {
+        padding: 30px 20px 10px 20px;
+    }
+
+    #pricing .plan-cost .plan-price {
+        font-size: 22px;
+    }
+
+    .cetifi .res-margin {
+        margin-top: 0;
+    }
+
+    #testimonials .section-heading h3 {
+        font-size: 40px;
+        margin-bottom: 40px;
+    }
+
+    #adoption.cetifi h3 {
+        margin-bottom: 0;
+    }
+
+    #elements.dispo h2.sub-header {
+        font-size: 80px !important;
+    }
+
+    section.pages {
+        padding: 60px 0 30px;
+    }
+
+    #testimonials.pages {
+        padding: 60px 0 30px;
+    }
+
+    #services.tes {
+        padding-bottom: 30px;
+    }
+
+    #about-index.frecup .section-heading h3 {
+        margin-bottom: 30px;
+    }
+
+    .bajadaLograrGarantiaSec .gar7 {
+        font-size: 40px;
+        line-height: 45px;
+    }
+
+    .bajadaLograrGarantiaSec .gatpa {
+        margin-bottom: 30px;
+    }
+
+    #elements.adebe h3.sub-header {
+        font-size: 40px;
+    }
+
+    #services.muestrasAlumnas {
+        padding-bottom: 30px;
+    }
+
+    .bajadaLograrGarantiaSec .backgarancont {
+        margin-bottom: 20px;
+    }
+
+    #adoption.quienLograr .container .res-margin {
+        margin-top: 0;
+    }
+
+    #adoption.quienLograr h3 {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 991px) {
+
+    #elements.contenidoPrograma {
+        padding: 60px 0 30px 0;
+    }
+
+    #elements.contenidoPrograma .container {
+        padding: 0 15px;
+        margin: 0 auto;
+        max-width: unset;
+        width: 100%;
+    }
+
+    #elements.contenidoPrograma .section-heading {
+        margin-bottom: 30px;
+    }
+
+    #adoption.quienLograr .col-md-5 {
+        width: 70%;
+    }
+
+    #adoption.quienLograr .col-md-5 img {
+        width: 100%;
+    }
+
+    #adoption.quienLograr .col-md-7 {
+        width: 100%;
+    }
+
+    #adoption.cetifi .col-md-5 {
+        width: 50%;
+    }
+
+    #adoption.cetifi .col-md-5 img {
+        width: 100%;
+    }
+
+    #adoption.cetifi .col-md-7 {
+        width: 100%;
+    }
+
+    #adoption.cetifi .textint h4,
+    #adoption.quienLograr .textint h4 {
+        font-size: 26px;
+    }
+
+    #adoption.cetifi .pet-adopt-info h6,
+    #adoption.quienLograr .pet-adopt-info h6 {
+        font-size: 16px;
+    }
+
+    #pricing .price-table {
+        display: inline-flex;
+        flex-wrap: wrap;
+    }
+
+    .adebe h3.sub-header p {
+        font-size: 18px;
+        margin: 0 0 10px 0;
+    }
+
+    #adoption.quienLograr .container {
+        padding: 0 15px;
+        margin: 0 auto;
+        max-width: 600px;
+        width: 100%;
+    }
+
+    #adoption.quienLograr .container .row {
+        display: block;
+        align-items: unset;
+    }
+
+    #adoption.quienLograr .container .row:nth-of-type(1) .col-md-5 {
+        display: none;
+    }
+
+    #adoption.quienLograr .container .row:nth-of-type(1) .col-md-7 {
+        text-align: center;
+    }
+
+    #adoption.quienLograr .container .row:nth-of-type(2) .col-md-5.imgDiana {
+        margin-top: 0;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    #adoption.quienLograr .container .row:nth-of-type(2) .col-md-7 {
+        text-align: left;
+    }
+
+    #adoption.quienLograr .container .row:nth-of-type(2) .col-md-7 .alert {
+        margin: 50px 0 20px 0;
+    }
+
+    .back-to-top {
+        display: none !important;
+    }
+}
+
+@media (max-width: 920px) {
+
+    .container {
+        width: 100%;
+    }
+
+    .lead2 {
+        font-size: 44px !important;
+        line-height: 52px;
+    }
+
+    footer .row.politicasPages {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .section-heading h3:before, .section-heading h3:after, .section-heading h4:before, .section-heading h4:after {
+        background-color: unset;
+        display: none;
+    }
+
+    .section-heading h3, .section-heading h4 {
+        margin-bottom: 5px;
+    }
+
+    #pricing .price-table .col-lg-4 {
+        width: 50%;
+    }
+
+    #adoption.cetifi {
+        padding: 20px 0 10px 0;
+    }
+
+    #adoption.cetifi .col-md-5 {
+        width: 70%;
+    }
+
+    #adoption.cetifi .col-md-7 p,
+    .bajadaLograr .sub-header p {
+        line-height: 28px;
+    }
+
+    #elements.dispo h2.sub-header {
+        font-size: 65px !important;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .bajadaLograr .sub-header h2 {
+        font-size: 30px !important;
+        max-width: unset;
+    }
+
+    .bajadaLograr.segundaSection .sub-header p,
+    .bajadaLograr.segundaSection .sub-header p span {
+        font-size: 18px;
+        line-height: 29px;
+    }
+
+    .recides {
+        width: 290px;
+        text-align: center;
+        position: fixed;
+        right: 0;
+        top: 275px;
+        left: 0;
+        margin: 0 auto;
+    }
+
+    .recides .alert.alert-success {
+    }
+
+    .recides .alert.alert-success .close {
+    }
+
+    .ribbons50off {
+        top: -41px;
+    }
+
+    footer p {
+        line-height: 20px;
+    }
+
+    .ribbons50off img {
+        width: 95px;
+        height: auto;
+    }
+
+    p, ul {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+
+    .bajadaVideo .sub-header {
+        padding: 30px 15px;
+    }
+
+    .bajadaVideo .sub-header h2 {
+        line-height: 30px;
+    }
+
+    #stats.contenidoAprender {
+        padding: 45px 0px 30px 0px;
+    }
+
+    #stats.contenidoAprender .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .callToAction {
+        padding-bottom: 40px;
+    }
+
+    .section-heading {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .bajadaLograr .sub-header {
+        padding: 40px 15px;
+    }
+
+    #adoption.cetifi .col-md-7 p, .bajadaLograr .sub-header p {
+        line-height: 26px;
+    }
+
+    .bajadaLograr .sub-header p {
+        font-size: 18px;
+    }
+
+    #stats.contenidoAprender .container {
+        max-width: unset;
+    }
+
+    #elements.contenidoPrograma {
+        padding: 45px 0 30px 0;
+    }
+
+    #elements.contenidoPrograma .containerDesk {
+        display: none;
+    }
+
+    #elements.contenidoPrograma .containerMobile768 {
+        display: block;
+    }
+
+    #elements.contenidoPrograma .containerMobile768.panel-group .panel-heading {
+        text-align: center;
+    }
+
+    .rating-main-box-ratings-qty {
+        margin-top: 25px;
+    }
+
+    #elements.contenidoPrograma .section-heading {
+        margin-bottom: 20px;
+    }
+
+    #adoption.quienLograr {
+        padding: 45px 0 30px;
+    }
+
+    #adoption.quienLograr h3 {
+        margin-bottom: 0;
+    }
+
+    #adoption.quienLograr .textint h4 {
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+
+    .pet-adopt-info {
+        margin-bottom: 15px;
+    }
+
+    #adoption.quienLograr .textint p {
+        line-height: 28px;
+    }
+
+    section.pages {
+        padding: 45px 0 30px;
+    }
+
+    #adoption.cetifi .row h2 {
+        font-size: 28px !important;
+    }
+
+    #adoption.cetifi .col-md-7 {
+        padding-left: 0;
+    }
+
+    #adoption.cetifi .col-md-5 {
+        width: 50%;
+    }
+
+    .pmod, .carIDes p, .ulMod .ulModtoogle .conteUlModPanel .cUlModText .cUlModTextcon p, #opiniones-emprende-cosmetica .owl-carousel .desTesti p, #opiniones-emprende-cosmetica .owl-carousel .nameTesti, .sumarytesttext p {
+        line-height: 24px;
+        font-size: 16px;
+    }
+
+    #elements.adebe h3.sub-header {
+        padding: 21px 15px;
+    }
+
+    #beneficios, #costura-canina-y-felina, #costura-canina-y-felina-2, #costura-canina-y-felina-3, #costura-canina-y-felina-4 {
+        padding: 0 15px;
+    }
+
+    .back768 {
+        max-width: unset;
+        padding: 0;
+    }
+
+    #como-es-el-curso-por-dentro.videodentro .back768, #adoption.videodentro .back768 {
+        padding: 0 15px;
+    }
+
+    #dianaTesti.dianaTestiClass .back768 {
+        padding: 0 15px;
+    }
+
+    .bajadaLograrGarantiaSec .back768 {
+        max-width: calc(100% - 30px);
+    }
+
+    .slide2 {
+        padding: 80px 0 30px 0;
+    }
+
+    body .noTimerNoNav .slide2 {
+        padding: 20px 0 20px 0;
+    }
+
+    .headerdiv .newUpdate {
+        margin: 20px 0 0 0;
+    }
+
+    .lead2.h1newUpdate {
+        margin: 70px 0 20px 0;
+    }
+
+
+    body nav.hasTimerNavInNav2 + .slider-container2 .slide2 {
+        padding: 82px 0 22px 0;
+    }
+
+    body .hasTimerNav .slider2 {
+        padding: 76px 0 0 0;
+    }
+
+    .optesumVid {
+        margin: 30px 0 0px 0;
+    }
+
+    .adebe h3.sub-header p {
+        font-size: 17px;
+        line-height: 24px;
+    }
+
+    .pricesectionlast .alert.alert-warning {
+        padding: 18px 20px 19px 20px;
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .pricesectionlast .alert:before {
+        content: "";
+        margin-top: 0;
+        top: -17px;
+    }
+
+    .off75 {
+        font-size: 90px !important;
+        display: flex;
+        justify-content: center;
+    }
+
+    .off75:after {
+        content: "";
+        background-size: 70px 88px;
+        margin-top: 14px;
+        margin-left: 20px;
+        width: 70px;
+        height: 88px;
+    }
+
+    .des75 {
+        margin-top: -32px;
+    }
+
+    #costura-canina-y-felina-3 .conbor {
+        margin-top: -20px;
+    }
+
+    .bajadaLograrGarantiaSec .garatit {
+        line-height: 40px;
+        width: 100%;
+    }
+
+    .bajadaLograrGarantiaSec .gatpa {
+        margin-top: 30px;
+        line-height: 28px;
+    }
+
+    .bajadaLograrGarantiaSec {
+        padding: 20px 0 30px 0;
+    }
+
+    #testimonials.pages {
+        padding: 45px 0 30px;
+    }
+
+    #testimonials .section-heading h3 {
+        margin-bottom: 30px;
+    }
+
+    #about-index.frecup {
+        padding: 45px 0px 15px 0px;
+    }
+
+    #about-index.frecup .section-heading {
+        margin-bottom: 0;
+    }
+
+    .bajadaLograrGarantiaSec h4.gatpa.gar7 {
+        line-height: 40px;
+    }
+
+    .bajadaLograrGarantiaSec .garatitimg {
+        margin: 30px auto 0px auto;
+        width: 100%;
+    }
+
+    .bajadaLograrGarantiaSec .letpe {
+        font-size: 24px;
+        margin-bottom: 10px !important;
+    }
+
+    .slider-container2 .scroll-down {
+        margin-left: 0;
+        margin-top: 18px;
+        width: 90px;
+        height: 90px;
+    }
+
+    .slider-container2 .conteArrow {
+        height: 90px;
+        width: 90px;
+        margin-top: -39px;
+    }
+
+    #como-es-el-curso-por-dentro.videodentro,
+    #adoption.videodentro,
+    #dianaTesti.dianaTestiClass {
+        padding: 45px 0 45px 0;
+    }
+
+    .bajadaLograrGarantia .sub-header {
+        padding: 35px 15px 68px 15px;
+    }
+
+    .bajadaLograrGarantia .sub-header h3 {
+        font-size: 26px;
+        max-width: unset;
+        margin: 0 auto 15px auto;
+    }
+
+    #elements.dispo h2.sub-header {
+        padding: 26px 15px;
+    }
+
+    #costura-canina-y-felina-3 {
+        margin-top: 45px !important;
+    }
+
+    #costura-canina-y-felina-3 .itemscosas .pagosmonto {
+        margin-top: 0 !important;
+    }
+}
+
+@media (max-width: 720px) {
+
+    #adoption.cetifi .row {
+        display: block;
+    }
+
+    #adoption.cetifi .col-md-5 {
+        width: 100%;
+    }
+
+    #adoption.cetifi .col-md-5 img {
+        width: 100%;
+        max-width: 354px;
+    }
+
+    #adoption.cetifi .col-md-7 {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        text-align: center;
+        padding-top: 15px;
+    }
+
+    .bajadaVideo .sub-header h2 span {
+        display: block;
+        margin-top: 20px;
+    }
+
+    .adebe h3.sub-header p .blockMobile {
+        display: block;
+    }
+
+    #adoption.cetifi .textint p span {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    #adoption.cetifi .textint p span:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .carItem {
+        max-width: unset;
+        margin: 0px auto 20px auto;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+    }
+
+    .carItem .checkItem {
+        display: block;
+        width: 35px;
+        padding-top: 10px;
+    }
+
+    .carItem .contentItem {
+        width: auto;
+        padding-left: 10px;
+    }
+
+    #elements.dispo h2.sub-header {
+        font-size: 50px !important;
+    }
+
+    #elements.dispo h2.sub-header p {
+        margin: -5px 0 0 0;
+    }
+
+    .headerdiv.cutomheaderdiv.yorkshireTerrier .subtitIcon {
+        max-width: unset;
+    }
+
+    .bajadaLograr.segundaSection .sub-header p span {
+        display: block;
+        margin-top: 15px;
+        font-weight: bold;
+    }
+
+    .bajadaLograr.segundaSection.finaCur .sub-header p span {
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-size: 115%;
+    }
+
+    #adoption.quienLograr .textint h4 {
+        margin-bottom: 30px;
+    }
+
+    .lead2.h1newUpdate {
+        margin: 60px 0 20px 0;
+    }
+
+    .peopleseeing {
+        padding: 14px 0 12px 0;
+    }
+
+    .peopleseeingInt {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 670px) {
+
+    .lead2 {
+        font-size: 40px !important;
+        line-height: 47px;
+        margin: 15px 0 25px 0;
+    }
+
+    .subtitIcon {
+        width: 90%;
+        margin: 0 auto;
+        max-width: 366px;
+    }
+
+    .subtitIcon i {
+        font-size: 50px;
+        margin-right: 20px;
+    }
+
+    .subtitIcon .emprendto {
+        text-align: left;
+        font-size: 20px !important;
+        line-height: 24px;
+    }
+
+    .slide2 {
+        padding: 80px 0 25px 0;
+    }
+
+    .optesumVid {
+        margin: 25px 0 0px 0;
+    }
+
+    .headerdiv.cutomheaderdiv .subtitIcon.ofexl {
+        margin-bottom: 15px;
+    }
+
+    .headerdiv.cutomheaderdiv .subtitIcon.ofexl i {
+        margin-right: 10px;
+    }
+
+    #elements.dispo h2.sub-header {
+        font-size: 52px !important;
+    }
+
+    .optesum.todo199 {
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    #pricing .price-table .col-lg-4 {
+        width: 100%;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+
+    .dispo h2.sub-header p {
+        margin: 3px 0 0 0;
+    }
+
+    .bajadaLograrGarantiaSec .garatit {
+        font-size: 26px;
+        line-height: 34px;
+    }
+
+    .bajadaLograrGarantiaSec h4.gatpa.gar7 {
+        line-height: 34px;
+        font-size: 32px;
+    }
+
+    .bajadaVideo .sub-header h2 {
+        line-height: 34px;
+    }
+
+    .bajadaVideo .sub-header h2 span {
+        font-size: 24px;
+    }
+
+    #elements.dispo h2.sub-header {
+        font-size: 45px !important;
+    }
+
+    #elements.dispo h2.sub-header p {
+        letter-spacing: 0.4px;
+        font-size: 20px;
+        margin: 0;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .redspa {
+        display: block
+    }
+
+    .optesum.todo199 {
+        margin-bottom: 5px;
+    }
+
+    .optesum.lastUpdate .redspa {
+        margin-top: -10px;
+    }
+
+    .confirmados .redspa {
+        display: initial;
+    }
+
+    .myprogressBar {
+        font-size: 17px;
+    }
+
+    .optesumVid {
+        flex-direction: column-reverse;
+        margin: 15px 0 0px 0;
+    }
+
+    .optesumVid .fconLover {
+        width: 94%;
+    }
+
+    .optesumVid .faltu {
+        margin-left: 0;
+        width: 100%;
+        margin-bottom: 5px;
+        text-align: center;
+        font-size: 22px;
+        font-weight: bold;
+        text-transform: none;
+        font-family: 'Baloo Thambi', sans-serif;
+    }
+
+    .optesumVid .faltu u {
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 520px) {
+
+    .lead2 {
+        font-size: 38px !important;
+        line-height: 43px;
+    }
+
+    .cUlModIcon {
+        margin-top: 2px;
+    }
+
+    .panel-body {
+        padding: 0;
+    }
+
+    .bajadaVideo .sub-header h2 {
+        line-height: 29px;
+    }
+
+    .dispo h2.sub-header p {
+        margin: -3px 0 0 0;
+        letter-spacing: 0.4px;
+    }
+
+    #elements.dispo h2.sub-header {
+        font-size: 60px !important;
+    }
+
+    #pricing .section-heading .blockMobile {
+        display: block;
+    }
+
+    #services.tes .section-heading .blockMobile {
+        display: block;
+    }
+
+    .modActiontxt .blockMobile {
+        display: none;
+    }
+
+    .modActiontxt {
+        margin-top: 5px;
+    }
+
+    .bajadaVideo .modActiontxt {
+        margin-top: -4px;
+    }
+
+    .bajadaVideo .sub-header .btn, .btnAction,
+    .callToAction .btnAction {
+        font-size: 23px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: 100%;
+        max-width: 380px;
+    }
+
+    .callToAction .btnAction.specialFOnt {
+        font-size: 40px;
+        max-width: 450px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .off75 {
+        font-size: 76px !important;
+    }
+
+    .off75:after {
+        content: "";
+        background-size: contain;
+        margin-top: 13px;
+        width: 60px;
+        height: 75px;
+    }
+
+    #services.muestrasAlumnas .section-heading p,
+    #elements.contenidoPrograma .section-heading p,
+    #services.tes .section-heading p,
+    #pricing .section-heading p,
+    #como-es-el-curso-por-dentro.videodentro .section-heading p,
+    #adoption.videodentro .section-heading p,
+    #dianaTesti.dianaTestiClass .section-heading p {
+        line-height: 24px;
+    }
+
+    ul.custom li {
+        padding: 3px 0;
+    }
+
+    #costura-canina-y-felina-3 .conteUlMod,
+    #costura-canina-y-felina-2 .conteUlMod {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        margin-bottom: 18px;
+    }
+
+    #costura-canina-y-felina-3 .conteUlMod .cUlModIcon,
+    #costura-canina-y-felina-2 .conteUlMod .cUlModIcon {
+        margin-top: 5px;
+    }
+
+
+    #costura-canina-y-felina-3 .cUlModText {
+        padding: 0;
+        line-height: 24px;
+    }
+
+    #costura-canina-y-felina-2 .cUlModText {
+        padding: 0;
+        line-height: 24px;
+    }
+
+    #elements.dispo h2.sub-header {
+        font-size: 42px !important;
+    }
+
+    #dianaTesti.dianaTestiClass h3 {
+        font-size: 33px;
+    }
+
+    #dianaTesti.dianaTestiClass .section-heading p {
+        margin-top: 10px;
+    }
+
+    #dianaTesti.dianaTestiClass .section-heading p b {
+        display: block;
+    }
+
+    .headerdiv.cutomheaderdiv.yorkshireTerrier .subtitIcon.ofexl .emprendto.descubreal b {
+        display: block;
+        font-size: 16px !important;
+    }
+
+    .headerdiv.cutomheaderdiv.yorkshireTerrier .subtitIcon.ofexl i {
+        font-size: 38px;
+    }
+
+    .headerdiv.cutomheaderdiv.yorkshireTerrier .subtitIcon.ofexl p {
+        line-height: 22px;
+    }
+
+    #como-es-el-curso-por-dentro.videodentro, #adoption.videodentro {
+        padding: 10px 0 45px 0;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .containerMobile768.panel-group .panel-heading .accordion-toggle br {
+        display: block;
+    }
+
+    .cUlModIcon {
+        margin-top: 4px;
+    }
+
+    .lead2 {
+        text-transform: initial;
+    }
+
+    .headerdiv .newUpdate span {
+        display: block
+    }
+
+    .subtitIcon {
+        width: 96%;
+        margin: 0 auto;
+        max-width: 320px;
+    }
+
+    .subtitIcon i {
+        font-size: 50px;
+        margin-right: 15px;
+    }
+
+    .subtitIcon .emprendto {
+        font-size: 17px !important;
+        line-height: 24px;
+    }
+
+    .headerdiv.cutomheaderdiv.beagleTi .subtitIcon {
+        max-width: unset;
+    }
+
+    #adoption.quienLograr .textint h4 {
+        font-size: 23px;
+    }
+
+    .bajadaVideo .modActiontxt {
+        margin-top: -10px;
+    }
+
+    .bajadaVideo .sub-header .btn, .btnAction, .callToAction .btnAction {
+        margin: 5px 0;
+    }
+
+    .modActiontxt {
+        margin-top: -1px;
+    }
+
+    .dispo h2.sub-header p {
+        letter-spacing: 0.4px;
+    }
+
+    #elements.contenidoPrograma .container .col-md-6 {
+        padding: 0;
+    }
+
+    .dispo h2.sub-header p {
+        font-size: 20px;
+    }
+
+    #adoption.quienLograr .col-md-7,
+    #adoption.quienLograr .col-md-5 {
+        padding: 0;
+    }
+
+    #pricing .price-table .col-lg-4 {
+        padding: 0;
+    }
+
+    #adoption.cetifi .col-md-5,
+    #adoption.cetifi .col-md-7 {
+        padding: 0;
+    }
+
+    #adoption.cetifi .row {
+        margin: 0;
+    }
+
+    #como-es-el-curso-por-dentro.videodentro .section-heading,
+    #adoption.videodentro .section-heading,
+    #dianaTesti.dianaTestiClass .section-heading {
+        padding: 0;
+    }
+
+    .callToAction {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .alert.alert-success:before, .alert.alert-warning:before {
+        content: "";
+        height: 40px;
+        width: 40px;
+        margin-top: -26px;
+    }
+
+    #costura-canina-y-felina-4 .back1080.back480Mobile {
+        padding: 0;
+        display: block;
+        flex-wrap: unset;
+        max-width: 300px;
+    }
+
+    #costura-canina-y-felina-4 .back1080.back480Mobile .itemBenefis {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    #testimonials.pages .section-heading {
+        padding: 0;
+    }
+
+    #testimonials.pages .owl-carousel .owl-item .col-xs-12 {
+        padding: 0;
+    }
+
+    #about-index.frecup .section-heading {
+        padding: 0;
+    }
+
+    #about-index.frecup .row .col-md-6 {
+        padding: 0;
+    }
+
+    .pop-proof {
+        margin: 0 0 5px 5px;
+    }
+
+    #adoption.quienLograr .container .row {
+        margin: 0;
+    }
+
+    #adoption.quienLograr .container .row:nth-of-type(2) .col-md-7 .alert {
+        position: relative;
+        text-align: center;
+        padding: 15px;
+    }
+
+    #adoption.quienLograr .container .row:nth-of-type(2) .col-md-7 .alert:before {
+        content: "";
+        height: 40px;
+        width: 40px;
+        margin-top: 0;
+        top: -17px;
+        left: -14px;
+    }
+
+    #adoption.quienLograr .container .row:nth-of-type(2) .col-md-7 .alert p {
+        line-height: 25px;
+    }
+
+    #costura-canina-y-felina-3 .alert.alert-warning:before {
+        margin-top: 0;
+    }
+
+    .callToAction .btnAction.specialFOnt {
+        font-size: 32px;
+        max-width: 390px;
+    }
+
+    .bajadaVideo .sub-header h2 {
+        line-height: 26px;
+    }
+
+    #pricing h5 {
+        font-size: 28px;
+    }
+
+    .bajadaLograrGarantiaSec .gatpa {
+        line-height: 26px;
+    }
+
+    #adoption.quienLograr .pet-adopt-info {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-left: 15px;
+    }
+
+    #adoption.quienLograr .pet-adopt-info h6 {
+        margin: 0;
+    }
+
+    .bajadaLograrGarantiaSec h4.garatit {
+        font-size: 24px;
+        line-height: 29px;
+        width: 94%;
+    }
+
+    .bajadaLograrGarantiaSec .garatitimg {
+        width: 94%;
+    }
+
+    #elements.dispo h2.sub-header {
+        font-size: 50px !important;
+    }
+
+    #about-index.frecup .row {
+        margin: 0 -10px;
+    }
+
+    .conteTodoPagosCu {
+        margin: 0 auto 25px auto;
+        max-width: unset;
+        text-align: center;
+    }
+
+    .conteTodoPagosCu ul li {
+        padding: 0;
+        line-height: 28px;
+        font-size: 16px;
+    }
+
+    .pagosmonto .pnormal {
+        font-size: 80px;
+    }
+
+    #services.tes #owl-reviews1 .col-md-12,
+    #services.muestrasAlumnas #owl-featured .col-md-12 {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .bajadaLograr.segundaSection.finaCur {
+        display: none;
+    }
+
+    .adebe h3.sub-header p {
+        display: none;
+    }
+
+    #beneficios .carItem {
+        justify-content: left;
+    }
+
+    #beneficios .carIDes p {
+        display: none;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .optesum.todo199 .redspa {
+        display: inline;
+    }
+
+    .cUlModIcon {
+        margin-top: 6px;
+    }
+}
+
+@media (max-width: 440px) {
+
+    .off75:after {
+        display: none;
+    }
+
+    .off75 {
+        font-size: 80px !important;
+        letter-spacing: -2px;
+    }
+
+    .modAction.martopcustom0.callToAction {
+        padding: 0;
+    }
+
+    .itemscosas {
+        margin: 20px auto 0 auto;
+    }
+
+    .itemscosas .alicenter img {
+        width: 100%;
+    }
+
+    .adebe h3.sub-header p .blockMobile {
+        display: inline;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .ribbons50off img {
+        width: 69px;
+        height: auto;
+    }
+
+    .ribbons50off {
+        top: -30px;
+    }
+
+    #elements.dispo h2.sub-header {
+        font-size: 50px !important;
+    }
+
+    .dispo h2.sub-header p {
+        font-size: 18px;
+    }
+
+    .bajadaVideo .sub-header .btn, .btnAction, .callToAction .btnAction {
+        font-size: 22px;
+        width: 340px;
+        max-width: unset;
+    }
+
+    #pricing .price-table header {
+        padding: 25px 20px 10px 20px;
+    }
+
+    #pricing .price-table .plan {
+        padding: 0px 0px 25px;
+    }
+
+    .callToAction .btnAction.specialFOnt {
+        font-size: 30px;
+        max-width: unset;
+        width: 100%;
+    }
+
+    .lead2 {
+        font-size: 35px !important;
+        line-height: 40px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    #adoption.quienLograr .pet-adopt-info {
+        margin-bottom: 10px;
+        flex-flow: column;
+        margin-left: 15px;
+    }
+
+    #adoption.quienLograr .pet-adopt-info h6 {
+        margin: 0 0 3px 0;
+    }
+
+
+    .backRojo {
+        display: block;
+        padding: 2px 8px 6px 0;
+        text-align: center;
+    }
+
+    .countCupos {
+        margin-right: 0;
+        margin-bottom: 2px;
+    }
+
+    #timer {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .days, .hours, .minutes, .seconds {
+        padding: 0px 6px 4px 6px;
+        width: 42px;
+    }
+
+    .numbers {
+        font-size: 24px;
+        letter-spacing: 0px;
+        height: 27px;
+    }
+
+    .lead2 {
+        line-height: 40px;
+        font-size: 38px !important;
+        margin: 15px 0 15px 0;
+    }
+
+    .subtitIcon {
+        width: 100%;
+    }
+
+    .subtitIcon i {
+        font-size: 40px;
+    }
+
+    .subtitIcon .emprendto {
+        font-size: 17px !important;
+        line-height: 20px;
+    }
+
+    .slider-container2 .conteArrow {
+        height: 80px;
+        width: 80px;
+    }
+
+    .slider-container2 .scroll-down {
+        margin-top: 11px;
+        width: 75px;
+        height: 75px;
+    }
+
+    .ribbons50off {
+        top: 0;
+        left: 0;
+    }
+
+    .ribbons50off img {
+        width: 77px;
+    }
+
+    .optesumVid .cantv {
+        font-size: 20px;
+        width: 70px;
+        letter-spacing: 0.4px;
+        padding-left: 14px;
+        padding-right: 13px;
+        margin: 0 8px;
+    }
+
+    .optesumVid {
+        font-size: 14px;
+    }
+
+    .optesumVid .faltu {
+        font-size: 20px;
+    }
+
+    #elements.contenidoPrograma h3, #adoption.cetifi h3, #adoption.quienLograr h3, #pricing .section-heading h3, #stats.contenidoAprender h3 {
+        font-size: 32px !important;
+    }
+
+    #services .section-heading h4,
+    #services.tes .section-heading h4 {
+        font-size: 30px;
+    }
+
+    #adoption.quienLograr .textint h4 {
+        font-size: 21px;
+    }
+
+    .opte {
+        line-height: 35px;
+        font-size: 34px;
+    }
+
+    .bajadaLograrGarantiaSec .back768 {
+        max-width: calc(100% - 10px);
+    }
+
+    .callToAction .btnAction.specialFOnt {
+        font-size: 26px;
+    }
+
+    .headerdiv.cutomheaderdiv .subtitIcon.ofexl i {
+        margin-right: 7px;
+    }
+
+    .headerdiv.cutomheaderdiv .subtitIcon.ofexl p {
+        font-size: 13px !important;
+    }
+
+    .conteTodoPagosCu {
+        margin: -6px auto 25px auto !important;
+    }
+
+    .conteTodoPagosCu ul li {
+        font-size: 14px;
+    }
+
+    .pagosmonto .pnormal {
+        font-size: 77px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .lead2 {
+        line-height: 38px;
+        font-size: 34px !important;
+    }
+
+    .bajadaLograr .sub-header h2 {
+        font-size: 25px !important;
+    }
+
+    .bajadaVideo .sub-header .btn, .btnAction, .callToAction .btnAction {
+        font-size: 20px;
+        width: 320px;
+    }
+
+    .ribbons50off img {
+        width: 70px;
+    }
+
+    #elements.dispo h2.sub-header {
+        font-size: 44px !important;
+    }
+
+    #adoption.quienLograr {
+        padding: 30px 0 30px;
+    }
+
+    #adoption.quienLograr h3 {
+        margin-bottom: 6px;
+    }
+
+    .slide__text2 {
+        padding-right: 6px;
+        padding-left: 6px;
+    }
+
+    .section-heading {
+        padding-right: 6px;
+        padding-left: 6px;
+    }
+
+    #stats.contenidoAprender .container {
+        padding: 0 6px;
+    }
+
+    .section-heading {
+        margin-bottom: 30px;
+    }
+
+    #stats.contenidoAprender .section-heading {
+        margin-bottom: 24px;
+    }
+
+    .bajadaLograr .sub-header {
+        padding: 30px 6px;
+    }
+
+    #elements.contenidoPrograma {
+        padding: 30px 0 30px 0;
+    }
+
+    .section-heading h3, .section-heading h4 {
+        margin-bottom: 15px;
+    }
+
+    .bajadaVideo .sub-header {
+        padding: 6px 6px 25px 6px;
+    }
+
+    #stats.contenidoAprender {
+        padding: 30px 0px 15px 0px;
+    }
+
+    #adoption.cetifi .container {
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+
+    #elements.adebe h3.sub-header {
+        padding: 21px 12px;
+    }
+
+    #beneficios, #costura-canina-y-felina, #costura-canina-y-felina-2, #costura-canina-y-felina-3, #costura-canina-y-felina-4 {
+        padding: 0 10px;
+    }
+
+    .pricesectionlast .alert:before {
+        content: "";
+        top: 0;
+        left: 0;
+    }
+
+    .back540 {
+        padding: 0;
+    }
+
+    #como-es-el-curso-por-dentro.videodentro,
+    #adoption.videodentro,
+    #dianaTesti.dianaTestiClass {
+        padding: 30px 0 30px 0;
+    }
+
+    .bajadaVideo .sub-header h2 {
+        font-size: 20px !important;
+        letter-spacing: 0.4px;
+    }
+
+    #costura-canina-y-felina-4 {
+        margin: 0 auto 30px auto;
+    }
+
+    #stats .cUlModText {
+        font-size: 17px;
+    }
+
+    p, ul {
+        font-size: 17px;
+    }
+
+    .bajadaLograrGarantiaSec .backgarancont {
+        padding-top: 22px;
+        padding-bottom: 22px;
+        margin-top: -75px;
+    }
+
+    #about-index.frecup {
+        padding: 30px 0px 15px 0px;
+    }
+
+    #about-index.frecup .section-heading h3 {
+        font-size: 32px;
+    }
+
+    #about-index.frecup .section-heading h3 {
+        margin-bottom: 20px;
+    }
+
+    #testimonials.pages {
+        padding: 30px 0 30px;
+    }
+
+    #testimonials .section-heading h3 {
+        font-size: 32px;
+    }
+
+    #como-es-el-curso-por-dentro.videodentro h3,
+    #adoption.videodentro h3,
+    #dianaTesti.dianaTestiClass h3 {
+        font-size: 34px;
+        margin-bottom: 15px;
+        line-height: 31px;
+    }
+
+    #como-es-el-curso-por-dentro.videodentro .back768,
+    #adoption.videodentro .back768,
+    #dianaTesti.dianaTestiClass .back768 {
+        padding: 0 6px;
+    }
+
+    .bajadaLograrGarantia .sub-header {
+        padding: 30px 10px 59px 10px;
+    }
+
+    .conteTodo {
+        margin: 30px auto 30px auto;
+    }
+
+    .confirmados {
+        margin-top: 20px;
+    }
+
+    .itemscosas {
+        margin: 30px auto 0 auto;
+    }
+
+    .bajadaLograr .sub-header h2 {
+        letter-spacing: 0.4px;
+    }
+
+    .bajadaLograr.segundaSection .sub-header p,
+    .bajadaLograr.segundaSection .sub-header p span {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    #adoption.quienLograr .textint p {
+        line-height: 26px;
+    }
+
+    #adoption.quienLograr .container .row:nth-of-type(2) .col-md-7 .alert:before {
+        content: "";
+        top: 0;
+        left: 0;
+    }
+
+    .pmod, .carIDes p, .ulMod .ulModtoogle .conteUlModPanel .cUlModText .cUlModTextcon p, #opiniones-emprende-cosmetica .owl-carousel .desTesti p, #opiniones-emprende-cosmetica .owl-carousel .nameTesti, .sumarytesttext p {
+        line-height: 24px;
+        font-size: 17px;
+    }
+
+    .carItem .contentItem .carITit {
+        font-size: 24px;
+        line-height: 26px;
+    }
+
+    .opte {
+        line-height: 33px;
+        font-size: 32px;
+    }
+
+    .optesum.todo199 {
+        line-height: 28px;
+    }
+
+    .pricesectionlast .alert.alert-warning {
+        font-size: 17px;
+        line-height: 25px;
+    }
+
+    .bajadaLograrGarantiaSec .gatpa {
+        line-height: 24px;
+        font-size: 17px;
+    }
+
+    .bajadaLograrGarantiaSec .garatitimg img {
+        width: 200px;
+    }
+
+    .panel-body p {
+        line-height: 24px;
+    }
+
+    #adoption.quienLograr .container .row:nth-of-type(2) .col-md-7 .alert:before {
+        content: "";
+        top: -6px;
+        left: -6px;
+    }
+
+    .pricesectionlast .alert:before {
+        content: "";
+        top: -6px;
+        left: -6px;
+    }
+
+    #dianaTesti.dianaTestiClass h3 {
+        font-size: 30px;
+    }
+
+    .pagosmonto .pnormal {
+        font-size: 67px;
+    }
+
+    #dianaTesti.dianaTestiClass .section-heading p {
+        font-size: 16px;
+        margin: 0 0 38px 0;
+        line-height: 19px !important;
+    }
+}
+
+@media (max-width: 360px) {
+
+    .off75 {
+        font-size: 68px !important;
+    }
+
+    .pagosmonto .pnormal {
+        font-size: 67px;
+    }
+}
+
+@media (max-width: 340px) {
+
+    .bajadaVideo .sub-header .btn, .btnAction, .callToAction .btnAction {
+        width: auto;
+        font-size: 18px;
+    }
+
+    .callToAction .btnAction.specialFOnt {
+        font-size: 25px;
+        padding: 20px 35px;
+    }
+
+    .optesumVid .fconLover {
+        width: 100%;
+    }
+
+    #elements.adebe h3.sub-header {
+        font-size: 36px;
+    }
+
+    .lead2 {
+        line-height: 34px;
+        font-size: 30px !important;
+    }
+
+    .peopleseeingInt {
+        font-size: 13px;
+    }
+
+    .lead2.h1newUpdate {
+        margin: 50px 0 20px 0;
+    }
+}
+
+/* Fin Responsive */
+

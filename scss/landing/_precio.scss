@@ -1,0 +1,572 @@
+section#precio {
+    padding: 0;
+
+    @media (max-width: $break14) {
+        padding: 0 15px;
+    }
+
+    @media (max-width: $break27) {
+        padding: 0 10px;
+    }
+
+
+    > div.oferta50 {
+
+        > p:nth-of-type(1) {
+            margin-bottom: 10px;
+            color: $black;
+            font-family: $baloo-thambi;
+            font-size: 26px;
+            font-weight: 400;
+            line-height: 35px;
+            text-align: center;
+
+            @media (max-width: $break17) {
+                margin-bottom: 25px;
+            }
+
+            @media (max-width: $break20) {
+                margin-bottom: 15px;
+                line-height: 28px;
+            }
+
+            span {
+                color: $color3;
+
+                @media (max-width: $break23) {
+                    display: inline;
+                }
+            }
+        }
+
+        > p:nth-of-type(2) {
+            padding: 30px 45px 35px 45px;
+            margin: 0px 15px 20px 15px;
+            font-size: 20px;
+            position: relative;
+            color: $black;
+            line-height: 34px;
+            background-color: $color15;
+            border: 1px solid transparent;
+            border-radius: 20px;
+
+            @media (max-width: $break14) {
+                padding: 18px 20px 19px 20px;
+                font-size: 18px;
+                line-height: 26px;
+                margin: 0px 0 20px 0;
+            }
+
+            @media (max-width: $break27) {
+                font-size: 17px;
+                line-height: 25px;
+            }
+
+            &:before {
+                content: "";
+                background-image: url(../img/bone.svg);
+                background-repeat: no-repeat;
+                height: 50px;
+                font-family: $flaticon;
+                font-size: 50px;
+                left: -14px;
+                margin-top: -43px;
+                position: absolute;
+                width: 50px;
+
+                @media (max-width: $break14) {
+                    content: "";
+                    margin-top: 0;
+                    top: -17px;
+                }
+
+                @media (max-width: $break22) {
+                    content: "";
+                    height: 40px;
+                    margin-top: 0;
+                    margin-bottom: 10px;
+                    margin-right: 0;
+                    width: 100%;
+                }
+
+                @media (max-width: $break27) {
+                    content: "";
+                    top: -6px;
+                    left: -6px;
+                }
+            }
+        }
+
+        > img {
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            width: 112px;
+        }
+
+        > h3 {
+            color: $black;
+            font-family: $baloo-thambi;
+            font-size: 22px;
+            font-weight: 100;
+            letter-spacing: .2px;
+            margin-top: 20px;
+            line-height: 35px;
+            margin-bottom: 20px;
+            text-align: center;
+
+            .redspa {
+                color: $color3;
+
+                @media (max-width: $break20) {
+                    margin-top: -10px;
+                    display: block;
+                }
+            }
+        }
+
+        > h4 {
+            margin-top: -10px;
+            font-family: $poppins;
+            font-size: 110px;
+            font-weight: 700;
+            text-align: center;
+            color: $color3;
+
+            @media (max-width: $break14) {
+                margin-top: -10px;
+                display: flex;
+                font-size: 90px;
+                justify-content: center;
+            }
+
+            @media (max-width: $break21) {
+                font-size: 76px;
+            }
+
+            @media (max-width: $break24) {
+                font-size: 76px;
+                letter-spacing: -2px;
+            }
+
+            @media (max-width: $break28) {
+                font-size: 68px;
+            }
+
+            &:after {
+                content: "";
+                background: url(../img/regalo2.webp) no-repeat;
+                background-size: 88px 110px;
+                display: inline-block;
+                height: 110px;
+                margin-left: 14px;
+                margin-top: -7px;
+                vertical-align: top;
+                width: 88px;
+
+                @media (max-width: $break14) {
+                    content: "";
+                    background-size: 70px 88px;
+                    height: 88px;
+                    margin-left: 14px;
+                    margin-top: -7px;
+                    width: 70px;
+                }
+
+                @media (max-width: $break21) {
+                    content: "";
+                    background-size: contain;
+                    height: 75px;
+                    margin-left: 14px;
+                    margin-top: -7px;
+                    width: 60px;
+                }
+
+                @media (max-width: $break22) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+
+    > div.generalinfo {
+        @media (max-width: $break14) {
+            margin-top: -20px;
+        }
+
+        > img {
+            width: 100%;
+            margin: 0 auto;
+            max-width: $break14;
+            text-align: center;
+            display: block;
+        }
+
+        > h3 {
+            font-weight: 400;
+            vertical-align: middle;
+            color: $black;
+            font-family: $baloo-thambi;
+            font-size: 28px;
+            letter-spacing: -1px;
+            margin-bottom: 0;
+            margin-top: 40px;
+            text-align: center;
+            text-shadow: unset;
+
+            strike {
+                color: $color3;
+                font-size: 80%;
+            }
+        }
+
+        > h4 {
+            color: $color24;
+            display: block;
+            font-size: 98px;
+            font-weight: 700;
+            letter-spacing: -5px;
+            margin-bottom: 0;
+            margin-top: 0;
+            vertical-align: middle;
+            font-family: $poppins;
+
+            @media (max-width: $break22) {
+                font-size: 80px;
+            }
+
+            @media (max-width: $break26) {
+                font-size: 77px;
+            }
+
+            @media (max-width: $break27) {
+                font-size: 67px;
+            }
+        }
+
+        .main-cta {
+            padding-bottom: 25px;
+            padding-top: 25px;
+            margin-top: 0;
+            text-align: center;
+
+            @media (max-width: $break22) {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            @media (max-width: $break24) {
+                padding: 0;
+                margin: 30px 0;
+            }
+
+            > a {
+                animation: rocking 2s infinite;
+                animation-timing-function: ease-out;
+                background-color: $color3;
+                border: none;
+                border-radius: 25px;
+                box-shadow: inset 9px 0 0 0 $color18;
+                color: $white;
+                cursor: pointer;
+                display: inline-block;
+                font-family: $baloo-thambi;
+                font-size: 40px;
+                font-weight: 400;
+                letter-spacing: 0.1px;
+                line-height: 1em;
+                margin-bottom: 0;
+                margin-top: 10px;
+                padding: 20px 50px;
+                text-align: center;
+                -ms-touch-action: manipulation;
+                touch-action: manipulation;
+                transition: 0.2s;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                vertical-align: middle;
+                white-space: nowrap;
+
+                @media (max-width: $break21) {
+                    font-size: 40px;
+                    max-width: $break23;
+                    width: 100%;
+                    padding: 20px 24px;
+                }
+
+                @media (max-width: $break22) {
+                    font-size: 32px;
+                    max-width: 390px;
+                    margin: 5px 0;
+                }
+
+                @media (max-width: $break25) {
+                    max-width: unset;
+                    width: 100%;
+                }
+
+                @media (max-width: $break26) {
+                    font-size: 26px;
+                }
+
+                @media (max-width: $break29) {
+                    font-size: 25px;
+                    padding: 20px 24px;
+                }
+
+                &:hover {
+                    animation: none;
+                    background-color: $color2;
+                    box-shadow: none;
+                    color: $white;
+                    text-decoration: none;
+                    outline: 0;
+                }
+
+                &:active {
+                    background-image: none;
+                    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+                    box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+                    outline: 0;
+                }
+
+                &:focus {
+                    color: $white;
+                    text-decoration: none;
+                    outline: unset;
+                    outline-offset: unset;
+                }
+            }
+
+            > p {
+                font-size: 16px;
+                font-weight: 700;
+                line-height: unset;
+                text-align: center;
+                margin: 5px auto 0;
+                padding: 0;
+
+                @media (max-width: $break21) {
+                    margin-top: 5px;
+                }
+
+                @media (max-width: $break22) {
+                    margin-top: -1px;
+                }
+            }
+        }
+
+        .formas-de-pago {
+            margin: 0 auto;
+            max-width: $break14;
+            text-align: left;
+            width: 100%;
+
+            @media (max-width: $break24) {
+                margin: 20px auto 0;
+            }
+
+            @media (max-width: $break24) {
+                margin: 30px auto 0;
+            }
+
+            .lista-de-pagos {
+                margin: 34px 0;
+
+                @media (max-width: $break22) {
+                    margin: 20px 0 30px 0;
+                }
+
+                > p {
+                    color: $black;
+                    font-size: 28px;
+                    letter-spacing: -1px;
+                    margin-bottom: 15px;
+                    text-align: center;
+                    text-shadow: unset;
+                    margin: 0;
+                    padding: 0;
+                    font-family: $baloo-thambi;
+                    font-weight: 400;
+                    vertical-align: middle;
+
+                    @media (max-width: $break22) {
+                        font-size: 21px;
+                    }
+                }
+
+                ul {
+                    max-width: 540px;
+                    padding: 0 10px;
+                    text-align: center;
+                    margin: 0 auto;
+                    list-style: none;
+                    font-size: 17px;
+                    line-height: 34px;
+
+                    @media (max-width: $break14) {
+                        font-size: 18px;
+                        line-height: 28px;
+                    }
+
+                    @media (max-width: $break27) {
+                        margin: 0px auto;
+                        padding: 0;
+                        font-size: 17px;
+                    }
+
+                    li {
+                        font-size: 16px;
+                        line-height: 26px;
+                        padding: 3px 0;
+                        color: $color2;
+
+                        @media (max-width: $break21) {
+                            padding: 3px 0;
+                        }
+
+                        &:before {
+                            content: "\f0da";
+                            font-family: $fontAwesome;
+                            padding-right: 7px;
+                        }
+                    }
+                }
+            }
+
+            > img {
+                display: block;
+                margin: 20px auto 0 auto;
+                text-align: center;
+                max-width: $break26;
+
+                @media (max-width: $break24) {
+                    width: 100%;
+                }
+            }
+
+            .oferta50-cupos {
+                color: $black;
+                font-family: $baloo-thambi;
+                font-weight: 400;
+                text-align: center;
+                font-size: 18px;
+                letter-spacing: 0;
+                margin-bottom: 30px;
+                margin-top: 30px;
+
+                @media (max-width: $break27) {
+                    margin-top: 20px;
+                }
+
+                > p:nth-of-type(1) {
+                    margin: 0;
+                }
+
+                #progressbar {
+                    margin: 0 auto;
+                    max-width: 540px;
+                    padding: 0 10px;
+                    background-color: $color25;
+                    border-radius: 6px;
+                    box-shadow: 0 0 10px $color26;
+                    color: $white;
+                    padding-left: 0;
+                    padding-right: 0;
+                    text-align: center;
+                    font-family: $lato;
+
+                    @media (max-width: $break27) {
+                        padding: 0;
+                    }
+
+                    > div {
+                        background-color: $color3;
+                        border-radius: 6px 0 0 6px;
+                        font-size: 20px;
+                        font-weight: 700;
+                        height: inherit;
+                        padding: 5px 10px 7px 17px;
+                        text-align: left;
+                        width: 1%;
+
+                        @media (max-width: $break20) {
+                            font-size: 17px;
+                        }
+                    }
+                }
+
+                > p:nth-of-type(2) {
+                    margin: 5px 0 0 0;
+                    font-size: 24px;
+
+                    .redspa {
+                        color: $color3;
+                    }
+                }
+            }
+
+            .caracteristicas {
+                max-width: 540px;
+                padding: 0 10px;
+                text-align: center;
+                margin: 40px auto 0 auto;
+
+                @media (max-width: $break27) {
+                    padding: 0;
+                    margin: 30px auto 0 auto;
+                }
+
+                > div {
+                    margin: 0;
+
+                    @media (max-width: $break21) {
+                        align-items: start;
+                        display: flex;
+                        justify-content: center;
+                        margin-bottom: 18px;
+                    }
+
+                    p {
+                        color: $black;
+                        font-size: 17px;
+                        font-weight: 400;
+                        line-height: 30px;
+                        padding: 0 0 10px;
+                        text-align: left;
+                        width: calc(100% - 45px);
+                        display: inline-block;
+                        position: relative;
+
+                        @media (max-width: $break21) {
+                            line-height: 24px;
+                            padding: 0;
+                        }
+
+                        &:before {
+                            content: "";
+                            background: url(../img/ico-huella.svg) no-repeat;
+                            background-size: 31px 28px;
+                            position: absolute;
+                            width: 31px;
+                            height: 28px;
+                            left: -40px;
+                            top: 5px;
+
+                            @media (max-width: $break27) {
+                                background-size: 24px 22px;
+                                content: "";
+                                height: 22px;
+                                left: -28px;
+                                width: 24px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

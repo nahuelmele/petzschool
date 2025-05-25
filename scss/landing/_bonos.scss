@@ -1,0 +1,123 @@
+section#bonos {
+    padding: 60px 0 90px;
+
+    @media (max-width: $break6) {
+        padding: 60px 0;
+    }
+
+    @media (max-width: $break9) {
+        padding: 60px 0 30px;
+    }
+
+    @media (max-width: $break14) {
+        padding: 45px 0 30px;
+    }
+
+    > div:nth-of-type(1) {
+        margin-bottom: 50px;
+
+        @media (max-width: $break9) {
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: $break27) {
+            margin-bottom: 24px;
+        }
+
+        h2 {
+            font-size: 45px;
+
+            @media (max-width: $break9) {
+                font-size: 40px;
+            }
+
+            @media (max-width: $break26) {
+                font-size: 32px;
+            }
+        }
+    }
+
+    > div:nth-of-type(2) {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 20px;
+
+        @media (max-width: $break6) {
+            grid-template-columns: auto auto;
+        }
+
+        @media (max-width: $break9) {
+            gap: 15px;
+        }
+
+        @media (max-width: $break18) {
+            grid-template-columns: auto;
+        }
+
+        &:before {
+            display: none;
+        }
+
+        > div {
+            background: $color1;
+            border-radius: 20px;
+            padding: 30px;
+
+            @media (max-width: $break9) {
+                padding: 20px 15px;
+            }
+
+            > div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 5px;
+                text-align: center;
+
+                img {
+                }
+
+                h3 {
+                    color: $color31;
+                    font-family: $baloo-thambi;
+                    font-size: 1.6em;
+                    letter-spacing: -.4px;
+                    margin: 20px 0 0;
+                    text-transform: uppercase;
+                }
+
+                p {
+                    line-height: 24px;
+                    margin: 20px 0 0 0;
+                    padding: 0 15px;
+                    text-align: center;
+
+                    span {
+                        display: block;
+                        font-family: $baloo-thambi;
+                        font-size: 22px;
+                        margin-bottom: 3px;
+                        padding: 0;
+                        color: $color2;
+                    }
+                }
+
+                p[itemprop="priceCurrency"] {
+                    display: block;
+                    vertical-align: middle;
+                    margin: 0;
+
+                    span {
+                        color: $color3;
+                        font-family: $lato;
+                        font-size: 28px;
+                        font-style: normal;
+                        font-weight: 700;
+                        text-decoration: line-through;
+                    }
+                }
+            }
+        }
+    }
+}

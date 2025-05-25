@@ -1,0 +1,135 @@
+#faq {
+    padding: 60px 0;
+
+    @media (max-width: $break6) {
+        padding: 40px 0 40px 0;
+    }
+
+    > div {
+        .section-heading {
+            margin-bottom: 50px;
+
+            @media (max-width: $break6) {
+                margin-bottom: 40px;
+            }
+
+            h2 {
+                font-size: 38px;
+                margin-bottom: 0;
+                text-transform: inherit;
+
+                @media (max-width: $break21) {
+                    font-size: 33px;
+                }
+
+                @media (max-width: $break27) {
+                    font-size: 30px;
+                }
+            }
+        }
+
+        > div:last-of-type {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @media (max-width: $break6) {
+                flex-direction: column;
+            }
+
+            #accordion-faq {
+                width: 100%;
+
+                > div {
+                    border: 1px solid transparent;
+                    border-radius: 4px;
+                    background-color: $white;
+                    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+                    margin-bottom: 20px;
+
+                    > button {
+                        border: 0;
+                        border-radius: 15px;
+                        display: block;
+                        font-family: $baloo-thambi;
+                        letter-spacing: 0.5px;
+                        padding: 10px;
+                        text-transform: none;
+                        transition: all .2s ease-in-out;
+                        cursor: pointer;
+                        background-color: $color2;
+                        width: 100%;
+                        position: relative;
+
+                        h3 {
+                            margin: 0;
+                            color: $white;
+                            font-size: 18px;
+                            padding-right: 20px;
+                        }
+
+                        &:hover {
+                            background-color: $color3;
+                        }
+
+                        &:focus {
+                            outline: none;
+                        }
+
+                        &:after {
+                            content: "\f077";
+                            font-family: $fontAwesome;
+                            position: absolute;
+                            right: 12px;
+                            top: 13px;
+                            color: $white;
+                        }
+                    }
+
+                    > div {
+                        display: none;
+                        padding: 20px;
+                        border: 1px solid $color4;
+                        border-top: none;
+
+                        p {
+                            margin: 0 0 10px;
+                            font-size: 17px;
+                            line-height: 34px;
+                        }
+
+                        @media (max-width: $break27) {
+                            p {
+                                font-size: 17px;
+                                line-height: 24px;
+                            }
+                        }
+                    }
+
+
+                    &.active {
+                        > button {
+                            background-color: $color3;
+
+                            &:after {
+                                content: "\f077";
+                                transform: rotate(180deg);
+                            }
+                        }
+
+                        > div {
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+
+            > div:nth-of-type(2) {
+                @media (max-width: $break6) {
+                    display: none;
+                }
+            }
+        }
+    }
+}

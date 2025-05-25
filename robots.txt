@@ -1,0 +1,24 @@
+User-Agent: *
+Disallow: /about/
+Disallow: /adoption/
+Disallow: /adopt-single/
+Disallow: /blog/
+Disallow: /blog-single/
+Disallow: /contact/
+Disallow: /elements/
+Disallow: /gallery/
+Disallow: /index1/
+Disallow: /index-boxed/
+Disallow: /pricing/
+Disallow: /services/
+Disallow: /services-single/
+Disallow: /team/
+Disallow: /testimonials/
+Disallow: /category/uncategorized/
+Disallow: /category/
+Disallow: /cron/
+Disallow: /wordpress-resources-at-siteground/
+Disallow: /old/
+Disallow: /*?*
+
+Sitemap: https://petzschool.com/sitemap.txt

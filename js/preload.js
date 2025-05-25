@@ -1,0 +1,1 @@
+window.addEventListener("load",function(){var a=document.getElementById("preloader"),b=setInterval(function(){a.style.opacity||(a.style.opacity=1),a.style.opacity>0?a.style.opacity-=.1:(a.style.display="none",clearInterval(b))},60)})

@@ -1,0 +1,94 @@
+section.callToAction, section.bajada {
+    padding-bottom: 60px;
+    padding-top: 0;
+    text-align: center;
+
+    &.padding0 {
+        padding: 0;
+    }
+
+    button {
+        animation: rocking 2s infinite !important;
+        animation-timing-function: ease-out !important;
+        background-color: $color3;
+        border: none;
+        border-radius: 25px;
+        box-shadow: inset 9px 0 0 0 $color18;
+        color: $white;
+        cursor: pointer;
+        display: inline-block;
+        font-family: $baloo-thambi;
+        font-size: 29px;
+        font-weight: 400;
+        letter-spacing: 0.1px;
+        line-height: 1em;
+        margin-bottom: 0;
+        margin-top: 10px;
+        padding: 20px 30px;
+        text-align: center;
+        text-transform: capitalize;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        transition: 0.2s !important;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        vertical-align: middle;
+        white-space: nowrap;
+
+        @media (max-width: $break21) {
+            font-size: 23px;
+            max-width: $break27;
+            padding-bottom: 20px;
+            padding-top: 20px;
+            width: 100%;
+        }
+
+        @media (max-width: $break22) {
+            margin: 5px 0;
+        }
+
+        @media (max-width: $break27) {
+            font-size: 20px;
+            width: 320px;
+            padding: 20px 20px;
+        }
+
+        @media (max-width: $break29) {
+            font-size: 18px;
+            width: auto;
+        }
+
+        &:hover {
+            animation: none !important;
+            background-color: $color2;
+            box-shadow: none;
+            color: $white;
+            text-decoration: none;
+            outline: 0;
+        }
+
+        &:active {
+            background-image: none;
+            -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+            box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+            outline: 0;
+        }
+
+        &:focus {
+            color: $white;
+            text-decoration: none;
+            outline: unset;
+            outline-offset: unset;
+        }
+    }
+
+    .modActiontxt {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: unset;
+        text-align: center;
+        margin: 5px auto 0;
+    }
+}

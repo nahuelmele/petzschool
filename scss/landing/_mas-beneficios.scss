@@ -1,0 +1,70 @@
+section#mas-beneficios {
+    padding: 0;
+    margin-bottom: 50px;
+    margin-top: 50px;
+
+    h3 {
+        color: $color2;
+        text-align: center;
+        font-size: 34px;
+        padding: 0 15px;
+
+        @media (max-width: $break21) {
+            font-size: 33px;
+        }
+
+        @media (max-width: $break27) {
+            font-size: 30px;
+        }
+    }
+
+    > div {
+        padding: 0 25px;
+
+        @media (max-width: $break27) {
+            padding: 0 15px;
+        }
+
+        > div {
+            margin-bottom: 20px;
+
+            p {
+                color: $black;
+                display: inline-block;
+                font-size: 17px;
+                font-weight: 400;
+                line-height: unset;
+                padding: 2px 0 0 0;
+                position: relative;
+                text-align: left;
+                width: calc(100% - 45px);
+                margin: 0 auto;
+
+                @media (max-width: $break21) {
+                    line-height: 24px;
+                    padding: 0;
+                }
+
+                &:before {
+                    content: "";
+                    background: url(../img/ico-huella.svg) no-repeat;
+                    background-size: 31px 28px;
+                    height: 28px;
+                    left: -40px;
+                    position: absolute;
+                    top: 0px;
+                    width: 31px;
+
+                    @media (max-width: $break27) {
+                        content: "";
+                        background-size: 24px 22px;
+                        height: 22px;
+                        left: -28px;
+                        width: 24px;
+                        top: 3px;
+                    }
+                }
+            }
+        }
+    }
+}

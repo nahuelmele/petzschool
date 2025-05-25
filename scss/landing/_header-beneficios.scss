@@ -1,0 +1,66 @@
+section#header-beneficios {
+    padding: 0;
+    background-color: $color3;
+    color: $white;
+    margin-bottom: 30px;
+    padding: 26px;
+    text-align: center;
+
+    @media (max-width: $break14) {
+        padding: 21px 12px 21px 12px;
+    }
+
+    @media (max-width: $break22) {
+        padding: 12px 12px 21px 12px;
+    }
+
+    p:nth-of-type(1) {
+        font-weight: 400;
+        line-height: 35px;
+        text-align: center;
+        color: $white;
+        font-family: $lato;
+        font-size: 22px;
+        letter-spacing: 1px;
+        margin: 0;
+        padding: 0;
+
+        @media (max-width: $break9) {
+            font-size: 18px;
+        }
+
+        @media (max-width: $break14) {
+            font-size: 17px;
+            line-height: 24px;
+        }
+
+        @media (max-width: $break22) {
+            display: none;
+        }
+
+        span {
+            @media (max-width: $break16) {
+                display: block;
+            }
+
+            @media (max-width: $break24) {
+                display: inline;
+            }
+        }
+    }
+
+    p:nth-of-type(2) {
+        font-size: 44px;
+        font-family: $baloo-thambi;
+        line-height: 1em;
+        margin-top: 10px;
+
+        @media (max-width: $break9) {
+            font-size: 40px;
+        }
+
+        @media (max-width: $break29) {
+            font-size: 36px;
+        }
+    }
+}

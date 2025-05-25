@@ -1,0 +1,222 @@
+section#testimonios {
+    padding: 60px 0;
+
+    @media (max-width: $break14) {
+        padding: 45px 0;
+    }
+
+    @media (max-width: $break27) {
+        padding: 30px 0;
+    }
+
+    > div:nth-of-type(1) {
+        margin-bottom: 80px;
+
+        @media (max-width: $break9) {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 38px;
+            margin-bottom: 0;
+            text-transform: inherit;
+
+            @media (max-width: $break21) {
+                font-size: 33px;
+            }
+
+            @media (max-width: $break27) {
+                font-size: 30px;
+            }
+        }
+    }
+
+    > div:nth-of-type(2) {
+        margin: 0 auto;
+        padding: 0 40px;
+
+        @media (max-width: $break9) {
+            padding: 0 15px;
+        }
+
+        #owl-reviews {
+            .review {
+                display: inline-block;
+                position: relative;
+                width: 100%;
+
+                > div:nth-of-type(1) {
+                    border-radius: 20px;
+                    margin-bottom: 15px;
+                    padding: 45px 40px;
+                    position: relative;
+                    text-align: center;
+                    width: 100%;
+                    background-color: $color20;
+
+                    @media (max-width: $break22) {
+                        padding: 25px 25px 40px 25px;
+                    }
+
+                    h3 {
+                        color: $black;
+                        font-family: $baloo-thambi;
+                        font-size: 20px;
+                        letter-spacing: -.4px;
+                        margin: 0;
+                        text-transform: uppercase;
+                    }
+
+                    p {
+                        font-family: $baloo-thambi;
+                        font-size: 1.1em;
+                        font-weight: 400;
+                        letter-spacing: .2px;
+                        margin-bottom: 10px;
+                        padding-bottom: 15px;
+                        color: $color3;
+                        border-color: $color2;
+                    }
+
+                    blockquote {
+                        border-left: none;
+                        border-radius: 15px;
+                        color: $color30;
+                        font-family: $baloo-thambi;
+                        font-size: 16px;
+                        line-height: 28px;
+                        padding: 0;
+                        background-color: $color20;
+                        margin: 0 0 20px;
+                        text-align: center;
+
+                        &:before {
+                            content: "\f10d";
+                            font-family: $fontAwesome;
+                            font-size: 2.3em;
+                            line-height: .1em;
+                            margin-right: .5em;
+                            vertical-align: .2em;
+                            color: $color3;
+                        }
+                    }
+
+                    img {
+                        margin: 0 auto 10px;
+                        text-align: center;
+                        width: 120px;
+                    }
+                }
+
+                > div:nth-of-type(2) {
+                    margin-top: -50px;
+
+                    img {
+                        outline-color: $color2;
+                        display: block;
+                        -webkit-transform-style: preserve-3d;
+                        transform-style: preserve-3d;
+                        width: 100%;
+                        border: 5px solid $color20;
+                        border-radius: 50%;
+                        float: none;
+                        margin: 0 auto;
+                        max-width: 100px;
+                        vertical-align: top;
+                    }
+                }
+            }
+
+            .owl-controls {
+                .owl-nav {
+
+                    @media (max-width: $break9) {
+                        display: none;
+                    }
+
+                    .owl-next, .owl-prev {
+                        margin-top: 0;
+                        position: absolute;
+                        text-align: center;
+                        top: 34%;
+
+                        i {
+                            color: $white;
+                            font-size: 25px;
+                            padding: 10px;
+                            background-color: $color18;
+                        }
+                    }
+
+                    .owl-prev {
+                        left: -39px;
+
+                        i {
+                            border-radius: 20px 0 0 20px;
+
+                            &:before {
+                                content: "\f053";
+                            }
+                        }
+                    }
+
+                    .owl-next {
+                        right: -39px;
+
+                        i {
+                            border-radius: 0 20px 20px 0;
+
+                            &:before {
+                                content: "\f054";
+                            }
+                        }
+                    }
+                }
+
+                .owl-dots {
+                    margin-top: 30px;
+                    text-align: center;
+
+                    .owl-dot {
+                        display: inline-block;
+
+                        span {
+                            background-color: $color3;
+                            border: 2px solid $color27;
+                            border-radius: 50%;
+                            color: $color6;
+                            cursor: pointer;
+                            display: inline-block;
+                            height: 10px;
+                            margin: 0 5px;
+                            position: relative;
+                            vertical-align: top;
+                            width: 10px;
+
+                            &:before {
+                                content: "";
+                                background-color: $color3;
+                                border-radius: 50%;
+                                height: 13px;
+                                left: 50%;
+                                position: absolute;
+                                top: 50%;
+                                transform: translate(-50%, -50%) scale(0);
+                                transition: transform .3s;
+                                width: 13px;
+                            }
+                        }
+
+                        &.active {
+                            span {
+                                &:before {
+                                    transform: translate(-50%, -50%) scale(1);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

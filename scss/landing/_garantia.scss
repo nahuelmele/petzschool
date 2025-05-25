@@ -1,0 +1,151 @@
+section#bajadagarantia {
+    padding: 0 !important;
+
+    .sub-header {
+        border-radius: unset !important;
+        font-size: 80px;
+        padding: 50px 40px 80px 40px;
+        margin-bottom: 0;
+        text-align: center;
+        border-radius: 20px;
+        color: $white;
+        border-bottom: 0 none !important;
+        background: $black;
+        background-image: url("../img/pattern.png");
+        background-size: auto;
+
+        @media (max-width: $break14) {
+            padding: 35px 15px 68px 15px;
+        }
+
+        @media (max-width: $break27) {
+            padding: 30px 10px 59px 10px;
+        }
+
+        p {
+            color: $white;
+            font-size: 34px;
+            text-transform: initial;
+            letter-spacing: 1px;
+            max-width: 767px;
+            text-align: center;
+            margin: 0 auto 10px auto;
+            font-family: $baloo-thambi;
+
+            @media (max-width: $break14) {
+                font-size: 26px;
+                max-width: unset;
+                margin: 0 auto 15px auto;
+            }
+        }
+    }
+}
+
+
+section#garantia {
+    border-radius: unset;
+    padding: 20px 0 45px;
+
+    > div {
+        border-bottom: 20px solid $color2;
+        border-radius: 40px;
+        background: $color3;
+        color: $white;
+        box-shadow: 0 0 10px $color29;
+        margin-bottom: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -74px;
+        padding-bottom: 30px;
+        padding-top: 30px;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 32px;
+        width: 94%;
+
+        @media (max-width: $break9) {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            color: $white;
+            font-family: $baloo-thambi;
+            font-size: 34px;
+            font-weight: 700;
+            letter-spacing: 1.4px;
+            line-height: 48px;
+            margin: 0 auto;
+            text-transform: inherit;
+            width: 96%;
+
+            @media (max-width: $break14) {
+                width: 100%;
+                padding-left: 15px;
+                padding-right: 15px;
+                font-size: 28px;
+                line-height: 34px;
+            }
+        }
+
+        .garantia-img {
+            margin: 20px auto;
+            width: 250px;
+        }
+
+        h3 {
+            color: $white;
+            font-family: $baloo-thambi;
+            font-size: 50px;
+            letter-spacing: 1.4px;
+            line-height: 56px;
+            text-transform: inherit;
+            margin: 50px 0;
+
+            @media (max-width: $break14) {
+                width: 100%;
+                padding-left: 15px;
+                padding-right: 15px;
+                font-size: 32px;
+                line-height: 34px;
+                margin: 35px 0;
+            }
+        }
+
+        p {
+            font-size: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 94%;
+
+            @media (max-width: $break14) {
+                width: 100%;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            @media (max-width: $break22) {
+                text-align: left;
+            }
+        }
+
+        p.smallletter {
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            font-family: $lato;
+            margin-top: 30px;
+            letter-spacing: 0.5px;
+
+            @media (max-width: $break14) {
+                width: 100%;
+                padding-left: 15px;
+                padding-right: 15px;
+                font-size: 20px;
+            }
+
+            @media (max-width: $break22) {
+                text-align: center;
+            }
+        }
+    }
+}

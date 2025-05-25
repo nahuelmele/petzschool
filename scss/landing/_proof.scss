@@ -1,0 +1,128 @@
+section#proof {
+    padding: 0;
+    background: transparent;
+
+    .fixed-proof {
+        bottom: 0;
+        left: 0;
+        position: fixed;
+        z-index: 100000;
+
+        .pop-proof {
+            align-items: center;
+            background-color: $white;
+            border: 1px solid rgba(216, 217, 226, 0.5);
+            border-radius: 50px;
+            bottom: -80px;
+            box-shadow: 10px 20px 40px 0 rgba(36, 35, 40, 0.1);
+            display: flex;
+            height: 68px;
+            justify-content: left;
+            left: 0;
+            margin: 0 0 10px 10px;
+            padding: 0 0 0 6px;
+            position: relative;
+            position: fixed;
+            right: 0;
+            width: 270px;
+            z-index: 1000000;
+
+            @media (max-width: $break22) {
+                margin: 0 0 5px 5px;
+            }
+
+            > div:nth-of-type(1) {
+                margin-left: 0;
+                margin-right: 10px;
+                margin-top: 0;
+                display: block;
+                height: 56px;
+                vertical-align: middle;
+                width: 56px;
+                float: left;
+
+                img {
+                    border-color: $color20;
+                    border-radius: 50%;
+                    margin-left: 0;
+                    padding-top: 0;
+                    vertical-align: top;
+                    width: 100%;
+                }
+
+                .peopleViewing {
+                    background: $color3;
+                    border: 8px solid $color7;
+                    border-radius: 50%;
+                    color: $white;
+                    font-size: 22px;
+                    font-weight: 600;
+                    height: -webkit-fill-available;
+                    padding-top: 4px;
+                    text-align: center;
+                    vertical-align: middle;
+                    width: 100%;
+                }
+            }
+
+            > div:nth-of-type(2) {
+                font-family: $baloo-thambi;
+                padding-right: 0;
+                text-align: left;
+
+                .title-proof {
+                    color: $black;
+                    display: inline-block;
+                    font-family: $lato;
+                    font-size: 12px;
+                    font-weight: 400;
+                    letter-spacing: .2px;
+                    line-height: unset;
+                    margin-bottom: 0;
+                    margin-left: 0;
+                    padding: 0;
+
+                    .racaper {
+                        width: 18px !important;
+                        display: inline-block;
+                        font-weight: bold;
+                    }
+
+                    .racaperemprend {
+                        display: inline-block;
+                        font-weight: 600;
+                        letter-spacing: 0.4px;
+                    }
+                }
+
+                .instiproff {
+                    color: $black;
+                    font-family: $baloo-thambi;
+                    font-size: 15px !important;
+                    font-weight: 200;
+                    letter-spacing: -.6px;
+                    line-height: 14px;
+                    margin-bottom: 2px;
+                    margin-top: 0;
+                }
+
+                .what-proof {
+                    color: $black;
+                    font-family: $lato;
+                    font-size: 10px;
+                    font-weight: 400;
+                    letter-spacing: .2px;
+                    line-height: unset;
+                    padding-bottom: 4px;
+                    vertical-align: text-top;
+
+                    img {
+                        margin-left: 3px;
+                        padding-top: 2px;
+                        vertical-align: top;
+                    }
+                }
+            }
+        }
+    }
+}

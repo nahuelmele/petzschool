@@ -1,0 +1,36 @@
+section#back-to-top {
+    padding: 0;
+    background: transparent;
+
+    @media (max-width: $break9) {
+        display: none;
+    }
+
+    button {
+        position: relative;
+        bottom: 165px;
+        display: none;
+        position: fixed;
+        right: 34px;
+        border: 0 none;
+        z-index: 119;
+        background-color: $color3;
+        cursor: pointer;
+        border-radius: 50%;
+        color: $white;
+        display: block;
+        font-size: 27px;
+        height: 44px;
+        width: 44px;
+
+        &:before {
+            position: absolute;
+            bottom: 10px;
+            left: 14px;
+        }
+
+        &:hover {
+            background-color: $color2;
+        }
+    }
+}

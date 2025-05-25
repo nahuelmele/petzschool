@@ -1,0 +1,63 @@
+section#descuento {
+    padding: 0;
+    background: transparent;
+    width: auto;
+    position: fixed;
+    right: 10px;
+    z-index: 1000;
+    top: 0;
+    display: none;
+
+    @media (max-width: $break9) {
+        width: 290px;
+        text-align: center;
+        position: fixed;
+        right: 0;
+        top: 275px;
+        left: 0;
+        margin: 0 auto;
+    }
+
+    .alert.alert-success {
+        position: relative;
+        border: 1px solid transparent;
+        border-radius: 20px;
+        font-size: 16px;
+        margin: 20px 0;
+        padding: 25px;
+        background-color: $color12;
+        color: $color14;
+
+        @media (max-width: $break9) {
+            font-size: 14px;
+            padding: 16px;
+            border-radius: 10px;
+        }
+
+        &:before {
+            display: none;
+        }
+
+        .close {
+            color: $black;
+            filter: alpha(opacity = 20);
+            float: right;
+            font-size: 21px;
+            font-weight: 700;
+            line-height: 1;
+            opacity: .2;
+            text-shadow: 0 1px 0 $white;
+            position: absolute;
+            top: 5px;
+            right: 12px;
+            border: 0 none;
+            background: transparent;
+            cursor:pointer;
+
+            @media (max-width: $break7) {
+                top: -1px;
+                right: 5px;
+            }
+        }
+    }
+}

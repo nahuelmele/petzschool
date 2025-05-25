@@ -1,0 +1,473 @@
+section#first-scroll {
+    position: relative;
+    margin-top: 0;
+    padding: 0;
+    padding: 80px 0 40px;
+
+    @media (max-width: $break17) {
+        padding: 90px 0 25px;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(16, 136, 150, .85);
+        z-index: 1;
+    }
+
+    &.hasMenu {
+        padding-top: 150px;
+
+        @media (max-width: $break9) {
+            padding-top: 165px;
+        }
+
+        @media (max-width: $break14) {
+            padding-top: 150px;
+        }
+
+        @media (max-width: $break16) {
+            padding-top: 140px;
+        }
+
+        @media (max-width: $break29) {
+            padding-top: 130px;
+        }
+    }
+
+    > div {
+        position: relative;
+        z-index: 2;
+
+        @media (max-width: $break4) {
+            max-width: $break9;
+        }
+
+        @media (max-width: $break6) {
+            max-width: unset;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        @media (max-width: $break9) {
+            max-width: unset;
+            width: 100%;
+        }
+
+        @media (max-width: $break27) {
+            padding-left: 6px;
+            padding-right: 6px;
+        }
+
+        h1 {
+            color: $white;
+            font-size: 57px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            line-height: 66px;
+            margin: 30px 0 10px;
+
+            @media (max-width: $break9) {
+                font-size: 52px;
+                line-height: 60px;
+                margin: 15px 0 10px;
+            }
+
+            @media (max-width: $break12) {
+                font-size: 44px;
+                line-height: 52px;
+            }
+
+            @media (max-width: $break17) {
+                font-size: 40px;
+                line-height: 47px;
+                margin: 15px 0 25px;
+            }
+
+            @media (max-width: $break21) {
+                font-size: 38px;
+                line-height: 43px;
+            }
+
+            @media (max-width: $break22) {
+                text-transform: none;
+            }
+
+            @media (max-width: $break25) {
+                font-size: 35px;
+                line-height: 40px;
+            }
+
+            @media (max-width: $break26) {
+                font-size: 38px;
+                line-height: 40px;
+                margin: 15px 0;
+            }
+
+            @media (max-width: $break27) {
+                font-size: 34px;
+                line-height: 38px;
+            }
+
+            @media (max-width: $break29) {
+                font-size: 30px;
+                line-height: 34px;
+            }
+        }
+
+        > div.subtitIcon {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+
+            @media (max-width: $break17) {
+                margin: 0 auto;
+                max-width: 366px;
+                width: 90%;
+            }
+
+            @media (max-width: $break22) {
+                max-width: 320px;
+                width: 96%;
+            }
+
+            @media (max-width: $break26) {
+                width: 100%;
+            }
+
+            i {
+                color: $white;
+                font-size: 40px;
+                margin-right: 10px;
+                animation: beat .4s infinite alternate;
+                transform-origin: center;
+
+                @media (max-width: $break17) {
+                    font-size: 50px;
+                    margin-right: 20px;
+                }
+
+                @media (max-width: $break22) {
+                    font-size: 50px;
+                    margin-right: 15px;
+                }
+
+                @media (max-width: $break26) {
+                    font-size: 40px;
+                }
+            }
+
+            p {
+                color: $white;
+                font-size: 20px !important;
+                margin: 0;
+                padding-bottom: 0;
+                text-align: center;
+
+                @media (max-width: $break17) {
+                    font-size: 20px !important;
+                    line-height: 24px;
+                    text-align: left;
+                }
+
+                @media (max-width: $break22) {
+                    font-size: 17px !important;
+                    line-height: 24px;
+                }
+
+                @media (max-width: $break26) {
+                    font-size: 17px !important;
+                    line-height: 20px;
+                }
+            }
+        }
+
+        > div.conteArrow {
+            height: 120px;
+            margin: -35px auto 0;
+            position: relative;
+            text-align: center;
+            width: 120px;
+
+            @media (max-width: $break14) {
+                height: 90px;
+                margin-top: -39px;
+                width: 90px;
+            }
+
+            @media (max-width: $break26) {
+                height: 80px;
+                width: 80px;
+            }
+
+            > div {
+                border: 0;
+                -moz-border-radius: 100px;
+                -webkit-border-radius: 100px;
+                height: 120px;
+                margin: 7px 0 0;
+                position: absolute;
+                width: 120px;
+                z-index: 1;
+
+                @media (max-width: $break14) {
+                    height: 90px;
+                    margin-left: 0;
+                    margin-top: 18px;
+                    width: 90px;
+                }
+
+                @media (max-width: $break26) {
+                    height: 75px;
+                    margin-top: 11px;
+                    width: 75px;
+                }
+
+                > div {
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+                    -webkit-animation: pulse 1.5s ease 0s infinite normal forwards;
+                    -moz-animation: pulse 1.5s ease 0s infinite normal forwards;
+                    -o-animation: pulse 1.5s ease 0s infinite normal forwards;
+                    animation: pulse 1.5s ease 0s infinite normal forwards;
+                    background-image: url("../img/arrow-down.svg");
+                    background-repeat: no-repeat;
+                    -moz-background-size: 0 auto;
+                    -o-background-size: 0 auto;
+                    -webkit-background-size: 0 auto;
+                    background-size: 0 auto;
+                    -moz-border-radius: 100px;
+                    -webkit-border-radius: 100px;
+                    border-radius: 100px;
+                    color: transparent;
+                    font-size: 0;
+                    line-height: 0;
+                    margin-left: auto;
+                    margin-right: auto;
+                    opacity: 0;
+                    -moz-transition: all .4s ease;
+                    -o-transition: all .4s ease;
+                    -webkit-transition: all .4s ease;
+                    transition: all .4s ease;
+
+                    &:before {
+                        content: " ";
+                        background: url("../img/arrow-down.svg") no-repeat top;
+                        -moz-background-size: 100% auto;
+                        -o-background-size: 100% auto;
+                        -webkit-background-size: 100% auto;
+                        background-size: 100% auto;
+                        left: 0;
+                        position: absolute;
+                        top: 0;
+                        -webkit-animation: pulse 1.5s ease .25s infinite normal forwards;
+                        -moz-animation: pulse 1.5s ease .25s infinite normal forwards;
+                        -o-animation: pulse 1.5s ease .25s infinite normal forwards;
+                        animation: pulse 1.5s ease .25s infinite normal forwards;
+                        display: block;
+                        height: 100%;
+                        width: 100%;
+                    }
+
+                    &:after {
+                        content: " ";
+                        background: url("../img/arrow-down.svg") no-repeat top;
+                        -moz-background-size: 100% auto;
+                        -o-background-size: 100% auto;
+                        -webkit-background-size: 100% auto;
+                        background-size: 100% auto;
+                        left: 0;
+                        position: absolute;
+                        top: 0;
+                        -webkit-animation: pulse 1.5s ease .25s infinite normal forwards;
+                        -moz-animation: pulse 1.5s ease .25s infinite normal forwards;
+                        -o-animation: pulse 1.5s ease .25s infinite normal forwards;
+                        animation: pulse 1.5s ease .25s infinite normal forwards;
+                        display: block;
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        > div.boxShadowVideo {
+            max-height: 607.5px;
+            max-width: 1080px;
+
+            img {
+                left: -44px;
+                position: absolute;
+                top: -55px;
+                z-index: 1;
+                transform: rotate(-34deg);
+
+                @media (max-width: $break6) {
+                    left: -16px;
+                    top: -54px;
+                }
+
+                @media (max-width: $break14) {
+                    top: -41px;
+                    width: 95px;
+                }
+
+                @media (max-width: $break25) {
+                    top: -30px;
+                    width: 69px;
+                }
+
+                @media (max-width: $break26) {
+                    left: 0;
+                    top: 0;
+                    width: 77px;
+                }
+
+                @media (max-width: $break27) {
+                    width: 70px;
+                }
+            }
+
+            lite-vimeo {
+                max-height: 607.5px;
+                max-width: 1080px;
+            }
+        }
+
+        > div.optesumVid {
+            align-items: baseline;
+            color: $white;
+            font-family: $lato;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            line-height: unset;
+            margin: 35px 0 1px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+
+            @media (max-width: $break14) {
+                margin: 30px 0 0;
+            }
+
+            @media (max-width: $break17) {
+                margin: 25px 0 0;
+            }
+
+            @media (max-width: $break18) {
+                flex-direction: column-reverse;
+                margin: 15px 0 0;
+            }
+
+            @media (max-width: $break26) {
+                font-size: 14px;
+            }
+
+            > div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @media (max-width: $break18) {
+                    width: 94%;
+                    margin: 0 auto;
+                }
+
+                @media (max-width: $break22) {
+                    width: 100%;
+                    gap: 0;
+                }
+
+                p:nth-child(1) {
+                    margin: 0;
+
+                    @media (max-width: $break22) {
+                        font-size: 16px;
+                    }
+
+                    @media (max-width: $break27) {
+                        font-size: 14px;
+                    }
+                }
+
+                p:nth-child(2) {
+                    background: $color2;
+                    border: 4px solid $white;
+                    border-radius: 100%;
+                    color: $white;
+                    font-family: $baloo-thambi;
+                    font-size: 24px;
+                    font-weight: 400;
+                    letter-spacing: 1px;
+                    margin: 0 10px;
+                    padding-left: 14px;
+                    padding-right: 14px;
+                    text-align: center;
+                    vertical-align: sub;
+                    width: 90px;
+
+                    @media (max-width: $break26) {
+                        font-size: 20px;
+                        letter-spacing: .4px;
+                        margin: 0 8px;
+                        padding-left: 9px;
+                        padding-right: 13px;
+                        width: 70px;
+                    }
+                }
+
+                p:nth-child(3) {
+                    margin: 0;
+
+                    @media (max-width: $break22) {
+                        font-size: 16px;
+                    }
+
+                    @media (max-width: $break27) {
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            > p {
+                margin-left: 10px;
+                margin-bottom: 0;
+
+                @media (max-width: $break18) {
+                    font-family: $baloo-thambi;
+                    font-size: 22px;
+                    font-weight: 700;
+                    margin-bottom: 20px;
+                    margin-top: 20px;
+                    margin-left: 0;
+                    text-align: center;
+                    text-transform: none;
+                    width: 100%;
+                }
+
+                @media (max-width: $break26) {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        img.icon {
+            opacity: 1;
+            position: absolute;
+            z-index: 1;
+
+            @media (max-width: $break1) {
+                display: none;
+            }
+
+            &.last {
+            }
+        }
+    }
+}

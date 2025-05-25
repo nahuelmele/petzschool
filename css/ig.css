@@ -1,0 +1,195 @@
+.instagram-element.col-1 .instagram-photo { padding-bottom:100%; width:100%; }
+.instagram-element.col-2 .instagram-photo { padding-bottom:50%; width:50%; }
+
+.instagram-element.col-3 .instagram-photo {
+	padding-bottom: calc( 33% - 5px );
+    width: calc( 33% - 5px );
+}
+
+.instagram-element.col-4 .instagram-photo { padding-bottom:25%; width:25%; }
+.instagram-element.col-5 .instagram-photo { padding-bottom:20%; width:20%; }
+.instagram-element.col-6 .instagram-photo { padding-bottom:16.6%; width:16.6%; }
+.instagram-element.col-7 .instagram-photo { padding-bottom:14.28%; width:14.28%; }
+.instagram-element.col-8 .instagram-photo { padding-bottom:12.5%; width:12.5%; }
+.instagram-element.col-9 .instagram-photo { padding-bottom:11.11%; width:11.11%; }
+.instagram-element.col-10 .instagram-photo { padding-bottom:10%; width:10%; }
+
+.instagram-element.col-9 .instagram-photo .element-meta,
+.instagram-element.col-10 .instagram-photo .element-meta { font-size: 16px; }
+
+.instagram-element.gutter-5 .instagram-photo { margin:4px; }
+.instagram-element.gutter-10 .instagram-photo { margin:10px; }
+.instagram-element.gutter-15 .instagram-photo { margin:15px; }
+.instagram-element.gutter-20 .instagram-photo { margin:20px; }
+.instagram-element.gutter-25 .instagram-photo { margin:25px; }
+.instagram-element.gutter-30 .instagram-photo { margin:30px; }
+.instagram-element.gutter-35 .instagram-photo { margin:35px; }
+.instagram-element.gutter-40 .instagram-photo { margin:40px; }
+.instagram-element.gutter-45 .instagram-photo { margin:45px; }
+.instagram-element.gutter-50 .instagram-photo { margin:50px; }
+
+
+.instagram-photo { display: inline-block; height: auto; width: 195px; }
+
+.instagram-element .instagram-photo {	
+	cursor:pointer;
+	float:left;
+	height:0;
+	line-height:0;
+	margin:0;
+	overflow:hidden;
+	padding-bottom:20%;
+	position:relative;
+	width:20%;
+}
+
+.instagram-element .instagram-photo.image { background-color: #108896; }
+.instagram-element .instagram-photo.video { background-color: #EF5030; }
+
+.instagram-element .instagram-photo img { 	
+	height: 100%;
+	left: 50%;
+	min-width: 100%;
+	max-width: inherit;
+	opacity: 1;
+	position: absolute;
+	top: 50%;
+	transform: scale(1) translate(-50%, -50%);
+	transform-origin: 0 0;
+	transition: all 0.5s ease;
+	-moz-transition: -moz-transform 0.5s ease;
+	-webkit-transition: -webkit-transform 0.5s ease;
+	-webkit-backface-visibility: hidden;
+}
+
+.instagram-element .instagram-photo:hover img { 
+	-webkit-transform: scale(1.2) translate(-50%, -50%);
+	-moz-transform: scale(1.2) translate(-50%, -50%);
+	-ms-transform: scale(1.2) translate(-50%, -50%);
+	-o-transform: scale(1.2) translate(-50%, -50%);
+	transform: scale(1.2) translate(-50%, -50%);
+	opacity: 0.1;
+}
+
+.instagram-element .instagram-photo .element-meta {
+	color: #fff;
+	filter: alpha(opacity=0);
+    letter-spacing: 0.5px;
+    font-family: 'Baloo Thambi', sans-serif;
+	font-size: 24px;
+	font-weight: 700;
+	left: 0;
+	line-height: 11px;
+	opacity: 0;
+	position: absolute;
+	text-align: center;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.1);
+	text-transform:uppercase;
+	top: 10%;
+	width: 100%;
+}
+
+.instagram-element .instagram-photo .element-meta span { display: block; font-size: 14px; font-weight: 200; margin-top:10px; color: #fff; }
+
+.instagram-element .instagram-photo .icon {
+	display:none;
+	height:29px;
+	position:absolute;
+	right:18px;
+	text-indent:-9999px;
+	top:18px;
+	width:26px;
+}
+
+.instagram-element .instagram-photo:hover .icon { display:block; }
+.instagram-element .instagram-photo.video .icon { background:url("../img/video-icon.png") no-repeat; }
+.instagram-element .instagram-photo.image .icon { background:url("../img/image-icon.png") no-repeat; }
+
+/* User List */
+.instagram-user-all { background: none; cursor:pointer; display: inline-block; float: left; line-height: 0; width: 5%; }
+.instagram-user-all img { 
+	height:auto;
+	width:100%;
+}
+.instagram-user-all:hover img { opacity:.5; }
+
+/* Load More */
+.seachInstagramLoadMoreContainer { clear: both; text-align:center; }
+.seachInstagramLoadMore { margin-top: 20px; }
+
+/* Fix for landscape photos */
+/*
+body .instagram-photo img { -webkit-transform: scale(1.3); -moz-transform: scale(1.3); -ms-transform: scale(1.3); -o-transform: scale(1.3); transform: scale(1.3); -webkit-backface-visibility: hidden; }
+body .instagram-element .instagram-photo:hover img { -webkit-transform: scale(1.5); -moz-transform: scale(1.5); -ms-transform: scale(1.5); -o-transform: scale(1.5); transform: scale(1.5); }
+body .instagram-element .instagram-media img { -webkit-transform: scale(1.3); -moz-transform: scale(1.3); -ms-transform: scale(1.3); -o-transform: scale(1.3); transform: scale(1.3); width:100%; }
+*/
+
+/* Fancybox Information */
+.fancybox-nav { height:90%; width: 20%; }
+.fancybox-title .username-ui { font-family: 'Lato', sans-serif; font-size: 20px; font-weight: 700; }
+.fancybox-title .date-ui { color:#a9abae; display:block; font-weight: 700; margin-bottom:3px; text-transform:uppercase; }
+.fancybox-title .description-ui {}
+.fancybox-title .likes-ui {}
+.fancybox-title .comments-ui {}
+.fancybox-title .location-ui {}
+.fancybox-title .link-ui {}
+
+.fancybox-title .btnInsta{
+	display:block
+}
+
+/* Responsive Mobile
+-----------------------------*/
+/* Tablets */
+@media screen and (max-width: 1100px) {
+	/* Classic View */
+	.instagram-element .instagram-stage { width:90%; }
+	.instagram-element .instagram-media { height: auto; width:50%; }
+	.instagram-element .instagram-content { width:40%; }
+}
+
+/* iPad */
+@media screen and (max-width: 970px) {
+	
+	.instagram-element.col-3 .instagram-photo {
+		padding-bottom: calc( 49% - 5px );
+		width: calc( 49% - 5px );
+	}	
+	
+	.instaPetz a.instagram-photo:last-child {
+		display:none !important;
+	}
+	
+}
+
+/* iPhone */
+@media screen and (max-width: 780px) {
+	
+	/* Classic View */
+	.instagram-element .instagram-photo {}
+	.instagram-element .instagram-photo:hover img { opacity: 1; }
+	
+	.instagram-element .instagram-photo.image .icon, 
+	.instagram-element .instagram-photo .element-meta { display:none; }
+	
+	.instagram-element .instagram-stage { padding: 100px 0; }
+	.instagram-element .instagram-media { background:none; float:none; height: auto; margin:0 auto; width:90%; }
+	.instagram-element .instagram-media img { height:auto; width:100%; }
+	
+	.instagram-element .instagram-content { float:none; margin:0 auto; width:90%; }
+	.instagram-element .instagram-content ul { margin-bottom: 60px; }
+}
+
+
+@media screen and (max-width: 380px) {
+	
+	.instagram-element.col-3 .instagram-photo {
+		padding-bottom: 100%;
+		width: 100%;
+	}	
+	
+	.instaPetz a.instagram-photo:last-child {
+		display:block !important;
+	}
+	
+}
