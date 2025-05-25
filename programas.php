@@ -1,4 +1,5 @@
-<?php header("Cache-Control: no-cache");
+$des = "✓ Petz School - Programas hechos con amor para tu mascota.";
+header("Cache-Control: no-cache");
 include "inc/functions.php";
 //$testing = true;
 

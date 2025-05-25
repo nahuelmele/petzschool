@@ -1,4 +1,5 @@
-<?php 
+$des = "✓ Wow mira quien es Diana Fonseca y todos los programas y cursos hechos con amor para tu mascota - Petz School.";
+
 
 header("Cache-Control: no-cache");
 

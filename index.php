@@ -11,7 +11,7 @@ $dateModified = "2021-06-18";
 $imgShare = "share.jpg";
 
 
-$des = "✓ Petz School. Programas y cursos hechos con amor para tu mascosta.";
+$des = "✓ Petz School. Programas y cursos hechos con amor para tu mascota.";
 $tit = "Programas y cursos de Petz School";
 
 /* esto es para si pasamos parametro test no cargamos pixel */
