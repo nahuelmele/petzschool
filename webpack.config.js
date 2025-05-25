@@ -79,7 +79,8 @@ module.exports = (env, argv) => {
             alias: {
                 jquery: path.resolve(__dirname, 'node_modules/jquery/dist/jquery.js')
             },
-            extensions: ['.js', '.jsx', '.scss','css']
+            // Include css files when resolving imports
+            extensions: ['.js', '.jsx', '.scss', '.css']
         },
         mode: 'development' // Or dynamic based on `isProduction`
     };
