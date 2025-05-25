@@ -1,62 +1,62 @@
-<?php 
+<?php
 
 header("Cache-Control: no-cache");
 
 //base de donde esta la landing con respecto al root para los includes
 $base = "../../";
-$dirLanding = "cupido-tambien-es-petfrienly";
-$nombredelcurso = "Cupido también es Petfrienly";
+$dirLanding = "cupido-tambien-es-petfriendly";
+$nombredelcurso = "Cupido también es Petfriendly";
 $autor = "Diana Fonseca";
 $autorSlug = "diana-fonseca";
 
-include $base. "inc/functions.php";
+include $base . "inc/functions.php";
 
 //precios en dolares
-$oferta50Precio  	= getPrecio(16.25);
-$sinOfertaPrecio 	= getPrecio(32.50);
+$oferta50Precio = getPrecio(16.25);
+$sinOfertaPrecio = getPrecio(32.50);
 
 
-$currency 			= getCurrency();
+$currency = getCurrency();
 
-$landingData 		= getLandingData();
-$imgPagosBillet 	= $landingData["IMGBILLET"];
-$puedesAbonarCon 	= $landingData["SHOWMEDIOS"];
-$medioPagoEfectivo  = $landingData["TEXTMEDIOSPAGO"];
+$landingData = getLandingData();
+$imgPagosBillet = $landingData["IMGBILLET"];
+$puedesAbonarCon = $landingData["SHOWMEDIOS"];
+$medioPagoEfectivo = $landingData["TEXTMEDIOSPAGO"];
 
 
 $textCuotasFull = "";
 $textCuotas50Off = "";
 
 
-if( COUNTRYCODE == "ar" || COUNTRYCODE == "cl" || COUNTRYCODE == "eu" ){
-
-	$textCuotasFull = "Tarjeta de crédito.";
-	$textCuotas50Off = "Tarjeta de crédito.";
-	
-}else if( COUNTRYCODE == "co" ){
-
-    $textCuotasFull = "Tarjeta de crédito.";
-    $textCuotas50Off = "Tarjeta de crédito.";
-	
-	//$textCuotasFull = "Tarjeta de crédito hasta en <b>12 cuotas</b> de <b>".$currency." ". getPrecio(2.708702) ."</b>."; 
-	//$textCuotas50Off = "Tarjeta de crédito hasta en <b>12 cuotas</b> de <b>".$currency." ". getPrecio(1.354351) ."</b>.";
-	
-}else if( COUNTRYCODE == "pe" ){
+if (COUNTRYCODE == "ar" || COUNTRYCODE == "cl" || COUNTRYCODE == "eu") {
 
     $textCuotasFull = "Tarjeta de crédito.";
     $textCuotas50Off = "Tarjeta de crédito.";
 
-	//$textCuotasFull =  "Tarjeta de crédito hasta en <b>12 cuotas</b> de <b>".$currency." ". getPrecio(5.798,1) ."</b>.";
-	//$textCuotas50Off = "Tarjeta de crédito hasta en <b>12 cuotas</b> de <b>".$currency." ". getPrecio(2.899,1) ."</b>.";
-			
-}else if( COUNTRYCODE == "mx" ){
+} else if (COUNTRYCODE == "co") {
 
     $textCuotasFull = "Tarjeta de crédito.";
     $textCuotas50Off = "Tarjeta de crédito.";
-	
-	//$textCuotasFull =  "Tarjeta de crédito hasta en <b>12 cuotas</b> de <b>".$currency." ". getPrecio(7.067,1) ."</b>."; 
-	//$textCuotas50Off = "Tarjeta de crédito hasta en <b>6 cuotas</b> de <b>".$currency." ". getPrecio(6.494,1) ."</b>.";
-			
+
+    //$textCuotasFull = "Tarjeta de crédito hasta en <b>12 cuotas</b> de <b>".$currency." ". getPrecio(2.708702) ."</b>."; 
+    //$textCuotas50Off = "Tarjeta de crédito hasta en <b>12 cuotas</b> de <b>".$currency." ". getPrecio(1.354351) ."</b>.";
+
+} else if (COUNTRYCODE == "pe") {
+
+    $textCuotasFull = "Tarjeta de crédito.";
+    $textCuotas50Off = "Tarjeta de crédito.";
+
+    //$textCuotasFull =  "Tarjeta de crédito hasta en <b>12 cuotas</b> de <b>".$currency." ". getPrecio(5.798,1) ."</b>.";
+    //$textCuotas50Off = "Tarjeta de crédito hasta en <b>12 cuotas</b> de <b>".$currency." ". getPrecio(2.899,1) ."</b>.";
+
+} else if (COUNTRYCODE == "mx") {
+
+    $textCuotasFull = "Tarjeta de crédito.";
+    $textCuotas50Off = "Tarjeta de crédito.";
+
+    //$textCuotasFull =  "Tarjeta de crédito hasta en <b>12 cuotas</b> de <b>".$currency." ". getPrecio(7.067,1) ."</b>."; 
+    //$textCuotas50Off = "Tarjeta de crédito hasta en <b>6 cuotas</b> de <b>".$currency." ". getPrecio(6.494,1) ."</b>.";
+
 }
 
 //cuando esta arriba este "testing" hay que comentarlo. NO PONERLO EN FALSE NI REMOVERLO, cuando estamos en "localhost" automaticamente todo el sitio entra en testing y cuando esta arriba todo pasa a prod.
@@ -106,27 +106,27 @@ $g_whatsaup = false;
 // descripcion
 $des = "¿Te imaginas crear Tu propio negocio de snacks deliciosos y saludables para mascotas? - Petz School.";
 
-//$des = "Cocina con Amor y emprende con éxito en el mundo de la Cupido también es petfrienly - Petz School.";
+//$des = "Cocina con Amor y emprende con éxito en el mundo de la Cupido también es Petfriendly - Petz School.";
 
 // titulo
-$tit = "✓ Promo 50% Off en el Curso de Cupido también es petfrienly de Diana Fonseca - Petz School";
+$tit = "✓ Promo 50% Off en el Curso de Cupido también es Petfriendly de Diana Fonseca - Petz School";
 
 
 //OFERTAS SETTINGS, elegir una de las 2, si esta activo uno con "true" los otros 2 tienen que estar en "false"
 
-$oferta50  = true;
+$oferta50 = true;
 $sinOferta = false;
 
 // Hide pago en efectivo
 
 $hideEfectivo = false;
 
-if( $hideEfectivo ){
-	$imgpagosFinal = PAGOSTODOS;
-	$pagoEfe = "";
-}else{
-	$imgpagosFinal = $imgPagosBillet;
-	$pagoEfe = $medioPagoEfectivo;
+if ($hideEfectivo) {
+    $imgpagosFinal = PAGOSTODOS;
+    $pagoEfe = "";
+} else {
+    $imgpagosFinal = $imgPagosBillet;
+    $pagoEfe = $medioPagoEfectivo;
 }
 
 
@@ -145,30 +145,30 @@ $linkProducto = "https://go.hotmart.com/R78911738N?ap=3551";
 $offDiscount = "";
 $textCuotas = $textCuotasFull;
 
-if( $oferta50 ){
-	
-	$offDiscount = "&offDiscount=220774";
-	$textCuotas = $textCuotas50Off;
-	
+if ($oferta50) {
+
+    $offDiscount = "&offDiscount=220774";
+    $textCuotas = $textCuotas50Off;
+
 }
 
 $hideEfectivoText = "";
-if( $hideEfectivo )
-	$hideEfectivoText = "&hideBillet=1";
+if ($hideEfectivo)
+    $hideEfectivoText = "&hideBillet=1";
 
-$linkProducto = $linkProducto.$offDiscount.$hideEfectivoText;
+$linkProducto = $linkProducto . $offDiscount . $hideEfectivoText;
 
 
 
 //esto es para si pasamos parametro test no cargamos pixel
 $testPar = false;
 
-if( isset( $_GET["test"] ) )
-	$testPar = true;
+if (isset($_GET["test"]))
+    $testPar = true;
 
 
-if( !$testing && !$testPar )
-	ob_start('comprimir_pagina_landing'); 
+if (!$testing && !$testPar)
+    ob_start('comprimir_pagina_landing');
 
 ?><!DOCTYPE html>
 <html lang="es-ES">
@@ -181,12 +181,13 @@ if( !$testing && !$testPar )
 
 		<?php include_once ($base . "inc/landings/skipContent.php"); ?>
 
-		<?php 
-		if( $hayMenu )
-			include_once( $base. "inc/nav.php");
-		?>
+		<?php
+        if ($hayMenu)
+            include_once ($base . "inc/nav.php");
+        ?>
 
-		<section id="first-scroll" <?php if (!$timer) echo "class='hasMenu'" ?> aria-labelledby="first-scroll-heading" itemscope itemtype="https://schema.org/EducationalOccupationalProgram" style="background-image: url(/img/landings/<?= $dirLanding ?>/bg-hero.jpg); background-size: cover">
+		<section id="first-scroll" <?php if (!$timer)
+            echo "class='hasMenu'" ?> aria-labelledby="first-scroll-heading" itemscope itemtype="https://schema.org/EducationalOccupationalProgram" style="background-image: url(/img/landings/<?= $dirLanding ?>/bg-hero.jpg); background-size: cover">
 			<div class="container back1080">
 
 				<h1 id="first-scroll-heading" itemprop="name">
@@ -541,76 +542,76 @@ if( !$testing && !$testPar )
 
 					<?php
 
-					$carouselTestimoniosItems = [
-						[
-							"nombre" => "Ximena Capeletti",
-							"bajada" => "Dog Lover",
-							"descripcion" => "Les quiero recomendar la pastelería para perro de Diana Fonseca. Mis tres amores perrunos, Simón (14 años), Teo (1 año) y Eva (6meses), la adoran!! Simón no volvió a sufrir de la piel desde que lo cambié a esta comida. No tienen mal aliento y el pelo les brilla.",
-							"nombre_imagen" => "ximena.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "Sandra Muñoz",
-							"bajada" => "Dog Lover",
-							"descripcion" => "Me encanto el curso de Cupido también es Petfrienly, mi perro se llama rocky y prepararle deliciosos snack es una excelente actividad que la disfruto con mi hijo. Amamos a Rocky y el ama estas recetas…… Muchisimas Gracias Diana!!!!",
-							"nombre_imagen" => "sandra.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "Nathy Pardo",
-							"bajada" => "Dog Lover",
-							"descripcion" => "Me encanta la simplicidad y facilidad con la que se pueden preparar las distintas recetas que nos comparte Diana. He visto un cambio en la salud de Pepe, mi Pastor Aleman. Siento que ahora mi peludo es más feliz y tiene más energía. Gracias!",
-							"nombre_imagen" => "naty.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "Gaby Flores",
-							"bajada" => "Dog Lover",
-							"descripcion" => "Dante es mi Boston terrier de 4 años y medio, desde el destete ha comido dieta natural, sin embargo Dante tenía problemas en las articulaciones. Cuando pasamos a la barf y pastelería todo cambio, en poco tiempo estaba corriendo y saltando por todas partes. Gracias por todo Diana, saludos!",
-							"nombre_imagen" => "gaby.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "LUISA SALAH",
-							"bajada" => "Dog Lover",
-							"descripcion" => "Quiero contar como este tipo de comida cambió la salud de mi perro. Tengo un pastor collie y desde que le cambie su alimentación su pelo lo tiene más suave, las deposiciones ya no son blandas, los dientes son más blancos, jamás tiene sarro y se le ve con más energía.",
-							"nombre_imagen" => "luisa.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "ANDRÉS FERNÁNDEZ",
-							"bajada" => "Dog Lover",
-							"descripcion" => "Mi hermosa celebra su cumpleaños perruno 3, disfruta de una torta de pollo que aprendimos, nos encanta que Diana sea parte de este especial día, a Bella le encanta toda la pastelería. Muchas gracias cada vez que se porta bien le doy las galletas verdes que tanto le gustan.",
-							"nombre_imagen" => "andres-fernandez.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "SOFIA BUSTAMANTE",
-							"bajada" => "Cat Lover",
-							"descripcion" => "Maya celebró su 3er cumpleaños con una torta de atún que realizamos con el curso de Cupido también es Petfrienly de la profe Diana. Realizare luego helados para Maya que estan en el curso espero me queden delicioso como esta torta.",
-							"nombre_imagen" => "sofia.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "NORA RIVERA DE CRUZ",
-							"bajada" => "Cat Lover",
-							"descripcion" => "Gracias a ustedes  por la torta de atún de cumpleaños de Zahiro, estaba como loco, nunca lo habíamos visto así. Realmente disfruto de su primer cumpleaños. Quedamos satisfecho que gran talento que tienen en la comida de mascotas.",
-							"nombre_imagen" => "nora.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "MIRNA AGUILAR",
-							"bajada" => "Dog Lover",
-							"descripcion" => "Mi hermosa Bella celebró su cumpleaños perruno 2 con una torta de pollo que aprendimos a hacer con el curso de Diana. El curso es muy práctico y apredimos muchas cosas que no teniamos ni idea sobre como alimentarla correctamente.",
-							"nombre_imagen" => "mirna.jpg",
-							"cantidad_estrellas" => 5
-						],
+                    $carouselTestimoniosItems = [
+                        [
+                            "nombre" => "Ximena Capeletti",
+                            "bajada" => "Dog Lover",
+                            "descripcion" => "Les quiero recomendar la pastelería para perro de Diana Fonseca. Mis tres amores perrunos, Simón (14 años), Teo (1 año) y Eva (6meses), la adoran!! Simón no volvió a sufrir de la piel desde que lo cambié a esta comida. No tienen mal aliento y el pelo les brilla.",
+                            "nombre_imagen" => "ximena.jpg",
+                            "cantidad_estrellas" => 5
+                        ],
+                        [
+                            "nombre" => "Sandra Muñoz",
+                            "bajada" => "Dog Lover",
+                            "descripcion" => "Me encanto el curso de Cupido también es Petfriendly, mi perro se llama rocky y prepararle deliciosos snack es una excelente actividad que la disfruto con mi hijo. Amamos a Rocky y el ama estas recetas…… Muchisimas Gracias Diana!!!!",
+                            "nombre_imagen" => "sandra.jpg",
+                            "cantidad_estrellas" => 5
+                        ],
+                        [
+                            "nombre" => "Nathy Pardo",
+                            "bajada" => "Dog Lover",
+                            "descripcion" => "Me encanta la simplicidad y facilidad con la que se pueden preparar las distintas recetas que nos comparte Diana. He visto un cambio en la salud de Pepe, mi Pastor Aleman. Siento que ahora mi peludo es más feliz y tiene más energía. Gracias!",
+                            "nombre_imagen" => "naty.jpg",
+                            "cantidad_estrellas" => 5
+                        ],
+                        [
+                            "nombre" => "Gaby Flores",
+                            "bajada" => "Dog Lover",
+                            "descripcion" => "Dante es mi Boston terrier de 4 años y medio, desde el destete ha comido dieta natural, sin embargo Dante tenía problemas en las articulaciones. Cuando pasamos a la barf y pastelería todo cambio, en poco tiempo estaba corriendo y saltando por todas partes. Gracias por todo Diana, saludos!",
+                            "nombre_imagen" => "gaby.jpg",
+                            "cantidad_estrellas" => 5
+                        ],
+                        [
+                            "nombre" => "LUISA SALAH",
+                            "bajada" => "Dog Lover",
+                            "descripcion" => "Quiero contar como este tipo de comida cambió la salud de mi perro. Tengo un pastor collie y desde que le cambie su alimentación su pelo lo tiene más suave, las deposiciones ya no son blandas, los dientes son más blancos, jamás tiene sarro y se le ve con más energía.",
+                            "nombre_imagen" => "luisa.jpg",
+                            "cantidad_estrellas" => 5
+                        ],
+                        [
+                            "nombre" => "ANDRÉS FERNÁNDEZ",
+                            "bajada" => "Dog Lover",
+                            "descripcion" => "Mi hermosa celebra su cumpleaños perruno 3, disfruta de una torta de pollo que aprendimos, nos encanta que Diana sea parte de este especial día, a Bella le encanta toda la pastelería. Muchas gracias cada vez que se porta bien le doy las galletas verdes que tanto le gustan.",
+                            "nombre_imagen" => "andres-fernandez.jpg",
+                            "cantidad_estrellas" => 5
+                        ],
+                        [
+                            "nombre" => "SOFIA BUSTAMANTE",
+                            "bajada" => "Cat Lover",
+                            "descripcion" => "Maya celebró su 3er cumpleaños con una torta de atún que realizamos con el curso de Cupido también es Petfriendly de la profe Diana. Realizare luego helados para Maya que estan en el curso espero me queden delicioso como esta torta.",
+                            "nombre_imagen" => "sofia.jpg",
+                            "cantidad_estrellas" => 5
+                        ],
+                        [
+                            "nombre" => "NORA RIVERA DE CRUZ",
+                            "bajada" => "Cat Lover",
+                            "descripcion" => "Gracias a ustedes  por la torta de atún de cumpleaños de Zahiro, estaba como loco, nunca lo habíamos visto así. Realmente disfruto de su primer cumpleaños. Quedamos satisfecho que gran talento que tienen en la comida de mascotas.",
+                            "nombre_imagen" => "nora.jpg",
+                            "cantidad_estrellas" => 5
+                        ],
+                        [
+                            "nombre" => "MIRNA AGUILAR",
+                            "bajada" => "Dog Lover",
+                            "descripcion" => "Mi hermosa Bella celebró su cumpleaños perruno 2 con una torta de pollo que aprendimos a hacer con el curso de Diana. El curso es muy práctico y apredimos muchas cosas que no teniamos ni idea sobre como alimentarla correctamente.",
+                            "nombre_imagen" => "mirna.jpg",
+                            "cantidad_estrellas" => 5
+                        ],
 
-					];
+                    ];
 
-					include_once ($base . "inc/landings/testimonios.php");
+                    include_once ($base . "inc/landings/testimonios.php");
 
-					?>
+                    ?>
 
 				</div>
 
@@ -622,9 +623,10 @@ if( !$testing && !$testPar )
 		
    </body>
 
-</html><?php 
+</html><?php
 
-if( !$testing && !$testPar )
-	ob_end_flush(); 
+if (!$testing && !$testPar)
+    ob_end_flush();
 
+?>
 ?>
