@@ -4,7 +4,10 @@ header("Cache-Control: no-cache");
 
 //base de donde esta la landing con respecto al root para los includes
 $base = "../../";
-$dirLanding = "peluqueria-para-perros";
+
+$dirLanding = "peluqueria-para-gatos";
+$assetDir = "peluqueria-para-perros";
+
 $nombredelcurso = "Peluquería para Gatos";
 $autor = "Fabio Gomez Sepulveda";
 $autorSlug = "fabio-gomez-sepulveda";
@@ -128,6 +131,7 @@ $modalMesageCheckout = false;
 
 // Link Producto, chechout limpio para crashing
 
+
 $linkProducto = "https://go.hotmart.com/K53197775W?ap=f1ce";
 
 
@@ -225,8 +229,6 @@ if( !$testing && !$testPar )
 					</p>
 				</div>
 
-				<img src="/img/landings/<?= $dirLanding ?>/<?= $dirLanding ?>-ico.svg" class="icon" alt="tijeras grooming <?= $nombredelcurso ?>" width="82" height="82" />
-				<img src="/img/landings/<?= $dirLanding ?>/<?= $dirLanding ?>-ico.svg" class="icon last" alt="tijeras grooming <?= $nombredelcurso ?>" width="82" height="82" />
 
 			</div>
 		</section>
@@ -237,10 +239,10 @@ if( !$testing && !$testPar )
 		<section class="bajada principal padding0" aria-labelledby="sub-header-title" itemscope itemtype="https://schema.org/EducationalOccupationalProgram">
 			<div class="sub-header">
 
-				<h2 id="sub-header-title" itemprop="name">
-					<span>CONVIÉRTETE</span> en un profesional certificado en estética y peluquería para perros, <u itemprop="courseMode" content="online">conoce los cortes más vanguardistas</u> para las diferentes razas.
-					<span>CREA tu propio negocio</span> emprendiendo en un sector en crecimiento <u itemprop="courseMode" content="online">dominando las técnicas más novedosas de cortes</u>.
-				</h2>
+                                <h2 id="sub-header-title" itemprop="name">
+                                        <span>CONVIÉRTETE</span> en un profesional certificado en estética y peluquería para gatos, <u itemprop="courseMode" content="online">conoce los cuidados más importantes</u> para todo tipo de felinos.
+                                        <span>CREA tu propio negocio</span> emprendiendo en un sector en crecimiento <u itemprop="courseMode" content="online">dominando las técnicas más novedosas de cortes</u>.
+                                </h2>
 				
 				<?php
 
@@ -260,22 +262,36 @@ if( !$testing && !$testPar )
     
 			<div class="container">
 				<div>
-					<div>
-						<p>El <b>lenguaje técnico</b> que te permitirá entender cada lección del curso.</p>
-						<p>Identificar las características de cada tipo de pelo.</p>
-						<p>Elegir bien los productos según el tipo de pelo para <b>lograr resultados increíbles</b>.</p>
-						<p>Todo sobre <b>el manejo de los perros</b> en la peluquería.</p>
-						<p>Cómo <b>cortar el pelo</b> de una manera práctica <b>con máquina y tijera</b>.</p>
-						<p>Las herramientas según el <b>tipo de pelo, textura y razas</b>.</p>
-						<p>Cuáles son <b>las herramientas y cómo utilizarlas</b> para quitar los nudos.</p>
-						<p>Entender <u>las partes de un perro</u> para su aseo y apariencia.</p>
-						<p>La <u>cosmética aplicada al manto</u> según el tipo de pelo y textura del perro.</p>
-						<p>Los procedimientos de estética <b>baño, cepillado y desenredado</b>.</p>
-						<p>Cómo saber si quedó limpio el pelo, <b>prolongar el efecto del baño</b> y saber <u>en qué momento acondicionar</u> o hidratar.</p>
-					</div>
-				</div>
-			</div>
-		</section>
+
+                                        <div>
+                                                <p><b>Parte 1:</b> Introducción a la peluquería felina, consejos antes del baño y herramientas iniciales.</p>
+                                                <p><b>Parte 2:</b> La piel del gato y la cosmética. Conociendo a los gatos.</p>
+                                                <p><b>Parte 3:</b> Cómo recepcionar al gato en la peluquería.</p>
+                                                <p><b>Parte 4:</b> Antes de bañar un gato por primera vez.</p>
+                                                <p><b>Parte 5:</b> Relacionando al gato con la herramienta.</p>
+                                                <p><b>Parte 6:</b> Preparación del gato antes del baño.</p>
+                                                <p><b>Parte 7:</b> Cómo bañar al gato.</p>
+                                                <p><b>Parte 8:</b> Cómo secar al gato.</p>
+                                                <p><b>Parte 9:</b> Resultado del primer baño y consejos importantes.</p>
+                                                <p><b>Parte 10:</b> Cómo iniciar la peluquería con un gato adulto.</p>
+                                                <p><b>Parte 11:</b> Técnica del precorte.</p>
+                                                <p><b>Parte 12:</b> Preparación del gato antes del baño e introducción al precorte.</p>
+                                                <p><b>Parte 13:</b> Cómo bañar al gato adulto.</p>
+                                                <p><b>Parte 14:</b> Cómo secar al gato.</p>
+                                                <p><b>Parte 15:</b> Peluquería final: técnica de pulido y acabados.</p>
+                                                <p><b>Parte 16:</b> Modelo 3, gato temperamental.</p>
+                                                <p><b>Parte 17:</b> Trabajo con máquina.</p>
+                                                <p><b>Parte 18:</b> Cómo desenredar al gato.</p>
+                                                <p><b>Parte 19:</b> Precorte con tijera.</p>
+                                                <p><b>Parte 20:</b> Baño para un gato temperamental.</p>
+                                                <p><b>Parte 21:</b> Secado rápido.</p>
+                                                <p><b>Parte 22:</b> Corte final tipo peluche (acabados).</p>
+                                                <p><b>Parte 23:</b> Resultado final y consejos importantes.</p>
+                                                <p><b>Parte 24:</b> Despedida con información de oro.</p>
+                                        </div>
+                                </div>
+                        </div>
+                </section>
 
 		<section id="muestras" class="bgYellow" aria-labelledby="muestras-heading">
 
@@ -284,7 +300,9 @@ if( !$testing && !$testPar )
 				<p>Así como ellos, tu <b>adquirirás las habilidades</b> y competencias para realizar <b>espectaculares cortes</b>.</p>
 			</div>
 
+
 			<?php include_once ($base . "inc/landings/muestras.php"); ?>
+
 
 		</section>
 
@@ -369,27 +387,27 @@ if( !$testing && !$testPar )
 			<div id="temario" >
 			  <div class="active">
 				<h3>
-				  <button>INTRODUCCIÓN - PELUQUERIA PARA PERROS</button>
+                                  <button>INTRODUCCIÓN - PELUQUERIA PARA GATOS</button>
 				</h3>
 				<ul style="display:block" itemprop="hasCourseInstance" itemscope itemtype="https://schema.org/CourseInstance"> 
 					 <meta itemprop="courseWorkload" content="PT4H" />
-					<li itemprop="courseMode" content="online"><span>PARTE 1 - A</span> - Introducción a la peluquería canina.</li> 
-					<li itemprop="courseMode" content="online"><span>PARTE 1 - B</span> – Introducción a la peluquería canina.</li>
+                                        <li itemprop="courseMode" content="online"><span>PARTE 1 - A</span> - Introducción a la peluquería felina.</li>
+                                        <li itemprop="courseMode" content="online"><span>PARTE 1 - B</span> – Introducción a la peluquería felina.</li>
 					<li itemprop="courseMode" content="online"><span>PARTE 1 - C</span> – Lenguaje técnico que debe tener un estilista.</li>
-					<li itemprop="courseMode" content="online"><span>PARTE 2 - A</span> – Cosmetología aplicada al manto del perro.</li>
-					<li itemprop="courseMode" content="online"><span>PARTE 2 - B</span> – Cosmetología aplicada al manto del perro.</li>
-					<li itemprop="courseMode" content="online"><span>PARTE 3</span> – Introducción a la parte práctica en peluquería canina.</li>
+                                        <li itemprop="courseMode" content="online"><span>PARTE 2 - A</span> – Cosmetología aplicada al manto del gato.</li>
+                                        <li itemprop="courseMode" content="online"><span>PARTE 2 - B</span> – Cosmetología aplicada al manto del gato.</li>
+                                        <li itemprop="courseMode" content="online"><span>PARTE 3</span> – Introducción a la parte práctica en peluquería felina.</li>
 					<li itemprop="courseMode" content="online"><span>PARTE 4</span> – Seguridad en la peluquería.</li>
-					<li itemprop="courseMode" content="online"><span>PARTE 5</span> – Manejo del perro.</li>
-					<li itemprop="courseMode" content="online"><span>PARTE 6</span> – Herramientas de peluquería canina.</li>
-					<li itemprop="courseMode" content="online"><span>PARTE 7</span> – Productos que vas a necesitar en la peluquería canina.</li>
-					<li itemprop="courseMode" content="online"><span>PARTE 8</span> – Preparación del perro antes del baño.</li>
-					<li itemprop="courseMode" content="online"><span>PARTE 9</span> – Cómo bañar al perro.</li>
-					<li itemprop="courseMode" content="online"><span>PARTE 10</span> – Cómo secar al perro.</li>
+                                        <li itemprop="courseMode" content="online"><span>PARTE 5</span> – Manejo del gato.</li>
+                                        <li itemprop="courseMode" content="online"><span>PARTE 6</span> – Herramientas de peluquería felina.</li>
+                                        <li itemprop="courseMode" content="online"><span>PARTE 7</span> – Productos que vas a necesitar en la peluquería felina.</li>
+                                        <li itemprop="courseMode" content="online"><span>PARTE 8</span> – Preparación del gato antes del baño.</li>
+                                        <li itemprop="courseMode" content="online"><span>PARTE 9</span> – Cómo bañar al gato.</li>
+                                        <li itemprop="courseMode" content="online"><span>PARTE 10</span> – Cómo secar al gato.</li>
 					<li itemprop="courseMode" content="online"><span>PARTE 11</span> – Arreglo de almohadillas, higiénico y como despejar ojos.</li>
 					<li itemprop="courseMode" content="online"><span>PARTE 12</span> – Corte de maquina y tijera en cuerpo y cabeza.</li>
 					<li itemprop="courseMode" content="online"><span>PARTE 13</span> – Arreglo de cabeza y orejas.</li>
-					<li itemprop="courseMode" content="online"><span>PARTE 14</span> – Resultado final primer curso básico de peluquería canina.</li>
+                                        <li itemprop="courseMode" content="online"><span>PARTE 14</span> – Resultado final primer curso básico de peluquería felina.</li>
 					<li itemprop="courseMode" content="online"><span>PARTE 15</span> – Certificación.</li>
 				</ul>
 			  </div>
@@ -522,15 +540,15 @@ if( !$testing && !$testPar )
 			</div>
 
 			<div class="container" itemscope itemtype="https://schema.org/Person">
-				<meta itemprop="jobTitle" content="Estilista canino, Handler canino, Groomer canino">
+<meta itemprop="jobTitle" content="Estilista felino, Handler felino, Groomer felino">
 				<div>
 					<div></div>
 					<div>
 						<h3>Con <b itemprop="name">Fabio Gomez Sepulveda</b></h3>
 						<div>
-							<h4 itemprop="jobTitle">Estilista canino</h4>
-							<h4 itemprop="jobTitle">Handler canino</h4>
-							<h4 itemprop="jobTitle">Groomer canino</h4>
+                                                        <h4 itemprop="jobTitle">Estilista felino</h4>
+                                                        <h4 itemprop="jobTitle">Handler felino</h4>
+                                                        <h4 itemprop="jobTitle">Groomer felino</h4>
 						</div>					
 					</div>
 				</div>	
@@ -539,7 +557,6 @@ if( !$testing && !$testPar )
 					<div>
 						<img 
 							src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-							data-src="/img/landings/<?= $dirLanding ?>/<?= $autorSlug ?>-<?= $dirLanding ?>.jpg" 
 							class="center-block img-rounded lazyload"  
 							alt="<?= $autor ?> de <?= $nombredelcurso ?>"
 							title="<?= $autor ?> de <?= $nombredelcurso ?>" 
@@ -551,7 +568,8 @@ if( !$testing && !$testPar )
 
 					<div itemprop="description">
 						<p>
-							Desarrollado por <b>Fabio Ernesto Gomez Sepulveda</b>, <u>estilista canino profesional, handler, ponente internacional</u> y escultor con participación en uno de los congresos más grandes e importantes del mundo de las mascotas. <b>Ganador de múltiples Best In Show</b> en diferentes competencias de belleza en perros y de peluquería canina.
+                                                        Desarrollado por <b>Fabio Ernesto Gomez Sepulveda</b>, <u>estilista felino profesional, handler, ponente internacional</u> y escultor con participación en uno de los congresos más grandes e importantes del mundo de las mascotas. <b>Ganador de múltiples Best In Show</b> en diferentes competencias de belleza y de peluquería felina.
+
 						</p>
 
 						<p>
@@ -560,7 +578,9 @@ if( !$testing && !$testPar )
                 
 						<div>
 							<p>
-								Estudiar peluquería canina nunca fue tan fácil. Aprende un arte que puedas <b>desempeñar en cualquier lugar</b>.
+
+                                                                Estudiar peluquería felina nunca fue tan fácil. Aprende un arte que puedas <b>desempeñar en cualquier lugar</b>.
+
 							</p>
 						</div>				
 					</div>
@@ -571,7 +591,7 @@ if( !$testing && !$testPar )
 		<?php
 
         $subtitleAlumnas = ['subtitle' => ''];
-        include_once ($base . "inc/landings/alumnasfelices.php");
+include_once ($base . "inc/landings/alumnasfelices.php");
 
         ?>
 
@@ -587,7 +607,9 @@ if( !$testing && !$testPar )
 			<div class="back1080">
 				<img 
 					src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-					data-src="/img/landings/<?= $dirLanding ?>/diploma.png" 
+
+                                        data-src="/img/landings/<?= $assetDir ?>/diploma.png"
+
 					class="lazyload"  
 					alt="Certificado como profesional en <?= $nombredelcurso ?> avalado por <?= $autor ?>" 
 					title="Certificado como profesional en <?= $nombredelcurso ?> avalado por <?= $autor ?>" 
@@ -601,7 +623,8 @@ if( !$testing && !$testPar )
 
 					<p itemprop="description">
 						<span>Al finalizar el curso podrás imprimir tu <b>certificado de conclusión digital</b> y colgarlo donde tu quieras.</span>
-						<span>Estamos seguros que cuando lo hagas sentirás la satisfacción de saber que estás listo para <b>realizar increíbles cortes caninos</b> y crear tu propio negocio en esta bonita actividad.</span>
+                                                <span>Estamos seguros que cuando lo hagas sentirás la satisfacción de saber que estás listo para <b>realizar increíbles cortes felinos</b> y crear tu propio negocio en esta bonita actividad.</span>
+
 					</p>
 
 				</div>
@@ -614,7 +637,8 @@ if( !$testing && !$testPar )
 				<div class="text-center section-heading">
 					<h2 id="video-adicional-heading" itemprop="name">Fabio responde</h2>
 					<p itemprop="description">
-						<b>¿Se puede hacer un curso de peluquería para perros online?</b>
+                                                <b>¿Se puede hacer un curso de peluquería para gatos online?</b>
+
 					</p>
 				</div>        
 
@@ -626,15 +650,16 @@ if( !$testing && !$testPar )
 		</section>
 	
 		
-		<?php include_once ($base . "inc/landings/header-beneficios.php"); ?>
+                <?php
+                $dirLandingTemp = $dirLanding; $dirLanding = $assetDir;
+                include_once ($base . "inc/landings/header-beneficios.php");
+                include_once ($base . "inc/landings/beneficios.php");
+                include_once ($base . "inc/landings/precio.php");
+                include_once ($base . "inc/landings/precio-beneficios.php");
+                include_once ($base . "inc/landings/garantia.php");
+                $dirLanding = $dirLandingTemp;
+                ?>
 
-		<?php include_once ($base . "inc/landings/beneficios.php"); ?>
-
-		<?php include_once ($base . "inc/landings/precio.php"); ?>
-
-		<?php include_once ($base . "inc/landings/precio-beneficios.php"); ?>
-
-		<?php include_once ($base . "inc/landings/garantia.php"); ?>
 
 		<?php
 
@@ -643,7 +668,13 @@ if( !$testing && !$testPar )
 
         ?>
 		
-		<?php include_once ($base . "inc/landings/faq.php"); ?>
+                <?php
+                $dirLandingTemp = $dirLanding;
+                $dirLanding = $assetDir;
+                include_once ($base . "inc/landings/faq.php");
+                $dirLanding = $dirLandingTemp;
+                ?>
+
 
 		<?php
 
@@ -652,7 +683,13 @@ if( !$testing && !$testPar )
 		
 		?>
 	  
-		<?php include_once ($base . "inc/landings/footer-landing.php"); ?>
+                <?php
+                $dirLandingTemp = $dirLanding;
+                $dirLanding = $assetDir;
+                include_once ($base . "inc/landings/footer-landing.php");
+                $dirLanding = $dirLandingTemp;
+                ?>
+
 		
    </body>
 
