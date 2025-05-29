@@ -11,9 +11,16 @@ $autorSlug = "diana-fonseca";
 
 include $base. "inc/functions.php";
 
-//precios en dolares
+//precios en dolares... es 65% descuento
 $oferta50Precio  	= getPrecio(29.99);
 $sinOfertaPrecio 	= getPrecio(59.98);
+
+$bono1 = getPrecio(15);
+$bono2 = getPrecio(13);
+$bono3 = getPrecio(17);
+$bono4 = getPrecio(19);
+
+$bonosTotal = getPrecio(64);
 
 $currency 			= getCurrency();
 
@@ -94,15 +101,15 @@ $g_facebook = true;
 $g_whatsaup = false;
 
 // descripcion
-$des = "¿Te imaginas crear Tu propio negocio de snacks naturales y saludables, artesanales, sin conservantes y llenos de sabor? - Petz School.";
+$des = "Crea Tu propio negocio de snacks naturales y saludables, artesanales, sin conservantes y llenos de sabor - Deshidratados - Petz School.";
 //$des = "Cocina con Amor y emprende con éxito en el mundo de la Deshidratados - Petz School.";
 
 // titulo
 $tit = "✓ Promo 50% Off en el Curso de Deshidratados de Diana Fonseca - Petz School";
 
-$videoPrincipalID 	= "96bba50862";
-$videoMuestraID		= "302a587cf2";
-$videoAdicionalID	= "302a587cf2s";
+$videoPrincipalID 	= "1087916037";
+$videoMuestraID		= "1064474904";
+$videoAdicionalID	= "1064124075";
 
 
 //OFERTAS SETTINGS, elegir una de las 2, si esta activo uno con "true" los otros 2 tienen que estar en "false"
@@ -128,8 +135,10 @@ if( $hideEfectivo ){
 $modalMesageCheckout = false;
 
 // Link Producto, chechout limpio para crashing
+// https://go.hotmart.com/H85889948W?ap=2145
 
-$linkProducto = "https://go.hotmart.com/H85889948W?ap=e04b";
+//con order bumps
+$linkProducto = "https://go.hotmart.com/H85889948W?ap=04b4";
 
 
 //De aca para abajo no hay que tocar nada
@@ -140,7 +149,8 @@ $textCuotas = $textCuotasFull;
 
 if( $oferta50 ){
 	
-	$offDiscount = "&offDiscount=220774";
+	//en este caso esta con el descuento ya en el link y si le aplico esto me hace un descuento sobre el descuento
+	//$offDiscount = "&offDiscount=220774";
 	$textCuotas = $textCuotas50Off;
 	
 }
@@ -183,7 +193,8 @@ if( !$testing && !$testPar )
 			<div class="container back1080">
 
 				<h1 id="first-scroll-heading" itemprop="name">
-				Dominá el Arte de la Deshidratación y Crea Snacks Saludables para Mascotas
+					<?php $tituloAnterior = "Dominá el Arte de la Deshidratación y Crea Snacks Saludables para Mascotas"; ?>
+					Snacks Deshidratados para Mascotas. Nutrición Real, un Negocio con Alma
 				</h1>
 
 				<div class="subtitIcon">
@@ -221,7 +232,7 @@ if( !$testing && !$testPar )
 				<div class="optesumVid">
 					<div>
 						<p>Ya somos más de </p>
-						<p>634</p>
+						<p>459</p>
 						<p>Pets Lovers</p>
 					</div>
 					<p>
@@ -261,11 +272,11 @@ if( !$testing && !$testPar )
 			<div class="container">
 				<div itemprop="educationalCredentialAwarded" content="Certificado de <?= $nombredelcurso ?>">
 					<div itemprop="description">
-						<p itemprop="competencyRequired">Deshidratar frutas, verduras, carnes, galletas, patas y pescuezos de pollo correctamente utilizando diferentes métodos (horno, Airfryer, sol o deshidratador casero).</p>
-						<p itemprop="competencyRequired">Elaborar colorantes naturales en polvo a partir de verduras para almacenamiento y uso en decoraciones.</p>
-						<p itemprop="competencyRequired">Crear sazonadores naturales con cárnicos y verduras deshidratadas para mejorar el sabor y el valor nutricional de los alimentos para mascotas.</p>
-						<p itemprop="competencyRequired">Preparar cuero o rollitos de frutas deshidratados para presentaciones innovadoras.</p>
-						<p itemprop="competencyRequired">Técnicas de macerado con más de 12 recetas para potenciar el sabor de carnes, aves y pescados antes de deshidratarlos.</p>
+						<p itemprop="competencyRequired"><b>Aprende a deshidratar frutas, verduras, carnes, galletas, patas, pescuezos y corazones de pollo</b> de forma correcta, ya sea en horno, Airfryer, al sol o con deshidratador casero.</p>
+						<p itemprop="competencyRequired"><b>Elaborar colorantes naturales</b> en polvo a partir de verduras para almacenamiento y uso en decoraciones.</p>
+						<p itemprop="competencyRequired"><b>Crear sazonadores naturales</b> con cárnicos y verduras deshidratadas para mejorar el sabor y el valor nutricional de los alimentos para mascotas.</p>
+						<p itemprop="competencyRequired"><b>Preparar cuero o rollitos de frutas</b> deshidratados para presentaciones innovadoras.</p>
+						<p itemprop="competencyRequired"><b>Técnicas de macerado</b> con más de 12 recetas para potenciar el sabor de carnes, aves y pescados antes de deshidratarlos.</p>
 					</div>
 				</div>
 			</div>
@@ -346,9 +357,9 @@ if( !$testing && !$testPar )
 				</div>
 
 				<div>
-					<p><i class="fa fa-clock-o"></i>32 videos</p>
+					<p><i class="fa fa-clock-o"></i>32 lecciones</p>
 					<p><i class="fa fa-user"></i><span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Por <?= $autor ?></span></span></p>
-					<p itemprop="reviewCount"><i class="fa fa-comment"></i>321 Evaluaciones</p>
+					<p itemprop="reviewCount"><i class="fa fa-comment"></i>18 Evaluaciones</p>
 				</div>
 
 			  </div>		
@@ -476,6 +487,64 @@ if( !$testing && !$testPar )
         ?>
 
 
+		<section id="bonos" class="bg-pattern" itemscope itemtype="https://schema.org/Course">
+
+			<?php
+
+            $bonos = [
+
+                [
+                    'img' => 'recetario-diana-fonseca-deshidratados.png',
+                    'alt' => 'Recetario Diana Fonseca Deshidratados',
+                    'precio' => $bono1,
+                    'descripcion' => '<b>Recetario incluido</b>. Todas las recetas del curso, siempre a tu alcance sin tomar apuntes.',
+                ],
+                [
+                    'img' => 'almacenamiento-diana-fonseca-deshidratados.png',
+                    'alt' => 'Guia sobre Almacenamiento de Deshidratados',
+                    'precio' => $bono2,
+                    'descripcion' => 'Guia práctica sobre <b>almacenamiento y empaque</b>. Mantené frescos tus deshidratados.',
+                ],
+                [
+                    'img' => 'rentabilidad-diana-fonseca-deshidratados.png',
+                    'alt' => 'Rentabilidad al detalle sobre el nefocio de Deshidratados',
+                    'precio' => $bono3,
+                    'descripcion' => 'Aprendé a poner <b>precios justos y competitivos</b>. Vendé bien y ganá mejor.',
+                ],
+                [
+                    'img' => 'macerados-diana-fonseca-deshidratados.png',
+                    'alt' => '12 Recetas de Macerados',
+                    'precio' => $bono4,
+                    'descripcion' => '<b>12 Recetas de Macerados</b> para Peludos Gourmets. Añade sabor, salud y variedad a su dieta.',
+                ],
+                [
+                    'img' => 'private-group.png',
+                    'alt' => 'Tendrás acceso de por vida a nuestro grupo privado de Facebook y Telegram.',
+                    'precio' => "Invaluable",
+                    'descripcion' => 'Tendrás <b>acceso de por vida</b> a nuestro grupo privado de Facebook y Telegram.',
+                ],
+            ];
+
+            $cantBonos = count($bonos);
+
+            ?>
+
+			<div class="text-center section-heading">
+				<h2 itemprop="name">Recibe GRATIS <?= $cantBonos ?> Bonos</h2>
+				<p itemprop="description">
+					<b class="blockMobile">SOLO POR HOY</b> con tu inscripción recibirás totalmente <b>GRATIS <?= $cantBonos ?> bonos</b> valorados en <b>+ de <?= $currency ?> <?= $bonosTotal ?></b>.
+				</p>
+			</div>
+
+			<?php
+
+            include_once ($base . "inc/landings/bonos.php");
+
+            ?>
+
+		</section>
+
+
 		<section id="certificado" class="backDark" aria-labelledby="certificado-heading" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
 			<div class="back1080">
 				<img 
@@ -526,6 +595,7 @@ if( !$testing && !$testPar )
 
         $masBeneficios = [
             "Más de 30 lecciones en video, formato súper HD.",
+            "TUS $cantBonos bonos valuados en + de $currency $bonosTotal.",
             "SORPRESAS Y REGALOS... videos, playbooks, publicaciones, imágenes, actualizaciones y presentaciones."
         ];
 
@@ -574,94 +644,6 @@ if( !$testing && !$testPar )
 
         ?>
 		
-		<section id="testimonios" class="bgYellow bg-pattern" aria-labelledby="testimonios-heading">
-
-			<div class="section-heading text-center">
-				<h2 id="testimonios-heading">!Más opiniones de alumnas!</h2>
-			</div>
-
-			<div class="container">
-
-				<div id="owl-reviews">
-
-					<?php
-
-					$carouselTestimoniosItems = [
-						[
-							"nombre" => "Ximena Capeletti",
-							"bajada" => "Dog Lover",
-							"descripcion" => "Les quiero recomendar la pastelería para perro de Diana Fonseca. Mis tres amores perrunos, Simón (14 años), Teo (1 año) y Eva (6meses), la adoran!! Simón no volvió a sufrir de la piel desde que lo cambié a esta comida. No tienen mal aliento y el pelo les brilla.",
-							"nombre_imagen" => "ximena.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "Sandra Muñoz",
-							"bajada" => "Dog Lover",
-							"descripcion" => "Me encanto el curso de Deshidratados, mi perro se llama rocky y prepararle deliciosos snack es una excelente actividad que la disfruto con mi hijo. Amamos a Rocky y el ama estas recetas…… Muchisimas Gracias Diana!!!!",
-							"nombre_imagen" => "sandra.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "Nathy Pardo",
-							"bajada" => "Dog Lover",
-							"descripcion" => "Me encanta la simplicidad y facilidad con la que se pueden preparar las distintas recetas que nos comparte Diana. He visto un cambio en la salud de Pepe, mi Pastor Aleman. Siento que ahora mi peludo es más feliz y tiene más energía. Gracias!",
-							"nombre_imagen" => "naty.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "Gaby Flores",
-							"bajada" => "Dog Lover",
-							"descripcion" => "Dante es mi Boston terrier de 4 años y medio, desde el destete ha comido dieta natural, sin embargo Dante tenía problemas en las articulaciones. Cuando pasamos a la barf y pastelería todo cambio, en poco tiempo estaba corriendo y saltando por todas partes. Gracias por todo Diana, saludos!",
-							"nombre_imagen" => "gaby.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "LUISA SALAH",
-							"bajada" => "Dog Lover",
-							"descripcion" => "Quiero contar como este tipo de comida cambió la salud de mi perro. Tengo un pastor collie y desde que le cambie su alimentación su pelo lo tiene más suave, las deposiciones ya no son blandas, los dientes son más blancos, jamás tiene sarro y se le ve con más energía.",
-							"nombre_imagen" => "luisa.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "ANDRÉS FERNÁNDEZ",
-							"bajada" => "Dog Lover",
-							"descripcion" => "Mi hermosa celebra su cumpleaños perruno 3, disfruta de una torta de pollo que aprendimos, nos encanta que Diana sea parte de este especial día, a Bella le encanta toda la pastelería. Muchas gracias cada vez que se porta bien le doy las galletas verdes que tanto le gustan.",
-							"nombre_imagen" => "andres-fernandez.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "SOFIA BUSTAMANTE",
-							"bajada" => "Cat Lover",
-							"descripcion" => "Maya celebró su 3er cumpleaños con una torta de atún que realizamos con el curso de Deshidratados de la profe Diana. Realizare luego helados para Maya que estan en el curso espero me queden delicioso como esta torta.",
-							"nombre_imagen" => "sofia.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "NORA RIVERA DE CRUZ",
-							"bajada" => "Cat Lover",
-							"descripcion" => "Gracias a ustedes  por la torta de atún de cumpleaños de Zahiro, estaba como loco, nunca lo habíamos visto así. Realmente disfruto de su primer cumpleaños. Quedamos satisfecho que gran talento que tienen en la comida de mascotas.",
-							"nombre_imagen" => "nora.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "MIRNA AGUILAR",
-							"bajada" => "Dog Lover",
-							"descripcion" => "Mi hermosa Bella celebró su cumpleaños perruno 2 con una torta de pollo que aprendimos a hacer con el curso de Diana. El curso es muy práctico y apredimos muchas cosas que no teniamos ni idea sobre como alimentarla correctamente.",
-							"nombre_imagen" => "mirna.jpg",
-							"cantidad_estrellas" => 5
-						],
-
-					];
-
-					include_once ($base . "inc/landings/testimonios.php");
-
-					?>
-
-				</div>
-
-			</div>
-
-		</section>
 	  
 		<?php include_once ($base . "inc/landings/footer-landing.php"); ?>
 		

@@ -1,54 +1,64 @@
-<?xml version="1.0" encoding="UTF-8"?> 
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<!-- Páginas generales -->
 	<url>
-	  <loc>https://petzschool.com</loc>
-	  <priority>1.0</priority>
-	  <changefreq>weekly</changefreq>
+		<loc>https://petzschool.com</loc>
+		<priority>1.0</priority>
+		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-	  <loc>https://petzschool.com/instructores/</loc>
-	  <priority>1.0</priority>
-	  <changefreq>weekly</changefreq>
+		<loc>https://petzschool.com/contacto/</loc>
+		<priority>1.0</priority>
+		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-	  <loc>https://petzschool.com/programas/</loc>
-	  <priority>1.0</priority>
-	  <changefreq>weekly</changefreq>
+		<loc>https://petzschool.com/instructores/</loc>
+		<priority>1.0</priority>
+		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-	  <loc>https://petzschool.com/contacto/</loc>
-	  <priority>1.0</priority>
-	  <changefreq>weekly</changefreq>
+		<loc>https://petzschool.com/programas/</loc>
+		<priority>1.0</priority>
+		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-	  <loc>https://petzschool.com/promociones/</loc>
-	  <priority>1.0</priority>
-	  <changefreq>weekly</changefreq>
+		<loc>https://petzschool.com/promociones/</loc>
+		<priority>1.0</priority>
+		<changefreq>weekly</changefreq>
+	</url>
+
+	<!-- Alejandro Quiceno -->
+	<url>
+		<loc>https://petzschool.com/alejandro-quiceno/dieta-barf/</loc>
+		<priority>1.0</priority>
+		<changefreq>weekly</changefreq>
+	</url>
+
+	<!-- Diana Fonseca -->
+	<url>
+		<loc>https://petzschool.com/diana-fonseca/</loc>
+		<priority>1.0</priority>
+		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-	  <loc>https://petzschool.com/diana-fonseca/</loc>
-	  <priority>1.0</priority>
-	  <changefreq>weekly</changefreq>
-	</url>	
-	<url>
-	  <loc>https://petzschool.com/diana-fonseca/pasteleria-canina-y-felina/</loc>
-	  <priority>1.0</priority>
-	  <changefreq>weekly</changefreq>
+		<loc>https://petzschool.com/diana-fonseca/pasteleria-canina-y-felina/</loc>
+		<priority>1.0</priority>
+		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-	  <loc>https://petzschool.com/diana-fonseca/mascotas-sanas/</loc>
-	  <priority>1.0</priority>
-	  <changefreq>weekly</changefreq>
-	</url>	
-	<url>
-	  <loc>https://petzschool.com/diana-fonseca/petlados/</loc>
-	  <priority>1.0</priority>
-	  <changefreq>weekly</changefreq>
+		<loc>https://petzschool.com/diana-fonseca/mascotas-sanas/</loc>
+		<priority>1.0</priority>
+		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-	  <loc>https://petzschool.com/diana-fonseca/reposteria-de-halloween/</loc>
-	  <priority>1.0</priority>
-	  <changefreq>weekly</changefreq>
+		<loc>https://petzschool.com/diana-fonseca/petlados/</loc>
+		<priority>1.0</priority>
+		<changefreq>weekly</changefreq>
+	</url>
+	<url>
+		<loc>https://petzschool.com/diana-fonseca/reposteria-de-halloween/</loc>
+		<priority>1.0</priority>
+		<changefreq>weekly</changefreq>
 	</url>
 	<url>
 		<loc>https://petzschool.com/diana-fonseca/tecnicas-de-decoracion-pasteleria-canina-y-felina/</loc>
@@ -66,7 +76,7 @@
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-		<loc>https://petzschool.com/diana-fonseca/dieta-cocinada-para-perros/</loc>
+		<loc>https://petzschool.com/diana-fonseca/dietas-cocinadas-para-perros/</loc>
 		<priority>1.0</priority>
 		<changefreq>weekly</changefreq>
 	</url>
@@ -81,32 +91,36 @@
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-		<loc>https://petzschool.com/diana-fonseca/cupido-tambien-es-petfrienly/</loc>
+		<loc>https://petzschool.com/diana-fonseca/cupido-tambien-es-petfriendly/</loc>
 		<priority>1.0</priority>
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-	  <loc>https://petzschool.com/fabio-gomez-sepulveda/</loc>
-	  <priority>1.0</priority>
-	  <changefreq>weekly</changefreq>
-	</url>		
+		<loc>https://petzschool.com/diana-fonseca/petlicias-navidenas/</loc>
+		<priority>1.0</priority>
+		<changefreq>weekly</changefreq>
+	</url>
+
+	<!-- Fabio Gomez Sepulveda -->
 	<url>
-	  <loc>https://petzschool.com/fabio-gomez-sepulveda/peluqueria-para-perros/</loc>
-	  <priority>1.0</priority>
-	  <changefreq>weekly</changefreq>
-	</url>	
-		<url>
-	  <loc>https://petzschool.com/alejandro-quiceno/dieta-barf/</loc>
-	  <priority>1.0</priority>
-	  <changefreq>weekly</changefreq>
-	</url>	
-		<url>
-	  <loc>https://petzschool.com/alvaro-osorio/educanino/</loc>
-	  <priority>1.0</priority>
-	  <changefreq>weekly</changefreq>
-	</url>		
-	<url>	  <loc>https://petzschool.com/willian-quispe-abarca/costura-canina-y-felina/</loc>	  <priority>1.0</priority>	  <changefreq>weekly</changefreq>	</url>	
-	<url>	  <loc>https://petzschool.com/diana-fonseca/petlicias-navidenas/</loc>	  <priority>1.0</priority>	  <changefreq>weekly</changefreq>	</url>
+		<loc>https://petzschool.com/fabio-gomez-sepulveda/</loc>
+		<priority>1.0</priority>
+		<changefreq>weekly</changefreq>
+	</url>
+	<url>
+		<loc>https://petzschool.com/fabio-gomez-sepulveda/peluqueria-para-perros/</loc>
+		<priority>1.0</priority>
+		<changefreq>weekly</changefreq>
+	</url>
+
+	<!-- Willian Quispe Abarca -->
+	<url>
+		<loc>https://petzschool.com/willian-quispe-abarca/costura-canina-y-felina/</loc>
+		<priority>1.0</priority>
+		<changefreq>weekly</changefreq>
+	</url>
+
+	<!-- Pets Space -->
 	<url>
 		<loc>https://petzschool.com/pets-space/primeros-auxilios-para-perros/</loc>
 		<priority>1.0</priority>

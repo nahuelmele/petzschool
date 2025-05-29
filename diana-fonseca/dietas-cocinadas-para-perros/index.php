@@ -107,7 +107,7 @@ $des = "¿Te imaginas crear Tu propio negocio y aprender pastelería nutritiva y
 // titulo
 $tit = "✓ Promo 50% Off en el Curso de Pastelería Canina y Felina de Diana Fonseca - Petz School";
 
-$videoPrincipalID 	= "714492785";
+$videoPrincipalID 	= "1064137648";
 $videoMuestraID		= "716119020";
 $videoAdicionalID	= "718531292";
 

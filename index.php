@@ -591,79 +591,7 @@ if( !$testing && !$testPar ){
 
                      </div>					 
 					 
-					 <div class="col-xs-12">
-					 
-                        <div class="isotope-item">
-
-                           <div class="adoption-thumb oferta50">
-
-
-
-								<div class="ribbons50off">
-
-									<img src="/img/ribbons50off.png" />
-
-								</div>
-						   
-							  <a href="/alvaro-osorio/educanino/<?= ( $testPar ? '?test' : '') ?>" title="Educanino - adiestramiento profesional canino - con Alvaro Osorio">
-								<img class="img-responsive img-circle" src="/img/educanino.jpg" alt="Educanino - adiestramiento profesional canino - con Alvaro Osorio" title="Educanino - adiestramiento profesional canino - con Alvaro Osorio">
-							  </a>	
-							  
-                              <div class="adopt-header">
-							  
-                                <h3>
-									<a href="/alvaro-osorio/educanino/<?= ( $testPar ? '?test' : '') ?>" >
-										Educanino
-									</a>
-							   	</h3>	
-								
-								<div class="rating-main-box-ratings-qty">
-									<div class="rating rating--title colorText">
-										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-										</svg>
-										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-										</svg>
-										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-										</svg>
-										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-										</svg>
-										<span>
-											<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star-half" class="svg-inline--fa fa-star-half fa-w-18 fontawesome-icon star-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-												<path fill="currentColor" d="M288 0c-11.4 0-22.8 5.9-28.7 17.8L194 150.2 47.9 171.4c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.1 23 46 46.4 33.7L288 439.6V0z"></path>
-											</svg>
-											<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star-half" class="svg-inline--fa fa-star-half fa-w-18 fontawesome-icon star-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-												<path fill="currentColor" d="M288 0c-11.4 0-22.8 5.9-28.7 17.8L194 150.2 47.9 171.4c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.1 23 46 46.4 33.7L288 439.6V0z"></path>
-											</svg>
-										</span>
-									</div>
-									
-									<div class="blog-tags">
-										<a>4.7</a>
-									</div>
-									
-								</div>								
-								 
-								<div class="post-info">
-									<p><i class="fa fa-clock-o"></i>123 Lecciones</p>
-									<p><i class="fa fa-user"></i>Por Alvaro Osorio</a></p>
-								</div>
-								
-								<div class="plan-cost">
-									<span class="plan-price"><?= getPrecio(60) ?></span>
-									<span class="plan-price-discount"><?= getPrecio(120) ?></span>
-								</div>
-		
-                              </div>
-							  
-                           </div>
-
-                        </div>					 
-					 
-					 </div>						 
+				 
 					 
 					 
 					 
@@ -1848,28 +1776,6 @@ if( !$testing && !$testPar ){
                            <div class="social-media smaller">
                               <a href="https://www.facebook.com/NaturalTaste2015/" title="Diana Fonseca" class="facebook" target="_blank" rel="nofollow"><i class="fa fa-facebook"></i></a>
                               <a href="https://www.instagram.com/dianafonsecamartin/" title="Diana Fonseca" class="instagram" target="_blank" rel="nofollow"><i class="fa fa-instagram"></i></a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="team-wrap col-md-12">
-                     <div class="member text-center">
-                        <div class="wrap">
-                           <div class="info">
-                              <h3 class="name">
-									<a href="/alvaro-osorio/<?= ( $testPar ? '?test' : '') ?>" style="color: initial;" >
-										Alvaro Osorio
-									</a></h3>
-                              <h4 class="position">Entrenador de Perros</h4>
-                           </div>
-                           <img src="/img/team5.jpg" alt="Alvaro Osorio" class="img-circle img-responsive">
-                        </div>
-                        <div class="more">
-                           <p>Es un instructor profesional Adiestrador canino con más de 20 años de experiencia.</p>
-                           <div class="social-media smaller">
-                               <a href="https://www.facebook.com/Alvaro-Osorio-I-Adiestramiento-Canino-112777313819899/" title="Alvaro Osorio" class="facebook" target="_blank" rel="nofollow"><i class="fa fa-facebook"></i></a>
-                              <a href="https://www.instagram.com/diestros1/" title="Alvaro Osorio" class="instagram" target="_blank" rel="nofollow"><i class="fa fa-instagram"></i></a>
-                              <a href="https://www.youtube.com/user/diestros2" title="Alvaro Osorio" class="youtube" target="_blank" rel="nofollow"><i class="fa fa-youtube"></i></a>
                            </div>
                         </div>
                      </div>

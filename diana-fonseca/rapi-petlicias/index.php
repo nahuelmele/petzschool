@@ -104,9 +104,8 @@ $des = "¿Te imaginas crear Tu propio negocio y aprender recetas rápidas nutrit
 // titulo
 $tit = "✓ Promo 50% Off en el Curso de Rapi Petlicias de Diana Fonseca - Petz School";
 
-$videoPrincipalID 	= "714492785";
-$videoMuestraID		= "716119020";
-$videoAdicionalID	= "718531292";
+$videoPrincipalID 	= "1064135284";
+$videoAdicionalID	= "1064135938";
 
 
 //OFERTAS SETTINGS, elegir una de las 2, si esta activo uno con "true" los otros 2 tienen que estar en "false"
@@ -543,7 +542,7 @@ if( !$testing && !$testPar )
 			</div>
 		</section>
 		
-		<!-- <section id="video-adicional" class="bgYellow bg-pattern" aria-labelledby="video-adicional-heading" itemscope itemtype="https://schema.org/VideoObject">
+		<section id="video-adicional" class="bgYellow bg-pattern" aria-labelledby="video-adicional-heading" itemscope itemtype="https://schema.org/VideoObject">
 			<div class="back768">
         
 				<div class="text-center section-heading">
@@ -558,7 +557,7 @@ if( !$testing && !$testPar )
 				</div>    
         
 			</div>
-		</section> 		 -->
+		</section> 	
 		
 		<?php include_once ($base . "inc/landings/header-beneficios.php"); ?>
 
@@ -580,24 +579,6 @@ if( !$testing && !$testPar )
 		<?php include_once ($base . "inc/landings/precio.php"); ?>
 
 		<?php include_once ($base . "inc/landings/precio-beneficios.php"); ?>
-
-
-		<section id="video-por-dentro" class="bgYellow bg-pattern" aria-labelledby="video-por-dentro-heading" itemscope itemtype="https://schema.org/VideoObject">
-			<div class="back768">
-        
-				<div class="text-center section-heading">
-					<h2 id="video-por-dentro-heading" itemprop="name">¿Quíeres dar un vistazo?</h2>
-					<p itemprop="description">
-						Aquí podrás ver cómo es <b>el curso por dentro</b>.
-					</p>
-				</div>        
-
-				<div class="boxShadowVideo" itemprop="video">
-					<lite-vimeo videoid="<?= $videoMuestraID ?>"></lite-vimeo>
-				</div>    
-        
-			</div>
-		</section>
 	
 		<?php include_once ($base . "inc/landings/garantia.php"); ?>
 

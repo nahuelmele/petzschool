@@ -32,11 +32,6 @@
 								Fabio Sepulveda
 							</a>							
 						</li>
-						<li>
-							<a href="/alvaro-osorio/<?= ( $testPar ? '?test' : '') ?>" >
-								Alvaro Osorio
-							</a>							
-						</li>
                      </ul>
 					</li>
 				  <li><a href="/programas/<?= ( $testPar ? '?test' : '') ?>" class="<?php echo ( strpos( CURRENTURL, "programas" ) !== false ) ? "current" : ""; ?>" >Programas</a></li>

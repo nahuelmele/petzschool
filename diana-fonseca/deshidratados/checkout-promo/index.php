@@ -3,5 +3,5 @@
 <meta property="og:title" content="Deshidratados de Diana Fonseca - Petz School" />
 <meta property="og:image" content="https://petzschool.com/img/landings/deshidratados/compartir-deshidratados.jpg" />
 <script>
-  window.location.href = 'https://go.hotmart.com/H85889948W?ap=e04b&offDiscount=220774';
+  window.location.href = 'https://go.hotmart.com/H85889948W?ap=04b4';
 </script>

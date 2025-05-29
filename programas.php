@@ -1561,157 +1561,7 @@ if( !$testing && !$testPar ){
 
 
 
-				  
-
-                     <div class="col-lg-6 col-sm-6 col-md-6 dog">
-
-                        <div class="isotope-item">
-
-
-
-                           <div class="adoption-thumb oferta50">						   								
-						   
-								<div class="ribbons50off">									
-									<img src="/img/ribbons50off.png" />								
-								</div>
-
-						   
-
-							  <a href="/alvaro-osorio/educanino/" title="Educanino - adiestramiento profesional canino - con Alvaro Osorio">
-
-								<img class="img-responsive img-circle" src="/img/educanino.jpg" alt="Educanino - adiestramiento profesional canino - con Alvaro Osorio" title="Educanino - adiestramiento profesional canino - con Alvaro Osorio">
-
-							  </a>	
-
-							  
-
-                              <div class="adopt-header">
-
-							  
-
-                                <h3>
-
-									<a href="/alvaro-osorio/educanino/">
-
-										Educanino
-
-									</a>
-
-							   	</h3>	
-
-								
-
-								<div class="rating-main-box-ratings-qty">
-
-									<div class="rating rating--title colorText">
-
-										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-
-											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-
-										</svg>
-
-										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-
-											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-
-										</svg>
-
-										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-
-											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-
-										</svg>
-
-										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-
-											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-
-										</svg>
-
-										<span>
-
-											<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star-half" class="svg-inline--fa fa-star-half fa-w-18 fontawesome-icon star-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-
-												<path fill="currentColor" d="M288 0c-11.4 0-22.8 5.9-28.7 17.8L194 150.2 47.9 171.4c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.1 23 46 46.4 33.7L288 439.6V0z"></path>
-
-											</svg>
-
-											<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star-half" class="svg-inline--fa fa-star-half fa-w-18 fontawesome-icon star-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-
-												<path fill="currentColor" d="M288 0c-11.4 0-22.8 5.9-28.7 17.8L194 150.2 47.9 171.4c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.1 23 46 46.4 33.7L288 439.6V0z"></path>
-
-											</svg>
-
-										</span>
-
-									</div>
-
-									
-
-									<div class="blog-tags">
-
-										<a>4.7</a>
-
-									</div>
-
-									
-
-								</div>		
-
-								
-
-								 
-
-								<div class="post-info">
-
-									<p><i class="fa fa-clock-o"></i>360 Lecciones</p>
-
-									<p><i class="fa fa-user"></i>Por Alvaro Osorio</a></p>
-
-									<p><i class="fa fa-comment"></i>164 Evaluaciones</p>
-
-								</div>
-
-								
-
-								<div class="plan-cost">
-
-									<span class="plan-price"><?= $currency ?> <?= getPrecio(60) ?></span>
-
-									<span class="plan-price-discount"><?= $currency ?> <?= getPrecio(120) ?></span>
-
-								</div>								
-
-								
-
-                                <p>
-
-									Convierte tu amor por los perros en un negocio rentable y genera ingresos extras con <b>el único programa certificado de adiestramiento canino en español</b>.
-
-								</p>
-
-								 
-
-                                <a class="btn" href="/alvaro-osorio/educanino/">
-
-									Ver más
-
-								</a>
-
-								
-
-                              </div>
-
-							  
-
-                           </div>
-
-
-
-                        </div>
-
-                     </div>
+				 
 
 
                      <div class="col-lg-6 col-sm-6 col-md-6 cat dog">
@@ -2699,9 +2549,9 @@ if( !$testing && !$testPar ){
 
 						   
 
-							  <a href="https://go.hotmart.com/H85889948W" target="_blank" title="Curso de pasteleria-canina-y-felina de Diana Fonseca">
+							  <a href="https://go.hotmart.com/H85889948W" target="_blank" title="Curso de deshidratados de Diana Fonseca">
 
-								<img class="img-responsive img-circle" src="/img/pasteleria-canina-y-felina.jpg" alt="Curso de pasteleria-canina-y-felina de Diana Fonseca" title="Curso de pasteleria-canina-y-felina de Diana Fonseca">
+								<img class="img-responsive img-circle" src="/img/deshidratados.jpg" alt="Curso de deshidratados de Diana Fonseca" title="Curso de deshidratados de Diana Fonseca">
 
 							  </a>	
 
@@ -2715,7 +2565,7 @@ if( !$testing && !$testPar ){
 
 									<a href="https://go.hotmart.com/H85889948W" target="_blank">
 
-										pasteleria-canina-y-felina
+										Deshidratados
 
 									</a>
 

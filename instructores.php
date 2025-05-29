@@ -191,28 +191,6 @@ if( !$testing && !$testPar ){
                         </div>
                      </div>
                   </div>
-                  <div class="team-wrap col-md-12">
-                     <div class="member text-center">
-                        <div class="wrap">
-                           <div class="info">
-                                                            <h3 class="name">
-									<a href="/alvaro-osorio/<?= ( $testPar ? '?test' : '') ?>" style="color: initial;" >
-										Alvaro Osorio
-									</a></h3>
-                              <h4 class="position">Entrenador de Perros</h4>
-                           </div>
-                           <img src="/img/team5.jpg" alt="Alvaro Osorio" class="img-circle img-responsive">
-                        </div>
-                        <div class="more">
-                           <p>Es un instructor profesional Adiestrador canino con más de 14 años de experiencia.</p>
-                           <div class="social-media smaller">
-                               <a href="https://www.facebook.com/Alvaro-Osorio-I-Adiestramiento-Canino-112777313819899/" title="Alvaro Osorio" class="facebook" target="_blank" rel="nofollow"><i class="fa fa-facebook"></i></a>
-                              <a href="https://www.instagram.com/diestros1/" title="Alvaro Osorio" class="instagram" target="_blank" rel="nofollow"><i class="fa fa-instagram"></i></a>
-                              <a href="https://www.youtube.com/user/diestros2" title="Alvaro Osorio" class="youtube" target="_blank" rel="nofollow"><i class="fa fa-youtube"></i></a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
 				  <div class="team-wrap col-md-12">
                      <div class="member text-center">
                         <div class="wrap">

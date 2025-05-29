@@ -62,7 +62,7 @@ if (COUNTRYCODE == "ar" || COUNTRYCODE == "cl" || COUNTRYCODE == "eu") {
 //cuando esta arriba este "testing" hay que comentarlo. NO PONERLO EN FALSE NI REMOVERLO, cuando estamos en "localhost" automaticamente todo el sitio entra en testing y cuando esta arriba todo pasa a prod.
 //$testing = true;
 
-$whatsAppMessage = 'Tengo la siguiente duda sobre el curso "' . $nombredelcurso . '" ...';
+$whatsAppMessage = 'Tengo la siguiente duda sobre el taller "' . $nombredelcurso . '" ...';
 
 //whatsApp chat directo o con popUp, false seria con el popUp ( por ahora no usarlo )
 $directo = true;
@@ -104,12 +104,12 @@ $g_facebook = true;
 $g_whatsaup = false;
 
 // descripcion
-$des = "¿Te imaginas crear Tu propio negocio de snacks deliciosos y saludables para mascotas? - Petz School.";
+$des = "Unete al Taller Petfriendly de San Valentín. Aprendé a crear snacks naturales para mascotas y convertí tu pasión en un negocio rentable con Petz School.";
 
 //$des = "Cocina con Amor y emprende con éxito en el mundo de la Cupido también es Petfriendly - Petz School.";
 
 // titulo
-$tit = "✓ Promo 50% Off en el Curso de Cupido también es Petfriendly de Diana Fonseca - Petz School";
+$tit = "✓ Promo 50% Off en el taller de Cupido también es Petfriendly de Diana Fonseca - Petz School";
 
 
 //OFERTAS SETTINGS, elegir una de las 2, si esta activo uno con "true" los otros 2 tienen que estar en "false"
@@ -191,7 +191,7 @@ if (!$testing && !$testPar)
 			<div class="container back1080">
 
 				<h1 id="first-scroll-heading" itemprop="name">
-				Celebra San Valentín con tu Peludo: Taller de Snacks Especiales para Perros y Gatos
+				Taller Petfriendly: Aprendé a preparar snacks saludables, decorativos y temáticos para San Valentín
 				</h1>
 
 				<div class="conteArrow">
@@ -216,8 +216,8 @@ if (!$testing && !$testPar)
 				<img class="imgInstedVideo"
 					 src="/img/landings/<?= $dirLanding ?>/img-hero.webp" 
 				data-src="/img/landings/<?= $dirLanding ?>/img-hero.webp"   
-				alt="Curso: <?= $nombredelcurso ?> de <?= $autor ?>" 
-				title="Curso: <?= $nombredelcurso ?> de <?= $autor ?>" 
+				alt="Taller: <?= $nombredelcurso ?> de <?= $autor ?>" 
+				title="Taller: <?= $nombredelcurso ?> de <?= $autor ?>" 
 				itemprop="image"
 				/>
 
@@ -244,8 +244,8 @@ if (!$testing && !$testPar)
 			<div class="sub-header">
 
 				<h2 id="sub-header-title" itemprop="name">
-					<span>¡CONVIÉRTETE</span> en un maestro de la repostería pet-friendly! <br>
-					<span>CREA tu propio negocio</span> de snacks saludables para mascotas y sorprende a los dueños con deliciosas y creativas opciones <u itemprop="courseMode" content="online">hechas con amor</u>.
+					<span>CONSENTÍ</span> a tu peludo con bocados caseros, fáciles de hacer y 100% naturales.<br>
+					<span>CREA tu propio negocio</span> de snacks saludables para mascotas y sorprende a los dueños con deliciosas y creativas opciones <u itemprop="courseMode" content="online">para San Valentín</u>.
 				</h2>
 				
 				<?php
@@ -265,12 +265,14 @@ if (!$testing && !$testPar)
     
 			<div class="container">
 				<div itemprop="educationalCredentialAwarded" content="Certificado de <?= $nombredelcurso ?>">
+				<p>Aprende con este <b>taller temático para San Valentín</b> a preparar deliciosos, nutritivos y sanos snacks decorados con la seguridad de utilizar ingredientes apropiados a su naturaleza <b>fáciles de hacer y 100% naturales</b>.</p>
+			
 				<div itemprop="description">
-						<p itemprop="competencyRequired">Una forma diferente de elaborar tortas para perros y gatos, más suaves y esponjosa</p>
-						<p itemprop="competencyRequired"> Técnicas de decoración sin glaseado ni coberturas artificiales.</p>
-						<p itemprop="competencyRequired">Dos recetas adicionales de galletas saludables para mascotas.</p>
-						<p itemprop="competencyRequired">Cómo elaborar galletas decoradas sin necesidad de glaseados; más naturales, más sanas y más deliciosas.</p>
-						<p itemprop="competencyRequired">Cinco diseños creativos de decoración utilizando solo masa de colores.</p>
+						<p itemprop="competencyRequired"><b>Una forma diferente de elaborar tortas</b> para perros y gatos, más suaves y esponjosa.</p>
+						<p itemprop="competencyRequired"><b>Técnicas de decoración</b> sin glaseado ni coberturas artificiales.</p>
+						<p itemprop="competencyRequired"><b>Dos recetas adicionales</b> de galletas saludables para mascotas.</p>
+						<p itemprop="competencyRequired">Cómo elaborar galletas decoradas naturales, sanas y deliciosas <b>sin necesidad de glaseados</b>.</p>
+						<p itemprop="competencyRequired"><b>Cinco diseños creativos</b> de decoración utilizando solo masa de colores.</p>
 						<h5>¡Inscríbete y sorprende a tu compañero peludo con un regalo hecho con amor! 💕🐾</h5>
 					</div>
 				</div>
@@ -305,7 +307,7 @@ if (!$testing && !$testPar)
 				<p itemprop="articleBody">
 					<span>Endulza San Valentín para tus mascotas con snacks saludables, creativos y fáciles de hacer</u>.</span> 
 					<span>Aprende a preparar y decorar deliciosas galletas y tortas sin glaseados artificiales, <u>con ingredientes seguros y naturales.</u> </span> 
-					<span><b>¡Un curso perfecto para consentir a tu peludo y emprender tu propio negocio!</b></span>
+					<span><b>¡Un taller perfecto para consentir a tu peludo y emprender tu propio negocio!</b></span>
 				</p>
 			</div>
 		</section>
@@ -317,7 +319,7 @@ if (!$testing && !$testPar)
 			  <h2 itemprop="name">¿Cómo lo vas a LOGRAR?</h2>
 
 			  <p itemprop="description">
-				Por medio de un curso <b>práctico y completo</b>, explicado paso a paso y en videos HD, conformado de la siguiente manera.
+				Por medio de un taller <b>práctico y completo</b>, explicado paso a paso y en videos HD, conformado de la siguiente manera.
 			  </p>
 
 			  <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
@@ -363,7 +365,7 @@ if (!$testing && !$testPar)
 			<div id="temario" >
 			  <div class="active" style="display: flex;justify-content: center;">
 				<!--h3>
-				  <button>Haz clic para ver el <br/>contenido del curso</button>
+				  <button>Haz clic para ver el <br/>contenido del taller</button>
 				</h3-->
 				<ul itemprop="hasCourseInstance" itemscope itemtype="https://schema.org/CourseInstance"> 
 					
@@ -478,7 +480,7 @@ if (!$testing && !$testPar)
 					<h2 id="certificado-heading" itemprop="name">Certifícate como profesional</h2>
 
 					<p itemprop="description">
-						<span>Al finalizar el curso, tendrás un <b>certificado de conclusión digital</b>, el cual podrás imprimir y compartirlo en <b>el grupo VIP</b>.</span>
+						<span>Al finalizar el taller, tendrás un <b>certificado de conclusión digital</b>, el cual podrás imprimir y compartirlo en <b>el grupo VIP</b>.</span>
 						<span>Estamos seguros que cuando lo hagas sentirás una satisfacción de saber que estás lista para crear deliciosos platillos para tu peludo y crear tu propio negocio en esta bonita actividad.</span>
 					</p>
 
