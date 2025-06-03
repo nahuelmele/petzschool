@@ -13,14 +13,13 @@ include $base. "inc/functions.php";
 
 //precios en dolares
 $oferta50Precio  	= getPrecio(35);
-$sinOfertaPrecio 	= getPrecio(69.99);
+$sinOfertaPrecio 	= getPrecio(100);
 
-$bono1 = getPrecio(9);
-$bono2 = getPrecio(11);
-$bono3 = getPrecio(15);
-$bono4 = getPrecio(15);
-$bono5 = getPrecio(13);
-$bonosTotal = getPrecio(63);	
+$bono1 = getPrecio(11);
+$bono2 = getPrecio(13);
+$bono3 = getPrecio(25);
+$bono4 = getPrecio(17);
+$bonosTotal = getPrecio(66);	
 
 $currency 			= getCurrency();
 
@@ -80,10 +79,10 @@ $update = true;
 $proof = true;
 
 // fecha de publicacion
-$datePublished = "2021-10-24";
+$datePublished = "2025-05-29";
 
 // fecha de ultima modificacion
-$dateModified = "2021-10-30";
+$dateModified = "2025-05-31";
 
 // nombre de imagen para compartir.
 $imgShare = "compartir-" . $dirLanding . ".jpg";
@@ -101,21 +100,25 @@ $g_facebook = true;
 $g_whatsaup = false;
 
 // descripcion
-$des = "¿Te imaginas crear Tu propio negocio y aprender pastelería nutritiva y saludable para Tu mascota? - Petz School.";
+$des = "✓ Promo 65% Off. Deja atrás los procesados. Aprende a nutrir a tu perro con amor y convierte ese saber en un proyecto con propósito. Diana Fonseca - Petz School";
 //$des = "Cocina con Amor y emprende con éxito en el mundo de la Pastelería canina y felina - Petz School.";
 
 // titulo
-$tit = "✓ Promo 50% Off en el Curso de Pastelería Canina y Felina de Diana Fonseca - Petz School";
+$tit = "Dietas Cocinadas para Perros, Amor que Nutre - Petz School";
 
-$videoPrincipalID 	= "1064137648";
-$videoMuestraID		= "716119020";
-$videoAdicionalID	= "718531292";
+$videoPrincipalID 	= "1089375113";
+$videoMuestraID		= "1089376236";
+$videoAdicionalID	= "1089377009";
 
 
 //OFERTAS SETTINGS, elegir una de las 2, si esta activo uno con "true" los otros 2 tienen que estar en "false"
 
-$oferta50  = true;
+$oferta50  = false;
 $sinOferta = false;
+
+
+$oferta35 = false;
+$oferta65 = true;
 
 // Hide pago en efectivo
 
@@ -135,8 +138,8 @@ if( $hideEfectivo ){
 $modalMesageCheckout = false;
 
 // Link Producto, chechout limpio para crashing
-
-$linkProducto = "https://go.hotmart.com/K92839389V?ap=a02a";
+// 65% de descuento
+$linkProducto = "https://go.hotmart.com/K92839389V?ap=a614";
 
 
 //De aca para abajo no hay que tocar nada
@@ -145,11 +148,48 @@ $linkProducto = "https://go.hotmart.com/K92839389V?ap=a02a";
 $offDiscount = "";
 $textCuotas = $textCuotasFull;
 
-if( $oferta50 ){
+if( $oferta50 || $oferta65 || $oferta35 ){
 	
 	$offDiscount = "&offDiscount=220774";
 	$textCuotas = $textCuotas50Off;
-	
+
+
+    switch (true) {
+        case $oferta50:
+            $ribbon = "ribbons50off.png";
+
+            $precioConDescuento = $oferta50Precio;
+            $oferta50Precio = $oferta50Precio;
+            $numeroDescuento = 50;
+
+
+            break;
+        case $oferta65:
+            $ribbon = "ribbons65off.png";
+
+            $precioConDescuento = $oferta50Precio;
+            $oferta50Precio = $sinOfertaPrecio - $oferta50Precio;
+            $numeroDescuento = 65;
+
+            break;
+        case $oferta35:
+            $ribbon = "ribbons35off.png";
+
+            $precioConDescuento = $oferta50Precio;
+            $oferta50Precio = $sinOfertaPrecio - $oferta50Precio;
+            $numeroDescuento = 35;
+
+            break;
+        default:
+            $ribbon = ""; // o null si preferís sin imagen
+
+            $precioConDescuento = $oferta50Precio;
+            $oferta50Precio = $oferta50Precio;
+
+            $numeroDescuento = 0;
+            break;
+    }
+
 }
 
 $hideEfectivoText = "";
@@ -190,7 +230,7 @@ if( !$testing && !$testPar )
 			<div class="container back1080">
 
 				<h1 id="first-scroll-heading" itemprop="name">
-				Dieta Cocinada para Perros: Nutrición Casera y Equilibrada Paso a Paso
+				Deja atrás los procesados. Aprende a nutrir a tu perro con amor y convierte ese saber en un proyecto con propósito
 				</h1>
 
 				<div class="subtitIcon">
@@ -207,9 +247,11 @@ if( !$testing && !$testPar )
 				</div>
 
 				<div class="boxShadowVideo" itemprop="video" itemscope itemtype="https://schema.org/VideoObject">
-					<?php if ($oferta50 && !$sinOferta) { ?>
+					<?php 
+					
+					if ( ( $oferta50 || $oferta65 || $oferta35 ) && !$sinOferta) { ?>
 						<img 
-							src="/img/ribbons50off.png" 
+							src="/img/<?= $ribbon ?>" 
 							alt="Oferta <?= $nombredelcurso ?>" 
 							width="134" 
 							height="129" 
@@ -228,7 +270,7 @@ if( !$testing && !$testPar )
 				<div class="optesumVid">
 					<div>
 						<p>Ya somos más de </p>
-						<p>624</p>
+						<p>359</p>
 						<p>Pets Lovers</p>
 					</div>
 					<p>
@@ -246,8 +288,8 @@ if( !$testing && !$testPar )
 			<div class="sub-header">
 
 				<h2 id="sub-header-title" itemprop="name">
-					<span>CONVIÉRTETE</span> en una experta en alimentación natural para perros.
-					<span>CREA tu propio negocio</span> de dietas caseras y saludables para mascotas.
+					<span>APRENDE</span> a cocinar para tu perro de forma saludable y potencia su bienestar, previene enfermedades y alarga su vida.
+					<span>CREA tu propio negocio</span> ayudando a otros a nutrir a sus peludos con amor y conciencia.
 				</h2>
 				
 				<?php
@@ -261,23 +303,24 @@ if( !$testing && !$testPar )
 		</section>
 		
 		<section id="aprender" class="bgYellow" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
-			<div class="section-heading text-center">
-				<h2 itemprop="name">¿Qué vas a APRENDER?</h2>
+		  <div class="section-heading text-center">
+			<h2 itemprop="name">¿Qué vas a lograr?</h2>
+		  </div>
+
+		  <div class="container">
+			<div itemprop="educationalCredentialAwarded" content="Certificado de <?= $nombredelcurso ?>">
+			  <div itemprop="description">
+				<p itemprop="competencyRequired"><b>Aprenderás a calcular la ración diaria PERFECTA</b> para tu perro según su peso, edad, nivel de actividad y necesidades específicas.</p>
+				<p itemprop="competencyRequired"><b>Conocerás qué suplementos naturales necesita</b> su dieta para estar realmente completa, sin deficiencias ni excesos.</p>
+				<p itemprop="competencyRequired"><b>Dominarás técnicas sencillas y efectivas</b> para preparar dietas cocinadas que sean completas y fáciles de preparar.</p>
+				<p itemprop="competencyRequired"><b>Realizarás una transición alimentaria SEGURA Y EFECTIVA</b> sin riesgos para su sistema digestivo.</p>
+				<p itemprop="competencyRequired"><b>Usarás recetas certificadas y tablas nutricionales</b> para empezar con confianza y respaldo profesional.</p>
+				<p itemprop="competencyRequired"><b>Prolongarás su vida y reforzarás su salud</b> con una alimentación natural, consciente y alineada con su bienestar.</p>
+			  </div>
 			</div>
-    
-			<div class="container">
-				<div itemprop="educationalCredentialAwarded" content="Certificado de <?= $nombredelcurso ?>">
-					<div itemprop="description">
-						<p itemprop="competencyRequired">Calcular la ración diaria ideal para tu perro según su edad, peso y actividad.</p>
-						<p itemprop="competencyRequired">Elegir los ingredientes adecuados para una dieta cocinada balanceada.</p>
-						<p itemprop="competencyRequired">Incorporar los suplementos esenciales para evitar deficiencias nutricionales.</p>
-						<p itemprop="competencyRequired">Diseñar menús adaptados a las necesidades y preferencias de tu mascota.</p>
-						<p itemprop="competencyRequired">Hacer la transición de su alimentación de manera segura y efectiva.</p>
-						<p itemprop="competencyRequired">Aplicar técnicas de cocina para optimizar la digestión y absorción de nutrientes.</p>
-					</div>
-				</div>
-			</div>
+		  </div>
 		</section>
+
 
 		<section id="muestras" class="bgYellow" aria-labelledby="muestras-heading">
 
@@ -305,7 +348,7 @@ if( !$testing && !$testPar )
 					<span>pero ¿qué pasa con nuestra mascota?</span>
 				</h2>
 				<p itemprop="articleBody">
-					<span><b>Alimenta a tu perro con lo mejor</b> y mejora su salud con una dieta casera bien equilibrada. Aprende a cocinar para él con <b>seguridad y confianza</b> en este curso práctico y completo.</span>
+					<span>Una dieta inadecuada puede <b>acortar la vida de tu perro</b> y afectar su bienestar. <b>Dietas Cocinadas para Perros</b> te enseña a alimentarlo con amor, salud y confianza. Aprendé a cocinarle bien y <b>convertí su plato en una herramienta de cuidado real</b>.</span>
 				</p>
 			</div>
 		</section>
@@ -354,60 +397,53 @@ if( !$testing && !$testPar )
 				<div>
 					<p><i class="fa fa-clock-o"></i>25 Lecciones</p>
 					<p><i class="fa fa-user"></i><span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Por <?= $autor ?></span></span></p>
-					<p itemprop="reviewCount"><i class="fa fa-comment"></i>321 Evaluaciones</p>
+					<p itemprop="reviewCount"><i class="fa fa-comment"></i>47 Evaluaciones</p>
 				</div>
 
 			  </div>		
 			</div>
-    
-			<div id="temario" class="two-cols">
-			  <div class="active">
-				<h3>
-				  <button>Haz clic para ver el <br/>contenido del curso</button>
-				</h3>
-				<ul itemprop="hasCourseInstance" itemscope itemtype="https://schema.org/CourseInstance"> 
-					<li itemprop="courseMode" content="online"><span>Módulo bienvenida</span></li> 
-					<li itemprop="courseMode" content="online"><span>Clase No 1.</span> – Bienvenida.</li> 
-					<li itemprop="courseMode" content="online"><span>Clase No 2.</span> – Invitación al grupo de Facebook y Telegram.</li>
 
-					<li itemprop="courseMode" content="online"><span>Módulo 1</span></li> 
 
-					<li itemprop="courseMode" content="online"><span>Clase No 3.</span> – Origen del perro y sus hábitos alimenticios.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 4.</span> – Anatomía y fisiología del sistema digestivo del perro.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 5.</span> – Macronutrientes.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 6.</span> – Micronutrientes.</li>
+			<div id="temario" >
+			  <div class="active" style="display: flex;justify-content: center;">
 
-					<li itemprop="courseMode" content="online"><span>Módulo 2</span></li> 
-
-					<li itemprop="courseMode" content="online"><span>Clase No 7.</span> – Tipos de alimentación para los perros.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 8.</span> – Ventajas y desventajas de la dieta cocinada.</li>
-
-					<li itemprop="courseMode" content="online"><span>Módulo 3</span></li> 
-					<li itemprop="courseMode" content="online"><span>Clase No 9.</span> –  Dietas cocinadas con huesos</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 10.</span> – Dietas cocinadas sin hueso.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 11.</span> – Ejemplo de elaboración de dieta cocinada sin hueso.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 12.</span> – Ejemplo de elaboración de dieta cocinada con hueso.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 13.</span> – Condición corporal y cálculo de la ración diaria.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 14.</span> – Suplementos obligatorios.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 15.</span> – Elaboración de calcio a partir de cáscaras de huevo.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 16.</span> – Otros suplementos.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 17.</span> – Cómo balancear la dieta cocinada.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 17.1.</span> – Ejemplos de menús cocinados.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 18.</span> – Ajustes en la dieta según las necesidades individuales.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 19.</span> – Como hacer el cambio de alimentación.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 20.</span> – Consejos para preparar raciones.</li>
-
-					<li itemprop="courseMode" content="online"><span>Módulo 4</span></li> 
-
-					<li itemprop="courseMode" content="online"><span>Clase No 21.</span> – Consideraciones a tener en cuenta.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 22.</span> –  Ayuno y ayuno intermitente.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 23.</span> – La microbiota y su importancia.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 24.</span> – El agua, la exposición a toxinas y el entorno
-					.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 25.</span> – Despedida</li>
+				<ul style="display:block" itemprop="hasCourseInstance" itemscope itemtype="https://schema.org/CourseInstance"> 
+				  <li itemprop="courseMode" content="online"><span>MÓDULO BIENVENIDA</span> – Bienvenida</li>
+				  <li itemprop="courseMode" content="online"><span>MÓDULO BIENVENIDA</span> – Invitación al grupo de Facebook y Telegram</li>
+				  <li itemprop="courseMode" content="online"><span>MÓDULO 1</span> – Origen del perro y sus hábitos alimenticios</li>
+				  <li itemprop="courseMode" content="online"><span>MÓDULO 1</span> – Anatomía y fisiología del sistema digestivo del perro</li>
+				  <li itemprop="courseMode" content="online"><span>MÓDULO 1</span> – Macronutrientes</li>
+				  <li itemprop="courseMode" content="online"><span>MÓDULO 1</span> – Micronutrientes</li>
+				  <li itemprop="courseMode" content="online"><span>MÓDULO 2</span> – Tipos de alimentación para los perros</li>
+				  <li itemprop="courseMode" content="online"><span>MÓDULO 2</span> – Ventajas y desventajas de la dieta cocinada</li>
+				  <li itemprop="courseMode" content="online"><span>MÓDULO 3</span> – Dietas cocinadas con huesos</li>
+				  <li itemprop="courseMode" content="online"><span>MÓDULO 3</span> – Dietas cocinadas sin hueso</li>
+				  <li itemprop="courseMode" content="online"><span>MÓDULO 3</span> – Ejemplo de elaboración de dieta cocinada sin hueso</li>
+				  <li itemprop="courseMode" content="online"><span>MÓDULO 3</span> – Ejemplo de elaboración de dieta cocinada con hueso</li>
+				  <li itemprop="courseMode" content="online"><span>MÓDULO 3</span> – Condición corporal y cálculo de la ración diaria</li>
+				  <li itemprop="courseMode" content="online"><span>MÓDULO 3</span> – Suplementos obligatorios</li>
+				  <li itemprop="courseMode" content="online"><span>MÓDULO 3</span> – Elaboración de calcio a partir de cáscaras de huevo</li>
+				  <li itemprop="courseMode" content="online"><span>MÓDULO 3</span> – Otros suplementos</li>
+				  <li itemprop="courseMode" content="online"><span>MÓDULO 3</span> – Cómo balancear la dieta cocinada</li>
+				  <li itemprop="courseMode" content="online"><span>MÓDULO 3</span> – Ejemplos de menús cocinados</li>
+				  <li itemprop="courseMode" content="online"><span>MÓDULO 3</span> – Ajustes según necesidades individuales</li>
+				  <li itemprop="courseMode" content="online"><span>MÓDULO 3</span> – Cómo hacer el cambio de alimentación</li>
+				  <li itemprop="courseMode" content="online"><span>MÓDULO 3</span> – Consejos para preparar raciones</li>
+				  <li itemprop="courseMode" content="online"><span>MÓDULO 4</span> – Consideraciones a tener en cuenta</li>
+				  <li itemprop="courseMode" content="online"><span>MÓDULO 4</span> – Ayuno y ayuno intermitente</li>
+				  <li itemprop="courseMode" content="online"><span>MÓDULO 4</span> – La microbiota y su importancia</li>
+				  <li itemprop="courseMode" content="online"><span>MÓDULO 4</span> – El agua, la exposición a toxinas y el entorno</li>
+				  <li itemprop="courseMode" content="online"><span>MÓDULO 4</span> – Despedida</li>
+				  <li itemprop="courseMode" content="online"><span>BONUS PDF</span> – Guía completa de suplementos naturales</li>
+				  <li itemprop="courseMode" content="online"><span>BONUS PDF</span> – Listado de frutas y verduras aptas para perros</li>
+				  <li itemprop="courseMode" content="online"><span>BONUS PDF</span> – 8 Ejemplos de dietas cocinadas</li>
+				  <li itemprop="courseMode" content="online"><span>BONUS PDF</span> – 2 Dietas modelo + Tabla nutricional</li>
 				</ul>
 			  </div>
+
 			</div>
+
+
 
 		  </div>
 		</section>
@@ -456,7 +492,7 @@ if( !$testing && !$testPar )
 					<div itemprop="description">
 
 						<p>
-							Experta en nutrición canina y felina, con una <b>certificación como Bio nutricionista</b> de perros y gatos y especializada en <u>repostería artesanal canina y felina</u>. Con más de 5 años de experiencia en el sector de la alimentación natural de animales de compañía.
+							Experta en nutrición canina y felina, con una <b>certificación como Bio nutricionista</b> de perros y gatos y especializada en <u>repostería artesanal para perros y gatos, Dieta Barf o evolutiva y dieta cocinada.</u>. Con más de 9 años de experiencia en el sector de la alimentación natural de animales de compañía.
 						</p>
 						<p>
 							<b>Estudió con veterinarios expertos</b> en nutrición canina y felina y en poco tiempo evidenció los cambios notables en la salud, pelaje y estado de ánimo de "Limon", su Beagle, comparándola con otras al ir al parque. En 2015 decidió abrir "Natural Taste", un local dedicado única y exclusivamente a la alimentación natural de perros y gatos.
@@ -493,34 +529,28 @@ if( !$testing && !$testPar )
 
             $bonos = [
                 [
-                    'img' => 'premios-pasteleria.png',
-                    'alt' => 'Receta infalible de premios para entrenamiento de tu mascota',
+                    'img' => 'pdf-diapositivas-dietas-cocinadas-para-perros-diana-fonseca.png',
+                    'alt' => 'Resumen visual completo para seguir el curso sin tomar apuntes.',
                     'precio' => $bono1,
-                    'descripcion' => '<b>Receta infalible</b> de premios para entrenamiento de tu mascota.',
+                    'descripcion' => '<b>Resumen visual completo</b> para seguir el curso sin tomar apuntes.',
                 ],
                 [
-                    'img' => 'helados-mascotas.png',
-                    'alt' => 'Aprende hacer ricos y deliciosos helados para tus mascotas.',
+                    'img' => 'guia-completa-de-suplementos-dietas-cocinadas-para-perros-diana-fonseca.png',
+                    'alt' => 'Guía esencial de suplementos con usos y beneficios paso a paso.',
                     'precio' => $bono2,
-                    'descripcion' => 'Aprende hacer <b>ricos y deliciosos helados</b> para tus mascotas.',
+                    'descripcion' => '<b>Guía esencial de suplementos</b> con usos y beneficios paso a paso.',
                 ],
                 [
-                    'img' => 'verdades-escandalosas-v1.png',
-                    'alt' => 'Vol. 1 de Verdades Escandalosas. Lo que no te cuentan sobre su alimentación.',
+                    'img' => '2-dietas-modelo-tabla-nutricional-dietas-cocinadas-para-perros-diana-fonseca.png',
+                    'alt' => '2 dietas listas para usar con tablas nutricionales y fórmulas profesionales.',
                     'precio' => $bono3,
-                    'descripcion' => '<b>Vol. 1</b> de Verdades Escandalosas. Lo que <b>no te cuentan</b> sobre su alimentación.',
+                    'descripcion' => '<b>2 dietas listas para usar</b> con tablas nutricionales y fórmulas profesionales.',
                 ],
                 [
-                    'img' => 'verdades-escandalosas-v2.png',
-                    'alt' => 'Vol. 2 de Verdades Escandalosas. Lo que no te cuentan sobre su alimentación.',
+                    'img' => '8-ejemplos-dietas-cocinadas-para-perros-diana-fonseca.png',
+                    'alt' => '8 menús cocinados reales listos para poner en práctica hoy mismo.',
                     'precio' => $bono4,
-                    'descripcion' => '<b>Vol. 2</b> de Verdades Escandalosas. Lo que <b>no te cuentan</b> sobre su alimentación.',
-                ],
-                [
-                    'img' => 'recetario.png',
-                    'alt' => 'Recetario con ideas para consentir a tu mascota sin necesidad de horno.',
-                    'precio' => $bono5,
-                    'descripcion' => 'Recetario con ideas para consentir a tu mascota <b>sin necesidad de horno</b>.',
+                    'descripcion' => '<b>8 menús cocinados reales</b> listos para poner en práctica hoy mismo.',
                 ],
                 [
                     'img' => 'private-group.png',
@@ -529,6 +559,7 @@ if( !$testing && !$testPar )
                     'descripcion' => 'Tendrás <b>acceso de por vida</b> a nuestro grupo privado de Facebook y Telegram.',
                 ],
             ];
+
 
             $cantBonos = count($bonos);
 
@@ -573,6 +604,24 @@ if( !$testing && !$testPar )
 				</div>
 			</div>
 		</section>
+
+
+		<section id="video-adicional" class="bgYellow bg-pattern" aria-labelledby="video-adicional-heading" itemscope itemtype="https://schema.org/VideoObject">
+			<div class="back768">
+        
+				<div class="text-center section-heading">
+					<h2 id="video-adicional-heading" itemprop="name">WOW, Diana quiere decirte</h2>
+					<p itemprop="description">
+						<b>IMPORTANTE</b> Presta mucha ATENCIÓN al siguiente video.
+					</p>
+				</div>        
+
+				<div class="boxShadowVideo" itemprop="video">
+					<lite-vimeo videoid="<?= $videoAdicionalID ?>"></lite-vimeo>
+				</div>    
+        
+			</div>
+		</section> 	
 		
 		
 		
@@ -583,7 +632,7 @@ if( !$testing && !$testPar )
 		<?php
 
         $masBeneficios = [
-            "Más de 40 lecciones en video, formato súper HD.",
+            "Más de 25 lecciones en video, formato súper HD.",
             "TUS $cantBonos bonos valuados en + de $currency $bonosTotal.",
             "SORPRESAS Y REGALOS... videos, playbooks, publicaciones, imágenes, actualizaciones y presentaciones."
         ];
@@ -597,7 +646,22 @@ if( !$testing && !$testPar )
 
 		<?php include_once ($base . "inc/landings/precio-beneficios.php"); ?>
 
+		<section id="video-por-dentro" class="bgYellow bg-pattern" aria-labelledby="video-por-dentro-heading" itemscope itemtype="https://schema.org/VideoObject">
+			<div class="back768">
+        
+				<div class="text-center section-heading">
+					<h2 id="video-por-dentro-heading" itemprop="name">¿Quíeres dar un vistazo?</h2>
+					<p itemprop="description">
+						Aquí podrás ver cómo es <b>el curso por dentro</b>.
+					</p>
+				</div>        
 
+				<div class="boxShadowVideo" itemprop="video">
+					<lite-vimeo videoid="<?= $videoMuestraID ?>"></lite-vimeo>
+				</div>    
+        
+			</div>
+		</section>
 		
 	
 		<?php include_once ($base . "inc/landings/garantia.php"); ?>
@@ -617,95 +681,6 @@ if( !$testing && !$testPar )
         include ($base . "inc/landings/callToAction.php");
 
         ?>
-		
-		<section id="testimonios" class="bgYellow bg-pattern" aria-labelledby="testimonios-heading">
-
-			<div class="section-heading text-center">
-				<h2 id="testimonios-heading">!Más opiniones de alumnas!</h2>
-			</div>
-
-			<div class="container">
-
-				<div id="owl-reviews">
-
-					<?php
-
-					$carouselTestimoniosItems = [
-						[
-							"nombre" => "Ximena Capeletti",
-							"bajada" => "Dog Lover",
-							"descripcion" => "Les quiero recomendar la pastelería para perro de Diana Fonseca. Mis tres amores perrunos, Simón (14 años), Teo (1 año) y Eva (6meses), la adoran!! Simón no volvió a sufrir de la piel desde que lo cambié a esta comida. No tienen mal aliento y el pelo les brilla.",
-							"nombre_imagen" => "ximena.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "Sandra Muñoz",
-							"bajada" => "Dog Lover",
-							"descripcion" => "Me encanto el curso de Dietas cocinadas para perros, mi perro se llama rocky y prepararle deliciosos snack es una excelente actividad que la disfruto con mi hijo. Amamos a Rocky y el ama estas recetas…… Muchisimas Gracias Diana!!!!",
-							"nombre_imagen" => "sandra.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "Nathy Pardo",
-							"bajada" => "Dog Lover",
-							"descripcion" => "Me encanta la simplicidad y facilidad con la que se pueden preparar las distintas recetas que nos comparte Diana. He visto un cambio en la salud de Pepe, mi Pastor Aleman. Siento que ahora mi peludo es más feliz y tiene más energía. Gracias!",
-							"nombre_imagen" => "naty.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "Gaby Flores",
-							"bajada" => "Dog Lover",
-							"descripcion" => "Dante es mi Boston terrier de 4 años y medio, desde el destete ha comido dieta natural, sin embargo Dante tenía problemas en las articulaciones. Cuando pasamos a la barf y pastelería todo cambio, en poco tiempo estaba corriendo y saltando por todas partes. Gracias por todo Diana, saludos!",
-							"nombre_imagen" => "gaby.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "LUISA SALAH",
-							"bajada" => "Dog Lover",
-							"descripcion" => "Quiero contar como este tipo de comida cambió la salud de mi perro. Tengo un pastor collie y desde que le cambie su alimentación su pelo lo tiene más suave, las deposiciones ya no son blandas, los dientes son más blancos, jamás tiene sarro y se le ve con más energía.",
-							"nombre_imagen" => "luisa.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "ANDRÉS FERNÁNDEZ",
-							"bajada" => "Dog Lover",
-							"descripcion" => "Mi hermosa celebra su cumpleaños perruno 3, disfruta de una torta de pollo que aprendimos, nos encanta que Diana sea parte de este especial día, a Bella le encanta toda la pastelería. Muchas gracias cada vez que se porta bien le doy las galletas verdes que tanto le gustan.",
-							"nombre_imagen" => "andres-fernandez.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "SOFIA BUSTAMANTE",
-							"bajada" => "Cat Lover",
-							"descripcion" => "Maya celebró su 3er cumpleaños con una torta de atún que realizamos con el curso de Dietas cocinadas para perros de la profe Diana. Realizare luego helados para Maya que estan en el curso espero me queden delicioso como esta torta.",
-							"nombre_imagen" => "sofia.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "NORA RIVERA DE CRUZ",
-							"bajada" => "Cat Lover",
-							"descripcion" => "Gracias a ustedes  por la torta de atún de cumpleaños de Zahiro, estaba como loco, nunca lo habíamos visto así. Realmente disfruto de su primer cumpleaños. Quedamos satisfecho que gran talento que tienen en la comida de mascotas.",
-							"nombre_imagen" => "nora.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "MIRNA AGUILAR",
-							"bajada" => "Dog Lover",
-							"descripcion" => "Mi hermosa Bella celebró su cumpleaños perruno 2 con una torta de pollo que aprendimos a hacer con el curso de Diana. El curso es muy práctico y apredimos muchas cosas que no teniamos ni idea sobre como alimentarla correctamente.",
-							"nombre_imagen" => "mirna.jpg",
-							"cantidad_estrellas" => 5
-						],
-
-					];
-
-					include_once ($base . "inc/landings/testimonios.php");
-
-					?>
-
-				</div>
-
-			</div>
-
-		</section>
 	  
 		<?php include_once ($base . "inc/landings/footer-landing.php"); ?>
 		

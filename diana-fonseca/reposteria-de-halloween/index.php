@@ -12,8 +12,15 @@ $autorSlug = "diana-fonseca";
 include $base . "inc/functions.php";
 
 //precios en dolares
-$oferta50Precio = getPrecio(25);
-$sinOfertaPrecio = getPrecio(50);
+$oferta50Precio = getPrecio(24.49);
+$sinOfertaPrecio = getPrecio(69.98);
+
+
+$bono1 = getPrecio(12);
+$bono2 = getPrecio(17);
+
+$bonosTotal = getPrecio(29);
+
 
 $currency = getCurrency();
 
@@ -97,15 +104,20 @@ $g_whatsaup = false;
 $des = "En este novedoso taller aprenderás a elaborar recetas de pastelería artesanal canina y felina para Halloween utilizando ingredietes aptos para el consumo de nuestros peluditos - Diana Fonseca - Petz School.";
 
 // titulo
-$tit = "Aprende de forma fácil y rápida 9 recetas de repostería de Halloween aptas para perros y gatos - Diana Fonseca - Petz School";
+$tit = "✓ Promo 65% Off en el curso de repostería de Halloween aptas para perros y gatos - Diana Fonseca - Petz School";
 
 $videoPrincipalID = "757793018";
+$videoMuestraID		= "1089688211";
 
 
 //OFERTAS SETTINGS, elegir una de las 2, si esta activo uno con "true" los otros 2 tienen que estar en "false"
 
-$oferta50 = true;
+$oferta50 = false;
 $sinOferta = false;
+
+
+$oferta35 = false;
+$oferta65 = true;
 
 // Hide pago en efectivo
 
@@ -131,10 +143,47 @@ $linkProducto = "https://go.hotmart.com/Y71611560N?ap=8b41";
 $offDiscount = "";
 $textCuotas = $textCuotasFull;
 
-if ($oferta50) {
+if ($oferta50 || $oferta65 || $oferta35) {
 
     $offDiscount = "&offDiscount=220774";
     $textCuotas = $textCuotas50Off;
+
+
+    switch (true) {
+        case $oferta50:
+            $ribbon = "ribbons50off.png";
+
+            $precioConDescuento = $oferta50Precio;
+            $oferta50Precio = $oferta50Precio;
+            $numeroDescuento = 50;
+
+
+            break;
+        case $oferta65:
+            $ribbon = "ribbons65off.png";
+
+            $precioConDescuento = $oferta50Precio;
+            $oferta50Precio = $sinOfertaPrecio - $oferta50Precio;
+            $numeroDescuento = 65;
+
+            break;
+        case $oferta35:
+            $ribbon = "ribbons35off.png";
+
+            $precioConDescuento = $oferta50Precio;
+            $oferta50Precio = $sinOfertaPrecio - $oferta50Precio;
+            $numeroDescuento = 35;
+
+            break;
+        default:
+            $ribbon = ""; // o null si preferís sin imagen
+
+            $precioConDescuento = $oferta50Precio;
+            $oferta50Precio = $oferta50Precio;
+
+            $numeroDescuento = 0;
+            break;
+    }
 
 }
 
@@ -194,9 +243,11 @@ if (!$testing && !$testPar)
 				</div>
 
 				<div class="boxShadowVideo" itemprop="video" itemscope itemtype="https://schema.org/VideoObject">
-					<?php if ($oferta50 && !$sinOferta) { ?>
+					<?php
+
+						if (($oferta50 || $oferta65 || $oferta35) && !$sinOferta) { ?>
 						<img 
-							src="/img/ribbons50off.png" 
+							src="/img/<?= $ribbon ?>" 
 							alt="Oferta <?= $nombredelcurso ?>" 
 							width="134" 
 							height="129" 
@@ -309,7 +360,7 @@ if (!$testing && !$testPar)
 				</div>
 
 				<div>
-					<p><i class="fa fa-clock-o"></i>9 Lecciones</p>
+					<p><i class="fa fa-clock-o"></i>13 Lecciones</p>
 					<p><i class="fa fa-user"></i><span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Por <?= $autor ?></span></span></p>
 					<p itemprop="reviewCount"><i class="fa fa-comment"></i>21 Evaluaciones</p>
 				</div>
@@ -317,24 +368,26 @@ if (!$testing && !$testPar)
 			  </div>		
 			</div>
     
-			<div id="temario" class="two-cols">
-			  <div class="active">
-				<h3>
-				  <button>Haz clic para ver el <br/>contenido del curso</button>
-				</h3>
+			<div id="temario">
+			  <div class="active" style="display: flex;justify-content: center;">
 				<ul itemprop="hasCourseInstance" itemscope itemtype="https://schema.org/CourseInstance"> 
-					<li itemprop="courseMode" content="online"><span>Clase No 1.</span> – Elaboración de merengue adaptado.</li> 
-					<li itemprop="courseMode" content="online"><span>Clase No 2.</span> – Merenguitos de Halloween.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 3.</span> – Salchichas caseras.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 4.</span> – Momias de salchicha.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 5.</span> – Cakepops en forma de calabaza.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 6.</span> – Pet Pan de muerto.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 7.</span> – Receta de queso crema casero.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 8.</span> – Decoración de cupcakes para halloween.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 9.</span> – Decoración de tarta para halloween</li>
+				  <li itemprop="courseMode" content="online"><span>Clase No 1.</span> – Bienvenida</li>
+				  <li itemprop="courseMode" content="online"><span>Clase No 2.</span> – Invitación a la comunidad exclusiva de Facebook</li>
+				  <li itemprop="courseMode" content="online"><span>Clase No 3.</span> – Recetario</li>
+				  <li itemprop="courseMode" content="online"><span>Clase No 4.</span> – Muffins, torta y masa para galletas</li>
+				  <li itemprop="courseMode" content="online"><span>Clase No 5.</span> – Salchichas caseras y momias de salchicha</li>
+				  <li itemprop="courseMode" content="online"><span>Clase No 6.</span> – Elaboración de queso crema casero</li>
+				  <li itemprop="courseMode" content="online"><span>Clase No 7.</span> – Pet pan de muerto</li>
+				  <li itemprop="courseMode" content="online"><span>Clase No 8.</span> – Merengue adaptado</li>
+				  <li itemprop="courseMode" content="online"><span>Clase No 9.</span> – Merengues de Halloween</li>
+				  <li itemprop="courseMode" content="online"><span>Clase No 10.</span> – Cake pops en forma de calabaza</li>
+				  <li itemprop="courseMode" content="online"><span>Clase No 11.</span> – Decoración de muffins</li>
+				  <li itemprop="courseMode" content="online"><span>Clase No 12.</span> – Decoración de torta con motivo de Halloween</li>
+				  <li itemprop="courseMode" content="online"><span>Clase No 13.</span> – Despedida</li>
 				</ul>
 			  </div>
 			</div>
+
 
 		  </div>
 		</section>
@@ -383,7 +436,7 @@ if (!$testing && !$testPar)
 					<div itemprop="description">
 
 						<p>
-							Experta en nutrición canina y felina, con una <b>certificación como Bio nutricionista</b> de perros y gatos y especializada en <u>repostería artesanal canina y felina</u>. Con más de 5 años de experiencia en el sector de la alimentación natural de animales de compañía.
+							Experta en nutrición canina y felina, con una <b>certificación como Bio nutricionista</b> de perros y gatos y especializada en <u>repostería artesanal canina y felina</u>. Con más de 9 años de experiencia en el sector de la alimentación natural de animales de compañía.
 						</p>
 						<p>
 							<b>Estudió con veterinarios expertos</b> en nutrición canina y felina y en poco tiempo evidenció los cambios notables en la salud, pelaje y estado de ánimo de "Limon", su Beagle, comparándola con otras al ir al parque. En 2015 decidió abrir "Natural Taste", un local dedicado única y exclusivamente a la alimentación natural de perros y gatos.
@@ -413,6 +466,53 @@ if (!$testing && !$testPar)
         include ($base . "inc/landings/callToAction.php");
 
         ?>
+
+
+		<section id="bonos" class="bg-pattern" itemscope itemtype="https://schema.org/Course">
+
+			<?php
+
+            $bonos = [
+
+                [
+                    'img' => 'recetario-reposteria-de-halloween-para-perros-y-gatos-diana-fonseca.png',
+                    'alt' => 'Recetario de Repostería de Halloween para Perros y Gatos',
+                    'precio' => $bono1,
+                    'descripcion' => '<b>Recetario incluido</b>. Todas las recetas del curso, siempre a tu alcance sin tomar apuntes.',
+                ],
+                [
+                    'img' => 'listado-de-ingredientes-peligrosos-reposteria-de-halloween-para-perros-y-gatos-diana-fonseca.png',
+                    'alt' => 'Listado de Ingredientes Peligrosos',
+                    'precio' => $bono2,
+                    'descripcion' => '<b>Listado completo de ingredientes peligrosos</b> que debes evitar en la dieta de tu perro o gato y como reemplazarlos.',
+                ],
+                [
+                    'img' => 'private-group.png',
+                    'alt' => 'Tendrás acceso de por vida a nuestro grupo privado de Facebook y Telegram.',
+                    'precio' => "Invaluable",
+                    'descripcion' => 'Tendrás <b>acceso de por vida</b> a nuestro grupo privado de Facebook y Telegram.',
+                ],
+            ];
+
+            $cantBonos = count($bonos);
+
+            ?>
+
+			<div class="text-center section-heading">
+				<h2 itemprop="name">Recibe GRATIS <?= $cantBonos ?> Bonos</h2>
+				<p itemprop="description">
+					<b class="blockMobile">SOLO POR HOY</b> con tu inscripción recibirás totalmente <b>GRATIS <?= $cantBonos ?> bonos</b> valorados en <b>+ de <?= $currency ?> <?= $bonosTotal ?></b>.
+				</p>
+			</div>
+
+			<?php
+
+            include_once ($base . "inc/landings/bonos.php");
+
+            ?>
+
+		</section>
+
 		
 		<?php include_once ($base . "inc/landings/header-beneficios.php"); ?>
 
@@ -421,6 +521,24 @@ if (!$testing && !$testPar)
 		<?php include_once ($base . "inc/landings/precio.php"); ?>
 
 		<?php include_once ($base . "inc/landings/precio-beneficios.php"); ?>
+
+		<section id="video-por-dentro" class="bgYellow bg-pattern" aria-labelledby="video-por-dentro-heading" itemscope itemtype="https://schema.org/VideoObject">
+			<div class="back768">
+        
+				<div class="text-center section-heading">
+					<h2 id="video-por-dentro-heading" itemprop="name">¿Quíeres dar un vistazo?</h2>
+					<p itemprop="description">
+						Aquí podrás ver cómo es <b>el curso por dentro</b>.
+					</p>
+				</div>        
+
+				<div class="boxShadowVideo" itemprop="video">
+					<lite-vimeo videoid="<?= $videoMuestraID ?>"></lite-vimeo>
+				</div>    
+        
+			</div>
+		</section>
+
 	
 		<?php include_once ($base . "inc/landings/garantia.php"); ?>
 

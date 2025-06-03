@@ -1,6 +1,11 @@
 <?php
 
-if ($oferta50 && !$sinOferta) {
+if (
+    (isset($oferta50) && $oferta50) ||
+    (isset($oferta65) && $oferta65) ||
+    (isset($oferta35) && $oferta35)
+) {
+    if (!isset($sinOferta) || !$sinOferta) {
 
 ?>
 		
@@ -17,6 +22,7 @@ if ($oferta50 && !$sinOferta) {
 		
 <?php
 
-} 
+    }
+}
 	
 ?>	

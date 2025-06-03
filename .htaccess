@@ -62,6 +62,7 @@ RewriteEngine On
 # Redirections for /alvaro-osorio/ and /alvaro-osorio/educanino/
 Redirect 301 /alvaro-osorio/educanino/ https://petzschool.com/
 Redirect 301 /alvaro-osorio/ https://petzschool.com/
+Redirect 301 /diana-fonseca/dieta-cocinada-para-perros/ https://petzschool.com/diana-fonseca/dietas-cocinadas-para-perros/
 
 
 # Redirect www to non-www

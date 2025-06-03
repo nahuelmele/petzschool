@@ -2,7 +2,16 @@
 
     <h2 id="precio-heading" class="visually-hidden">Precios y Beneficios</h2>
     
-    <?php if ($oferta50 && !$sinOferta) { ?>      
+    <?php
+
+    if (
+        (isset($oferta50) && $oferta50) ||
+        (isset($oferta65) && $oferta65) ||
+        (isset($oferta35) && $oferta35)
+    ) {
+        if (!isset($sinOferta) || !$sinOferta) {
+
+    ?>      
     
     <div class="oferta50" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
         <p>
@@ -21,9 +30,14 @@
             itemprop="image"
         />
         <h3>Última Actualización <span class="redspa"><?= $mes ?> <?= $y ?></span></h3>
-        <h4>50% OFF</h4>
+        <h4><?= isset($numeroDescuento) ? $numeroDescuento : 50; ?>% OFF</h4>
     </div>
-    <?php } ?>
+
+    <?php }
+
+    }   
+        
+    ?>
     
     <div class="generalinfo" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
         <img 
@@ -37,14 +51,30 @@
             itemprop="image"
         />
         
-        <?php if ($oferta50 && !$sinOferta) { ?>                        
+        <?php
+
+        if (
+            (isset($oferta50) && $oferta50) ||
+            (isset($oferta65) && $oferta65) ||
+            (isset($oferta35) && $oferta35)
+        ) {
+            if (!isset($sinOferta) || !$sinOferta) {
+
+        ?>                         
         <h3>Pago único <strike><span itemprop="priceCurrency" content="<?= $currency ?>"><?= $currency ?></span> <span itemprop="price"><?= $sinOfertaPrecio ?></span></strike></h3> 
-        <?php } ?>
+        <?php 
+            }
+        }
+        ?>
         
         <?php if ($sinOferta) { ?>    
         <h4><span itemprop="priceCurrency" content="<?= $currency ?>"><?= $currency ?></span> <span itemprop="price"><?= $sinOfertaPrecio ?></span></h4>
-        <?php } else if ($oferta50) { ?>        
-        <h4><span itemprop="priceCurrency" content="<?= $currency ?>"><?= $currency ?></span> <span itemprop="price"><?= $oferta50Precio ?></span></h4>
+        <?php } else if (
+                (isset($oferta50) && $oferta50) ||
+                (isset($oferta65) && $oferta65) ||
+                (isset($oferta35) && $oferta35)
+            ) { ?>        
+        <h4><span itemprop="priceCurrency" content="<?= $currency ?>"><?= $currency ?></span> <span itemprop="price"><?= isset($precioConDescuento) ? $precioConDescuento : $oferta50Precio; ?></span></h4>
         <?php } ?>
         
         <div class="main-cta">
@@ -86,13 +116,25 @@
                 itemprop="image"
             />
             
-            <?php if ($oferta50 && !$sinOferta) { ?>
+            <?php
+
+            if (
+                (isset($oferta50) && $oferta50) ||
+                (isset($oferta65) && $oferta65) ||
+                (isset($oferta35) && $oferta35)
+            ) {
+                if (!isset($sinOferta) || !$sinOferta) {
+
+            ?>   
             <div class="oferta50-cupos">
                 <p>Cupos confirmados</p>
                 <div id="progressbar"><div>83%</div></div>
                 <p><span class="redspa">50 Cupos</span> Disponibles</p>
             </div>
-            <?php } ?>
+            <?php
+                }
+            }
+            ?>
             
             <div class="caracteristicas">
                 <?php if ($currency == "USD") { ?>

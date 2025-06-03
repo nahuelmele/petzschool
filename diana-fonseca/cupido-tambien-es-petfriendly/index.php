@@ -13,7 +13,7 @@ include $base . "inc/functions.php";
 
 //precios en dolares
 $oferta50Precio = getPrecio(16.25);
-$sinOfertaPrecio = getPrecio(32.50);
+$sinOfertaPrecio = getPrecio(25);
 
 
 $currency = getCurrency();
@@ -109,13 +109,17 @@ $des = "Unete al Taller Petfriendly de San Valentín. Aprendé a crear snacks na
 //$des = "Cocina con Amor y emprende con éxito en el mundo de la Cupido también es Petfriendly - Petz School.";
 
 // titulo
-$tit = "✓ Promo 50% Off en el taller de Cupido también es Petfriendly de Diana Fonseca - Petz School";
+$tit = "✓ Promo 35% Off en el taller de Cupido también es Petfriendly de Diana Fonseca - Petz School";
 
 
 //OFERTAS SETTINGS, elegir una de las 2, si esta activo uno con "true" los otros 2 tienen que estar en "false"
 
-$oferta50 = true;
+$oferta50 = false;
 $sinOferta = false;
+
+
+$oferta35 = true;
+$oferta65 = false;
 
 // Hide pago en efectivo
 
@@ -145,10 +149,47 @@ $linkProducto = "https://go.hotmart.com/R78911738N?ap=3551";
 $offDiscount = "";
 $textCuotas = $textCuotasFull;
 
-if ($oferta50) {
+if ($oferta50 || $oferta65 || $oferta35) {
 
     $offDiscount = "&offDiscount=220774";
     $textCuotas = $textCuotas50Off;
+
+
+    switch (true) {
+        case $oferta50:
+            $ribbon = "ribbons50off.png";
+
+            $precioConDescuento = $oferta50Precio;
+            $oferta50Precio = $oferta50Precio;
+            $numeroDescuento = 50;
+
+
+            break;
+        case $oferta65:
+            $ribbon = "ribbons65off.png";
+
+            $precioConDescuento = $oferta50Precio;
+            $oferta50Precio = $sinOfertaPrecio - $oferta50Precio;
+            $numeroDescuento = 65;
+
+            break;
+        case $oferta35:
+            $ribbon = "ribbons35off.png";
+
+            $precioConDescuento = $oferta50Precio;
+            $oferta50Precio = $sinOfertaPrecio - $oferta50Precio;
+            $numeroDescuento = 35;
+
+            break;
+        default:
+            $ribbon = ""; // o null si preferís sin imagen
+
+            $precioConDescuento = $oferta50Precio;
+            $oferta50Precio = $oferta50Precio;
+
+            $numeroDescuento = 0;
+            break;
+    }
 
 }
 
@@ -201,13 +242,15 @@ if (!$testing && !$testPar)
 				</div>
 
 				<div class="boxShadowVideo" itemprop="video" itemscope itemtype="https://schema.org/VideoObject">
-					<?php if ($oferta50 && !$sinOferta) { ?>
+					<?php
+
+                    if (($oferta50 || $oferta65 || $oferta35) && !$sinOferta) { ?>
 						<img 
-							src="/img/ribbons50off.png" 
+							src="/img/<?= $ribbon ?>" 
 							alt="Oferta <?= $nombredelcurso ?>" 
 							width="134" 
 							height="129" 
-							itemprop="image"                               
+							itemprop="image"                                    
 						/>
 					<?php } ?>
 					
@@ -431,7 +474,7 @@ if (!$testing && !$testPar)
 					<div itemprop="description">
 
 						<p>
-							Experta en nutrición canina y felina, con una <b>certificación como Bio nutricionista</b> de perros y gatos y especializada en <u>repostería artesanal canina y felina</u>. Con más de 5 años de experiencia en el sector de la alimentación natural de animales de compañía.
+							Experta en nutrición canina y felina, con una <b>certificación como Bio nutricionista</b> de perros y gatos y especializada en <u>repostería artesanal canina y felina</u>. Con más de 9 años de experiencia en el sector de la alimentación natural de animales de compañía.
 						</p>
 						<p>
 							<b>Estudió con veterinarios expertos</b> en nutrición canina y felina y en poco tiempo evidenció los cambios notables en la salud, pelaje y estado de ánimo de "Limon", su Beagle, comparándola con otras al ir al parque. En 2015 decidió abrir "Natural Taste", un local dedicado única y exclusivamente a la alimentación natural de perros y gatos.

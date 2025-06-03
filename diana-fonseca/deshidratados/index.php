@@ -13,7 +13,7 @@ include $base. "inc/functions.php";
 
 //precios en dolares... es 65% descuento
 $oferta50Precio  	= getPrecio(29.99);
-$sinOfertaPrecio 	= getPrecio(59.98);
+$sinOfertaPrecio 	= getPrecio(85.69);
 
 $bono1 = getPrecio(15);
 $bono2 = getPrecio(13);
@@ -105,7 +105,7 @@ $des = "Crea Tu propio negocio de snacks naturales y saludables, artesanales, si
 //$des = "Cocina con Amor y emprende con éxito en el mundo de la Deshidratados - Petz School.";
 
 // titulo
-$tit = "✓ Promo 50% Off en el Curso de Deshidratados de Diana Fonseca - Petz School";
+$tit = "✓ Promo 65% Off en el Curso de Deshidratados de Diana Fonseca - Petz School";
 
 $videoPrincipalID 	= "1087916037";
 $videoMuestraID		= "1064474904";
@@ -114,8 +114,12 @@ $videoAdicionalID	= "1064124075";
 
 //OFERTAS SETTINGS, elegir una de las 2, si esta activo uno con "true" los otros 2 tienen que estar en "false"
 
-$oferta50  = true;
+$oferta50  = false;
 $sinOferta = false;
+
+
+$oferta35 = false;
+$oferta65 = true;
 
 // Hide pago en efectivo
 
@@ -147,13 +151,52 @@ $linkProducto = "https://go.hotmart.com/H85889948W?ap=04b4";
 $offDiscount = "";
 $textCuotas = $textCuotasFull;
 
-if( $oferta50 ){
-	
-	//en este caso esta con el descuento ya en el link y si le aplico esto me hace un descuento sobre el descuento
-	//$offDiscount = "&offDiscount=220774";
-	$textCuotas = $textCuotas50Off;
-	
+
+if ($oferta50 || $oferta65 || $oferta35) {
+
+    //en este caso esta con el descuento ya en el link y si le aplico esto me hace un descuento sobre el descuento
+    //$offDiscount = "&offDiscount=220774";
+    $textCuotas = $textCuotas50Off;
+
+
+    switch (true) {
+        case $oferta50:
+            $ribbon = "ribbons50off.png";
+
+            $precioConDescuento = $oferta50Precio;
+            $oferta50Precio = $oferta50Precio;
+            $numeroDescuento = 50;
+
+
+            break;
+        case $oferta65:
+            $ribbon = "ribbons65off.png";
+
+            $precioConDescuento = $oferta50Precio;
+            $oferta50Precio = $sinOfertaPrecio - $oferta50Precio;
+            $numeroDescuento = 65;
+
+            break;
+        case $oferta35:
+            $ribbon = "ribbons35off.png";
+
+            $precioConDescuento = $oferta50Precio;
+            $oferta50Precio = $sinOfertaPrecio - $oferta50Precio;
+            $numeroDescuento = 35;
+
+            break;
+        default:
+            $ribbon = ""; // o null si preferís sin imagen
+
+            $precioConDescuento = $oferta50Precio;
+            $oferta50Precio = $oferta50Precio;
+
+            $numeroDescuento = 0;
+            break;
+    }
+
 }
+
 
 $hideEfectivoText = "";
 if( $hideEfectivo )
@@ -211,9 +254,11 @@ if( !$testing && !$testPar )
 				</div>
 
 				<div class="boxShadowVideo" itemprop="video" itemscope itemtype="https://schema.org/VideoObject">
-					<?php if ($oferta50 && !$sinOferta) { ?>
+					<?php
+
+                    if (($oferta50 || $oferta65 || $oferta35) && !$sinOferta) { ?>
 						<img 
-							src="/img/ribbons50off.png" 
+							src="/img/<?= $ribbon ?>" 
 							alt="Oferta <?= $nombredelcurso ?>" 
 							width="134" 
 							height="129" 
@@ -455,7 +500,7 @@ if( !$testing && !$testPar )
 					<div itemprop="description">
 
 						<p>
-							Experta en nutrición canina y felina, con una <b>certificación como Bio nutricionista</b> de perros y gatos y especializada en <u>repostería artesanal canina y felina</u>. Con más de 5 años de experiencia en el sector de la alimentación natural de animales de compañía.
+							Experta en nutrición canina y felina, con una <b>certificación como Bio nutricionista</b> de perros y gatos y especializada en <u>repostería artesanal canina y felina</u>. Con más de 9 años de experiencia en el sector de la alimentación natural de animales de compañía.
 						</p>
 						<p>
 							<b>Estudió con veterinarios expertos</b> en nutrición canina y felina y en poco tiempo evidenció los cambios notables en la salud, pelaje y estado de ánimo de "Limon", su Beagle, comparándola con otras al ir al parque. En 2015 decidió abrir "Natural Taste", un local dedicado única y exclusivamente a la alimentación natural de perros y gatos.
