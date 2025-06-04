@@ -91,6 +91,7 @@ $tit = "✓ Promo 50% Off en el Curso Educanino de Alvaro Osorio - Petz School";
 $videoPrincipalID 	= "788386754";
 $osorioenTv		= "805308109";
 
+/*
 $videos = [
     "787369452",
     "787369588",
@@ -99,6 +100,8 @@ $videos = [
     "787369804",
     "787369990",
 ];
+
+*/
 
 // grupos privados
 $g_telegram = false;
@@ -929,6 +932,14 @@ if( !$testing && !$testPar )
 			</div>
 		</section>
 
+		<?php
+
+        $show = false;
+
+        if ($show):
+
+            ?>
+
 		<section id="muestras-videos" class="bgYellow" aria-labelledby="muestras-videos-heading">
 
 			<div class="section-heading text-center">
@@ -948,6 +959,8 @@ if( !$testing && !$testPar )
         include ($base . "inc/landings/callToAction.php");
 
         ?>
+
+		<?php endif; ?>
 
 		<section id="certificado" class="backDark" aria-labelledby="certificado-heading" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
 			<div class="back1080">

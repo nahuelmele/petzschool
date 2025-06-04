@@ -104,8 +104,8 @@ $des = "Pastelería Inclusiva para Mascotas: Delicias Saludables para Perros y G
 // titulo
 $tit = "✓ Promo 50% Off en el Curso de Pastelería inclusiva para perros y gatos enfermos de Diana Fonseca - Petz School";
 
-$videoPrincipalID 	= "1064145194";
-$videoAdicionalID	= "1088080424";
+$videoPrincipalID 	= "1090418063";
+$videoAdicionalID	= "1090419008";
 
 
 //OFERTAS SETTINGS, elegir una de las 2, si esta activo uno con "true" los otros 2 tienen que estar en "false"

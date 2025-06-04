@@ -101,7 +101,7 @@ $g_facebook = true;
 $g_whatsaup = false;
 
 // descripcion
-$des = "¿Te imaginas crear Tu propio negocio y aprender pastelería nutritiva y saludable para Tu mascota? - Petz School.";
+$des = "¿Te gustaría <b>consentir a tu peludo</b> con recetas naturales y además empezar tu propio negocio desde casa?";
 //$des = "Cocina con Amor y emprende con éxito en el mundo de la Pastelería canina y felina - Petz School.";
 
 // titulo
@@ -190,7 +190,7 @@ if( !$testing && !$testPar )
 			<div class="container back1080">
 
 				<h1 id="first-scroll-heading" itemprop="name">
-					¿Te imaginas crear Tu propio negocio y <b>aprender pastelería nutritiva y saludable</b> para Tu mascota?
+					¿Te gustaría <b>consentir a tu peludo</b> con recetas naturales y además <b>empezar tu propio negocio desde casa</b>?
 				</h1>
 
 				<div class="subtitIcon">

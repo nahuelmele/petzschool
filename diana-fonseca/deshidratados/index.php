@@ -107,9 +107,9 @@ $des = "Crea Tu propio negocio de snacks naturales y saludables, artesanales, si
 // titulo
 $tit = "✓ Promo 65% Off en el Curso de Deshidratados de Diana Fonseca - Petz School";
 
-$videoPrincipalID 	= "1087916037";
-$videoMuestraID		= "1064474904";
-$videoAdicionalID	= "1064124075";
+$videoPrincipalID 	= "1090414660";
+$videoMuestraID		= "1090416797";
+$videoAdicionalID	= "1090416136";
 
 
 //OFERTAS SETTINGS, elegir una de las 2, si esta activo uno con "true" los otros 2 tienen que estar en "false"

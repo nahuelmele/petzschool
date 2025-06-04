@@ -110,11 +110,6 @@ $videoPrincipalID = "737748993";
 $videoMuestraID = "1090305384";
 $videoAdicionalID = "1090321709";
 
-$videos = [
-    "1090326547",
-    "1090326892",
-    "1090327029",
-];
 
 //OFERTAS SETTINGS, elegir una de las 2, si esta activo uno con "true" los otros 2 tienen que estar en "false"
 
@@ -607,36 +602,6 @@ if (!$testing && !$testPar)
             ?>
 
 		</section>
-
-		<?php 
-		$show = false;
-
-        if ($show): ?>
-
-		<section id="muestras-videos" class="bgYellow" aria-labelledby="muestras-videos-heading">
-
-			<div class="section-heading text-center">
-				<h2 id="muestras-videos-heading">Píldoras informativas con Alvaro Osorio</h2>
-				<p>
-					<b class="blockMobile">Esto es solo una muestra</b> de todo lo que aprenderás dentro de <b>Educanino</b> ¡Inscribete Ahora!
-				</p>
-			</div>
-
-			<?php include_once ($base . "inc/landings/muestras-videos.php"); ?>
-
-		</section>
-
-		
-		
-		<?php
-
-        $params = ['class' => 'bgYellow', 'text' => '<b>SIN RIESGOS</b>. Pruébanos por 7 días', 'section' => true];
-        include ($base . "inc/landings/callToAction.php");
-
-        ?>
-
-		<?php endif; ?>
-
 
 		<section id="certificado" class="backDark" aria-labelledby="certificado-heading" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
 			<div class="back1080">
