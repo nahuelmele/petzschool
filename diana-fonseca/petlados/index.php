@@ -12,8 +12,15 @@ $autorSlug = "diana-fonseca";
 include $base . "inc/functions.php";
 
 //precios en dolares
-$oferta50Precio = getPrecio(39.99);
-$sinOfertaPrecio = getPrecio(79.98);
+$oferta50Precio = getPrecio(34.99);
+$sinOfertaPrecio = getPrecio(99.98);
+
+$bono1 = getPrecio(11);
+$bono2 = getPrecio(15);
+$bono3 = getPrecio(20);
+$bono4 = getPrecio(20);
+$bonosTotal = getPrecio(66);
+
 
 $currency = getCurrency();
 
@@ -83,7 +90,7 @@ $dateModified = "2022-08-04";
 $imgShare = "compartir-" . $dirLanding . ".jpg";
 
 // cuantas alumnas felicies hay
-$alumnasfelices = 6;
+$alumnasfelices = 8;
 
 // cuantas muestras hay
 $muestras = 6;
@@ -94,18 +101,29 @@ $g_facebook = true;
 $g_whatsaup = false;
 
 // descripcion
-$des = "Aprende de una forma fácil, rápida y divertida 20 recetas de helados artesanales basadas en proteina animal y frutas para que consientas a tus peludos o crear tu propia heladeria.";
+$des = "Aprende de una forma fácil y divertida 20 recetas de helados artesanales basadas en proteina animal y frutas para tus peludos o crear tu propia heladeria.";
 
 // titulo
-$tit = "✓ Curso Petlados de Diana Fonseca - Petz School";
+$tit = "✓ Promo 65% Off. Curso Petlados de Diana Fonseca";
 
 $videoPrincipalID = "737748993";
+$videoMuestraID = "1090305384";
+$videoAdicionalID = "1090321709";
+
+$videos = [
+    "1090326547",
+    "1090326892",
+    "1090327029",
+];
 
 //OFERTAS SETTINGS, elegir una de las 2, si esta activo uno con "true" los otros 2 tienen que estar en "false"
 
-$oferta50 = true;
+$oferta50 = false;
 $sinOferta = false;
 
+
+$oferta35 = false;
+$oferta65 = true;
 // Hide pago en efectivo
 
 $hideEfectivo = false;
@@ -134,10 +152,47 @@ $linkProducto = "https://go.hotmart.com/Y71611538R?ap=7400";
 $offDiscount = "";
 $textCuotas = $textCuotasFull;
 
-if ($oferta50) {
+if ($oferta50 || $oferta65 || $oferta35) {
 
     //$offDiscount = "&offDiscount=220774";
     $textCuotas = $textCuotas50Off;
+
+
+    switch (true) {
+        case $oferta50:
+            $ribbon = "ribbons50off.png";
+
+            $precioConDescuento = $oferta50Precio;
+            $oferta50Precio = $oferta50Precio;
+            $numeroDescuento = 50;
+
+
+            break;
+        case $oferta65:
+            $ribbon = "ribbons65off.png";
+
+            $precioConDescuento = $oferta50Precio;
+            $oferta50Precio = $sinOfertaPrecio - $oferta50Precio;
+            $numeroDescuento = 65;
+
+            break;
+        case $oferta35:
+            $ribbon = "ribbons35off.png";
+
+            $precioConDescuento = $oferta50Precio;
+            $oferta50Precio = $sinOfertaPrecio - $oferta50Precio;
+            $numeroDescuento = 35;
+
+            break;
+        default:
+            $ribbon = ""; // o null si preferís sin imagen
+
+            $precioConDescuento = $oferta50Precio;
+            $oferta50Precio = $oferta50Precio;
+
+            $numeroDescuento = 0;
+            break;
+    }
 
 }
 
@@ -197,9 +252,11 @@ if (!$testing && !$testPar)
 				</div>
 
 				<div class="boxShadowVideo" itemprop="video" itemscope itemtype="https://schema.org/VideoObject">
-					<?php if ($oferta50 && !$sinOferta) { ?>
+					<?php
+
+						if (($oferta50 || $oferta65 || $oferta35) && !$sinOferta) { ?>
 						<img 
-							src="/img/ribbons50off.png" 
+							src="/img/<?= $ribbon ?>" 
 							alt="Oferta <?= $nombredelcurso ?>" 
 							width="134" 
 							height="129" 
@@ -251,25 +308,31 @@ if (!$testing && !$testPar)
 				
 			</div>
 		</section>
-		
+
 		<section id="aprender" class="bgYellow" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
-			<div class="section-heading text-center">
-				<h2 itemprop="name">¿Qué vas a APRENDER?</h2>
+		  <div class="section-heading text-center">
+			<h2 itemprop="name">Aprenderás a elaborar</h2>
+		  </div>
+
+		  <div class="container">
+			<div itemprop="educationalCredentialAwarded" content="Certificado de <?= $nombredelcurso ?>">
+			  <div itemprop="description">
+				<p itemprop="competencyRequired"><b>3 bases para helados</b> que podrás utilizar para crear <b>infinitos sabores y combinaciones deliciosas</b>.</p>
+				<p itemprop="competencyRequired">Elaboración de <b>yogurt natural super cremoso</b>, ideal para tus recetas más suaves.</p>
+				<p itemprop="competencyRequired">Cómo hacer <b>yogurt griego espeso y durito</b> para una textura irresistible.</p>
+				<p itemprop="competencyRequired">Paso a paso para preparar <b>queso crema casero</b>, perfecto para usar en múltiples recetas.</p>
+				<p itemprop="competencyRequired"><b>Paletas de frutas</b> refrescantes con base de yogurt natural.</p>
+				<p itemprop="competencyRequired"><b>Paletas cremosas</b> con base de yogurt griego y queso crema para una experiencia gourmet.</p>
+				<p itemprop="competencyRequired">Creación de <b>paletas especiales</b> como cheesecake, chocolate, cookies and cream y tipo Magnum con cobertura <b>apta para perros</b>.</p>
+				<p itemprop="competencyRequired"><b>Helados cremosos en bolita</b> con textura profesional, sin necesidad de máquinas.</p>
+				<p itemprop="competencyRequired"><b>3 técnicas infalibles</b> para romper los cristales de hielo y lograr cremosidad sin máquina heladora.</p>
+				<p itemprop="competencyRequired">Cómo hacer <b>cucuruchos y canastillas comestibles</b> aptas para el consumo de los perros.</p>
+				<p itemprop="competencyRequired">Recetas de <b>toppings y siropes caseros</b> para decorar y potenciar el sabor de tus helados.</p>
+			  </div>
 			</div>
-    
-			<div class="container">
-				<div itemprop="educationalCredentialAwarded" content="Certificado de <?= $nombredelcurso ?>">
-					<div itemprop="description">
-						<p itemprop="competencyRequired">20 recetas de helados y paletas <u>aptas para perros y gatos</u>.</p>
-						<p itemprop="competencyRequired">Aprenderás a hacer <b>3 diferentes bases de helados</b> que utilizaras para muchas mas creaciones.</p>
-						<p itemprop="competencyRequired">Aprenderás a crear yogurt <u>super cremoso y griego</u> más espeso.</p>
-						<p itemprop="competencyRequired">Aprenderás a hacer helados con <b>3 técnicas diferentes</b> para lograr máxima cremosidad.</p>
-						<p itemprop="competencyRequired">Aprenderás a <u>hacer queso crema casero</u> que prodras utilizar en las diferentes recetas.</p>
-						<p itemprop="competencyRequired">Aprenderás a hacer <b>paletas de frutas, cremosas y especiales</b> con base de yogurt griego y queso crema.</p>
-					</div>
-				</div>
-			</div>
+		  </div>
 		</section>
+
 
 		<section id="muestras" class="bgYellow" aria-labelledby="muestras-heading">
 
@@ -288,6 +351,18 @@ if (!$testing && !$testPar)
         include ($base . "inc/landings/callToAction.php");
 
         ?>
+
+
+		<section class="bajada" itemscope itemtype="https://schema.org/Article" aria-labelledby="sub-header-title">
+			<div class="sub-header">
+				<h2 id="sub-header-title" itemprop="headline" class="visually-hidden">
+					Cuando finalices este super curso te habrás convertido en una experta PETladera
+				</h2>
+				<p itemprop="articleBody">
+					<span><strong>Cuando finalices este super curso te habrás convertido en una experta PETladera</strong> con los conocimientos necesarios para poder emprender con una paletería/heladería dirigida a perros y gatos.</span>
+				</p>
+			</div>
+		</section>
 		
 		<section id="contenido" class="bg-pattern" itemscope itemtype="https://schema.org/Course">
 		  <div class="container">
@@ -331,7 +406,7 @@ if (!$testing && !$testPar)
 				</div>
 
 				<div>
-					<p><i class="fa fa-clock-o"></i>36 Lecciones</p>
+					<p><i class="fa fa-clock-o"></i>46 Lecciones</p>
 					<p><i class="fa fa-user"></i><span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Por <?= $autor ?></span></span></p>
 					<p itemprop="reviewCount"><i class="fa fa-comment"></i>59 Evaluaciones</p>
 				</div>
@@ -340,51 +415,62 @@ if (!$testing && !$testPar)
 			</div>
     
 			<div id="temario" class="two-cols">
-			  <div class="active">
-				<h3>
-				  <button>Haz clic para ver el <br/>contenido del curso</button>
-				</h3>
-				<ul itemprop="hasCourseInstance" itemscope itemtype="https://schema.org/CourseInstance"> 
-					<li itemprop="courseMode" content="online"><span>Clase No 1.</span> – Acceso Total.</li> 
-					<li itemprop="courseMode" content="online"><span>Clase No 2.</span> – Bienvenida.</li> 
-					<li itemprop="courseMode" content="online"><span>Clase No 3.</span> – Invitación a los grupos de Facebook y Telegram.</li> 
-					<li itemprop="courseMode" content="online"><span>Clase No 4.</span> – Recetario PETlados.</li> 
-					<li itemprop="courseMode" content="online"><span>Clase No 5</span> – Módulo paletas de yogurt.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 6.</span> – Base para helados de yogurt.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 7.</span> – Haciendo yogurt natural sin azucar.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 8.</span> – Paletas cremosas de melon y hierbabuena.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 9.</span> – Paletas cremosas de banana y kiwi.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 10.</span> – Paleta cremosa de frutos rojos.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 11.</span> – Paleta de melocoton y queso.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 12.</span> – Paleta cremosa de mango y coco.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 13.</span> – Paletas cremosas de pure de manzana y canela.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 14.</span> – Paletas cremosas de colores.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 15.</span> – Paleta cremosa de pera rellena de mantequilla de mani.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 16.</span> – Base para helados yogurt y queso crema.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 17.</span> – Haciendo yogurt griego.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 18.</span> – Haciendo queso crema casero.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 19.</span> – Paleta cremosa de guanabana y moras.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 20.</span> – Paletas cremosas de mango y arandanos.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 21.</span> – Paleta cremosa de papaya y queso.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 22.</span> – Paletas cremosas de arandanos, franbuesa y mandarina.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 23.</span> – Paletas cremosas de higado.</li>								
-					<li itemprop="courseMode" content="online"><span>Clase No 24.</span> – Paletas cremosas de pollo.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 25.</span> – Paleta Cheesecake.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 26.</span> – Paletas Chocolate.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 27.</span> – Base de helados súper cremosa.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 28.</span> – Paletas tipo Magnum.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 29.</span> – Decoración de galletas.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 30.</span> – Paleta cookies and cream.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 31.</span> – Helado cremoso de banana y mandarina.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 32.</span> – Helado cremoso de hígado.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 33.</span> – Helado cremoso de pollo/pavo.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 34.</span> – Cómo sacar costos y obtener una ganancia justa.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 35.</span> – Despedida.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 36.</span> – Invitación Especial.</li>
-					<li itemprop="courseMode" content="online"><span>BONUS Nº 1</span> – Recetarios descargable.</li>
-					<li itemprop="courseMode" content="online"><span>BONUS Nº 2</span> – Asesorías de por vida ( grupo privado de Facebook y Telegram ).</li>
-				</ul>
-			  </div>
+				<div class="active">
+					<h3>
+						<button>Haz clic para ver el <br/>contenido del curso</button>
+					</h3>
+					<ul itemprop="hasCourseInstance" itemscope itemtype="https://schema.org/CourseInstance">
+						<li itemprop="courseMode" content="online"><span>Clase No 1.</span> – Advertencia</li>
+						<li itemprop="courseMode" content="online"><span>Clase No 2.</span> – Acceso total al curso</li>
+						<li itemprop="courseMode" content="online"><span>Clase No 3.</span> – Resolución de dudas y soporte</li>
+						<li itemprop="courseMode" content="online"><span>Clase No 4.</span> – Bienvenida</li>
+						<li itemprop="courseMode" content="online"><span>Clase No 5.</span> – Invitación al grupo de Facebook</li>
+						<li itemprop="courseMode" content="online"><span>Clase No 6.</span> – Recetario</li>
+						<li itemprop="courseMode" content="online"><span>Clase No 7.</span> – Módulo paletas de yogurt</li>
+						<li itemprop="courseMode" content="online"><span>Clase No 8.</span> – Base para helados de yogurt</li>
+						<li itemprop="courseMode" content="online"><span>Clase No 9.</span> – Haciendo yogurt natural</li>
+						<li itemprop="courseMode" content="online"><span>Clase No 10.</span> – Paleta cremosa de melón y hierbabuena</li>
+						<li itemprop="courseMode" content="online"><span>Clase No 11.</span> – Paleta cremosa de banana y kiwi</li>
+						<li itemprop="courseMode" content="online"><span>Clase No 12.</span> – Paleta cremosa de frutos rojos</li>
+						<li itemprop="courseMode" content="online"><span>Clase No 13.</span> – Paleta cremosa de melocotón y queso</li>
+						<li itemprop="courseMode" content="online"><span>Clase No 14.</span> – Paleta cremosa de mango y coco</li>
+						<li itemprop="courseMode" content="online"><span>Clase No 15.</span> – Paleta cremosa de puré de manzana y canela</li>
+						<li itemprop="courseMode" content="online"><span>Clase No 16.</span> – Paleta cremosa de colores</li>
+						<li itemprop="courseMode" content="online"><span>Clase No 17.</span> – Paleta cremosa de pera rellena de mantequilla de maní</li>
+						<li itemprop="courseMode" content="online"><span>Clase No 18.</span> – Módulo paletas de yogurt y queso crema</li>
+						<li itemprop="courseMode" content="online"><span>Clase No 19.</span> – Base de helados de yogurt y queso crema</li>
+						<li itemprop="courseMode" content="online"><span>Clase No 20.</span> – Haciendo yogurt griego</li>
+						<li itemprop="courseMode" content="online"><span>Clase No 21.</span> – Haciendo queso crema casero</li>
+						<li itemprop="courseMode" content="online"><span>Clase No 22.</span> – Paleta cremosa de guanábana y moras</li>
+						<li itemprop="courseMode" content="online"><span>Clase No 23.</span> – Paleta cremosa de banana, mantequilla de maní y moras</li>
+						<li itemprop="courseMode" content="online"><span>Clase No 24.</span> – Paleta cremosa de arándanos y mango</li>
+						<li itemprop="courseMode" content="online"><span>Clase No 25.</span> – Paleta cremosa de papaya y queso</li>
+						<li itemprop="courseMode" content="online"><span>Clase No 26.</span> – Paleta cremosa de hígado</li>
+						<li itemprop="courseMode" content="online"><span>Clase No 27.</span> – Módulo paletas especiales</li>
+						<li itemprop="courseMode" content="online"><span>Clase No 28.</span> – Paleta cheesecake</li>
+						<li itemprop="courseMode" content="online"><span>Clase No 29.</span> – Paleta de “Chocolate”</li>
+						<li itemprop="courseMode" content="online"><span>Clase No 30.</span> – Base para helados súper cremosa</li>
+						<li itemprop="courseMode" content="online"><span>Clase No 31.</span> – Paleta tipo Magnum</li>
+						<li itemprop="courseMode" content="online"><span>Clase No 32.</span> – Paleta cookies and cream</li>
+						<li itemprop="courseMode" content="online"><span>Clase No 33.</span> – Helado cremoso de banana y mandarina</li>
+						<li itemprop="courseMode" content="online"><span>Clase No 34.</span> – Helado cremoso de hígado</li>
+						<li itemprop="courseMode" content="online"><span>Clase No 35.</span> – Helado cremoso de pollo/pavo</li>
+						<li itemprop="courseMode" content="online"><span>Clase No 36.</span> – Cucuruchos y canastillas de avena</li>
+						<li itemprop="courseMode" content="online"><span>Clase No 37.</span> – Cucuruchos y canastillas de almendra</li>
+						<li itemprop="courseMode" content="online"><span>Clase No 38.</span> – Módulo Toppings</li>
+						<li itemprop="courseMode" content="online"><span>Clase No 39.</span> – Perlas de hierbabuena</li>
+						<li itemprop="courseMode" content="online"><span>Clase No 40.</span> – Perlas de mango</li>
+						<li itemprop="courseMode" content="online"><span>Clase No 41.</span> – Perlas de hígado</li>
+						<li itemprop="courseMode" content="online"><span>Clase No 42.</span> – Perlas de mango</li>
+						<li itemprop="courseMode" content="online"><span>Clase No 43.</span> – Sirope de arándanos</li>
+						<li itemprop="courseMode" content="online"><span>Clase No 44.</span> – Sirope de kiwi</li>
+						<li itemprop="courseMode" content="online"><span>Clase No 45.</span> – Sirope de hígado</li>
+						<li itemprop="courseMode" content="online"><span>Clase No 46.</span> – Despedida</li>
+						<li itemprop="courseMode" content="online"><span>BONUS</span> – Cómo calcular costos</li>
+						<li itemprop="courseMode" content="online"><span>BONUS</span> – Crecimiento en Instagram (PDF)</li>
+						<li itemprop="courseMode" content="online"><span>BONUS</span> – 4 recetas de bebidas para perros (PDF)</li>
+					</ul>
+				</div>
 			</div>
 
 		  </div>
@@ -465,6 +551,93 @@ if (!$testing && !$testPar)
 
         ?>
 
+		<section id="bonos" class="bg-pattern" itemscope itemtype="https://schema.org/Course">
+
+			<?php
+
+            $bonos = [
+                [
+                    'img' => 'recetario-petlados-diana-fonseca.png',
+                    'alt' => 'Resumen descargable completo para seguir el curso sin tomar apuntes.',
+                    'precio' => $bono1,
+                    'descripcion' => '<b>Resumen descargable completo</b> para seguir el curso sin tomar apuntes.',
+                ],
+                [
+                    'img' => 'como-calcular-costos-petlados-diana-fonseca.png',
+                    'alt' => 'Maximiza tus ganancias y asegura la rentabilidad de tu negocio.',
+                    'precio' => $bono2,
+                    'descripcion' => '<b>Maximiza tus ganancias</b> y asegura la rentabilidad de tu negocio.',
+                ],
+                [
+                    'img' => 'creciendo-en-instagram-petlados-diana-fonseca.png',
+                    'alt' => 'Impulsa tu negocio y destaca en Instagram.',
+                    'precio' => $bono3,
+                    'descripcion' => '<b>Impulsa tu negocio</b> y destaca en Instagram.',
+                ],
+                [
+                    'img' => '4-recetas-de-bebidas-para-perros-petlados-diana-fonseca.png',
+                    'alt' => 'Deliciosas, refrescantes y nutricionalmente saludables adaptadas para perros y gatos.',
+                    'precio' => $bono4,
+                    'descripcion' => '<b>Deliciosas, refrescantes</b> y nutricionalmente saludables adaptadas para perros y gatos.',
+                ],
+                [
+                    'img' => 'private-group.png',
+                    'alt' => 'Tendrás acceso de por vida a nuestro grupo privado de Facebook y Telegram.',
+                    'precio' => "Invaluable",
+                    'descripcion' => 'Tendrás <b>acceso de por vida</b> a nuestro grupo privado de Facebook y Telegram.',
+                ],
+            ];
+
+
+            $cantBonos = count($bonos);
+
+            ?>
+
+			<div class="text-center section-heading">
+				<h2 itemprop="name">Recibe GRATIS <?= $cantBonos ?> Bonos</h2>
+				<p itemprop="description">
+					<b class="blockMobile">SOLO POR HOY</b> con tu inscripción recibirás totalmente <b>GRATIS <?= $cantBonos ?> bonos</b> valorados en <b>+ de <?= $currency ?> <?= $bonosTotal ?></b>.
+				</p>
+			</div>
+
+			<?php
+
+            include_once ($base . "inc/landings/bonos.php");
+
+            ?>
+
+		</section>
+
+		<?php 
+		$show = false;
+
+        if ($show): ?>
+
+		<section id="muestras-videos" class="bgYellow" aria-labelledby="muestras-videos-heading">
+
+			<div class="section-heading text-center">
+				<h2 id="muestras-videos-heading">Píldoras informativas con Alvaro Osorio</h2>
+				<p>
+					<b class="blockMobile">Esto es solo una muestra</b> de todo lo que aprenderás dentro de <b>Educanino</b> ¡Inscribete Ahora!
+				</p>
+			</div>
+
+			<?php include_once ($base . "inc/landings/muestras-videos.php"); ?>
+
+		</section>
+
+		
+		
+		<?php
+
+        $params = ['class' => 'bgYellow', 'text' => '<b>SIN RIESGOS</b>. Pruébanos por 7 días', 'section' => true];
+        include ($base . "inc/landings/callToAction.php");
+
+        ?>
+
+		<?php endif; ?>
+
+
 		<section id="certificado" class="backDark" aria-labelledby="certificado-heading" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
 			<div class="back1080">
 				<img 
@@ -489,6 +662,23 @@ if (!$testing && !$testPar)
 				</div>
 			</div>
 		</section>	
+
+		<section id="video-adicional" class="bgYellow bg-pattern" aria-labelledby="video-adicional-heading" itemscope itemtype="https://schema.org/VideoObject">
+			<div class="back768">
+        
+				<div class="text-center section-heading">
+					<h2 id="video-adicional-heading" itemprop="name">WOW, Diana quiere decirte</h2>
+					<p itemprop="description">
+						<b>IMPORTANTE</b> Presta mucha ATENCIÓN al siguiente video.
+					</p>
+				</div>        
+
+				<div class="boxShadowVideo" itemprop="video">
+					<lite-vimeo videoid="<?= $videoAdicionalID ?>"></lite-vimeo>
+				</div>    
+        
+			</div>
+		</section> 	
 		
 		<?php include_once ($base . "inc/landings/header-beneficios.php"); ?>
 
@@ -497,7 +687,8 @@ if (!$testing && !$testPar)
 		<?php
 
         $masBeneficios = [
-            "Más de 36 lecciones en video, formato súper HD.",
+            "Más de 46 lecciones en video, formato súper HD.",
+            "TUS $cantBonos bonos valuados en + de $currency $bonosTotal.",
             "SORPRESAS Y REGALOS... videos, playbooks, publicaciones, imágenes, actualizaciones y presentaciones."
         ];
 
@@ -509,6 +700,25 @@ if (!$testing && !$testPar)
 		<?php include_once ($base . "inc/landings/precio.php"); ?>
 
 		<?php include_once ($base . "inc/landings/precio-beneficios.php"); ?>
+
+
+		<section id="video-por-dentro" class="bgYellow bg-pattern" aria-labelledby="video-por-dentro-heading" itemscope itemtype="https://schema.org/VideoObject">
+			<div class="back768">
+        
+				<div class="text-center section-heading">
+					<h2 id="video-por-dentro-heading" itemprop="name">¿Quíeres dar un vistazo?</h2>
+					<p itemprop="description">
+						Aquí podrás ver cómo es <b>el curso por dentro</b>.
+					</p>
+				</div>        
+
+				<div class="boxShadowVideo" itemprop="video">
+					<lite-vimeo videoid="<?= $videoMuestraID ?>"></lite-vimeo>
+				</div>    
+        
+			</div>
+		</section>
+
 	
 		<?php include_once ($base . "inc/landings/garantia.php"); ?>
 

@@ -96,9 +96,10 @@ $g_whatsaup = false;
 $des = "En el curso de Petlicias Navideñas aprenderás a hacer platos y postres Navideños dirigidos a Mascotas. Platillos típicos navideños aptos para el consumo de perros y gatos - Diana Fonseca - Petz School.";
 
 // titulo
-$tit = "Aprende a hacer platos y postres Navideños dirigidos a perros y gatos - Diana Fonseca - Petz School";
+$tit = "✓ Promo 50% Off en el curso Petlicias Navideñas de Diana Fonseca - Petz School";
 
 $videoPrincipalID = "888910923";
+$videoMuestraID = "1090332521";
 
 
 //OFERTAS SETTINGS, elegir una de las 2, si esta activo uno con "true" los otros 2 tienen que estar en "false"
@@ -354,6 +355,8 @@ if (!$testing && !$testPar)
 					<li itemprop="courseMode" content="online"><span>Clase No 26.</span> – Vino blanco para perros y gatos</li>
 					<li itemprop="courseMode" content="online"><span>Clase No 27.</span> – Vino rose para perros y gatos</li>
 					<li itemprop="courseMode" content="online"><span>Clase No 28.</span> – Despedida</li>	
+					<li itemprop="courseMode" content="online"><span>BONO</span> – Recetario en Pdf</li>
+					<li itemprop="courseMode" content="online"><span>BONO</span> – Listado de ingredientes peligrosos que debes evitar en la dieta de tu perro o gato.</li>
 				</ul>
 			  </div>
 			</div>
@@ -435,6 +438,31 @@ if (!$testing && !$testPar)
         include ($base . "inc/landings/callToAction.php");
 
         ?>
+
+		<section id="certificado" class="backDark" aria-labelledby="certificado-heading" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
+			<div class="back1080">
+				<img 
+					src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+					data-src="/img/landings/<?= $dirLanding ?>/diploma.png" 
+					class="lazyload"  
+					alt="Certificado como profesional en <?= $nombredelcurso ?> avalado por <?= $autor ?>" 
+					title="Certificado como profesional en <?= $nombredelcurso ?> avalado por <?= $autor ?>" 
+					width="354" 
+					height="354"
+					itemprop="image"
+				/>
+
+				<div>
+					<h2 id="certificado-heading" itemprop="name">Certifícate como profesional</h2>
+
+					<p itemprop="description">
+						<span>Al finalizar el curso, tendrás un <b>certificado de conclusión digital</b>, el cual podrás descargar e imprimir.</span>
+						<span>Estamos seguros que cuando lo hagas sentirás la satisfacción de saber que tienes todos los conocimientos necesarios para <b>adiestrar a tu perro</b> y <b>crear tu propio negocio</b> en esta bonita actividad.</span>
+					</p>
+
+				</div>
+			</div>
+		</section>
 		
 		<?php include_once ($base . "inc/landings/header-beneficios.php"); ?>
 
@@ -443,6 +471,23 @@ if (!$testing && !$testPar)
 		<?php include_once ($base . "inc/landings/precio.php"); ?>
 
 		<?php include_once ($base . "inc/landings/precio-beneficios.php"); ?>
+
+		<section id="video-por-dentro" class="bgYellow bg-pattern" aria-labelledby="video-por-dentro-heading" itemscope itemtype="https://schema.org/VideoObject">
+			<div class="back768">
+        
+				<div class="text-center section-heading">
+					<h2 id="video-por-dentro-heading" itemprop="name">¿Quíeres dar un vistazo?</h2>
+					<p itemprop="description">
+						Aquí podrás ver cómo es <b>el curso por dentro</b>.
+					</p>
+				</div>        
+
+				<div class="boxShadowVideo" itemprop="video">
+					<lite-vimeo videoid="<?= $videoMuestraID ?>"></lite-vimeo>
+				</div>    
+        
+			</div>
+		</section>
 	
 		<?php include_once ($base . "inc/landings/garantia.php"); ?>
 

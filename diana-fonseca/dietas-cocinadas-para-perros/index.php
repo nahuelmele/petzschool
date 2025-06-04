@@ -100,11 +100,11 @@ $g_facebook = true;
 $g_whatsaup = false;
 
 // descripcion
-$des = "✓ Promo 65% Off. Deja atrás los procesados. Aprende a nutrir a tu perro con amor y convierte ese saber en un proyecto con propósito. Diana Fonseca - Petz School";
+$des = " Deja atrás los procesados. Aprende a nutrir a tu perro con amor y convierte ese saber en un proyecto con propósito. Diana Fonseca - Petz School";
 //$des = "Cocina con Amor y emprende con éxito en el mundo de la Pastelería canina y felina - Petz School.";
 
 // titulo
-$tit = "Dietas Cocinadas para Perros, Amor que Nutre - Petz School";
+$tit = "✓ Promo 65% Off en el curso Dietas Cocinadas para Perros de Diana Fonseca.";
 
 $videoPrincipalID 	= "1089375113";
 $videoMuestraID		= "1089376236";
