@@ -101,10 +101,10 @@ $g_facebook = true;
 $g_whatsaup = false;
 
 // descripcion
-$des = "En este novedoso taller aprenderás a elaborar recetas de pastelería artesanal canina y felina para Halloween utilizando ingredietes aptos para el consumo de nuestros peluditos - Diana Fonseca - Petz School.";
+$des = "🎃 En este novedoso taller aprenderás a crear recetas de pastelería canina y felina 🐾 ideales para Halloween 👻 usando ingredientes 100% aptos. ¡Sumate ahora!";
 
 // titulo
-$tit = "✓ Promo 65% Off en el curso de repostería de Halloween aptas para perros y gatos - Diana Fonseca - Petz School";
+$tit = "✓ Promo 65% Off en el curso de Repostería de Halloween para Perros y Gatos de Diana Fonseca - Petz School";
 
 $videoPrincipalID = "757793018";
 $videoMuestraID		= "1089688211";

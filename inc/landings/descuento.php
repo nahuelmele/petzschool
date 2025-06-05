@@ -3,7 +3,8 @@
 if (
     (isset($oferta50) && $oferta50) ||
     (isset($oferta65) && $oferta65) ||
-    (isset($oferta35) && $oferta35)
+    (isset($oferta35) && $oferta35) ||
+    (isset($oferta30) && $oferta30)
 ) {
     if (!isset($sinOferta) || !$sinOferta) {
 

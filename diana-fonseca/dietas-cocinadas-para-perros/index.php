@@ -100,7 +100,7 @@ $g_facebook = true;
 $g_whatsaup = false;
 
 // descripcion
-$des = " Deja atrás los procesados. Aprende a nutrir a tu perro con amor y convierte ese saber en un proyecto con propósito. Diana Fonseca - Petz School";
+$des = "🍲 Deja atrás los alimentos procesados. Aprende a nutrir a tu perro con recetas caseras, sanas y llenas de amor y crea tu negocio pet-friendly. 🚀 ¡Sumate HOY!";
 //$des = "Cocina con Amor y emprende con éxito en el mundo de la Pastelería canina y felina - Petz School.";
 
 // titulo

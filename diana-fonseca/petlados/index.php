@@ -101,10 +101,10 @@ $g_facebook = true;
 $g_whatsaup = false;
 
 // descripcion
-$des = "Aprende de una forma fácil y divertida 20 recetas de helados artesanales basadas en proteina animal y frutas para tus peludos o crear tu propia heladeria.";
+$des = "🍦 Aprende de forma fácil y divertida 20 recetas de helados artesanales 🐾 para consentir a tus peludos y crea tu propia heladería pet-friendly! 🚀 ¡Sumate HOY!";
 
 // titulo
-$tit = "✓ Promo 65% Off. Curso Petlados de Diana Fonseca";
+$tit = "✓ Promo 65% Off en el Curso Petlados de Diana Fonseca - Petz School";
 
 $videoPrincipalID = "737748993";
 $videoMuestraID = "1090305384";

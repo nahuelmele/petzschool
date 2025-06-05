@@ -13,7 +13,7 @@ include $base. "inc/functions.php";
 
 //precios en dolares
 $oferta50Precio  	= getPrecio(17.50);
-$sinOfertaPrecio 	= getPrecio(35);
+$sinOfertaPrecio 	= getPrecio(25.00);
 
 $currency 			= getCurrency();
 
@@ -94,21 +94,22 @@ $g_facebook = true;
 $g_whatsaup = false;
 
 // descripcion
-$des = "¿Te imaginas crear Tu propio negocio de repostería pet-friendly? - Petz School.";
+$des = "🍪 Sorprende a tu mascota con dulces de Pascua 100% pet-friendly 🐶🐱. Aprende recetas únicas, técnicas fáciles y emprende con amor. 🐣 ¡Sumate ahora!";
 //$des = "Cocina con Amor y emprende con éxito en el mundo de la Pascua para 4patas - Petz School.";
 
 // titulo
-$tit = "✓ Promo 50% Off en el taller de Pascua para 4patas de Diana Fonseca - Petz School";
-
-$videoPrincipalID 	= "96bba50862";
-$videoMuestraID		= "716119020";
-$videoAdicionalID	= "290a0895dc";
+$tit = "✓ Promo 30% Off en el taller de Pascua para 4patas de Diana Fonseca - Petz School";
 
 
 //OFERTAS SETTINGS, elegir una de las 2, si esta activo uno con "true" los otros 2 tienen que estar en "false"
 
-$oferta50  = true;
+$oferta50 = false;
 $sinOferta = false;
+
+
+$oferta30 = true;
+$oferta35 = false;
+$oferta65 = false;
 
 // Hide pago en efectivo
 
@@ -138,11 +139,57 @@ $linkProducto = "https://go.hotmart.com/M90056990B?ap=e002";
 $offDiscount = "";
 $textCuotas = $textCuotasFull;
 
-if( $oferta50 ){
-	
-	//$offDiscount = "&offDiscount=220774";
-	$textCuotas = $textCuotas50Off;
-	
+if ($oferta50 || $oferta65 || $oferta35 || $oferta30) {
+
+    //en este caso esta con el descuento ya en el link y si le aplico esto me hace un descuento sobre el descuento
+    //$offDiscount = "&offDiscount=220774";
+    $textCuotas = $textCuotas50Off;
+
+
+    switch (true) {
+        case $oferta50:
+            $ribbon = "ribbons50off.png";
+
+            $precioConDescuento = $oferta50Precio;
+            $oferta50Precio = $oferta50Precio;
+            $numeroDescuento = 50;
+
+
+            break;
+        case $oferta65:
+            $ribbon = "ribbons65off.png";
+
+            $precioConDescuento = $oferta50Precio;
+            $oferta50Precio = $sinOfertaPrecio - $oferta50Precio;
+            $numeroDescuento = 65;
+
+            break;
+        case $oferta35:
+            $ribbon = "ribbons35off.png";
+
+            $precioConDescuento = $oferta50Precio;
+            $oferta50Precio = $sinOfertaPrecio - $oferta50Precio;
+            $numeroDescuento = 35;
+
+            break;
+        case $oferta30:
+            $ribbon = "ribbons30off.png";
+
+            $precioConDescuento = $oferta50Precio;
+            $oferta50Precio = $sinOfertaPrecio - $oferta50Precio;
+            $numeroDescuento = 30;
+
+            break;
+        default:
+            $ribbon = ""; // o null si preferís sin imagen
+
+            $precioConDescuento = $oferta50Precio;
+            $oferta50Precio = $oferta50Precio;
+
+            $numeroDescuento = 0;
+            break;
+    }
+
 }
 
 $hideEfectivoText = "";
@@ -183,15 +230,8 @@ if( !$testing && !$testPar )
 			<div class="container back1080">
 
 				<h1 id="first-scroll-heading" itemprop="name">
-				Pascua Pet-Friendly: Celebra con tu Mascota
+				Sorprende a tu mascota con dulces de Pascua 100% PET Friendly. Aprende recetas únicas, técnicas fáciles y emprendé con amor
 				</h1>
-
-				<!-- <div class="subtitIcon">
-					<i class="heart fa fa-volume-up"></i>
-					<p>
-						<b>ATENCIÓN</b> Sube el volumen, mira y escucha el video hasta el <b>FINAL</b>
-					</p>
-				</div> -->
 
 				<div class="conteArrow">
 					<div>
@@ -200,40 +240,32 @@ if( !$testing && !$testPar )
 				</div>
 
 				<div class="boxShadowVideo" itemprop="video" itemscope itemtype="https://schema.org/VideoObject">
-					<?php if ($oferta50 && !$sinOferta) { ?>
+					<?php
+
+                    if (($oferta50 || $oferta65 || $oferta35 || $oferta30) && !$sinOferta) { ?>
 						<img 
-							src="/img/ribbons50off.png" 
+							src="/img/<?= $ribbon ?>" 
 							alt="Oferta <?= $nombredelcurso ?>" 
 							width="134" 
 							height="129" 
-							itemprop="image"  
-							style="left: 60px"                                
+							itemprop="image"                                    
 						/>
 					<?php } ?>
 
-					<!-- <lite-vimeo videoid="<?= $videoPrincipalID ?>" itemprop="embedUrl" content="https://vimeo.com/<?= $videoPrincipalID ?>"></lite-vimeo>
-
-					<meta itemprop="name" content="Video Principal del Curso de <?= $nombredelcurso ?>">
-					<meta itemprop="description" content="Video donde <?= $autor ?> te explica todo sobre el curso de <?= $nombredelcurso ?>.">
-					<meta itemprop="thumbnailUrl" content="https://vumbnail.com/<?= $videoPrincipalID ?>.jpg"> -->
-
 				</div>
 
-				<img style="transform: rotate(0);"
+				<img class="imgInstedVideo"
 				src="/img/landings/<?= $dirLanding ?>/img-hero.jpg" 
-				data-src="/img/landings/<?= $dirLanding ?>/img-hero.jpg" 
-				class="lazyload boxShadowVideo"  
-				alt="Curso: <?= $nombredelcurso ?> de <?= $autor ?>" 
-				title="Curso: <?= $nombredelcurso ?> de <?= $autor ?>" 
-				width="905" 
-				height="509"
+				data-src="/img/landings/<?= $dirLanding ?>/img-hero.jpg"  
+				alt="Taller: <?= $nombredelcurso ?> de <?= $autor ?>" 
+				title="Taller: <?= $nombredelcurso ?> de <?= $autor ?>" 
 				itemprop="image"
 				/>
 
 				<div class="optesumVid">
 					<div>
 						<p>Ya somos más de </p>
-						<p>598</p>
+						<p>97</p>
 						<p>Pets Lovers</p>
 					</div>
 					<p>
@@ -251,9 +283,10 @@ if( !$testing && !$testPar )
 			<div class="sub-header">
 
 				<h2 id="sub-header-title" itemprop="name">
-					<span>¡CONVIÉRTETE</span> en un experto en repostería pet-friendly!<br>
-					<span>CREA tu propio negocio</span> de dulces saludables para mascotas y sorprende con recetas únicas de Pascua, <u itemprop="courseMode" content="online">seguras, nutritivas y llenas de amor</u>.
+					<span>¡CONVIÉRTETE</span> en una experta en repostería pet-friendly!</span> Aprendé técnicas creativas, seguras y nutritivas para mimar a tus mascotas con dulces irresistibles.<br>
+					<span>CREA tu propio negocio</span> de postres saludables y sorprendé con recetas de Pascua <u itemprop="courseMode" content="online">únicas y llenas de amor</u>.
 				</h2>
+
 				
 				<?php
 
@@ -273,11 +306,11 @@ if( !$testing && !$testPar )
 			<div class="container">
 				<div itemprop="educationalCredentialAwarded" content="Certificado de <?= $nombredelcurso ?>">
 					<div itemprop="description">
-						<p itemprop="competencyRequired">Cómo adaptar los dulces típicos de Semana Santa para que sean seguros y deliciosos para tus mascotas.</p>
-						<p itemprop="competencyRequired">Qué ingredientes utilizar para garantizar snacks saludables y nutritivos para perros y gatos.</p>
-						<p itemprop="competencyRequired">Recetas creativas para sorprender a familiares y amigos con dulces especiales para mascotas.</p>
-						<p itemprop="competencyRequired">Técnicas para preparar diferentes tipos de postres, permitiéndote innovar y crear nuevas recetas en otras ocasiones.</p>
-						<p itemprop="competencyRequired">Cómo hacer tus propios dulces pet-friendly y ahorrar en productos comerciales, asegurando calidad y bienestar para tu mascota.</p>
+						<p itemprop="competencyRequired">Aprende <strong>cómo adaptar dulces típicos de Semana Santa</strong> para que sean <strong>seguros y deliciosos</strong> para tu perro o gato.</p>
+						<p itemprop="competencyRequired">Descubre <strong>qué ingredientes usar</strong> para crear <strong>snacks saludables y nutritivos</strong> para tus mascotas.</p>
+						<p itemprop="competencyRequired">Sorprende a todos con <strong>recetas creativas</strong> que encantan a humanos y son <strong>perfectas para consentir a tus peludos</strong>.</p>
+						<p itemprop="competencyRequired">Dominá <strong>técnicas dulces</strong> que te permitirán <strong>innovar y crear postres únicos</strong> para toda ocasión.</p>
+						<p itemprop="competencyRequired">Aprende a <strong>crear tus propios dulces pet-friendly</strong>, ahorrando en productos comerciales y asegurando <strong>calidad y bienestar</strong> para tu mascota.</p>
 					</div>
 				</div>
 			</div>
@@ -304,10 +337,6 @@ if( !$testing && !$testPar )
 
 		<section class="bajada" itemscope itemtype="https://schema.org/Article" aria-labelledby="sub-header-title">
 			<div class="sub-header">
-				<h2 id="sub-header-title" itemprop="headline" class="visually-hidden">
-					<span>Nosotros cuidamos de nuestra alimentación,</span> 
-					<span>pero ¿qué pasa con nuestra mascota?</span>
-				</h2>
 				<p itemprop="articleBody">
 					<span>Aprende a preparar versiones saludables de los postres típicos de Semana Santa, con <u>ingredientes seguros y nutritivos</u>.</span> 
 					<span>Comparte momentos inolvidables con tu peludo y haz que forme parte de la celebración con recetas deliciosas y fáciles de hacer.</span> 
@@ -360,20 +389,17 @@ if( !$testing && !$testPar )
 				<div>
 					<p><i class="fa fa-clock-o"></i>8 videos</p>
 					<p><i class="fa fa-user"></i><span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Por <?= $autor ?></span></span></p>
-					<p itemprop="reviewCount"><i class="fa fa-comment"></i>321 Evaluaciones</p>
+					<p itemprop="reviewCount"><i class="fa fa-comment"></i>12 Evaluaciones</p>
 				</div>
 
 			  </div>		
 			</div>
     
-			<div id="temario" class="two-cols">
-			  <div class="active">
-				<h3>
-				  <button>Haz clic para ver el <br/>contenido del curso</button>
-				</h3>
+			<div id="temario">
+			  <div class="active" style="display: flex;justify-content: center;">
 				<ul itemprop="hasCourseInstance" itemscope itemtype="https://schema.org/CourseInstance"> 
 					<li itemprop="courseMode" content="online"><span>Video No 1.</span> – Rosca o mona de Pascua.</li> 
-					<li itemprop="courseMode" content="online"><span>Video No 2.</span> – Mini Pasteles decorados para la ocasión utilizando diferentes técnicas de decoración.</li>
+					<li itemprop="courseMode" content="online"><span>Video No 2.</span> – Mini Pasteles decorados para la ocasión utilizando diferentes técnicas.</li>
 					<li itemprop="courseMode" content="online"><span>Video No 3.</span> – Mini cakepops en forma de huevo de Pascua para decorar los mini pasteles.</li>
 					<li itemprop="courseMode" content="online"><span>Video No 4.</span> – Galletas en forma de conejito utilizando sólo cortador en forma de corazón.</li>
 					<li itemprop="courseMode" content="online"><span>Video No 5.</span> – Glaseado para galletas.</li>
@@ -447,13 +473,6 @@ if( !$testing && !$testPar )
 				</div>
 			</div>
 		</section>	
-	  
-		<?php
-
-        $subtitleAlumnas = ['subtitle' => ''];
-        include_once ($base . "inc/landings/alumnasfelices.php");
-
-        ?>
 		
 		<?php
 
@@ -496,7 +515,7 @@ if( !$testing && !$testPar )
 		<?php
 
         $masBeneficios = [
-            "Más de 5 lecciones en video, formato súper HD.",
+            "Más de 8 lecciones en video, formato súper HD.",
             "SORPRESAS Y REGALOS... videos, playbooks, publicaciones, imágenes, actualizaciones y presentaciones."
         ];
 
@@ -528,95 +547,6 @@ if( !$testing && !$testPar )
         include ($base . "inc/landings/callToAction.php");
 
         ?>
-		
-		<section id="testimonios" class="bgYellow bg-pattern" aria-labelledby="testimonios-heading">
-
-			<div class="section-heading text-center">
-				<h2 id="testimonios-heading">!Más opiniones de alumnas!</h2>
-			</div>
-
-			<div class="container">
-
-				<div id="owl-reviews">
-
-					<?php
-
-					$carouselTestimoniosItems = [
-						[
-							"nombre" => "Ximena Capeletti",
-							"bajada" => "Dog Lover",
-							"descripcion" => "Les quiero recomendar la pastelería para perro de Diana Fonseca. Mis tres amores perrunos, Simón (14 años), Teo (1 año) y Eva (6meses), la adoran!! Simón no volvió a sufrir de la piel desde que lo cambié a esta comida. No tienen mal aliento y el pelo les brilla.",
-							"nombre_imagen" => "ximena.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "Sandra Muñoz",
-							"bajada" => "Dog Lover",
-							"descripcion" => "Me encanto el curso de Taller Pascua para 4patas, mi perro se llama rocky y prepararle deliciosos snack es una excelente actividad que la disfruto con mi hijo. Amamos a Rocky y el ama estas recetas…… Muchisimas Gracias Diana!!!!",
-							"nombre_imagen" => "sandra.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "Nathy Pardo",
-							"bajada" => "Dog Lover",
-							"descripcion" => "Me encanta la simplicidad y facilidad con la que se pueden preparar las distintas recetas que nos comparte Diana. He visto un cambio en la salud de Pepe, mi Pastor Aleman. Siento que ahora mi peludo es más feliz y tiene más energía. Gracias!",
-							"nombre_imagen" => "naty.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "Gaby Flores",
-							"bajada" => "Dog Lover",
-							"descripcion" => "Dante es mi Boston terrier de 4 años y medio, desde el destete ha comido dieta natural, sin embargo Dante tenía problemas en las articulaciones. Cuando pasamos a la barf y pastelería todo cambio, en poco tiempo estaba corriendo y saltando por todas partes. Gracias por todo Diana, saludos!",
-							"nombre_imagen" => "gaby.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "LUISA SALAH",
-							"bajada" => "Dog Lover",
-							"descripcion" => "Quiero contar como este tipo de comida cambió la salud de mi perro. Tengo un pastor collie y desde que le cambie su alimentación su pelo lo tiene más suave, las deposiciones ya no son blandas, los dientes son más blancos, jamás tiene sarro y se le ve con más energía.",
-							"nombre_imagen" => "luisa.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "ANDRÉS FERNÁNDEZ",
-							"bajada" => "Dog Lover",
-							"descripcion" => "Mi hermosa celebra su cumpleaños perruno 3, disfruta de una torta de pollo que aprendimos, nos encanta que Diana sea parte de este especial día, a Bella le encanta toda la pastelería. Muchas gracias cada vez que se porta bien le doy las galletas verdes que tanto le gustan.",
-							"nombre_imagen" => "andres-fernandez.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "SOFIA BUSTAMANTE",
-							"bajada" => "Cat Lover",
-							"descripcion" => "Maya celebró su 3er cumpleaños con una torta de atún que realizamos con el curso de Taller Pascua para 4patas de la profe Diana. Realizare luego helados para Maya que estan en el curso espero me queden delicioso como esta torta.",
-							"nombre_imagen" => "sofia.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "NORA RIVERA DE CRUZ",
-							"bajada" => "Cat Lover",
-							"descripcion" => "Gracias a ustedes  por la torta de atún de cumpleaños de Zahiro, estaba como loco, nunca lo habíamos visto así. Realmente disfruto de su primer cumpleaños. Quedamos satisfecho que gran talento que tienen en la comida de mascotas.",
-							"nombre_imagen" => "nora.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "MIRNA AGUILAR",
-							"bajada" => "Dog Lover",
-							"descripcion" => "Mi hermosa Bella celebró su cumpleaños perruno 2 con una torta de pollo que aprendimos a hacer con el curso de Diana. El curso es muy práctico y apredimos muchas cosas que no teniamos ni idea sobre como alimentarla correctamente.",
-							"nombre_imagen" => "mirna.jpg",
-							"cantidad_estrellas" => 5
-						],
-
-					];
-
-					include_once ($base . "inc/landings/testimonios.php");
-
-					?>
-
-				</div>
-
-			</div>
-
-		</section>
 	  
 		<?php include_once ($base . "inc/landings/footer-landing.php"); ?>
 		

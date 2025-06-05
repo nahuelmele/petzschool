@@ -101,7 +101,7 @@ $g_facebook = true;
 $g_whatsaup = false;
 
 // descripcion
-$des = "¿Te gustaría <b>consentir a tu peludo</b> con recetas naturales y además empezar tu propio negocio desde casa?";
+$des = "🐾 ¿Te gustaría aprender a consentir a tu peludo con recetas de pastelería canina y felina naturales y además crear tu propio negocio PET Friendly? ¡Sumate HOY!";
 //$des = "Cocina con Amor y emprende con éxito en el mundo de la Pastelería canina y felina - Petz School.";
 
 // titulo

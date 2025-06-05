@@ -7,7 +7,8 @@
     if (
         (isset($oferta50) && $oferta50) ||
         (isset($oferta65) && $oferta65) ||
-        (isset($oferta35) && $oferta35)
+        (isset($oferta35) && $oferta35) ||
+        (isset($oferta30) && $oferta30)
     ) {
         if (!isset($sinOferta) || !$sinOferta) {
 
@@ -56,7 +57,8 @@
         if (
             (isset($oferta50) && $oferta50) ||
             (isset($oferta65) && $oferta65) ||
-            (isset($oferta35) && $oferta35)
+            (isset($oferta35) && $oferta35) ||
+            (isset($oferta30) && $oferta30)
         ) {
             if (!isset($sinOferta) || !$sinOferta) {
 
@@ -72,7 +74,8 @@
         <?php } else if (
                 (isset($oferta50) && $oferta50) ||
                 (isset($oferta65) && $oferta65) ||
-                (isset($oferta35) && $oferta35)
+                (isset($oferta35) && $oferta35) ||
+                (isset($oferta30) && $oferta30)
             ) { ?>        
         <h4><span itemprop="priceCurrency" content="<?= $currency ?>"><?= $currency ?></span> <span itemprop="price"><?= isset($precioConDescuento) ? $precioConDescuento : $oferta50Precio; ?></span></h4>
         <?php } ?>
@@ -121,7 +124,8 @@
             if (
                 (isset($oferta50) && $oferta50) ||
                 (isset($oferta65) && $oferta65) ||
-                (isset($oferta35) && $oferta35)
+                (isset($oferta35) && $oferta35) ||
+                (isset($oferta30) && $oferta30)
             ) {
                 if (!isset($sinOferta) || !$sinOferta) {
 

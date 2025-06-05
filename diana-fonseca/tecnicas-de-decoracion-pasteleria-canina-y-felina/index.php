@@ -13,9 +13,9 @@ include $base. "inc/functions.php";
 
 //precios en dolares
 $oferta50Precio  	= getPrecio(69.99);
-$sinOfertaPrecio 	= getPrecio(139.99);
+$sinOfertaPrecio 	= getPrecio(199.98);
 
-
+$bonosTotal = getPrecio(51);
 $currency 			= getCurrency();
 
 $landingData 		= getLandingData();
@@ -87,7 +87,7 @@ $imgShare = "compartir-" . $dirLanding . ".jpg";
 $alumnasfelices = 30;
 
 // cuantas muestras hay
-$muestras = 19;
+$muestras = 16;
 
 // grupos privados
 $g_telegram = true;
@@ -95,11 +95,12 @@ $g_facebook = true;
 $g_whatsaup = false;
 
 // descripcion
-$des = "¿Te imaginas crear Tu propio negocio y aprender pastelería nutritiva y saludable para Tu mascota? - Petz School.";
+$des = "🧁 Domina las Técnicas de Decoración más Avanzadas en Pastelería Canina y Felina. Formate con Diana Fonseca y Ofrece Productos Profesionales. 🎓 ¡Empeza Ahora!";
+
 //$des = "Cocina con Amor y emprende con éxito en el mundo de la Pastelería canina y felina - Petz School.";
 
 // titulo
-$tit = "✓ Promo 50% Off en el Curso de Técnicas de decoración Pastelería Canina y Felina de Diana Fonseca - Petz School";
+$tit = "✓ Promo 65% Off en el Curso de Técnicas de decoración Pastelería Canina y Felina de Diana Fonseca - Petz School";
 
 $videoPrincipalID 	= "1090441130";
 $videoMuestraID		= "1090442219";
@@ -108,8 +109,12 @@ $videoAdicionalID	= "718531292";
 
 //OFERTAS SETTINGS, elegir una de las 2, si esta activo uno con "true" los otros 2 tienen que estar en "false"
 
-$oferta50  = true;
+$oferta50 = false;
 $sinOferta = false;
+
+
+$oferta35 = false;
+$oferta65 = true;
 
 // Hide pago en efectivo
 
@@ -130,7 +135,7 @@ $modalMesageCheckout = false;
 
 // Link Producto, chechout limpio para crashing
 
-$linkProducto = "https://go.hotmart.com/U82241052N?ap=ad85";
+$linkProducto = "https://go.hotmart.com/U82241052N?ap=8880";
 
 
 //De aca para abajo no hay que tocar nada
@@ -139,11 +144,49 @@ $linkProducto = "https://go.hotmart.com/U82241052N?ap=ad85";
 $offDiscount = "";
 $textCuotas = $textCuotasFull;
 
-if( $oferta50 ){
-	
-	$offDiscount = "&offDiscount=220774";
-	$textCuotas = $textCuotas50Off;
-	
+if ($oferta50 || $oferta65 || $oferta35) {
+
+    //en este caso esta con el descuento ya en el link y si le aplico esto me hace un descuento sobre el descuento
+    //$offDiscount = "&offDiscount=220774";
+    $textCuotas = $textCuotas50Off;
+
+
+    switch (true) {
+        case $oferta50:
+            $ribbon = "ribbons50off.png";
+
+            $precioConDescuento = $oferta50Precio;
+            $oferta50Precio = $oferta50Precio;
+            $numeroDescuento = 50;
+
+
+            break;
+        case $oferta65:
+            $ribbon = "ribbons65off.png";
+
+            $precioConDescuento = $oferta50Precio;
+            $oferta50Precio = $sinOfertaPrecio - $oferta50Precio;
+            $numeroDescuento = 65;
+
+            break;
+        case $oferta35:
+            $ribbon = "ribbons35off.png";
+
+            $precioConDescuento = $oferta50Precio;
+            $oferta50Precio = $sinOfertaPrecio - $oferta50Precio;
+            $numeroDescuento = 35;
+
+            break;
+        default:
+            $ribbon = ""; // o null si preferís sin imagen
+
+            $precioConDescuento = $oferta50Precio;
+            $oferta50Precio = $oferta50Precio;
+
+            $numeroDescuento = 0;
+            break;
+    }
+
 }
 
 $hideEfectivoText = "";
@@ -184,7 +227,7 @@ if( !$testing && !$testPar )
 			<div class="container back1080">
 
 				<h1 id="first-scroll-heading" itemprop="name">
-				Técnicas de Decoración para Pastelería Canina y Felina: Eleva tus Creaciones al Siguiente Nivel
+				Transforma tu Pastelería Canina y Felina a Nivel Profesional con Técnicas de Decoración Pro que Impactan y Enamoran
 				</h1>
 
 				<div class="subtitIcon">
@@ -201,9 +244,11 @@ if( !$testing && !$testPar )
 				</div>
 
 				<div class="boxShadowVideo" itemprop="video" itemscope itemtype="https://schema.org/VideoObject">
-					<?php if ($oferta50 && !$sinOferta) { ?>
+					<?php
+
+                    if (($oferta50 || $oferta65 || $oferta35) && !$sinOferta) { ?>
 						<img 
-							src="/img/ribbons50off.png" 
+							src="/img/<?= $ribbon ?>" 
 							alt="Oferta <?= $nombredelcurso ?>" 
 							width="134" 
 							height="129" 
@@ -222,7 +267,7 @@ if( !$testing && !$testPar )
 				<div class="optesumVid">
 					<div>
 						<p>Ya somos más de </p>
-						<p>615</p>
+						<p>289</p>
 						<p>Pets Lovers</p>
 					</div>
 					<p>
@@ -242,8 +287,8 @@ if( !$testing && !$testPar )
 			<div class="sub-header">
 
 				<h2 id="sub-header-title" itemprop="name">
-					<span>CONVIÉRTETE</span> en una experta en pastelería para mascotas.
-					<span>CREA tu propio negocio</span> y sé pionera emprendiendo en un sector en crecimiento como <u itemprop="courseMode" content="online">profesional independiente</u>.
+					<span>CONVIÉRTETE</span> en experta en pastelería canina y felina con técnicas avanzadas de decoración profesional.
+					<span>CREA tu propio negocio</span> en pastelería para mascotas y destácate como profesional en un sector en expansión.
 				</h2>
 				
 				<?php
@@ -264,13 +309,14 @@ if( !$testing && !$testPar )
 			<div class="container">
 				<div itemprop="educationalCredentialAwarded" content="Certificado de <?= $nombredelcurso ?>">
 					<div itemprop="description">
-						<p itemprop="competencyRequired">Dominar técnicas de decoración como Facecake, Boxcake y Caricaturas.</p>
-						<p itemprop="competencyRequired">Diseñar y decorar una torta 3D con forma de perro o gato.</p>
-						<p itemprop="competencyRequired">Elaborar 5 coberturas seguras y aptas para perros y gatos.</p>
-						<p itemprop="competencyRequired">Aplicar 8 técnicas avanzadas de decoración en pasteles y galletas.</p>
-						<p itemprop="competencyRequired">Crear figuras en fondant adaptado para mascotas.</p>
-						<p itemprop="competencyRequired">Modelar galletas en 3D y pintar sobre ellas.</p>
-						<p itemprop="competencyRequired">Preparar betún y queso crema casero tipo Philadelphia.</p>
+						<p itemprop="competencyRequired">Dominar <strong>técnicas avanzadas de decoración</strong> como <strong>Facecake</strong>, <strong>Boxcake</strong> y <strong>Caricaturas</strong>, aplicadas a pastelería canina y felina.</p>
+						<p itemprop="competencyRequired">Diseñar y decorar una <strong>torta 3D realista</strong> con forma de perro o gato, incluyendo modelado y acabado profesional.</p>
+						<p itemprop="competencyRequired">Elaborar <strong>5 coberturas seguras y aptas para el consumo moderado</strong> de perros y gatos, ideales para decoraciones elaboradas.</p>
+						<p itemprop="competencyRequired">Aplicar más de <strong>8 técnicas específicas de decoración</strong> en pasteles y galletas, adaptadas al mundo pet.</p>
+						<p itemprop="competencyRequired">Modelar figuras en <strong>fondant adaptado</strong> para mascotas y darles forma con detalle y creatividad.</p>
+						<p itemprop="competencyRequired">Crear <strong>galletas en 3D</strong> y aplicar técnicas de <strong>pintura comestible</strong> para lograr diseños únicos y llamativos.</p>
+						<p itemprop="competencyRequired">Preparar betunes caseros como el <strong>queso crema tipo Philadelphia</strong> y otras coberturas que suman sabor y textura.</p>
+						<p itemprop="competencyRequired">Aprender a montar <strong>crema casera</strong> y utilizarla en decoraciones suaves, vistosas y seguras para tus clientes peludos.</p>
 					</div>
 				</div>
 			</div>
@@ -297,12 +343,8 @@ if( !$testing && !$testPar )
 
 		<section class="bajada" itemscope itemtype="https://schema.org/Article" aria-labelledby="sub-header-title">
 			<div class="sub-header">
-				<h2 id="sub-header-title" itemprop="headline" class="visually-hidden">
-					<span>Nosotros cuidamos de nuestra alimentación,</span> 
-					<span>pero ¿qué pasa con nuestra mascota?</span>
-				</h2>
 				<p itemprop="articleBody">
-					<span>Descubre el <b>arte de la pastelería</b> para mascotas y sorprende con <b>creaciones irresistibles</b>. <u>¡Aprende, crea y convierte tu pasión en un negocio rentable!</u></span>
+					<span><strong>Imagina crear tartas, muffins y galletas para tu perro o gato</strong>, con <u>decoraciones seguras</u> que también sean <strong>irresistibles y visualmente impactantes</strong>. Con este curso, aprenderás a hacerlo paso a paso, con amor y técnica.</span>
 				</p>
 			</div>
 		</section>
@@ -349,37 +391,72 @@ if( !$testing && !$testPar )
 				</div>
 
 				<div>
-					<p><i class="fa fa-clock-o"></i>10 Lecciones</p>
+					<p><i class="fa fa-clock-o"></i>42 Lecciones</p>
 					<p><i class="fa fa-user"></i><span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Por <?= $autor ?></span></span></p>
-					<p itemprop="reviewCount"><i class="fa fa-comment"></i>321 Evaluaciones</p>
+					<p itemprop="reviewCount"><i class="fa fa-comment"></i>27 Evaluaciones</p>
 				</div>
 
 			  </div>		
 			</div>
     
-			<div id="temario" class="two-cols">
-			  <div class="active">
-				<h3>
-				  <button>Haz clic para ver el <br/>contenido del curso</button>
-				</h3>
+			<div id="temario">
+			  <div class="active" style="display: flex;justify-content: center;">
 				<ul itemprop="hasCourseInstance" itemscope itemtype="https://schema.org/CourseInstance">
 				
-					<li itemprop="courseMode" content="online"><span>Módulo 1 – FAULTLINE CAKE </span></li> 
-					<li itemprop="courseMode" content="online"><span>Clase No 1.</span> – Butter cream adaptado.</li> 
-					<li itemprop="courseMode" content="online"><span>Clase No 2.</span> – Técnica de decoracion FAULTLINE CAKE.</li>
+					<!-- Módulo 1 – FAULTLINE CAKE -->
+					<li itemprop="courseMode" content="online"><span>Módulo 1 – FAULTLINE CAKE</span></li>
+					<li itemprop="courseMode" content="online"><span>Clase No 1.</span> – Butter cream adaptado.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 2.</span> – Técnica de decoración Faultline Cake.</li>
 					<li itemprop="courseMode" content="online"><span>Clase No 3.</span> – Modelado de figuras de perro y gato en fondant adaptado.</li>
-					<li itemprop="courseMode" content="online"><span>Módulo 2 – FACECOOKIES </span></li> 
+
+					<!-- Módulo 2 – FACECOOKIES (Galletas 3D) -->
+					<li itemprop="courseMode" content="online"><span>Módulo 2 – FACECOOKIES</span></li>
 					<li itemprop="courseMode" content="online"><span>Clase No 1.</span> – Receta de galletas de pavo y manzana verde.</li>
 					<li itemprop="courseMode" content="online"><span>Clase No 2.</span> – Modelado de galleta Beagle.</li>
 					<li itemprop="courseMode" content="online"><span>Clase No 3.</span> – Modelado de galleta gato.</li>
 					<li itemprop="courseMode" content="online"><span>Clase No 4.</span> – Modelado de galleta Yorkie.</li>
 					<li itemprop="courseMode" content="online"><span>Clase No 5.</span> – Modelado de galleta Border Collie.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 6.</span> – Técnica de pintura sobre galleta.</li>
-					<li itemprop="courseMode" content="online"><span>Módulo 3 – FACECAKE </span></li> 
+					<li itemprop="courseMode" content="online"><span>Clase No 6.</span> – Técnica de pintura sobre galleta (Parte 1 y 2).</li>
 
-					<li itemprop="courseMode" content="online"><span>Clase No 1.</span> – Tecinas de decoracion Pasteleria canina y felina.</li>
-					
+					<!-- Módulo 3 – FACECAKE -->
+					<li itemprop="courseMode" content="online"><span>Módulo 3 – FACECAKE</span></li>
+					<li itemprop="courseMode" content="online"><span>Clase No 1.</span> – Técnica Facecake y betún queso crema casero.</li>
+
+					<!-- Módulo 4 – BOXCAKE -->
+					<li itemprop="courseMode" content="online"><span>Módulo 4 – BOXCAKE</span></li>
+					<li itemprop="courseMode" content="online"><span>Clase No 1.</span> – Técnica Boxcake.</li>
+
+					<!-- Módulo 5 – CARICATURAS -->
+					<li itemprop="courseMode" content="online"><span>Módulo 5 – CARICATURAS</span></li>
+					<li itemprop="courseMode" content="online"><span>Clase No 1.</span> – Queso crema casero tipo Philadelphia.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 2.</span> – Modelado de cara de perro.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 3.</span> – Modelado de cara de gato.</li>
+
+					<!-- Módulo 6 – DOGFACE CUPCAKES -->
+					<li itemprop="courseMode" content="online"><span>Módulo 6 – DOGFACE CUPCAKES</span></li>
+					<li itemprop="courseMode" content="online"><span>Clase No 1.</span> – Crema para batir casera.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 2.</span> – Técnica Dogface Cupcake (Parte 1).</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 3.</span> – Técnica Dogface Cupcake (Parte 2).</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 4.</span> – Técnica Dogface Cupcake (Parte 3).</li>
+
+					<!-- Módulo 7 – TORTA 3D -->
+					<li itemprop="courseMode" content="online"><span>Módulo 7 – TORTA 3D</span></li>
+					<li itemprop="courseMode" content="online"><span>Clase No 1.</span> – Receta torta de ternera y brócoli.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 2.</span> – Queso crema proteico.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 3.</span> – Modelado torta 3D perro.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 4.</span> – Decoración torta 3D perro.</li>
+
+					<!-- BONUS -->
+					<li itemprop="courseMode" content="online"><span>BONUS</span></li>
+					<li itemprop="courseMode" content="online"><span>Bonus 1.</span> – Recetario con todas las recetas del curso.</li>
+					<li itemprop="courseMode" content="online"><span>Bonus 2.</span> – Recetario con recetas de tortas, muffins y galletas.</li>
+					<li itemprop="courseMode" content="online"><span>Bonus 3.</span> – Taller Torta 3D, donde aprenderás todas las técnicas.</li>
+					<li itemprop="courseMode" content="online"><span>Bonus 4.</span> – Taller Decoración Torta 3D, con trucos y recomendaciones.</li>
+
+					<!-- Cierre -->
+					<li itemprop="courseMode" content="online"><span>Clase Final.</span> – Despedida del curso.</li>
 				</ul>
+
 			  </div>
 			</div>
 
@@ -510,7 +587,8 @@ if( !$testing && !$testPar )
 		<?php
 
         $masBeneficios = [
-            "Más de 10 lecciones en video, formato súper HD.",
+            "Más de 42 lecciones en video, formato súper HD.",
+            "TUS 4 bonos valuados en + de $currency $bonosTotal.",
             "SORPRESAS Y REGALOS... videos, playbooks, publicaciones, imágenes, actualizaciones y presentaciones."
         ];
 

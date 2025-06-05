@@ -13,11 +13,12 @@ include $base. "inc/functions.php";
 
 //precios en dolares
 $oferta50Precio  	= getPrecio(27.99);
-$sinOfertaPrecio 	= getPrecio(55.98);
+$sinOfertaPrecio 	= getPrecio(79.98);
 
-$bono1 = getPrecio(25);
-$bono2 = getPrecio(15);
-$bonosTotal = getPrecio(40);	
+$bono1 = getPrecio(11);
+$bono2 = getPrecio(30);
+$bono3 = getPrecio(20);
+$bonosTotal = getPrecio(61);	
 
 $currency 			= getCurrency();
 
@@ -98,11 +99,11 @@ $g_facebook = true;
 $g_whatsaup = false;
 
 // descripcion
-$des = "Pastelería Inclusiva para Mascotas: Delicias Saludables para Perros y Gatos Enfermos.";
+$des = "💚 ¡Mejora la vida de tu perro o gato enfermo con snacks deliciosos! 🐶🐱 Aprende a preparar recetas de pastelería adaptadas a sus necesidades. 🚀 ¡Sumate HOY!";
 //$des = "Cocina con Amor y emprende con éxito en el mundo de la Pastelería inclusiva, perros y gatos enfermos - Petz School.";
 
 // titulo
-$tit = "✓ Promo 50% Off en el Curso de Pastelería inclusiva para perros y gatos enfermos de Diana Fonseca - Petz School";
+$tit = "✓ Promo 65% Off en el Curso de Pastelería Inclusiva para Perros y Gatos Enfermos de Diana Fonseca - Petz School";
 
 $videoPrincipalID 	= "1090418063";
 $videoAdicionalID	= "1090419008";
@@ -110,8 +111,12 @@ $videoAdicionalID	= "1090419008";
 
 //OFERTAS SETTINGS, elegir una de las 2, si esta activo uno con "true" los otros 2 tienen que estar en "false"
 
-$oferta50  = true;
+$oferta50 = false;
 $sinOferta = false;
+
+
+$oferta35 = false;
+$oferta65 = true;
 
 // Hide pago en efectivo
 
@@ -141,11 +146,49 @@ $linkProducto = "https://go.hotmart.com/H80406773F?ap=196f";
 $offDiscount = "";
 $textCuotas = $textCuotasFull;
 
-if( $oferta50 ){
-	
-	//$offDiscount = "&offDiscount=220774";
-	$textCuotas = $textCuotas50Off;
-	
+if ($oferta50 || $oferta65 || $oferta35) {
+
+    //en este caso esta con el descuento ya en el link y si le aplico esto me hace un descuento sobre el descuento
+    //$offDiscount = "&offDiscount=220774";
+    $textCuotas = $textCuotas50Off;
+
+
+    switch (true) {
+        case $oferta50:
+            $ribbon = "ribbons50off.png";
+
+            $precioConDescuento = $oferta50Precio;
+            $oferta50Precio = $oferta50Precio;
+            $numeroDescuento = 50;
+
+
+            break;
+        case $oferta65:
+            $ribbon = "ribbons65off.png";
+
+            $precioConDescuento = $oferta50Precio;
+            $oferta50Precio = $sinOfertaPrecio - $oferta50Precio;
+            $numeroDescuento = 65;
+
+            break;
+        case $oferta35:
+            $ribbon = "ribbons35off.png";
+
+            $precioConDescuento = $oferta50Precio;
+            $oferta50Precio = $sinOfertaPrecio - $oferta50Precio;
+            $numeroDescuento = 35;
+
+            break;
+        default:
+            $ribbon = ""; // o null si preferís sin imagen
+
+            $precioConDescuento = $oferta50Precio;
+            $oferta50Precio = $oferta50Precio;
+
+            $numeroDescuento = 0;
+            break;
+    }
+
 }
 
 $hideEfectivoText = "";
@@ -186,7 +229,7 @@ if( !$testing && !$testPar )
 			<div class="container back1080">
 
 				<h1 id="first-scroll-heading" itemprop="name">
-				Pastelería Inclusiva para Mascotas: Delicias Saludables para Perros y Gatos Enfermos.
+				¡Saná con Sabor! Delicias Saludables para Consentir a tu Peludo Enfermo y una Puerta a tu Propio Proyecto
 				</h1>
 
 				<div class="subtitIcon">
@@ -203,9 +246,11 @@ if( !$testing && !$testPar )
 				</div>
 
 				<div class="boxShadowVideo" itemprop="video" itemscope itemtype="https://schema.org/VideoObject">
-					<?php if ($oferta50 && !$sinOferta) { ?>
+					<?php
+
+                    if (($oferta50 || $oferta65 || $oferta35) && !$sinOferta) { ?>
 						<img 
-							src="/img/ribbons50off.png" 
+							src="/img/<?= $ribbon ?>" 
 							alt="Oferta <?= $nombredelcurso ?>" 
 							width="134" 
 							height="129" 
@@ -244,8 +289,8 @@ if( !$testing && !$testPar )
 			<div class="sub-header">
 
 				<h2 id="sub-header-title" itemprop="name">
-					<span>CONVIÉRTETE</span> en una experto en pastelería inclusiva para mascotas.
-					<span>CREA tu propio negocio</span> de repostería saludable para perros y gatos y sé pionera emprendiendo en un sector en crecimiento.
+					<span>CONVIÉRTETE</span> en una experta en pastelería inclusiva para mascotas.
+					<span>CREA tu propio negocio</span> de repostería saludable para perros y gatos y marcá la diferencia en un nicho que no para de crecer.
 				</h2>
 				
 				<?php
@@ -264,14 +309,16 @@ if( !$testing && !$testPar )
 			</div>
     
 			<div class="container">
+
+
 				<div itemprop="educationalCredentialAwarded" content="Certificado de <?= $nombredelcurso ?>">
 					<div itemprop="description">
-						<p itemprop="competencyRequired">Elaborar recetas de pastelería <b>adaptadas a 11 enfermedades comunes</b> en perros y gatos.</p>
-						<p itemprop="competencyRequired">Seleccionar ingredientes adecuados para cada necesidad nutricional.</p>
-						<p itemprop="competencyRequired">Crear premios y postres saludables sin afectar la dieta de tu mascota.</p>
-						<p itemprop="competencyRequired">Comprender el impacto de la alimentación funcional en la salud de los animales.</p>
-						<p itemprop="competencyRequired">Diseñar productos que complementen tratamientos veterinarios.</p>
-						<p itemprop="competencyRequired">Aplicar técnicas de repostería artesanal para mascotas con restricciones alimentarias.</p>
+						<p itemprop="competencyRequired"><b>Aprendé a elaborar recetas de pastelería</b> creativas y terapéuticas, <b>adaptadas a 12 de las enfermedades</b> más comunes en perros y gatos.</p>
+						<p itemprop="competencyRequired"><b>Descubrí cómo elegir ingredientes funcionales</b> y naturales que realmente marcan la diferencia en su bienestar.</p>
+						<p itemprop="competencyRequired"><b>Diseñá snacks, premios y postres saludables</b> que miman sin romper la dieta ni el tratamiento médico.</p>
+						<p itemprop="competencyRequired"><b>Comprendé el poder de la alimentación funcional</b> y su impacto real en la salud y calidad de vida de tu peludo.</p>
+						<p itemprop="competencyRequired"><b>Creá delicias que complementen tratamientos veterinarios</b> y acompañen procesos de recuperación con amor y sabor.</p>
+						<p itemprop="competencyRequired"><b>Dominá técnicas de repostería artesanal</b> para mascotas con necesidades especiales y convertí ese saber en un recurso valioso.</p>
 					</div>
 				</div>
 			</div>
@@ -298,13 +345,9 @@ if( !$testing && !$testPar )
 
 		<section class="bajada" itemscope itemtype="https://schema.org/Article" aria-labelledby="sub-header-title">
 			<div class="sub-header">
-				<h2 id="sub-header-title" itemprop="headline" class="visually-hidden">
-					<span>Nosotros cuidamos de nuestra alimentación,</span> 
-					<span>pero ¿qué pasa con nuestra mascota?</span>
-				</h2>
 				<p itemprop="articleBody">
-					<span>Ayuda a perros y gatos enfermos a disfrutar de deliciosos premios adaptados a sus necesidades. </span> 
-					<span><u>Aprende, crea y convierte tu pasión en una oportunidad única.</u></span>
+					<span>En este curso único y práctico elaboraremos recetas de Pastelería canina y felina adaptadas a 12 de las enfermedades más frecuentes en perros y gatos como son: <b>epilepsia</b>, <b>diabetes</b>, <b>anemia</b>, <b>cálculos de estruvita y oxalato</b>, <b>pancreatitis</b>, <b>gastritis</b>, <b>tiroides</b>, <b>intestino irritable</b>, <b>enfermedades del corazón, renales, hepáticas y de articulaciones</b>.
+ </span> 
 				</p>
 			</div>
 		</section>
@@ -351,59 +394,60 @@ if( !$testing && !$testPar )
 				</div>
 
 				<div>
-					<p><i class="fa fa-clock-o"></i>38 Lecciones</p>
+					<p><i class="fa fa-clock-o"></i>40 Lecciones</p>
 					<p><i class="fa fa-user"></i><span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Por <?= $autor ?></span></span></p>
-					<p itemprop="reviewCount"><i class="fa fa-comment"></i>321 Evaluaciones</p>
+					<p itemprop="reviewCount"><i class="fa fa-comment"></i>18 Evaluaciones</p>
 				</div>
 
 			  </div>		
 			</div>
     
 			<div id="temario" class="two-cols">
-			  <div class="active">
+			  <div class="active" style="display: flex;justify-content: center;">
 				<h3>
 				  <button>Haz clic para ver el <br/>contenido del curso</button>
 				</h3>
 				<ul itemprop="hasCourseInstance" itemscope itemtype="https://schema.org/CourseInstance"> 
-					<li itemprop="courseMode" content="online"><span>Clase No 1.</span> –  Bienvenida.				</li> 
-					<li itemprop="courseMode" content="online"><span>Clase No 2.</span> – Recetario.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 3.</span> – Queso crema casero.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 4.</span> – Epilepsia y demas enfermedades del sistema nervioso.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 5.</span> – Torta para el sistema nervioso.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 6.</span> – Galletas para el sistema nervioso.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 7.</span> – Diabéticos.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 8.</span> – Torta para diabéticos.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 9.</span> – Galletas para diabéticos.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 10.</span> – Anemia.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 11.</span> – Torta para anemia.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 12.</span> – Helado para anemia.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 13.</span> – Enfermos renales.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 14.</span> – Torta para enfermos renales.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 15.</span> – Helado para enfermos renales.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 16.</span> – Enfermos hepáticos.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 17.</span> – Torta para perros enfermos hepáticos.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 17.1.</span> –  Torta para gatos enfermos hepáticos.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 18.</span> – Enfermos del corazón.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 19.</span> – Torta para enfermos del corazón.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 20.</span> –  Gomitas para enfermos del corazón.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 21.</span> – Enfermedad de las vías urinarias.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 22.</span> – Torta para cristales en la vejiga.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 23.</span> – Helado para cristales de oxalato.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 24.</span> – Helado para cristales de estruvita.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 25.</span> – Pancreatitis.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 26.</span> – Torta para pancreatitis.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 27.</span> – Bocaditos para pancreatitis.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 28.</span> – Tiroideos.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 29.</span> – Bocaditos para enfermos tiroideos.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 30.</span> – Pastel para enfermos tiroideos.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 31.</span> – Gastritis.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 32.</span> – Gelatina para gastritis.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 33.</span> – Gomitas para gastritis .</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 34.</span> – Síndrome de intestino irritable.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 35.</span> – Torta para IBD.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 36.</span> – gomitas para IBD.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 37.</span> – Caldo de hueso.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 38.</span> – Despedida.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 1.</span> – Bienvenida.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 2.</span> – Invitación al grupo de Facebook.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 3.</span> – Recetario.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 4.</span> – Queso crema casero.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 5.</span> – Epilepsia y demás enfermedades del sistema nervioso.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 6.</span> – Torta para el sistema nervioso.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 7.</span> – Galletas para el sistema nervioso.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 8.</span> – Diabéticos.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 9.</span> – Torta para diabéticos.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 10.</span> – Galletas para diabéticos.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 11.</span> – Anemia.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 12.</span> – Torta para anemia.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 13.</span> – Helado para anemia.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 14.</span> – Enfermos renales.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 15.</span> – Torta para enfermos renales.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 16.</span> – Helado para enfermos renales.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 17.</span> – Enfermos hepáticos.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 18.</span> – Torta para perros enfermos hepáticos.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 19.</span> – Torta para gatos enfermos hepáticos.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 20.</span> – Enfermos del corazón.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 21.</span> – Torta para enfermos del corazón.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 22.</span> – Gomitas para enfermos del corazón.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 23.</span> – Enfermedad de las vías urinarias.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 24.</span> – Torta para cristales en la vejiga.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 25.</span> – Helado para cristales de oxalato.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 26.</span> – Helado para cristales de estruvita.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 27.</span> – Pancreatitis.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 28.</span> – Torta para pancreatitis.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 29.</span> – Bocaditos para pancreatitis.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 30.</span> – Tiroideos.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 31.</span> – Bocaditos para enfermos tiroideos.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 32.</span> – Pastel para enfermos tiroideos.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 33.</span> – Gastritis.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 34.</span> – Gelatina para gastritis.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 35.</span> – Gomitas para gastritis.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 36.</span> – Síndrome de intestino irritable.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 37.</span> – Torta para IBD.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 38.</span> – Gomitas para IBD.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 39.</span> – Caldo de hueso.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 40.</span> – Despedida.</li>
 				</ul>
 			  </div>
 			</div>
@@ -492,22 +536,22 @@ if( !$testing && !$testPar )
 
             $bonos = [
                 [
-                    'img' => 'ficha-tecnica-enfermedades.png',
-                    'alt' => 'Fichas técnicas de cada enfermedad',
+                    'img' => 'recetario-pasteleria-inclusiva-para-perros-y-gatos-enfermos-diana-fonseca.png',
+                    'alt' => 'Recetario en PDF del curso Pasteleria Inclusiva para Perros y Gatos Enfermos de Diana Fonseca',
                     'precio' => $bono1,
-                    'descripcion' => '<b>Fichas técnicas de cada enfermedad</b> para saber qué aspectos tener en cuenta a la hora de elaborar los premios de tu peludo.',
+                    'descripcion' => '<b>Recetario incluido</b>. Todas las recetas del curso, siempre a tu alcance sin tomar apuntes.',
                 ],
                 [
-                    'img' => 'ficha-tecnica-alimentos.png',
-                    'alt' => 'Fichas técnicas de ingredientes',
+                    'img' => 'ficha-tecnicas-de-enfermedades-pasteleria-inclusiva-para-perros-y-gatos-enfermos-diana-fonseca.png',
+                    'alt' => 'Fichas técnicas de Enfermedades del curso Pasteleria Inclusiva para Perros y Gatos Enfermos de Diana Fonseca',
                     'precio' => $bono2,
-                    'descripcion' => '<b>Fichas técnicas de ingredientes</b> para que conozcas los alimentos funcionales aptos para tu mascota.',
+                    'descripcion' => 'Sabrás cuales son los puntos principales a la hora de <b>elaborar un premio para cada una de las enfermedades tratadas en el curso</b>',
                 ],
                 [
-                    'img' => 'private-group.png',
-                    'alt' => 'Tendrás acceso de por vida a nuestro grupo privado de Facebook y Telegram.',
-                    'precio' => "Invaluable",
-                    'descripcion' => 'Tendrás <b>acceso de por vida</b> a nuestro grupo privado de Facebook y Telegram.',
+                    'img' => 'ficha-tecnicas-de-ingredientes-pasteleria-inclusiva-para-perros-y-gatos-enfermos-diana-fonseca.png',
+                    'alt' => 'Fichas técnicas de Ingredientes del curso Pasteleria Inclusiva para Perros y Gatos Enfermos de Diana Fonseca',
+                    'precio' => $bono2,
+                    'descripcion' => 'Sabrás exactamente <b>cómo cambiar o combinar ingredientes</b> aptos para crear nuevos sabores de acuerdo a cada enfermedad',
                 ],
             ];
 
@@ -579,7 +623,7 @@ if( !$testing && !$testPar )
 		<?php
 
         $masBeneficios = [
-            "Más de 35 lecciones en video, formato súper HD.",
+            "Más de 40 lecciones en video, formato súper HD.",
             "TUS $cantBonos bonos valuados en + de $currency $bonosTotal.",
             "SORPRESAS Y REGALOS... videos, playbooks, publicaciones, imágenes, actualizaciones y presentaciones."
         ];
@@ -613,95 +657,7 @@ if( !$testing && !$testPar )
         include ($base . "inc/landings/callToAction.php");
 
         ?>
-		
-		<section id="testimonios" class="bgYellow bg-pattern" aria-labelledby="testimonios-heading">
 
-			<div class="section-heading text-center">
-				<h2 id="testimonios-heading">!Más opiniones de alumnas!</h2>
-			</div>
-
-			<div class="container">
-
-				<div id="owl-reviews">
-
-					<?php
-
-					$carouselTestimoniosItems = [
-						[
-							"nombre" => "Ximena Capeletti",
-							"bajada" => "Dog Lover",
-							"descripcion" => "Les quiero recomendar la pastelería para perro de Diana Fonseca. Mis tres amores perrunos, Simón (14 años), Teo (1 año) y Eva (6meses), la adoran!! Simón no volvió a sufrir de la piel desde que lo cambié a esta comida. No tienen mal aliento y el pelo les brilla.",
-							"nombre_imagen" => "ximena.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "Sandra Muñoz",
-							"bajada" => "Dog Lover",
-							"descripcion" => "Me encanto el curso de Pastelería inclusiva, perros y gatos enfermos, mi perro se llama rocky y prepararle deliciosos snack es una excelente actividad que la disfruto con mi hijo. Amamos a Rocky y el ama estas recetas…… Muchisimas Gracias Diana!!!!",
-							"nombre_imagen" => "sandra.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "Nathy Pardo",
-							"bajada" => "Dog Lover",
-							"descripcion" => "Me encanta la simplicidad y facilidad con la que se pueden preparar las distintas recetas que nos comparte Diana. He visto un cambio en la salud de Pepe, mi Pastor Aleman. Siento que ahora mi peludo es más feliz y tiene más energía. Gracias!",
-							"nombre_imagen" => "naty.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "Gaby Flores",
-							"bajada" => "Dog Lover",
-							"descripcion" => "Dante es mi Boston terrier de 4 años y medio, desde el destete ha comido dieta natural, sin embargo Dante tenía problemas en las articulaciones. Cuando pasamos a la barf y pastelería todo cambio, en poco tiempo estaba corriendo y saltando por todas partes. Gracias por todo Diana, saludos!",
-							"nombre_imagen" => "gaby.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "LUISA SALAH",
-							"bajada" => "Dog Lover",
-							"descripcion" => "Quiero contar como este tipo de comida cambió la salud de mi perro. Tengo un pastor collie y desde que le cambie su alimentación su pelo lo tiene más suave, las deposiciones ya no son blandas, los dientes son más blancos, jamás tiene sarro y se le ve con más energía.",
-							"nombre_imagen" => "luisa.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "ANDRÉS FERNÁNDEZ",
-							"bajada" => "Dog Lover",
-							"descripcion" => "Mi hermosa celebra su cumpleaños perruno 3, disfruta de una torta de pollo que aprendimos, nos encanta que Diana sea parte de este especial día, a Bella le encanta toda la pastelería. Muchas gracias cada vez que se porta bien le doy las galletas verdes que tanto le gustan.",
-							"nombre_imagen" => "andres-fernandez.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "SOFIA BUSTAMANTE",
-							"bajada" => "Cat Lover",
-							"descripcion" => "Maya celebró su 3er cumpleaños con una torta de atún que realizamos con el curso de Pastelería inclusiva, perros y gatos enfermos de la profe Diana. Realizare luego helados para Maya que estan en el curso espero me queden delicioso como esta torta.",
-							"nombre_imagen" => "sofia.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "NORA RIVERA DE CRUZ",
-							"bajada" => "Cat Lover",
-							"descripcion" => "Gracias a ustedes  por la torta de atún de cumpleaños de Zahiro, estaba como loco, nunca lo habíamos visto así. Realmente disfruto de su primer cumpleaños. Quedamos satisfecho que gran talento que tienen en la comida de mascotas.",
-							"nombre_imagen" => "nora.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "MIRNA AGUILAR",
-							"bajada" => "Dog Lover",
-							"descripcion" => "Mi hermosa Bella celebró su cumpleaños perruno 2 con una torta de pollo que aprendimos a hacer con el curso de Diana. El curso es muy práctico y apredimos muchas cosas que no teniamos ni idea sobre como alimentarla correctamente.",
-							"nombre_imagen" => "mirna.jpg",
-							"cantidad_estrellas" => 5
-						],
-
-					];
-
-					include_once ($base . "inc/landings/testimonios.php");
-
-					?>
-
-				</div>
-
-			</div>
-
-		</section>
 	  
 		<?php include_once ($base . "inc/landings/footer-landing.php"); ?>
 		

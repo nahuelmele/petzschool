@@ -93,7 +93,7 @@ $g_facebook = true;
 $g_whatsaup = false;
 
 // descripcion
-$des = "En el curso de Petlicias Navideñas aprenderás a hacer platos y postres Navideños dirigidos a Mascotas. Platillos típicos navideños aptos para el consumo de perros y gatos - Diana Fonseca - Petz School.";
+$des = "🎄 En el curso Petlicias Navideñas aprenderas a preparar platos y postres típicos navideños 🎁 aptos para perros y gatos 🐶🐱. 🚀 ¡Sumate HOY!";
 
 // titulo
 $tit = "✓ Promo 50% Off en el curso Petlicias Navideñas de Diana Fonseca - Petz School";

@@ -104,7 +104,7 @@ $g_facebook = true;
 $g_whatsaup = false;
 
 // descripcion
-$des = "Unete al Taller Petfriendly de San Valentín. Aprendé a crear snacks naturales para mascotas y convertí tu pasión en un negocio rentable con Petz School.";
+$des = "❤️ Unete al Taller Petfriendly de San Valentín 🐾. Aprende a crear snacks naturales para mascotas y convierte tu pasión en un negocio rentable. 🚀 ¡Sumate HOY!";
 
 //$des = "Cocina con Amor y emprende con éxito en el mundo de la Cupido también es Petfriendly - Petz School.";
 

@@ -13,11 +13,12 @@ include $base. "inc/functions.php";
 
 //precios en dolares
 $oferta50Precio  	= getPrecio(27.99);
-$sinOfertaPrecio 	= getPrecio(55.98);
+$sinOfertaPrecio 	= getPrecio(79.98);
 
-$bono1 = getPrecio(20);
+$bono1 = getPrecio(11);
 $bono2 = getPrecio(20);
-$bonosTotal = getPrecio(40);	
+$bono3 = getPrecio(20);
+$bonosTotal = getPrecio(51);	
 
 $currency 			= getCurrency();
 
@@ -87,7 +88,7 @@ $imgShare = "compartir-" . $dirLanding . ".jpg";
 
 
 // cuantas alumnas felicies hay
-$alumnasfelices = 4;
+$alumnasfelices = 8;
 
 // cuantas muestras hay
 $muestras = 21;
@@ -98,11 +99,11 @@ $g_facebook = true;
 $g_whatsaup = false;
 
 // descripcion
-$des = "¿Te imaginas crear Tu propio negocio y aprender recetas rápidas nutritivas y saludables para Tu mascota? - Petz School.";
+$des = "¿🍔 Fast Food para Mascotas? ¡Sí, pero 🥦 Saludable y con Mucho Amor ❤️! Cocina para TU Perro o Gato y Crea un Negocio tan Sabroso como Único. 🚀 ¡Sumate HOY!";
 //$des = "Cocina con Amor y emprende con éxito en el mundo de la comida rápida para mascotas - Petz School.";
 
 // titulo
-$tit = "✓ Promo 50% Off en el Curso de Rapi Petlicias de Diana Fonseca - Petz School";
+$tit = "✓ Promo 65% Off en el Curso de Rapi Petlicias de Diana Fonseca - Petz School";
 
 $videoPrincipalID = "1090428662";
 $videoMuestraID = "1090430819";
@@ -111,8 +112,12 @@ $videoAdicionalID = "1090431535";
 
 //OFERTAS SETTINGS, elegir una de las 2, si esta activo uno con "true" los otros 2 tienen que estar en "false"
 
-$oferta50  = true;
+$oferta50 = false;
 $sinOferta = false;
+
+
+$oferta35 = false;
+$oferta65 = true;
 
 // Hide pago en efectivo
 
@@ -133,7 +138,7 @@ $modalMesageCheckout = false;
 
 // Link Producto, chechout limpio para crashing
 
-$linkProducto = "https://go.hotmart.com/U79119383E?ap=f8b2";
+$linkProducto = "https://go.hotmart.com/U79119383E?ap=8079";
 
 
 //De aca para abajo no hay que tocar nada
@@ -142,12 +147,51 @@ $linkProducto = "https://go.hotmart.com/U79119383E?ap=f8b2";
 $offDiscount = "";
 $textCuotas = $textCuotasFull;
 
-if( $oferta50 ){
-	
-	$offDiscount = "&offDiscount=220774";
-	$textCuotas = $textCuotas50Off;
-	
+if ($oferta50 || $oferta65 || $oferta35) {
+
+    //en este caso esta con el descuento ya en el link y si le aplico esto me hace un descuento sobre el descuento
+    //$offDiscount = "&offDiscount=220774";
+    $textCuotas = $textCuotas50Off;
+
+
+    switch (true) {
+        case $oferta50:
+            $ribbon = "ribbons50off.png";
+
+            $precioConDescuento = $oferta50Precio;
+            $oferta50Precio = $oferta50Precio;
+            $numeroDescuento = 50;
+
+
+            break;
+        case $oferta65:
+            $ribbon = "ribbons65off.png";
+
+            $precioConDescuento = $oferta50Precio;
+            $oferta50Precio = $sinOfertaPrecio - $oferta50Precio;
+            $numeroDescuento = 65;
+
+            break;
+        case $oferta35:
+            $ribbon = "ribbons35off.png";
+
+            $precioConDescuento = $oferta50Precio;
+            $oferta50Precio = $sinOfertaPrecio - $oferta50Precio;
+            $numeroDescuento = 35;
+
+            break;
+        default:
+            $ribbon = ""; // o null si preferís sin imagen
+
+            $precioConDescuento = $oferta50Precio;
+            $oferta50Precio = $oferta50Precio;
+
+            $numeroDescuento = 0;
+            break;
+    }
+
 }
+
 
 $hideEfectivoText = "";
 if( $hideEfectivo )
@@ -187,7 +231,7 @@ if( !$testing && !$testPar )
 			<div class="container back1080">
 
 				<h1 id="first-scroll-heading" itemprop="name">
-				Rapi Petlicias: Comida Rápida, Saludable y divertida para tus mascotas.
+				¿Fast Food para Mascotas? ¡Sí, pero saludable y con mucho amor! Cociná para tu perro o gato y creá un negocio tan sabroso como único
 				</h1>
 
 				<div class="subtitIcon">
@@ -204,9 +248,11 @@ if( !$testing && !$testPar )
 				</div>
 
 				<div class="boxShadowVideo" itemprop="video" itemscope itemtype="https://schema.org/VideoObject">
-					<?php if ($oferta50 && !$sinOferta) { ?>
+					<?php
+
+                    if (($oferta50 || $oferta65 || $oferta35) && !$sinOferta) { ?>
 						<img 
-							src="/img/ribbons50off.png" 
+							src="/img/<?= $ribbon ?>" 
 							alt="Oferta <?= $nombredelcurso ?>" 
 							width="134" 
 							height="129" 
@@ -225,7 +271,7 @@ if( !$testing && !$testPar )
 				<div class="optesumVid">
 					<div>
 						<p>Ya somos más de </p>
-						<p>633</p>
+						<p>397</p>
 						<p>Pets Lovers</p>
 					</div>
 					<p>
@@ -245,8 +291,8 @@ if( !$testing && !$testPar )
 			<div class="sub-header">
 
 				<h2 id="sub-header-title" itemprop="name">
-					<span>CONVIÉRTETE</span> en una experta en comida natural para mascotas. 
-					<span>CREA tu propio negocio</span> ofreciendo comidas rápidas saludables y deliciosas para perros y gatos.  <u itemprop="courseMode" content="online"> ¡Aprende, emprende y marca la diferencia en la alimentación de los peludos!</u>.
+					<span>APRENDE</span> a cocinar con propósito, emoción y técnica... y vuelvete una referente en un sector que está explotando.
+					<span>CREA tu propio negocio que derrita colas y corazones.</span> Ofrecé fast food saludable, divertido y delicioso para perros y gatos. <u>¡Emprendé con alma y dejá TU huella en la vida de los peludos!</u>.
 				</h2>
 				
 				<?php
@@ -267,11 +313,11 @@ if( !$testing && !$testPar )
 			<div class="container">
 				<div itemprop="educationalCredentialAwarded" content="Certificado de <?= $nombredelcurso ?>">
 					<div itemprop="description">
-						<p itemprop="competencyRequired">Preparar <b>comidas rápidas caseras y saludables</b> para perros y gatos, adaptadas a sus necesidades nutricionales.</p>
-						<p itemprop="competencyRequired">Elaborar recetas como hamburguesas, hot dogs, nuggets, tacos, pizza pocket y hasta cerveza para perros, con ingredientes naturales y aptos para su dieta.</p>
-						<p itemprop="competencyRequired">Aprender técnicas de preparación paso a paso a través de un curso en formato video HD, fácil y divertido.</p>
-						<p itemprop="competencyRequired">Sorprender a tu mascota con platos que imitan la comida rápida humana, pero <u>sin conservantes ni aditivos dañinos</u>.</p>
-						<p itemprop="competencyRequired">Descubrir nuevas formas de enriquecer la alimentación de tu mascota con <b>opciones innovadoras y nutritivas</b>.</p>
+						<p itemprop="competencyRequired">Preparar <b>comidas rápidas, caseras y explosivamente saludables</b> para perros y gatos, hechas a medida de sus necesidades nutricionales.</p>
+						<p itemprop="competencyRequired">Elaborar <b>hamburguesas, hot dogs, nuggets, tacos, pizza pocket y hasta cerveza</b> para mascotas, con ingredientes 100% naturales y aptos para su dieta carnívora.</p>
+						<p itemprop="competencyRequired">Aprender <b>paso a paso con videos en HD</b> en un curso <b>divertido, práctico y al grano</b> que te va a encantar desde la primera receta.</p>
+						<p itemprop="competencyRequired">Sorprender a tu peludo con platos que imitan la comida rápida humana, pero <u><b>sin conservantes ni porquerías industriales</b></u>. ¡Solo sabor y salud real!</p>
+						<p itemprop="competencyRequired">Descubrir <b>formas creativas y nutritivas</b> de revolucionar su alimentación… y por qué no, <b>crear algo grande a partir de eso</b>.</p>
 					</div>
 				</div>
 			</div>
@@ -336,14 +382,9 @@ if( !$testing && !$testPar )
 					  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
 						<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
 					  </svg>
-					  <span>
-						<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star-half" class="svg-inline--fa fa-star-half fa-w-18 fontawesome-icon star-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-						  <path fill="currentColor" d="M288 0c-11.4 0-22.8 5.9-28.7 17.8L194 150.2 47.9 171.4c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.1 23 46 46.4 33.7L288 439.6V0z"></path>
-						</svg>
-						<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star-half" class="svg-inline--fa fa-star-half fa-w-18 fontawesome-icon star-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-						  <path fill="currentColor" d="M288 0c-11.4 0-22.8 5.9-28.7 17.8L194 150.2 47.9 171.4c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.1 23 46 46.4 33.7L288 439.6V0z"></path>
-						</svg>
-					  </span>
+					  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+						<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
+					  </svg>
 					</div>
 
 					<p itemprop="ratingValue">5.0</p>
@@ -353,7 +394,7 @@ if( !$testing && !$testPar )
 				<div>
 					<p><i class="fa fa-clock-o"></i>27 Lecciones</p>
 					<p><i class="fa fa-user"></i><span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Por <?= $autor ?></span></span></p>
-					<p itemprop="reviewCount"><i class="fa fa-comment"></i>321 Evaluaciones</p>
+					<p itemprop="reviewCount"><i class="fa fa-comment"></i>17 Evaluaciones</p>
 				</div>
 
 			  </div>		
@@ -366,32 +407,34 @@ if( !$testing && !$testPar )
 				</h3>
 				<ul itemprop="hasCourseInstance" itemscope itemtype="https://schema.org/CourseInstance"> 
 					<li itemprop="courseMode" content="online"><span>Clase No 1.</span> – Bienvenida.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 2.</span> – Invitación a los grupos de Facebook y telegram.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 2.</span> – Invitación al grupo de Facebook.</li>
 					<li itemprop="courseMode" content="online"><span>Clase No 3.</span> – Recetario.</li>
 					<li itemprop="courseMode" content="online"><span>Clase No 4.</span> – Pan para hamburguesa.</li>
 					<li itemprop="courseMode" content="online"><span>Clase No 5.</span> – Salsas.</li>
 					<li itemprop="courseMode" content="online"><span>Clase No 6.</span> – Hamburguesa.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 7.</span> – Pan para Perro Caliente.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 7.</span> – Pan para perro caliente.</li>
 					<li itemprop="courseMode" content="online"><span>Clase No 8.</span> – Salchichas caseras.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 9.</span> – Pan para club Sandwich.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 10.</span> – Club Sandwich.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 11.</span> – "Papas fritas" de pollo o pavo.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 9.</span> – Pan para club sándwich.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 10.</span> – Club sándwich.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 11.</span> – “Papas fritas” de pollo o pavo.</li>
 					<li itemprop="courseMode" content="online"><span>Clase No 12.</span> – Salchipapa.</li>
 					<li itemprop="courseMode" content="online"><span>Clase No 13.</span> – Crepe de avena.</li>
 					<li itemprop="courseMode" content="online"><span>Clase No 14.</span> – Crepe de pollo.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 15.</span> – Masa para pizza Pocket.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 16.</span> – Salsa para pizza Pocket.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 17.</span> – Pizza Pocket/ pizza calzone.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 15.</span> – Masa para pizza pocket o pizza calzone.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 16.</span> – Salsa para pizza calzone.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 17.</span> – Pizza pocket / pizza calzone.</li>
 					<li itemprop="courseMode" content="online"><span>Clase No 18.</span> – Nuggets.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 29.</span> – Tortillas para tacos.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 20.</span> – Tacos de carne molida.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 21.</span> – Base para Quiche Lorraine.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 19.</span> – Tortillas para tacos.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 20.</span> – Tacos de carne.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 21.</span> – Base para quiche Lorraine.</li>
 					<li itemprop="courseMode" content="online"><span>Clase No 22.</span> – Quiche clásico.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 23.</span> – "Pop Corn" de pescado .</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 23.</span> – “Pop corn” de pescado.</li>
 					<li itemprop="courseMode" content="online"><span>Clase No 24.</span> – Caldo para bebidas.</li>
-					<li itemprop="courseMode" content="online"><span>Clase No 25.</span> – Cerveza para perros.</li>
+					<li itemprop="courseMode" content="online"><span>Clase No 25.</span> – Cerveza para perros y gatos.</li>
 					<li itemprop="courseMode" content="online"><span>Clase No 26.</span> – Petsi-Cola para perros y gatos.</li>
 					<li itemprop="courseMode" content="online"><span>Clase No 27.</span> – Despedida.</li>
+					<li itemprop="courseMode" content="online"><span>BONUS</span> – PDF 4 recetas, 2 desayunos y 2 bebidas.</li>
+					<li itemprop="courseMode" content="online"><span>BONUS</span> – PDF Guía de marketing para redes sociales.</li>
 				</ul>
 			  </div>
 			</div>
@@ -480,22 +523,22 @@ if( !$testing && !$testPar )
 
             $bonos = [
                 [
-                    'img' => 'guia-marketing.png',
-                    'alt' => 'Guía de Marketing Digital',
+                    'img' => 'recetario-rapi-petlicias-diana-fonseca.png',
+                    'alt' => 'Recetario Diana Fonseca Rapi Petlicias',
                     'precio' => $bono1,
-                    'descripcion' => '<b>Guía de Marketing Digital</b> Aprende a destacar tu negocio en redes sociales.',
+                    'descripcion' => '<b>Recetario incluido</b>. Todas las recetas del curso, siempre a tu alcance sin tomar apuntes.',
                 ],
                 [
-                    'img' => 'recetas-exclusivas.png',
-                    'alt' => 'Recetas exclusicas',
+                    'img' => 'recetas-exclusivas-rapi-petlicias-diana-fonseca.png',
+                    'alt' => 'Recetas Exclusivas Diana Fonseca Rapi Petlicias',
                     'precio' => $bono2,
                     'descripcion' => '<b>Recetas exclusivas</b> de 2 PawPuchinos y 2 desayunos aptos para perros.',
                 ],
                 [
-                    'img' => 'private-group.png',
-                    'alt' => 'Tendrás acceso de por vida a nuestro grupo privado de Facebook y Telegram.',
-                    'precio' => "Invaluable",
-                    'descripcion' => 'Tendrás <b>acceso de por vida</b> a nuestro grupo privado de Facebook y Telegram.',
+                    'img' => 'guia-marketing-rapi-petlicias-diana-fonseca.png',
+                    'alt' => 'Guia de Marketing Diana Fonseca Rapi Petlicias',
+                    'precio' => $bono3,
+                    'descripcion' => '<b>Guía de Marketing Digital</b> Aprende a destacar tu negocio en redes sociales.',
                 ],
             ];
 
@@ -567,7 +610,7 @@ if( !$testing && !$testPar )
 		<?php
 
         $masBeneficios = [
-            "Más de 25 lecciones en video, formato súper HD.",
+            "Más de 27 lecciones en video, formato súper HD.",
             "TUS $cantBonos bonos valuados en + de $currency $bonosTotal.",
             "SORPRESAS Y REGALOS... videos, playbooks, publicaciones, imágenes, actualizaciones y presentaciones."
         ];
@@ -616,95 +659,6 @@ if( !$testing && !$testPar )
         include ($base . "inc/landings/callToAction.php");
 
         ?>
-		
-		<section id="testimonios" class="bgYellow bg-pattern" aria-labelledby="testimonios-heading">
-
-			<div class="section-heading text-center">
-				<h2 id="testimonios-heading">!Más opiniones de alumnas!</h2>
-			</div>
-
-			<div class="container">
-
-				<div id="owl-reviews">
-
-					<?php
-
-					$carouselTestimoniosItems = [
-						[
-							"nombre" => "Ximena Capeletti",
-							"bajada" => "Dog Lover",
-							"descripcion" => "Les quiero recomendar la pastelería para perro de Diana Fonseca. Mis tres amores perrunos, Simón (14 años), Teo (1 año) y Eva (6meses), la adoran!! Simón no volvió a sufrir de la piel desde que lo cambié a esta comida. No tienen mal aliento y el pelo les brilla.",
-							"nombre_imagen" => "ximena.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "Sandra Muñoz",
-							"bajada" => "Dog Lover",
-							"descripcion" => "Me encanto el curso de Rapi Petlicias, mi perro se llama rocky y prepararle deliciosos snack es una excelente actividad que la disfruto con mi hijo. Amamos a Rocky y el ama estas recetas…… Muchisimas Gracias Diana!!!!",
-							"nombre_imagen" => "sandra.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "Nathy Pardo",
-							"bajada" => "Dog Lover",
-							"descripcion" => "Me encanta la simplicidad y facilidad con la que se pueden preparar las distintas recetas que nos comparte Diana. He visto un cambio en la salud de Pepe, mi Pastor Aleman. Siento que ahora mi peludo es más feliz y tiene más energía. Gracias!",
-							"nombre_imagen" => "naty.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "Gaby Flores",
-							"bajada" => "Dog Lover",
-							"descripcion" => "Dante es mi Boston terrier de 4 años y medio, desde el destete ha comido dieta natural, sin embargo Dante tenía problemas en las articulaciones. Cuando pasamos a la barf y pastelería todo cambio, en poco tiempo estaba corriendo y saltando por todas partes. Gracias por todo Diana, saludos!",
-							"nombre_imagen" => "gaby.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "LUISA SALAH",
-							"bajada" => "Dog Lover",
-							"descripcion" => "Quiero contar como este tipo de comida cambió la salud de mi perro. Tengo un pastor collie y desde que le cambie su alimentación su pelo lo tiene más suave, las deposiciones ya no son blandas, los dientes son más blancos, jamás tiene sarro y se le ve con más energía.",
-							"nombre_imagen" => "luisa.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "ANDRÉS FERNÁNDEZ",
-							"bajada" => "Dog Lover",
-							"descripcion" => "Mi hermosa celebra su cumpleaños perruno 3, disfruta de una torta de pollo que aprendimos, nos encanta que Diana sea parte de este especial día, a Bella le encanta toda la pastelería. Muchas gracias cada vez que se porta bien le doy las galletas verdes que tanto le gustan.",
-							"nombre_imagen" => "andres-fernandez.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "SOFIA BUSTAMANTE",
-							"bajada" => "Cat Lover",
-							"descripcion" => "Maya celebró su 3er cumpleaños con una torta de atún que realizamos con el curso de Rapi Petlicias de la profe Diana. Realizare luego helados para Maya que estan en el curso espero me queden delicioso como esta torta.",
-							"nombre_imagen" => "sofia.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "NORA RIVERA DE CRUZ",
-							"bajada" => "Cat Lover",
-							"descripcion" => "Gracias a ustedes  por la torta de atún de cumpleaños de Zahiro, estaba como loco, nunca lo habíamos visto así. Realmente disfruto de su primer cumpleaños. Quedamos satisfecho que gran talento que tienen en la comida de mascotas.",
-							"nombre_imagen" => "nora.jpg",
-							"cantidad_estrellas" => 5
-						],
-						[
-							"nombre" => "MIRNA AGUILAR",
-							"bajada" => "Dog Lover",
-							"descripcion" => "Mi hermosa Bella celebró su cumpleaños perruno 2 con una torta de pollo que aprendimos a hacer con el curso de Diana. El curso es muy práctico y apredimos muchas cosas que no teniamos ni idea sobre como alimentarla correctamente.",
-							"nombre_imagen" => "mirna.jpg",
-							"cantidad_estrellas" => 5
-						],
-
-					];
-
-					include_once ($base . "inc/landings/testimonios.php");
-
-					?>
-
-				</div>
-
-			</div>
-
-		</section>
 	  
 		<?php include_once ($base . "inc/landings/footer-landing.php"); ?>
 		

@@ -101,7 +101,7 @@ $g_facebook = true;
 $g_whatsaup = false;
 
 // descripcion
-$des = "Crea Tu propio negocio de snacks naturales y saludables, artesanales, sin conservantes y llenos de sabor - Deshidratados - Petz School.";
+$des = "🍎 Crea tu propio negocio de snacks deshidratados y saludables 🐶✨. Elabora productos artesanales, sin conservantes y llenos de sabor. 🚀 ¡Sumate HOY!";
 //$des = "Cocina con Amor y emprende con éxito en el mundo de la Deshidratados - Petz School.";
 
 // titulo

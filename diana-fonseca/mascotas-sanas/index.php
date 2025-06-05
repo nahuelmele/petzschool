@@ -100,7 +100,7 @@ $g_facebook = true;
 $g_whatsaup = false;
 
 // descripcion
-$des = "Con el MasterClass MASCOTAS SANAS Aprenderás las bases de la nutrición natural casera de perros y gatos. Para que puedas disfrutar de su compañía por mucho tiempo. - Petz School.";
+$des = "🐶🐱 Aprende nutrición natural para perros y gatos 🥦. Prepara dietas caseras, previene enfermedades y emprende tu propio negocio pet-friendly. 🚀 ¡Sumate HOY!";
 
 // titulo
 $tit = "✓ Promo 50% Off en el Curso de Mascotas Sanas de Diana Fonseca - Petz School";
@@ -188,7 +188,7 @@ if (!$testing && !$testPar)
 			<div class="container back1080">
 
 				<h1 id="first-scroll-heading" itemprop="name">
-					Aprende a preparar dietas nutritivas para cuidar la salud de tus mascotas y crea TU propio negocio
+					Transformá la alimentación de tus mascotas con recetas naturales y emprende con propósito y amor
 				</h1>
 
 				<div class="subtitIcon">
