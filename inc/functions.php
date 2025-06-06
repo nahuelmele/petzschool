@@ -3,11 +3,11 @@
 define("DOMAIN", getDomain());
 define("CURRENTURL", currentUrl() );
 define("IP", getUserIP() );
-define("COEFICIENTE_AR", 1241.88);
-define("COEFICIENTE_CO", 4398.6);
-define("COEFICIENTE_PE", 3.88);
-define("COEFICIENTE_MX", 23.548);
-define("COEFICIENTE_CL", 1181.72);
+define("COEFICIENTE_AR", 1300.08);
+define("COEFICIENTE_CO", 4327.52);
+define("COEFICIENTE_PE", 3.84);
+define("COEFICIENTE_MX", 23.4784);
+define("COEFICIENTE_CL", 1168.68);
 define("COEFICIENTE_EU", 1.1376);
 
 define("WHATSAPPGLOBAL", "Tengo la siguiente duda ...");
@@ -122,7 +122,8 @@ function getLandingData(){
 		$data = array( 
 					"SHOWMEDIOS" => true,
 					"IMGBILLET" => "pagostodos-billet-ar.jpg",
-					"TEXTMEDIOSPAGO" => "Pago en efectivo con <b>Pago Fácil</b>, <b>RAPIDPAGO</b>"
+					"TEXTMEDIOSPAGO" => ""
+					//"TEXTMEDIOSPAGO" => "Pago en efectivo con <b>Pago Fácil</b>, <b>RAPIDPAGO</b>"
 				);
 		
 	}else if (COUNTRYCODE == "cl") {
