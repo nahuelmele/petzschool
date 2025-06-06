@@ -12,8 +12,8 @@ $autorSlug = "diana-fonseca";
 include $base . "inc/functions.php";
 
 //precios en dolares
-$oferta50Precio = getPrecio(50);
-$sinOfertaPrecio = getPrecio(100);
+$oferta50Precio = getPrecio(49.99);
+$sinOfertaPrecio = getPrecio(99.98);
 
 $currency = getCurrency();
 
@@ -308,7 +308,7 @@ if (!$testing && !$testPar)
 					  </span>
 					</div>
 
-					<p itemprop="ratingValue">4.7</p>
+					<p itemprop="ratingValue">4.8</p>
 
 				</div>
 

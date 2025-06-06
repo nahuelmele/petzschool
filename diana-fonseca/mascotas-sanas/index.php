@@ -592,7 +592,7 @@ if (!$testing && !$testPar)
 		<?php
 
         $masBeneficios = [
-            "Más de 40 lecciones en video, formato súper HD.",
+            "Más de 46 lecciones en video, formato súper HD.",
             "TUS $cantBonos bonos valuados en + de $currency $bonosTotal.",
             "SORPRESAS Y REGALOS... videos, playbooks, publicaciones, imágenes, actualizaciones y presentaciones."
         ];

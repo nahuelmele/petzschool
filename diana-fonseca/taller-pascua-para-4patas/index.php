@@ -382,7 +382,7 @@ if( !$testing && !$testPar )
 					  </span>
 					</div>
 
-					<p itemprop="ratingValue">5.0</p>
+					<p itemprop="ratingValue">4.6</p>
 
 				</div>
 

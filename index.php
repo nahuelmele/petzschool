@@ -432,7 +432,7 @@ if( !$testing && !$testPar ){
 								</div>								
 								 
 								<div class="post-info">
-									<p><i class="fa fa-clock-o"></i>45 Lecciones</p>
+									<p><i class="fa fa-clock-o"></i>40 Lecciones</p>
 									<p><i class="fa fa-user"></i>Por Diana Fonseca</a></p>
 								</div>
 								
@@ -449,70 +449,7 @@ if( !$testing && !$testPar ){
 
                      </div>
 					 
-					 <div class="col-xs-12">
-					 
-                        <div class="isotope-item">
 
-                           <div class="adoption-thumb oferta50">
-
-								<div class="ribbons50off">
-									<img src="/img/ribbons50off.png" />
-								</div>
-						   
-							  <a href="/pets-space/primeros-auxilios-para-perros/<?= ( $testPar ? '?test' : '') ?>" target="_blank" title="Primeros auxilios para perros">
-								<img class="img-responsive img-circle" src="/img/primeros-auxilios-caninos.jpg" alt="Primeros auxilios para perros" title="Primeros auxilios para perros por Laura Viviana Castro Sabogal">
-							  </a>	
-							  
-                              <div class="adopt-header">
-							  
-                                <h3>
-									<a href="/pets-space/primeros-auxilios-para-perros/<?= ( $testPar ? '?test' : '') ?>" target="_blank">
-										Primeros auxilios para perros
-									</a>
-							   	</h3>	
-								
-								<div class="rating-main-box-ratings-qty">
-									<div class="rating rating--title colorText">
-										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-										</svg>
-										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-										</svg>
-										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-										</svg>
-										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-										</svg>
-										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-										</svg>
-									</div>
-									
-									<div class="blog-tags">
-										<a>5.0</a>
-									</div>
-									
-								</div>								
-								 
-								<div class="post-info">
-									<p><i class="fa fa-clock-o"></i>34 Lecciones</p>
-									<p><i class="fa fa-user"></i>Por Laura Viviana Castro Sabogal</a></p>
-								</div>
-
-								<div class="plan-cost">
-									<span class="plan-price"><?= getPrecio(49.99) ?></span>
-									<span class="plan-price-discount"><?= getPrecio(25) ?></span>
-								</div>	
-								
-                              </div>
-							  
-                           </div>
-
-                        </div>					 
-					 
-					 </div>
 
 					 
                      <div class="col-xs-12">
@@ -589,141 +526,76 @@ if( !$testing && !$testPar ){
 
                         </div>
 
-                     </div>					 
-					 
-				 
-					 
-					 
-					 
-                 <div class="col-xs-12">
+                     </div>		
+					  
 
+
+
+					 <div class="col-xs-12">
+					 
                         <div class="isotope-item">
-
-						
 
                            <div class="adoption-thumb oferta50">
 
-
-
 								<div class="ribbons50off">
-
 									<img src="/img/ribbons50off.png" />
-
 								</div>
-
 						   
-
-							  <a href="/alejandro-quiceno/dieta-barf/<?= ( $testPar ? '?test' : '') ?>" title="Dieta Barf de Alejandro Quiceno">
-
-								<img class="img-responsive img-circle" src="/img/dieta-barf.jpg" alt="Dieta Barf de Alejandro Quiceno" title="Dieta Barf de Alejandro Quiceno">
-
+							  <a href="/pets-space/primeros-auxilios-para-perros/<?= ($testPar ? '?test' : '') ?>" target="_blank" title="Primeros auxilios para perros">
+								<img class="img-responsive img-circle" src="/img/primeros-auxilios-caninos.jpg" alt="Primeros auxilios para perros" title="Primeros auxilios para perros por Laura Viviana Castro Sabogal">
 							  </a>	
-
 							  
-
                               <div class="adopt-header">
-
 							  
-
                                 <h3>
-
-									<a href="/alejandro-quiceno/dieta-barf/<?= ( $testPar ? '?test' : '') ?>">
-
-										Dieta BARF 
-
+									<a href="/pets-space/primeros-auxilios-para-perros/<?= ($testPar ? '?test' : '') ?>" target="_blank">
+										Primeros auxilios para perros
 									</a>
-
 							   	</h3>	
-
 								
-
 								<div class="rating-main-box-ratings-qty">
-
 									<div class="rating rating--title colorText">
-
 										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-
 											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-
 										</svg>
-
 										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-
 											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-
 										</svg>
-
 										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-
 											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-
 										</svg>
-
 										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-
 											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-
 										</svg>
-
-										<span>
-
-											<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star-half" class="svg-inline--fa fa-star-half fa-w-18 fontawesome-icon star-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-
-												<path fill="currentColor" d="M288 0c-11.4 0-22.8 5.9-28.7 17.8L194 150.2 47.9 171.4c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.1 23 46 46.4 33.7L288 439.6V0z"></path>
-
-											</svg>
-
-											<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star-half" class="svg-inline--fa fa-star-half fa-w-18 fontawesome-icon star-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-
-												<path fill="currentColor" d="M288 0c-11.4 0-22.8 5.9-28.7 17.8L194 150.2 47.9 171.4c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.1 23 46 46.4 33.7L288 439.6V0z"></path>
-
-											</svg>
-
-										</span>
-
+										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
+										</svg>
 									</div>
-
 									
-
 									<div class="blog-tags">
-
-										<a>4.8</a>
-
+										<a>5.0</a>
 									</div>
-
 									
-
 								</div>								
-
 								 
-
 								<div class="post-info">
-
-									<p><i class="fa fa-clock-o"></i>57 Lecciones</p>
-
-									<p><i class="fa fa-user"></i>Por Alejandro Quiceno</a></p>
-
-								
-
+									<p><i class="fa fa-clock-o"></i>34 Lecciones</p>
+									<p><i class="fa fa-user"></i>Por Laura Viviana Castro Sabogal</a></p>
 								</div>
-
-								
 
 								<div class="plan-cost">
-
-									<span class="plan-price"><?= getPrecio(25) ?></span>
-
-									<span class="plan-price-discount"><?= getPrecio(50) ?></span>
-
-								</div>								
-						
+									<span class="plan-price"><?= getPrecio(49.99) ?></span>
+									<span class="plan-price-discount"><?= getPrecio(25) ?></span>
+								</div>	
+								
                               </div>
-							 
+							  
                            </div>
-						   
-                        </div>
 
-                     </div>		
+                        </div>					 
+					 
+					 </div>
+					 
 
                     <div class="col-xs-12">
 
@@ -743,7 +615,7 @@ if( !$testing && !$testPar ){
 
 						   
 
-							  <a href="/diana-fonseca/mascotas-sanas/<?= ( $testPar ? '?test' : '') ?>" title="Mascotas Sanas con Diana Fonseca">
+							  <a href="/diana-fonseca/mascotas-sanas/<?= ($testPar ? '?test' : '') ?>" title="Mascotas Sanas con Diana Fonseca">
 
 								<img class="img-responsive img-circle" src="/img/mascotas-sanas.jpg" alt="Mascotas Sanas con Diana Fonseca" title="Mascotas Sanas con Diana Fonseca">
 
@@ -757,7 +629,7 @@ if( !$testing && !$testPar ){
 
                                 <h3>
 
-									<a href="/diana-fonseca/mascotas-sanas/<?= ( $testPar ? '?test' : '') ?>">
+									<a href="/diana-fonseca/mascotas-sanas/<?= ($testPar ? '?test' : '') ?>">
 
 										Mascotas Sanas 
 
@@ -859,7 +731,80 @@ if( !$testing && !$testPar ){
 
                         </div>
 
-                     </div>	
+                     </div>					 
+					 
+					 
+					 
+						<div class="col-xs-12">
+							<div class="isotope-item">
+								<div class="adoption-thumb oferta50">
+									<div class="ribbons50off">
+										<img src="/img/ribbons65off.png" />
+									</div>
+									<a href="/diana-fonseca/deshidratados/<?= ($testPar ? '?test' : '') ?>" target="_blank" title="Curso de deshidratados de Diana Fonseca">
+										<img class="img-responsive img-circle" src="/img/deshidratados.jpg" alt="Curso de deshidratados de Diana Fonseca" title="Curso de deshidratados de Diana Fonseca">
+									</a>
+									<div class="adopt-header">
+										<h3>
+											<a href="/diana-fonseca/deshidratados/<?= ($testPar ? '?test' : '') ?>" target="_blank" title="Curso de deshidratados de Diana Fonseca">
+												Deshidratados
+											</a>
+										</h3>
+										<div class="rating-main-box-ratings-qty">
+											<div class="rating rating--title colorText">
+												<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img"
+													xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+													<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
+												</svg>
+												<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img"
+													xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+													<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
+												</svg>
+												<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img"
+													xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+													<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
+												</svg>
+												<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img"
+													xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+													<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
+												</svg>
+												<span>
+													<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star-half" class="svg-inline--fa fa-star-half fa-w-18 fontawesome-icon star-left" role="img"
+														xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+														<path fill="currentColor" d="M288 0c-11.4 0-22.8 5.9-28.7 17.8L194 150.2 47.9 171.4c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.1 23 46 46.4 33.7L288 439.6V0z"></path>
+													</svg>
+													<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star-half" class="svg-inline--fa fa-star-half fa-w-18 fontawesome-icon star-right" role="img"
+														xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+														<path fill="currentColor" d="M288 0c-11.4 0-22.8 5.9-28.7 17.8L194 150.2 47.9 171.4c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.1 23 46 46.4 33.7L288 439.6V0z"></path>
+													</svg>
+												</span>
+											</div>
+											<div class="blog-tags">
+												<a>4.7</a>
+											</div>
+										</div>
+
+										<div class="post-info">
+
+										<p><i class="fa fa-clock-o"></i>32 Lecciones</p>
+
+										<p><i class="fa fa-user"></i>Por Diana Fonseca</a></p>
+
+									</div>
+									
+									<div class="plan-cost">
+
+										<span class="plan-price"><?= getPrecio(29.99) ?></span>
+
+										<span class="plan-price-discount"><?= getPrecio(85.69) ?></span>
+
+									</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+
 
 
                      <div class="col-xs-12">
@@ -872,7 +817,7 @@ if( !$testing && !$testPar ){
 
 								<div class="ribbons50off">
 
-									<img src="/img/ribbons50off.png" />
+									<img src="/img/ribbons65off.png" />
 
 								</div>
 						   
@@ -943,7 +888,7 @@ if( !$testing && !$testPar ){
 									
 									<div class="post-info">
 
-										<p><i class="fa fa-clock-o"></i>36 Lecciones</p>
+										<p><i class="fa fa-clock-o"></i>46 Lecciones</p>
 
 										<p><i class="fa fa-user"></i>Por Diana Fonseca</a></p>
 
@@ -951,9 +896,9 @@ if( !$testing && !$testPar ){
 									
 									<div class="plan-cost">
 
-										<span class="plan-price"><?= getPrecio(40) ?></span>
+										<span class="plan-price"><?= getPrecio(34.99) ?></span>
 
-										<span class="plan-price-discount"><?= getPrecio(80) ?></span>
+										<span class="plan-price-discount"><?= getPrecio(99.98) ?></span>
 
 									</div>
 									
@@ -965,204 +910,73 @@ if( !$testing && !$testPar ){
                      </div>						 
 
 
- <div class="col-xs-12">                        <div class="isotope-item">                           <div class="adoption-thumb oferta50">								<div class="ribbons50off">									<img src="/img/ribbons50off.png" />								</div>						   							  <a href="/diana-fonseca/petlicias-navidenas/" target="_blank" title="Curso de Petlicias navideñas">								<img class="img-responsive img-circle" src="/img/petlicias-navidenas-con-diana-fonseca.jpg" alt="Curso de Petlicias navideñas de Diana Fonseca" title="Curso de Petlicias navideñas de Diana Fonseca">							  </a>								                                <div class="adopt-header">							                                  <h3>									<a href="/diana-fonseca/petlicias-navidenas/" target="_blank">										PETlicias Navideñas									</a>							   	</h3>	 																<div class="rating-main-box-ratings-qty">									<div class="rating rating--title colorText"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">										<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>									</svg><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">										<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>									</svg><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">										<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>									</svg><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">										<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>									</svg>									<span>										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star-half" class="svg-inline--fa fa-star-half fa-w-18 fontawesome-icon star-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">											<path fill="currentColor" d="M288 0c-11.4 0-22.8 5.9-28.7 17.8L194 150.2 47.9 171.4c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.1 23 46 46.4 33.7L288 439.6V0z"></path>										</svg><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star-half" class="svg-inline--fa fa-star-half fa-w-18 fontawesome-icon star-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">											<path fill="currentColor" d="M288 0c-11.4 0-22.8 5.9-28.7 17.8L194 150.2 47.9 171.4c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.1 23 46 46.4 33.7L288 439.6V0z"></path>										</svg>									</span>									</div>																		<div class="blog-tags">										<a>5</a>									</div>																	</div>																 								<div class="post-info">									<p><i class="fa fa-clock-o"></i>28 Lecciones</p>									<p><i class="fa fa-user"></i>Por Diana Fonseca</a></p>								</div>																<div class="plan-cost">																			<span class="plan-price"><?= getPrecio(50) ?></span>
-										<span class="plan-price-discount"><?= getPrecio(100) ?></span>								</div>												                                 <a class="btn" href="/diana-fonseca/petlicias-navidenas/" target="_blank">									Ver más								</a>								                              </div>							                             </div>                        </div>                     </div>
-				  
-				  
+
+
                      <div class="col-xs-12">
-                      
-                        <div class="isotope-item">
 
-                           <div class="adoption-thumb oferta50">
-
+						<div class="isotope-item">
+							<div class="adoption-thumb oferta50">
 								<div class="ribbons50off">
-									<img src="/img/ribbons50off.png" />
+									<img src="/img/ribbons65off.png" />
 								</div>
-						   
-							  <a href="https://go.hotmart.com/L53194560M?ap=2d30&offDiscount=031016&hideBillet=1" target="_blank" title="Educat con Enit Suarez">
-								<img class="img-responsive img-circle" src="/img/educat.jpg" alt="Educat con Enit Suarez" title="Educat con Enit Suarez">
-							  </a>	
-							  
-                              <div class="adopt-header">
-							  
-                                <h3>
-									<a href="https://go.hotmart.com/L53194560M?ap=2d30&offDiscount=031016&hideBillet=1" target="_blank">
-										Educat
-									</a>
-							   	</h3>	
-								
-								<div class="rating-main-box-ratings-qty">
-									<div class="rating rating--title colorText">
-										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-										</svg>
-										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-										</svg>
-										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-										</svg>
-										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-										</svg>
-										<span>
-											<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star-half" class="svg-inline--fa fa-star-half fa-w-18 fontawesome-icon star-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-												<path fill="currentColor" d="M288 0c-11.4 0-22.8 5.9-28.7 17.8L194 150.2 47.9 171.4c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.1 23 46 46.4 33.7L288 439.6V0z"></path>
+								<a href="/diana-fonseca/rapi-petlicias/<?= ($testPar ? '?test' : '') ?>" target="_blank" title="Curso Rapi PETLICIAS">
+									<img class="img-responsive img-circle" src="/img/rapi-petlicias.jpg" alt="Curso Rapi PETLICIAS de Diana Fonseca" title="Curso Rapi PETLICIAS de Diana Fonseca">
+								</a>
+								<div class="adopt-header">
+									<h3>
+										<a href="/diana-fonseca/rapi-petlicias/<?= ($testPar ? '?test' : '') ?>" target="_blank">
+											Rapi PETLICIAS
+										</a>
+									</h3>
+									<div class="rating-main-box-ratings-qty">
+										<div class="rating rating--title colorText">
+											<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img"
+												xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+												<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
 											</svg>
-											<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star-half" class="svg-inline--fa fa-star-half fa-w-18 fontawesome-icon star-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-												<path fill="currentColor" d="M288 0c-11.4 0-22.8 5.9-28.7 17.8L194 150.2 47.9 171.4c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.1 23 46 46.4 33.7L288 439.6V0z"></path>
+											<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img"
+												xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+												<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
 											</svg>
-										</span>
+											<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img"
+												xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+												<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
+											</svg>
+											<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img"
+												xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+												<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
+											</svg>
+											<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img"
+												xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+												<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
+											</svg>
+										</div>
+										<div class="blog-tags">
+											<a>5</a>
+										</div>
+									</div>
+
+									<div class="post-info">
+
+										<p><i class="fa fa-clock-o"></i>27 Lecciones</p>
+
+										<p><i class="fa fa-user"></i>Por Diana Fonseca</a></p>
+
 									</div>
 									
-									<div class="blog-tags">
-										<a>4.8</a>
+									<div class="plan-cost">
+
+										<span class="plan-price"><?= getPrecio(27.99) ?></span>
+
+										<span class="plan-price-discount"><?= getPrecio(79.98) ?></span>
+
 									</div>
-									
-								</div>								
-								 
-								<div class="post-info">
-									<p><i class="fa fa-clock-o"></i>42 Lecciones</p>
-									<p><i class="fa fa-user"></i>Por Enit Suarez</a></p>
 								</div>
-								 
-								<div class="plan-cost">
-										<span class="plan-price"><?= getPrecio(25) ?></span>
+							</div>
+						</div>
 
-										<span class="plan-price-discount"><?= getPrecio(50) ?></span>
-								</div>
-								
-                              </div>
-							  
-                           </div>
-
-                        </div>
-                        
-                     </div>
-					 
-                     <div class="col-xs-12">
-
-                        <div class="isotope-item">
-						
-
-                           <div class="adoption-thumb">
-						   
-							  <a href="https://go.hotmart.com/S52960329D?ap=0507&hideBillet=1" target="_blank" title="Tu perro más ágil frisbee training con Geo Rojas">
-								<img class="img-responsive img-circle" src="/img/tu-perro-agil-frisbee-training.jpg" alt="Tu perro más ágil frisbee training con Geo Rojas" title="Tu perro más ágil frisbee training con Geo Rojas">
-							  </a>	
-							  
-                              <div class="adopt-header">
-							  
-                                <h3>
-									<a href="https://go.hotmart.com/S52960329D?ap=0507&hideBillet=1" target="_blank">
-										Tu Perro más ágil
-									</a>
-							   	</h3>	
-								
-								<div class="rating-main-box-ratings-qty">
-									<div class="rating rating--title colorText">
-										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-										</svg>
-										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-										</svg>
-										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-										</svg>
-										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-										</svg>
-										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-										</svg>
-									</div>
-									
-									<div class="blog-tags">
-										<a>5</a>
-									</div>
-									
-								</div>								
-								 
-								<div class="post-info">
-									<p><i class="fa fa-clock-o"></i>21 Lecciones</p>
-									<p><i class="fa fa-user"></i>Por Geo Rojas</a></p>
-								</div>
-								
-								<div class="plan-cost">
-										<span class="plan-price"><?= getPrecio(70) ?></span>
-								</div>									
-								
-                              </div>
-							  
-                           </div>
-
-
-                        </div>
-
-                     </div>					 
-					 
-
-					 
-					 <div class="col-xs-12">
-					 
-                        <div class="isotope-item">
-
-                           <div class="adoption-thumb">
-						   
-							  <a href="https://go.hotmart.com/P53170727H?ap=350f&hideBillet=1" target="_blank" title="Belleza capilar felina y canina con David López">
-								<img class="img-responsive img-circle" src="/img/belleza-capilar-felina-y-canina.jpg" alt="Belleza capilar felina y canina con David López" title="Belleza capilar felina y canina con David López">
-							  </a>	
-							  
-                              <div class="adopt-header">
-							  
-                                <h3>
-									<a href="https://go.hotmart.com/P53170727H?ap=350f&hideBillet=1" target="_blank">
-										Belleza capilar felina y canina
-									</a>
-							   	</h3>	
-								
-								<div class="rating-main-box-ratings-qty">
-									<div class="rating rating--title colorText">
-										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-										</svg>
-										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-										</svg>
-										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-										</svg>
-										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-										</svg>
-										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-										</svg>
-									</div>
-									
-									<div class="blog-tags">
-										<a>5</a>
-									</div>
-									
-								</div>								
-								 
-								<div class="post-info">
-									<p><i class="fa fa-clock-o"></i>6 Lecciones</p>
-									<p><i class="fa fa-user"></i>Por David López</a></p>
-								</div>
-
-								<div class="plan-cost">
-									<span class="plan-price"><?= getPrecio(50) ?></span>
-								</div>	
-								
-                              </div>
-							  
-                           </div>
-
-                        </div>					 
-					 
-					 </div>
+                     </div>	
+				 
 					 
 
 
@@ -1236,140 +1050,7 @@ if( !$testing && !$testPar ){
 					 
 				 
 
-					 
-					 <div class="col-xs-12">
-					 
-                        <div class="isotope-item">
-
-                           <div class="adoption-thumb oferta50">
-
-								<div class="ribbons50off">
-									<img src="/img/ribbons50off.png" />
-								</div>
-						   
-							  <a href="https://go.hotmart.com/K53197775W?ap=b25c&offDiscount=031016&hideBillet=1" target="_blank" title="Peluquería para gatos con Fabio Sepulveda">
-								<img class="img-responsive img-circle" src="/img/peluqueria-para-gatos.jpg" alt="Peluquería para gatos con Fabio Sepulveda" title="Peluquería para gatos con Fabio Sepulveda">
-							  </a>	
-							  
-                              <div class="adopt-header">
-							  
-                                <h3>
-									<a href="https://go.hotmart.com/K53197775W?ap=b25c&offDiscount=031016&hideBillet=1" target="_blank">
-										Peluquería para gatos
-									</a>
-							   	</h3>	
-								
-								<div class="rating-main-box-ratings-qty">
-									<div class="rating rating--title colorText">
-										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-										</svg>
-										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-										</svg>
-										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-										</svg>
-										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-										</svg>
-										<span>
-											<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star-half" class="svg-inline--fa fa-star-half fa-w-18 fontawesome-icon star-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-												<path fill="currentColor" d="M288 0c-11.4 0-22.8 5.9-28.7 17.8L194 150.2 47.9 171.4c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.1 23 46 46.4 33.7L288 439.6V0z"></path>
-											</svg>
-											<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star-half" class="svg-inline--fa fa-star-half fa-w-18 fontawesome-icon star-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-												<path fill="currentColor" d="M288 0c-11.4 0-22.8 5.9-28.7 17.8L194 150.2 47.9 171.4c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.1 23 46 46.4 33.7L288 439.6V0z"></path>
-											</svg>
-										</span>
-									</div>
-									
-									<div class="blog-tags">
-										<a>4.8</a>
-									</div>
-									
-								</div>								
-								 
-								<div class="post-info">
-									<p><i class="fa fa-clock-o"></i>24 Lecciones</p>
-									<p><i class="fa fa-user"></i>Por Fabio Sepulveda</a></p>
-								</div>
-								
-								<div class="plan-cost">
-										<span class="plan-price"><?= getPrecio(25) ?></span>
-										<span class="plan-price-discount"><?= getPrecio(50) ?></span>
-								</div>									
-								
-                              </div>
-							  
-                           </div>
-
-                        </div>					 
-					 
-					 </div>
-
-
-
-
-
-					 <div class="col-xs-12">
-					 
-                        <div class="isotope-item">
-
-                           <div class="adoption-thumb">
-						   
-							  <a href="https://go.hotmart.com/P53164495M?ap=e07b&hideBillet=1" target="_blank" title="Tu perro tranquilo con Alberto De La Torre">
-								<img class="img-responsive img-circle" src="/img/tu-perro-tranquilo.jpg" alt="Tu perro tranquilo con Alberto De La Torre" title="Tu perro tranquilo con Alberto De La Torre">
-							  </a>	
-							  
-                              <div class="adopt-header">
-							  
-                                <h3>
-									<a href="https://go.hotmart.com/P53164495M?ap=e07b&hideBillet=1" target="_blank">
-										Tu Perro Tranquilo
-									</a>
-							   	</h3>	
-								
-								<div class="rating-main-box-ratings-qty">
-									<div class="rating rating--title colorText">
-										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-										</svg>
-										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-										</svg>
-										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-										</svg>
-										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-										</svg>
-										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-										</svg>
-									</div>
-									
-									<div class="blog-tags">
-										<a>5.0</a>
-									</div>
-									
-								</div>								
-								 
-								<div class="post-info">
-									<p><i class="fa fa-clock-o"></i>44 Lecciones</p>
-									<p><i class="fa fa-user"></i>Por Alberto De La Torre</a></p>
-								</div>
-
-								<div class="plan-cost">
-										<span class="plan-price"><?= getPrecio(50) ?></span>
-								</div>	
-								
-                              </div>
-							  
-                           </div>
-
-                        </div>					 
-					 
-					 </div>					 
+				 
 					 
                   </div>
 				  

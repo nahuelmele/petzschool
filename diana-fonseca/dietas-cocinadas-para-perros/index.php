@@ -12,8 +12,8 @@ $autorSlug = "diana-fonseca";
 include $base. "inc/functions.php";
 
 //precios en dolares
-$oferta50Precio  	= getPrecio(35);
-$sinOfertaPrecio 	= getPrecio(100);
+$oferta50Precio  	= getPrecio(34.99);
+$sinOfertaPrecio 	= getPrecio(99.98);
 
 $bono1 = getPrecio(11);
 $bono2 = getPrecio(13);
