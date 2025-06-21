@@ -128,6 +128,49 @@ jQuery(document).ready(function () {
 	// Fin carrusel alumnas están felices
 
 
+	// Inicio carrusel cursos relacionados
+
+	if (jQuery("#owl-cursos-relacionados").length) {
+
+		jQuery("#owl-cursos-relacionados").owlCarousel({
+			stagePadding: 50,
+			loop: true,
+			margin: 20,
+			autoplay: true,
+			autoplayHoverPause: true,
+			dots: true,
+			center: true,
+			items: 5,
+			responsive: {
+				1: {
+					items: 1,
+					margin: 10,
+				},
+				481: {
+					items: 2,
+					margin: 10,
+				},
+				768: {
+					items: 2,
+					margin: 10,
+				},
+				900: {
+					items: 3
+				},
+				1200: {
+					items: 4
+				},
+				1400: {
+					items: 5
+				}
+			}
+		});
+
+	}
+
+	// Fin carrusel cursos relacionados
+
+
 	// Inicio carrusel educanino videos
 
 	if (jQuery("#muestras-videos-carousel").length) {
@@ -1020,7 +1063,7 @@ function proofVals(val) {
                     <span itemprop="name">Monica</span>
                 </div>
                 <div class="instiproff">Ya Realizó su Pago</div>
-                <div class="what-proof">23 Hs. Atrás <img width="106" height="14" src="../../img/verified.svg"></div>
+                <div class="what-proof">23 Hs. Atrás <img width="106" height="14" alt="Verified by Proof" src="../../img/verified.svg"></div>
                 <meta itemprop="orderDate" content="${getDateString(23)}">
                 <meta itemprop="orderStatus" content="https://schema.org/OrderDelivered">
                 <div itemprop="merchant" itemscope itemtype="https://schema.org/Organization">

@@ -174,7 +174,7 @@ if( !$testing && !$testPar )
 <html lang="es-ES">
 	<head>
 
-		<?php include_once ($base . "inc/header-landing.php"); ?>
+		<?php include_once ($base . "inc/header-landing-performance.php"); ?>
 		
 	</head>
     <body id="page-top" class="<?= $dirLanding ?>">

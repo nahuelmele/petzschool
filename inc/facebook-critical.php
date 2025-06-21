@@ -1,4 +1,9 @@
-// Facebook Pixel and Conversions API Synchronization
+<?php
+// Facebook Critical Inline Script
+// This loads BEFORE any bundles to ensure cookies are available for API
+?>
+<script>
+// Facebook Pixel and Conversions API Synchronization - CRITICAL INLINE
 (function() {
     'use strict';
     
@@ -29,17 +34,30 @@
     var sessionId = getCookie('fb_session_id');
     if (!sessionId) {
         sessionId = 'sess_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
-        setCookie('fb_session_id', sessionId, 1); // Expires in 1 day
+        setCookie('fb_session_id', sessionId, 1);
     }
     
-    // Store page view event ID for server-side API
+    // Store page view event ID for server-side API - CRITICAL FOR SYNC
     var pageViewEventId = 'PetzSite_' + Date.now() + '_' + Math.floor(Math.random() * 9000 + 1000);
     setCookie('fb_pageview_event_id', pageViewEventId, 1);
     
     // Store page title for server-side API
     setCookie('fb_page_title', document.title, 1);
     
-    // Enhanced Facebook Pixel initialization
+    // Preload Facebook pixel script for faster loading
+    var linkPreload = document.createElement('link');
+    linkPreload.rel = 'preload';
+    linkPreload.as = 'script';
+    linkPreload.href = 'https://connect.facebook.net/en_US/fbevents.js';
+    linkPreload.crossOrigin = 'anonymous';
+    document.head.appendChild(linkPreload);
+    
+    // Performance monitoring
+    if (window.performance && window.performance.mark) {
+        window.performance.mark('facebook-critical-start');
+    }
+    
+    // Load Facebook pixel immediately
     !function(f,b,e,v,n,t,s) {
         if(f.fbq) return;
         n = f.fbq = function() {
@@ -57,19 +75,24 @@
         s.parentNode.insertBefore(t,s)
     }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
     
-         // Initialize Facebook pixels
-     fbq('init', '700996330520730');  // MAIN Petz School
-     fbq('init', '2832144410330423');
-     fbq('init', '372361850883221');
-     fbq('init', '3067315600166617');
+    // Initialize Facebook pixels - All 4 pixels active
+    fbq('init', '700996330520730');  // MAIN Petz School Business Manager
+    fbq('init', '2832144410330423'); // Secondary Petz School
+    fbq('init', '372361850883221');  // Cosmeticacorp BM  
+    fbq('init', '3067315600166617'); // Cosmeticacorp BM
     
-    // Track PageView with synchronized event ID
+    // Track PageView with synchronized event ID - CRITICAL
     fbq('track', 'PageView', {
         eventID: pageViewEventId,
         content_type: 'website',
         page_title: document.title
     });
     
-
+    // Performance monitoring
+    if (window.performance && window.performance.mark) {
+        window.performance.mark('facebook-critical-end');
+        window.performance.measure('facebook-critical-duration', 'facebook-critical-start', 'facebook-critical-end');
+    }
     
-})(); 
+})();
+</script> 

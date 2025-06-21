@@ -1,15 +1,28 @@
 window.addEventListener("load", function () {
 
+    // Register Service Worker for better caching (optional)
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js').catch(function() {
+            // Service worker registration failed, continue normally
+        });
+    }
+
     //setTimeout(() => {
         //console.log("Retrasado css.");
 
-        var linka = document.createElement('link');
-        linka.rel = 'stylesheet';
-        linka.media = 'all';
-        linka.href = '/dist/landingcritical.bundle.css';
-        linka.id = 'dynamicStylesheet';
-        linka.onload = resourceLoaded;
-        document.body.appendChild(linka);
+        // Only load critical CSS if not already loaded in head
+        if (!window.CRITICAL_CSS_LOADED) {
+            var linka = document.createElement('link');
+            linka.rel = 'stylesheet';
+            linka.media = 'all';
+            linka.href = '/dist/landingcritical.bundle.css';
+            linka.id = 'dynamicStylesheet';
+            linka.onload = resourceLoaded;
+            document.body.appendChild(linka);
+        } else {
+            // Critical CSS already loaded, proceed directly
+            resourceLoaded();
+        }
 
          
         function loadStyle() {
@@ -30,7 +43,7 @@ window.addEventListener("load", function () {
             }
         }
 
-        // Añade event listeners que cargarán el script cuando el usuario interactúe
+        // Aï¿½ade event listeners que cargarï¿½n el script cuando el usuario interactï¿½e
         document.addEventListener('mousemove', loadStyle, { once: true });
         document.addEventListener('keydown', loadStyle, { once: true });
         document.addEventListener('scroll', loadStyle, { once: true });
@@ -48,7 +61,7 @@ window.addEventListener("load", function () {
         //document.removeEventListener('scroll', loadScript);
     //}
 
-    // Añade event listeners que cargarán el script cuando el usuario interactúe
+    // Aï¿½ade event listeners que cargarï¿½n el script cuando el usuario interactï¿½e
     //document.addEventListener('mousemove', loadScript, { once: true });
     //document.addEventListener('keydown', loadScript, { once: true });
     //document.addEventListener('scroll', loadScript, { once: true });

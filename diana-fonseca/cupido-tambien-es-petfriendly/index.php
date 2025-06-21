@@ -215,7 +215,7 @@ if (!$testing && !$testPar)
 <html lang="es-ES">
 	<head>
 
-		<?php include_once ($base . "inc/header-landing.php"); ?>
+		<?php include_once ($base . "inc/header-landing-performance.php"); ?>
 		
 	</head>
     <body id="page-top" class="<?= $dirLanding ?>" >
@@ -287,7 +287,7 @@ if (!$testing && !$testPar)
 			<div class="sub-header">
 
 				<h2 id="sub-header-title" itemprop="name">
-					<span>CONSENTÍ</span> a tu peludo con bocados caseros, fáciles de hacer y 100% naturales.<br>
+					<span>CONSIENTE</span> a tu peludo con bocados caseros, fáciles de hacer y 100% naturales.<br>
 					<span>CREA tu propio negocio</span> de snacks saludables para mascotas y sorprende a los dueños con deliciosas y creativas opciones <u itemprop="courseMode" content="online">para San Valentín</u>.
 				</h2>
 				
@@ -407,9 +407,6 @@ if (!$testing && !$testPar)
     
 			<div id="temario" >
 			  <div class="active" style="display: flex;justify-content: center;">
-				<!--h3>
-				  <button>Haz clic para ver el <br/>contenido del taller</button>
-				</h3-->
 				<ul itemprop="hasCourseInstance" itemscope itemtype="https://schema.org/CourseInstance"> 
 					
 					<li itemprop="courseMode" content="online"><span>Video No 1.</span> – Bienvenida</li>

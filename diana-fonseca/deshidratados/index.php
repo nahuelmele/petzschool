@@ -220,7 +220,7 @@ if( !$testing && !$testPar )
 <html lang="es-ES">
 	<head>
 
-		<?php include_once ($base . "inc/header-landing.php"); ?>
+		<?php include_once ($base . "inc/header-landing-performance.php"); ?>
 		
 	</head>
     <body id="page-top" class="<?= $dirLanding ?>" >
@@ -412,9 +412,6 @@ if( !$testing && !$testPar )
     
 			<div id="temario" class="two-cols">
 			  <div class="active">
-				<h3>
-				  <button>Haz clic para ver el <br/>contenido del curso</button>
-				</h3>
 				<ul itemprop="hasCourseInstance" itemscope itemtype="https://schema.org/CourseInstance"> 
 					<li itemprop="courseMode" content="online"><span>Video No 1.</span> – Bienvenida</li> 
 					<li itemprop="courseMode" content="online"><span>Video No 2.</span> – ¿Qué es la deshidratación?</li>

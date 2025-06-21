@@ -10433,7 +10433,15 @@ div.bg-darkcolor, div.bg-lightcolor1, div.bg-lightcolor2 {
 
 .social-media a {
     display: inline-block;
-    font-size: 25px
+    font-size: 25px;
+    min-height: 48px;
+    min-width: 48px;
+    padding: 12px;
+    margin: 8px 4px;
+    line-height: 1.4;
+    border-radius: 4px;
+    background-color: transparent;
+    transition: background-color 0.2s;
 }
 
 .social-media a i:hover {

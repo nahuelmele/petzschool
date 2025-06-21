@@ -26,10 +26,10 @@ if (isset($_COOKIE['data'])) {
 } else {
 	$ipdata = ipdata( IP );
 	
-	$countryCode 	= strtolower( $ipdata['geoplugin_countryCode'] );
-	$city 		 	= strtolower( $ipdata['geoplugin_city'] );
-	$region 		= strtolower( $ipdata['geoplugin_region'] );
-    $continent		= strtolower($ipdata['geoplugin_continentCode']);
+	$countryCode 	= strtolower( $ipdata['geoplugin_countryCode'] ?? '' );
+	$city 		 	= strtolower( $ipdata['geoplugin_city'] ?? '' );
+	$region 		= strtolower( $ipdata['geoplugin_region'] ?? '' );
+    $continent		= strtolower( $ipdata['geoplugin_continentCode'] ?? '' );
 	
 	$expiration = time() + (86400 * 60); // Expires in 60 days
 	setcookie("data", serialize( array($countryCode,$city,$region, $continent) ), $expiration, "/");
@@ -60,36 +60,77 @@ if(!$testing){
 
 $url = "https://graph.facebook.com/v12.0/700996330520730/events";
 
+// Get Facebook click ID and browser ID from cookies if available
+$fbc = isset($_COOKIE['_fbc']) ? $_COOKIE['_fbc'] : '';
+$fbp = isset($_COOKIE['_fbp']) ? $_COOKIE['_fbp'] : '';
+
+// Get synchronized event ID from frontend
+$syncedEventId = isset($_COOKIE['fb_pageview_event_id']) ? $_COOKIE['fb_pageview_event_id'] : '';
+$pageTitle = isset($_COOKIE['fb_page_title']) ? $_COOKIE['fb_page_title'] : 'Petz School';
+
+// Hash user data as required by Facebook API
+$hashedEmail = '';
+if (isset($_COOKIE['user_email']) && !empty($_COOKIE['user_email'])) {
+    $email = trim($_COOKIE['user_email']);
+    if (!empty($email)) {
+        $hashedEmail = hash('sha256', strtolower($email));
+    }
+}
+
+$hashedPhone = '';
+if (isset($_COOKIE['user_phone']) && !empty($_COOKIE['user_phone'])) {
+    $phone = preg_replace('/[^0-9]/', '', $_COOKIE['user_phone']);
+    if (!empty($phone)) {
+        $hashedPhone = hash('sha256', $phone);
+    }
+}
+
+// Create user_data array with hashed values
+$userData = array(
+    "client_ip_address" => IP,
+    "client_user_agent" => $_SERVER['HTTP_USER_AGENT'],
+    "ct" => array(hash('sha256', strtolower(CITY ?: 'unknown'))),
+    "country" => array(hash('sha256', strtolower(COUNTRYCODE ?: 'unknown'))),
+    "st" => array(hash('sha256', strtolower(REGION ?: 'unknown')))
+);
+
+// Add optional data if available
+if (!empty($fbc)) $userData['fbc'] = $fbc;
+if (!empty($fbp)) $userData['fbp'] = $fbp;
+if (!empty($hashedEmail)) $userData['em'] = array($hashedEmail);
+if (!empty($hashedPhone)) $userData['ph'] = array($hashedPhone);
+
+// Use synchronized event ID from frontend, fallback to generated ID
+$eventId = !empty($syncedEventId) ? $syncedEventId : "PetzSite_" . time() . "_" . rand(1000, 9999);
+
 // Generate Json code to provide
-$submitJson = '{
-    "data": [
-		{
-			"action_source": "website",
-			"event_name": "PageView",
-			"event_time": ' . time() . ',
-			"event_id": "PetzSite",
-			"event_source_url": "' . CURRENTURL . '",
-			"user_data": {
-				"client_ip_address": "' . IP . '",
-				"client_user_agent": "' . $_SERVER['HTTP_USER_AGENT'] . '",
-				"ct": [
-					"'.CITY.'"
-				],
-				"country": [
-					"'.COUNTRYCODE.'"
-				],
-				"st": [
-					"'.REGION.'"
-				]
-			}
-		}
-    ]
-}';
+$submitJson = array(
+    "data" => array(
+        array(
+            "action_source" => "website",
+            "event_name" => "PageView",
+            "event_time" => time(),
+            "event_id" => $eventId, // Synchronized event ID
+            "event_source_url" => CURRENTURL,
+            "user_data" => $userData,
+            "custom_data" => array(
+                "content_type" => "website",
+                "page_title" => $pageTitle,
+                "referrer" => isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : ''
+            )
+        )
+    ),
+    // "test_event_code" => "TEST12345" // Only for testing, remove in production
+);
 
 // Use cURL to send the POST request
-
 $_curl_ = new CurlServer();
-$_curl_->post_request($url, $submitJson);
+$result = $_curl_->post_request($url, json_encode($submitJson));
+
+// Log errors for debugging (optional)
+if (!$result['success']) {
+    error_log("Facebook Conversions API Error: " . $result['error']);
+}
 
 // End Set the Facebook Conversions API URL
 }
@@ -312,7 +353,22 @@ function ipdata($ip){
 
 	$ip_data = [];
     $ip_data = json_decode($ip_data_in,true);
-    $ip_data = str_replace('&quot;', '"', $ip_data); // for PHP 5.2 see stackoverflow.com/questions/3110487/
+    
+    // Fix: Only str_replace if $ip_data is valid
+    if (is_array($ip_data)) {
+        // Only apply str_replace to string values in the array
+        $ip_data = array_map(function($value) {
+            return is_string($value) ? str_replace('&quot;', '"', $value) : $value;
+        }, $ip_data);
+    } else {
+        // If json_decode fails, return default values
+        $ip_data = array(
+            'geoplugin_countryCode' => '',
+            'geoplugin_city' => '',
+            'geoplugin_region' => '',
+            'geoplugin_continentCode' => ''
+        );
+    }
 	
 	return $ip_data;
 	
@@ -473,9 +529,29 @@ class CurlServer
         curl_setopt($ch, CURLOPT_POSTFIELDS, $submitJson);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: Bearer ' . $this->access_token, 'Content-Type: application/json'));
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
+        
         $server_output = curl_exec($ch);
+        $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        $curl_error = curl_error($ch);
         curl_close($ch);
-        $serverReponseObject = json_decode($server_output);
+        
+        if ($curl_error) {
+            return array('success' => false, 'error' => 'cURL Error: ' . $curl_error);
+        }
+        
+        if ($http_code >= 400) {
+            return array('success' => false, 'error' => 'HTTP Error ' . $http_code . ': ' . $server_output);
+        }
+        
+        $serverResponseObject = json_decode($server_output, true);
+        
+        if (json_last_error() !== JSON_ERROR_NONE) {
+            return array('success' => false, 'error' => 'JSON Decode Error: ' . json_last_error_msg());
+        }
+        
+        return array('success' => true, 'data' => $serverResponseObject);
     }
     function get_request($url)
     {

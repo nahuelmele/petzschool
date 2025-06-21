@@ -211,7 +211,7 @@ if( !$testing && !$testPar )
 <html lang="es-ES">
 	<head>
 
-		<?php include_once ($base . "inc/header-landing.php"); ?>
+		<?php include_once ($base . "inc/header-landing-performance.php"); ?>
 		
 	</head>
     <body id="page-top" class="<?= $dirLanding ?>" >
@@ -535,6 +535,14 @@ if( !$testing && !$testPar )
 
         $params = ['class' => 'bgYellow', 'text' => '<b>SIN RIESGOS</b>. Pruébanos por 7 días', 'section' => true];
         include ($base . "inc/landings/callToAction.php");
+
+        ?>
+
+
+		<?php
+
+        //$cursosRelacionados = ['title' => 'Otros Cursos de Diana'];
+        //include_once ($base . "inc/landings/cursos-relacionados.php");
 
         ?>
 

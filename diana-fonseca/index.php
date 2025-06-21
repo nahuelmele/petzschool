@@ -51,6 +51,31 @@ if (!$testing && !$testPar) {
     <meta name="twitter:title" content="<?= $tit; ?>">
     <meta name="twitter:description" content="<?= $des ?>">
     <meta name="twitter:image" content="https://petzschool.com/img/<?= $imgShare; ?>">
+    
+    <!-- Resource Hints for Performance -->
+    <link rel="preconnect" href="https://connect.facebook.net">
+    <link rel="dns-prefetch" href="https://graph.facebook.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    
+    
+    <!-- Facebook Critical - Must load before any bundles -->
+    <?php 
+    $base = "../";
+    include_once($base . "inc/facebook-critical.php"); 
+    ?>
+    
+    <!-- Emergency fallback script -->
+    <script>
+        setTimeout(function() {
+            if (!window.fbq || typeof window.fbq !== 'function') {
+                var script = document.createElement('script');
+                script.src = '/js/face.js';
+                script.async = true;
+                document.head.appendChild(script);
+            }
+        }, 5000);
+    </script>
+    
     <link href="/css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="/fonts/flaticons/flaticon.css" rel="stylesheet" type="text/css">

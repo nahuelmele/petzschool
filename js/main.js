@@ -162,6 +162,28 @@ $(document).ready(function() {
         }
     });	
 
+    $("#owl-cursos-relacionados").owlCarousel({
+        dots: true,
+        loop: true,
+        autoplay: true,
+        nav: false,
+        margin: 20,
+        responsive: {
+            1: {
+                items: 1,
+            },
+            481: {
+                items: 2,
+            },
+            768: {
+                items: 3,
+            },
+            991: {
+                items: 5,
+            },
+        }
+    });	
+
     $("#owl-sample").owlCarousel({
         dots: true,
         loop: true,
