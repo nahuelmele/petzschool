@@ -20,6 +20,20 @@ body.pasteleria-canina-y-felina {
     }
 }
 
+/* Fix touch targets for accessibility - Specific elements only */
+// Only target the exact problematic elements from PageSpeed report
+a[href="https://www.facebook.com/petzschool/"],
+a[href="https://www.instagram.com/petz.school/"],
+a[href="/contacto/"] {
+    min-height: 48px !important;
+    min-width: 48px !important;
+    padding: 12px !important;
+    margin: 8px 4px !important;
+    display: inline-block !important;
+    text-align: center !important;
+    line-height: 1.2 !important;
+}
+
 body.mascotas-sanas {
     section#first-scroll {
         background-image: url("../img/landings/mascotas-sanas/mascotas-sanas.webp");

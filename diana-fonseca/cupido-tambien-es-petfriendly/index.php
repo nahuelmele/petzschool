@@ -228,7 +228,7 @@ if (!$testing && !$testPar)
         ?>
 
 		<section id="first-scroll" <?php if (!$timer)
-            echo "class='hasMenu'" ?> aria-labelledby="first-scroll-heading" itemscope itemtype="https://schema.org/EducationalOccupationalProgram" style="background-image: url(/img/landings/<?= $dirLanding ?>/bg-hero.jpg); background-size: cover">
+            echo "class='hasMenu'" ?> aria-labelledby="first-scroll-heading" itemscope itemtype="https://schema.org/EducationalOccupationalProgram" style="background-image: url(/img/landings/<?= $dirLanding ?>/bg-hero.webp); background-size: cover">
 			<div class="container back1080">
 
 				<h1 id="first-scroll-heading" itemprop="name">

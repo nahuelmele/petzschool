@@ -13,26 +13,4 @@
 
 /*! jQuery v2.2.3 | (c) jQuery Foundation | jquery.org/license */
 
-/*! jquery */
-
 /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */
-
-/*!***********************!*\
-  !*** ./js/landing.js ***!
-  \***********************/
-
-/*!**************************!*\
-  !*** ./js/lite-vimeo.js ***!
-  \**************************/
-
-/*!**************************!*\
-  !*** ./scss/styles.scss ***!
-  \**************************/
-
-/*!******************************!*\
-  !*** ./js/custom-landing.js ***!
-  \******************************/
-
-/*!********************************************!*\
-  !*** ./node_modules/jquery/dist/jquery.js ***!
-  \********************************************/

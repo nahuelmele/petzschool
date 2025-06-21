@@ -30,9 +30,7 @@ function downloadJSAtOnload(){
 				
 			}else if( i == 3 ){
 				
-				script = document.createElement('script');
-				script.setAttribute('src', '/scripts/yandex.js');
-				body.appendChild(script);
+						// Yandex tracking removed - no longer needed
 				
 			}else if( i == 4 ){
 				

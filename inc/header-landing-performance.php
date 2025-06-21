@@ -8,18 +8,43 @@ $baseUrl = $protocol . $domainName;
 $currentPath = $_SERVER['REQUEST_URI'];
 $heroImage = '';
 
+// Auto-detect hero images for all landings
 if (strpos($currentPath, 'pasteleria-canina-y-felina') !== false) {
     $heroImage = '/img/landings/pasteleria-canina-y-felina/pasteleria-canina-y-felina.webp';
 } elseif (strpos($currentPath, 'deshidratados') !== false) {
-    $heroImage = '/img/landings/deshidratados/bg-hero.jpg';
+    $heroImage = '/img/landings/deshidratados/bg-hero.webp';
 } elseif (strpos($currentPath, 'cupido-tambien-es-petfriendly') !== false) {
-    $heroImage = '/img/landings/cupido-tambien-es-petfriendly/bg-hero.jpg';
+    $heroImage = '/img/landings/cupido-tambien-es-petfriendly/bg-hero.webp';
 } elseif (strpos($currentPath, 'pasteleria-inclusiva') !== false) {
-    $heroImage = '/img/landings/pasteleria-inclusiva-para-perros-y-gatos-enfermos/bg-hero.jpg';
+    $heroImage = '/img/landings/pasteleria-inclusiva-para-perros-y-gatos-enfermos/bg-hero.webp';
 } elseif (strpos($currentPath, 'rapi-petlicias') !== false) {
-    $heroImage = '/img/landings/rapi-petlicias/bg-hero.jpg';
+    $heroImage = '/img/landings/rapi-petlicias/bg-hero.webp';
 } elseif (strpos($currentPath, 'peluqueria-para-perros') !== false) {
     $heroImage = '/img/landings/peluqueria-para-perros/peluqueria-para-perros.webp';
+} elseif (strpos($currentPath, 'peluqueria-para-gatos') !== false) {
+    $heroImage = '/img/landings/peluqueria-para-gatos/peluqueria-para-gatos.webp';
+} elseif (strpos($currentPath, 'dietas-cocinadas-para-perros') !== false) {
+    $heroImage = '/img/landings/dietas-cocinadas-para-perros/bg-hero.webp';
+} elseif (strpos($currentPath, 'tecnicas-de-decoracion') !== false) {
+    $heroImage = '/img/landings/tecnicas-de-decoracion-pasteleria-canina-y-felina/bg-hero.webp';
+} elseif (strpos($currentPath, 'mascotas-sanas') !== false) {
+    $heroImage = '/img/landings/mascotas-sanas/mascotas-sanas.webp';
+} elseif (strpos($currentPath, 'petlados') !== false) {
+    $heroImage = '/img/landings/petlados/petlados.webp';
+} elseif (strpos($currentPath, 'petlicias-navidenas') !== false) {
+    $heroImage = '/img/landings/petlicias-navidenas/petlicias-navidenas.webp';
+} elseif (strpos($currentPath, 'reposteria-de-halloween') !== false) {
+    $heroImage = '/img/landings/reposteria-de-halloween/reposteria-de-halloween.webp';
+} elseif (strpos($currentPath, 'taller-pascua') !== false) {
+    $heroImage = '/img/landings/taller-pascua-para-4patas/taller-pascua-para-4patas.webp';
+} elseif (strpos($currentPath, 'educanino') !== false) {
+    $heroImage = '/img/landings/educanino/educanino.webp';
+} elseif (strpos($currentPath, 'dieta-barf') !== false) {
+    $heroImage = '/img/landings/dieta-barf/dieta-barf.webp';
+} elseif (strpos($currentPath, 'costura-canina-y-felina') !== false) {
+    $heroImage = '/img/landings/costura-canina-y-felina/costura-canina-y-felina.webp';
+} elseif (strpos($currentPath, 'primeros-auxilios-para-perros') !== false) {
+    $heroImage = '/img/landings/primeros-auxilios-para-perros/primeros-auxilios-para-perros.webp';
 }
 ?>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -82,6 +107,11 @@ if (strpos($currentPath, 'pasteleria-canina-y-felina') !== false) {
 <!-- DNS prefetch for additional resources -->
 <link rel="dns-prefetch" href="//fonts.googleapis.com">
 <link rel="dns-prefetch" href="//fonts.gstatic.com">
+
+<!-- Optimize font loading - No visual changes, just performance -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"></noscript>
 <link rel="dns-prefetch" href="//player.vimeo.com">
 <link rel="dns-prefetch" href="//vimeo.com">
 <link rel="dns-prefetch" href="//i.vimeocdn.com">
@@ -90,6 +120,8 @@ if (strpos($currentPath, 'pasteleria-canina-y-felina') !== false) {
 <link rel="dns-prefetch" href="//pay.hotmart.com">
 <link rel="dns-prefetch" href="//graph.facebook.com">
 <link rel="dns-prefetch" href="//vumbnail.com">
+
+
 
 <?php if ($heroImage): ?>
 <!-- Critical image preload with high priority -->
@@ -100,9 +132,13 @@ if (strpos($currentPath, 'pasteleria-canina-y-felina') !== false) {
 <link rel="preload" as="image" href="/img/landings/<?= $dirLanding ?>/<?= $dirLanding ?>.webp" fetchpriority="high">
 
 <!-- Load critical CSS immediately to prevent layout shifts -->
-<link rel="stylesheet" href="/dist/landingcritical.bundle.css" media="all">
+<link rel="stylesheet" href="/dist/landingcritical.bundle.css">
 
-<!-- Critical CSS inline -->
+<!-- Preload remaining CSS for faster loading -->
+<link rel="preload" href="/dist/landing.bundle.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/dist/landing.bundle.css"></noscript>
+
+<!-- Minimal critical CSS inline - Only hero background -->
 <style>
 section#first-scroll {
 	position: relative;
@@ -148,12 +184,6 @@ section#first-scroll h1 {
 		font-size: 40px;
 		line-height: 47px;
 	}
-}
-
-/* Prevent horizontal scroll and layout shifts */
-html, body {
-	overflow-x: hidden;
-	max-width: 100vw;
 }
 </style>
 

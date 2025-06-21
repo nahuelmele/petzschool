@@ -46,9 +46,7 @@ function downloadJSAtOnload() {
 			}else if( i == 2 ){
 				
 				// Facebook sync is now loaded immediately in header, skip face.js
-				script = document.createElement('script');
-				script.setAttribute('src', domainName+'/js/yandex.js');
-				body.appendChild(script);
+				// Yandex tracking removed - no longer needed
 				
 			}else if( i == 3 ){
 				clearTimeout(myTimer);		
