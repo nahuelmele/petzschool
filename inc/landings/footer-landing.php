@@ -22,7 +22,7 @@
                     <div class="social-media" aria-label="Redes Sociales">
                         <a href="https://www.facebook.com/petzschool/" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Petz School" title="Facebook de Petz School" itemprop="sameAs"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                         <a href="https://www.instagram.com/petz.school/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Petz School" title="Instagram de Petz School" itemprop="sameAs"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                        <a href="/contacto/<?= ($testPar ? '?test' : '') ?>" target="_blank" rel="noopener noreferrer nofollow noindex" aria-label="Contacto con Petz School" title="Contacto con Petz School" itemprop="contactPoint" itemscope itemtype="https://schema.org/ContactPoint"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                        <a href="<?= get_link('/contacto/') ?>" target="_blank" rel="noopener noreferrer nofollow noindex" aria-label="Contacto con Petz School" title="Contacto con Petz School" itemprop="contactPoint" itemscope itemtype="https://schema.org/ContactPoint"><i class="fa fa-envelope" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>

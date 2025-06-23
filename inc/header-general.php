@@ -1,6 +1,6 @@
 <?php
 // Header for general pages (non-landing)
-// Includes Facebook critical inline for perfect API sync
+// Includes all common resources: Facebook, CSS, JS
 ?>
 <!-- Resource Hints for Performance -->
 <link rel="preconnect" href="https://connect.facebook.net">
@@ -11,15 +11,15 @@
 <!-- Facebook Critical - Must load before any bundles -->
 <?php include_once($base . "inc/facebook-critical.php"); ?>
 
-<!-- Emergency fallback script -->
-<script>
-	// Fallback if Facebook critical fails or bundles don't load
-	setTimeout(function() {
-		if (!window.fbq || typeof window.fbq !== 'function') {
-			var script = document.createElement('script');
-			script.src = '/js/face.js';
-			script.async = true;
-			document.head.appendChild(script);
-		}
-	}, 5000);
-</script> 
+<!--[if lt IE 9]>
+<script src="/js/respond.js"></script>
+<![endif]-->
+
+<!-- Common CSS Resources -->
+<link href="/css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="/fonts/flaticons/flaticon.css" rel="stylesheet" type="text/css">
+
+<!-- Preload CSS and JS -->
+<link rel="stylesheet" href="/css/preload.css" media="all" />
+<script src="/js/preload.js"></script> 

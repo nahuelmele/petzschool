@@ -1,15 +1,20 @@
 {
   "name": "petzschool",
   "version": "1.0.0",
-  "description": "",
+  "description": "Petz School - Educational Platform for Pet Care",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
-    "watch": "webpack --watch --mode development",
-    "start": "webpack serve --mode development --open"
+    "dev": "webpack --mode development --watch"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "pets",
+    "education",
+    "courses",
+    "veterinary",
+    "grooming"
+  ],
+  "author": "Petz School Team",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.24.4",
@@ -30,5 +35,17 @@
   },
   "dependencies": {
     "jquery": "^3.7.1"
-  }
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
 }

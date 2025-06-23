@@ -1,5 +1,16 @@
 window.addEventListener("load", function () {
-    // CSS is now loaded in head, just load JS bundle
+    // In test mode, load bundle without tracking but keep functionality
+    if (window.PETZ_TEST_MODE === true) {
+        console.log('🔓 TEST MODE: Loading bundle WITHOUT tracking');
+        // Load dev bundle (no analitica.js = no tracking)
+        var script = document.createElement('script');
+        script.src = "/dist/landingdev.bundle.js";
+        document.body.appendChild(script);
+        resourceLoaded();
+        return;
+    }
+    
+    // Production mode: load full bundle with tracking
     var script = document.createElement('script');
     script.src = "/dist/landing.bundle.js";
     document.body.appendChild(script);
@@ -9,6 +20,11 @@ window.addEventListener("load", function () {
 });
 
 function performPostLoadAction() {
+    // Don't load additional bundles in test mode (dev bundle already loaded)
+    if (window.PETZ_TEST_MODE === true) {
+        console.log('🔓 TEST MODE: Additional bundles NOT needed');
+        return;
+    }
 
     //console.log("Retrasado js.");
 
@@ -16,8 +32,6 @@ function performPostLoadAction() {
     scripta.src = '/dist/landingdev.bundle.js';
     scripta.onload = resourceLoaded;
     document.body.appendChild(scripta);
-
-
 }
 
 function resourceLoaded() {
@@ -37,6 +51,5 @@ function resourceLoaded() {
         }
 
     }, 60);
-
 
 }

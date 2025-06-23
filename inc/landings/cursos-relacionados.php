@@ -21,12 +21,12 @@
 								<div class="ribbons50off">
 									<img src="/img/ribbons50off.png" />
 								</div>
-								<a target="_blank" href="/diana-fonseca/pasteleria-canina-y-felina/<?= ($testPar ? '?test' : '') ?>" target="_blank" title="Pasteleria felina y canina con Diana Fonseca">
+								<a target="_blank" href="<?= get_link('/diana-fonseca/pasteleria-canina-y-felina/') ?>" target="_blank" title="Pasteleria felina y canina con Diana Fonseca">
 									<img class="img-responsive img-circle" src="/img/pasteleria-felina-y-canina.jpg" alt="Pasteleria felina y canina con Diana Fonseca" title="Pasteleria felina y canina con Diana Fonseca">
 								</a>
 								<div class="adopt-header">
 									<h3>
-										<a target="_blank" href="/diana-fonseca/pasteleria-canina-y-felina/<?= ($testPar ? '?test' : '') ?>" target="_blank" >
+										<a target="_blank" href="<?= get_link('/diana-fonseca/pasteleria-canina-y-felina/') ?>" target="_blank" >
 											Pasteleria felina y canina 
 										</a>
 									</h3>
@@ -87,7 +87,7 @@
 									<p>
 										Dale rienda suelta a tu creatividad pastelera. <b>Aprende recetas originales</b>, sabrosas y 100 % seguras. Comparte tu talento con el mundo y <b>emprende desde el corazón</b>.
 									</p>
-									<a target="_blank" class="btn" href="/diana-fonseca/pasteleria-canina-y-felina/<?= ($testPar ? '?test' : '') ?>">
+									<a target="_blank" class="btn" href="<?= get_link('/diana-fonseca/pasteleria-canina-y-felina/') ?>">
 										Ver más
 									</a>
 								</div>
@@ -101,12 +101,12 @@
 								<div class="ribbons50off">
 									<img src="/img/ribbons50off.png" />
 								</div>
-								<a href="/diana-fonseca/mascotas-sanas/<?= ($testPar ? '?test' : '') ?>" target="_blank" title="Mascotas Sanas con Diana Fonseca">
+								<a href="<?= get_link('/diana-fonseca/mascotas-sanas/') ?>" target="_blank" title="Mascotas Sanas con Diana Fonseca">
 									<img class="img-responsive img-circle" src="/img/mascotas-sanas.jpg" alt="Mascotas Sanas con Diana Fonseca" title="Mascotas Sanas con Diana Fonseca">
 								</a>
 								<div class="adopt-header">
 									<h3>
-										<a href="/diana-fonseca/mascotas-sanas/<?= ($testPar ? '?test' : '') ?>" target="_blank">
+										<a href="<?= get_link('/diana-fonseca/mascotas-sanas/') ?>" target="_blank">
 											Mascotas Sanas
 										</a>
 									</h3>
@@ -167,7 +167,7 @@
 									<p>
 										Descubre el placer de <b>alimentar a tu peludo de forma natural</b>. Aprende nutrición casera para mejorar su bienestar. Formate y comparte este conocimiento con más personas.
 									</p>
-									<a class="btn" target="_blank" href="/diana-fonseca/mascotas-sanas/<?= ($testPar ? '?test' : '') ?>">
+									<a class="btn" target="_blank" href="<?= get_link('/diana-fonseca/mascotas-sanas/') ?>">
 										Ver más
 									</a>
 								</div>
@@ -181,12 +181,12 @@
 								<div class="ribbons50off">
 									<img src="/img/ribbons65off.png" />
 								</div>
-								<a href="/diana-fonseca/petlados/<?= ($testPar ? '?test' : '') ?>" target="_blank" title="PETlados con Diana Fonseca">
+								<a href="<?= get_link('/diana-fonseca/petlados/') ?>" target="_blank" title="PETlados con Diana Fonseca">
 									<img class="img-responsive img-circle" src="/img/petlados-con-diana-fonseca.jpg" alt="Helados para perros y gatos" title="Helados para perros y gatos">
 								</a>
 								<div class="adopt-header">
 									<h3>
-										<a target="_blank" href="/diana-fonseca/petlados/<?= ($testPar ? '?test' : '') ?>" title="Heladeria canina y felina" >
+										<a target="_blank" href="<?= get_link('/diana-fonseca/petlados/') ?>" title="Heladeria canina y felina" >
 											PETlados
 										</a>
 									</h3>
@@ -247,7 +247,7 @@
 									<p>
 										Convierte <b>el calor en una fiesta</b> para tu mascota. <b>Crea helados naturales</b> y sabrosos con ingredientes reales. Ofrece una experiencia divertida y lanza tu propia PETladería.
 									</p>
-									<a class="btn" target="_blank" href="/diana-fonseca/petlados/<?= ($testPar ? '?test' : '') ?>">
+									<a class="btn" target="_blank" href="<?= get_link('/diana-fonseca/petlados/') ?>">
 										Ver más
 									</a>
 								</div>
@@ -261,12 +261,12 @@
 								<div class="ribbons50off">
 									<img src="/img/ribbons65off.png" />
 								</div>
-								<a href="/diana-fonseca/deshidratados/<?= ($testPar ? '?test' : '') ?>" target="_blank" title="Curso de deshidratados de Diana Fonseca">
-									<img class="img-responsive img-circle" src="/img/deshidratados.jpg" alt="Curso de deshidratados de Diana Fonseca" title="Curso de deshidratados de Diana Fonseca">
+								<a href="<?= get_link('/diana-fonseca/deshidratados/') ?>" target="_blank" title="Curso de deshidratados de Diana Fonseca">
+									<img class="img-responsive img-circle" src="/img/deshidratados.webp" alt="Curso de deshidratados de Diana Fonseca" title="Curso de deshidratados de Diana Fonseca">
 								</a>
 								<div class="adopt-header">
 									<h3>
-										<a href="/diana-fonseca/deshidratados/<?= ($testPar ? '?test' : '') ?>" target="_blank" title="Curso de deshidratados de Diana Fonseca">
+										<a href="<?= get_link('/diana-fonseca/deshidratados/') ?>" target="_blank" title="Curso de deshidratados de Diana Fonseca">
 											Deshidratados
 										</a>
 									</h3>
@@ -327,7 +327,7 @@
 									<p>
 										<b>Explora el mundo de los snacks caseros y duraderos.</b> Aprende a deshidratar ingredientes de forma simple y segura. Crea productos únicos y compartilos con otros amantes de mascotas.
 									</p>
-									<a class="btn" target="_blank" href="/diana-fonseca/deshidratados/<?= ($testPar ? '?test' : '') ?>" title="Curso de deshidratados de Diana Fonseca">
+									<a class="btn" target="_blank" href="<?= get_link('/diana-fonseca/deshidratados/') ?>" title="Curso de deshidratados de Diana Fonseca">
 										Ver más
 									</a>
 								</div>
@@ -342,12 +342,12 @@
 								<div class="ribbons50off">
 									<img src="/img/ribbons65off.png" />
 								</div>
-								<a href="/diana-fonseca/tecnicas-de-decoracion-pasteleria-canina-y-felina/<?= ($testPar ? '?test' : '') ?>" target="_blank" title="Curso Técnicas de decoración Pastelería canina y felina">
+								<a href="<?= get_link('/diana-fonseca/tecnicas-de-decoracion-pasteleria-canina-y-felina/') ?>" target="_blank" title="Curso Técnicas de decoración Pastelería canina y felina">
 									<img class="img-responsive img-circle" src="/img/tecnicas-de-decoracion-pasteleria-canina-y-felina.jpg" alt="Curso Técnicas de decoración Pastelería canina y felina de Diana Fonseca" title="Curso Técnicas de decoración Pastelería canina y felina de Diana Fonseca">
 								</a>
 								<div class="adopt-header">
 									<h3>
-										<a href="/diana-fonseca/tecnicas-de-decoracion-pasteleria-canina-y-felina/<?= ($testPar ? '?test' : '') ?>" target="_blank">
+										<a href="<?= get_link('/diana-fonseca/tecnicas-de-decoracion-pasteleria-canina-y-felina/') ?>" target="_blank">
 											Técnicas de decoración Pastelería canina y felina
 										</a>
 									</h3>
@@ -408,7 +408,7 @@
 									<p>
 										Eleva tus creaciones con <b>técnicas profesionales</b>. Aprende a decorar tortas, muffins y galletas como una experta. Dale <b>tu toque único</b> y sorprende a todos.
 									</p>
-									<a class="btn" href="/diana-fonseca/tecnicas-de-decoracion-pasteleria-canina-y-felina/<?= ($testPar ? '?test' : '') ?>" target="_blank">
+									<a class="btn" href="<?= get_link('/diana-fonseca/tecnicas-de-decoracion-pasteleria-canina-y-felina/') ?>" target="_blank">
 										Ver más
 									</a>
 								</div>
@@ -422,12 +422,12 @@
 								<div class="ribbons50off">
 									<img src="/img/ribbons65off.png" />
 								</div>
-								<a href="/diana-fonseca/pasteleria-inclusiva-para-perros-y-gatos-enfermos/<?= ($testPar ? '?test' : '') ?>" target="_blank" title="Curso de Pastelería inclusiva, perros y gatos enfermos de Diana Fonseca">
+								<a href="<?= get_link('/diana-fonseca/pasteleria-inclusiva-para-perros-y-gatos-enfermos/') ?>" target="_blank" title="Curso de Pastelería inclusiva, perros y gatos enfermos de Diana Fonseca">
 									<img class="img-responsive img-circle" src="/img/pasteleria-inclusiva-diana-fonseca.jpg" alt="Curso de Pastelería inclusiva, perros y gatos enfermos de Diana Fonseca" title="Curso de Pastelería inclusiva, perros y gatos enfermos de Diana Fonseca">
 								</a>
 								<div class="adopt-header">
 									<h3>
-										<a href="/diana-fonseca/pasteleria-inclusiva-para-perros-y-gatos-enfermos/<?= ($testPar ? '?test' : '') ?>" target="_blank">
+										<a href="<?= get_link('/diana-fonseca/pasteleria-inclusiva-para-perros-y-gatos-enfermos/') ?>" target="_blank">
 											Pastelería inclusiva, perros y gatos enfermos
 										</a>
 									</h3>
@@ -488,7 +488,7 @@
 									<p>
 										<b>Sana con sabor y consiente a tu peludo con amor.</b> Aprende recetas adaptadas y llenas de intención. Convierte ese saber en un proyecto con propósito.
 									</p>
-									<a class="btn" target="_blank" href="/diana-fonseca/pasteleria-inclusiva-para-perros-y-gatos-enfermos/<?= ($testPar ? '?test' : '') ?>">
+									<a class="btn" target="_blank" href="<?= get_link('/diana-fonseca/pasteleria-inclusiva-para-perros-y-gatos-enfermos/') ?>">
 										Ver más
 									</a>
 								</div>
@@ -503,12 +503,12 @@
 								<div class="ribbons50off">
 									<img src="/img/ribbons65off.png" />
 								</div>
-								<a href="/diana-fonseca/dietas-cocinadas-para-perros/<?= ($testPar ? '?test' : '') ?>" target="_blank" title="Curso Dietas cocinadas para perros">
-									<img class="img-responsive img-circle" src="/img/dietas-cocinadas-para-perros.jpg" alt="Curso Dietas cocinadas para perros de Diana Fonseca" title="Curso Dietas cocinadas para perros de Diana Fonseca">
+								<a href="<?= get_link('/diana-fonseca/dietas-cocinadas-para-perros/') ?>" target="_blank" title="Curso Dietas cocinadas para perros">
+									<img class="img-responsive img-circle" src="/img/dietas-cocinadas-para-perros.webp" alt="Curso Dietas cocinadas para perros de Diana Fonseca" title="Curso Dietas cocinadas para perros de Diana Fonseca">
 								</a>
 								<div class="adopt-header">
 									<h3>
-										<a href="/diana-fonseca/dietas-cocinadas-para-perros/<?= ($testPar ? '?test' : '') ?>" target="_blank">
+										<a href="<?= get_link('/diana-fonseca/dietas-cocinadas-para-perros/') ?>" target="_blank">
 											Dietas cocinadas para perros
 										</a>
 									</h3>
@@ -569,7 +569,7 @@
 									<p>
 										<b>Deja atrás los ultraprocesados</b> y disfruta preparando recetas caseras. Aprende a cocinar dietas balanceadas con <b>ingredientes reales</b>. Mejora su bienestar y crea un camino propio con propósito.
 									</p>
-									<a class="btn" href="/diana-fonseca/dietas-cocinadas-para-perros/<?= ($testPar ? '?test' : '') ?>" target="_blank">
+									<a class="btn" href="<?= get_link('/diana-fonseca/dietas-cocinadas-para-perros/') ?>" target="_blank">
 										Ver más
 									</a>
 								</div>
@@ -585,12 +585,12 @@
 								<div class="ribbons50off">
 									<img src="/img/ribbons65off.png" />
 								</div>
-								<a href="/diana-fonseca/rapi-petlicias/<?= ($testPar ? '?test' : '') ?>" target="_blank" title="Curso Rapi PETLICIAS">
+								<a href="<?= get_link('/diana-fonseca/rapi-petlicias/') ?>" target="_blank" title="Curso Rapi PETLICIAS">
 									<img class="img-responsive img-circle" src="/img/rapi-petlicias.jpg" alt="Curso Rapi PETLICIAS de Diana Fonseca" title="Curso Rapi PETLICIAS de Diana Fonseca">
 								</a>
 								<div class="adopt-header">
 									<h3>
-										<a href="/diana-fonseca/rapi-petlicias/<?= ($testPar ? '?test' : '') ?>" target="_blank">
+										<a href="<?= get_link('/diana-fonseca/rapi-petlicias/') ?>" target="_blank">
 											Rapi PETLICIAS
 										</a>
 									</h3>
@@ -645,7 +645,7 @@
 									<p>
 										<b>Cocina diferente y emprende con corazón</b>. Crea <b>fast food saludable</b> para tu peludo, sin complicaciones y sin conservantes. Transforma tu amor en algo delicioso y real.
 									</p>
-									<a class="btn" href="/diana-fonseca/rapi-petlicias/<?= ($testPar ? '?test' : '') ?>" target="_blank">
+									<a class="btn" href="<?= get_link('/diana-fonseca/rapi-petlicias/') ?>" target="_blank">
 										Ver más
 									</a>
 								</div>
@@ -659,12 +659,12 @@
 								<div class="ribbons50off">
 									<img src="/img/ribbons35off.png" />
 								</div>
-								<a href="/diana-fonseca/cupido-tambien-es-petfriendly/<?= ($testPar ? '?test' : '') ?>" target="_blank" title="Curso Cupido tambien es Petfrienly">
-									<img class="img-responsive img-circle" src="/img/cupido-es-petfriendly.jpg" alt="Curso Cupido tambien es Petfrienly de Diana Fonseca" title="Curso Cupido tambien es Petfrienly de Diana Fonseca">
+								<a href="<?= get_link('/diana-fonseca/cupido-tambien-es-petfriendly/') ?>" target="_blank" title="Curso Cupido tambien es Petfrienly">
+									<img class="img-responsive img-circle" src="/img/cupido-es-petfriendly.webp" alt="Curso Cupido tambien es Petfrienly de Diana Fonseca" title="Curso Cupido tambien es Petfrienly de Diana Fonseca">
 								</a>
 								<div class="adopt-header">
 									<h3>
-										<a href="/diana-fonseca/cupido-tambien-es-petfriendly/<?= ($testPar ? '?test' : '') ?>" target="_blank">
+										<a href="<?= get_link('/diana-fonseca/cupido-tambien-es-petfriendly/') ?>" target="_blank">
 											Cupido tambien es Petfrienly
 										</a>
 									</h3>
@@ -725,7 +725,7 @@
 									<p>
 										<b>San Valentín se celebra con quienes más amas</b>. Crea snacks temáticos llenos de ternura y sabor. Disfrutalos y compartelos con el mundo.
 									</p>
-									<a class="btn" href="/diana-fonseca/cupido-tambien-es-petfriendly/<?= ($testPar ? '?test' : '') ?>" target="_blank">
+									<a class="btn" href="<?= get_link('/diana-fonseca/cupido-tambien-es-petfriendly/') ?>" target="_blank">
 										Ver más
 									</a>
 								</div>
@@ -740,12 +740,12 @@
 								<div class="ribbons50off">
 									<img src="/img/ribbons65off.png" />
 								</div>
-								<a href="/diana-fonseca/reposteria-de-halloween/<?= ($testPar ? '?test' : '') ?>" target="_blank" title="Reposteria de Halloween con Diana Fonseca">
+								<a href="<?= get_link('/diana-fonseca/reposteria-de-halloween/') ?>" target="_blank" title="Reposteria de Halloween con Diana Fonseca">
 									<img class="img-responsive img-circle" src="/img/reposteria-de-halloween-para-mascotas-con-diana-fonseca.jpg" alt="Reposteria de Halloween con Diana Fonseca" title="Reposteria de Halloween con Diana Fonseca">
 								</a>
 								<div class="adopt-header">
 									<h3>
-										<a href="/diana-fonseca/reposteria-de-halloween/<?= ($testPar ? '?test' : '') ?>" target="_blank" >
+										<a href="<?= get_link('/diana-fonseca/reposteria-de-halloween/') ?>" target="_blank" >
 											Reposteria de Halloween
 										</a>
 									</h3>
@@ -806,7 +806,7 @@
 									<p>
 										<b>Diviertete creando dulces</b> temáticos para tus mascotas. Usa ingredientes seguros y decora con libertad. <b>Vive un Halloween distinto</b> y comparte tu talento.
 									</p>
-									<a class="btn" target="_blank" href="/diana-fonseca/reposteria-de-halloween/<?= ($testPar ? '?test' : '') ?>">
+									<a class="btn" target="_blank" href="<?= get_link('/diana-fonseca/reposteria-de-halloween/') ?>">
 										Ver más
 									</a>
 								</div>
@@ -820,12 +820,12 @@
 								<div class="ribbons50off">
 									<img src="/img/ribbons50off.png" />
 								</div>
-								<a href="/diana-fonseca/petlicias-navidenas/<?= ($testPar ? '?test' : '') ?>" target="_blank" title="Curso de Petlicias navideñas">
+								<a href="<?= get_link('/diana-fonseca/petlicias-navidenas/') ?>" target="_blank" title="Curso de Petlicias navideñas">
 									<img class="img-responsive img-circle" src="/img/petlicias-navidenas-con-diana-fonseca.jpg" alt="Curso de Petlicias navideñas de Diana Fonseca" title="Curso de Petlicias navideñas de Diana Fonseca">
 								</a>
 								<div class="adopt-header">
 									<h3>
-										<a href="/diana-fonseca/petlicias-navidenas/<?= ($testPar ? '?test' : '') ?>" target="_blank">
+										<a href="<?= get_link('/diana-fonseca/petlicias-navidenas/') ?>" target="_blank">
 											PETlicias Navideñas
 										</a>
 									</h3>
@@ -886,7 +886,7 @@
 									<p>
 										Que esta Navidad también sea especial para tu peludo. <b>Crea cenas y postres navideños saludables y creativos</b>. Sumate a esta celebración y emprende con alegría.
 									</p>
-									<a class="btn" href="/diana-fonseca/petlicias-navidenas/<?= ($testPar ? '?test' : '') ?>" target="_blank">
+									<a class="btn" href="<?= get_link('/diana-fonseca/petlicias-navidenas/') ?>" target="_blank">
 										Ver más
 									</a>
 								</div>
@@ -900,12 +900,12 @@
 								<div class="ribbons50off">
 									<img src="/img/ribbons30off.png" />
 								</div>
-								<a href="/diana-fonseca/taller-pascua-para-4patas/<?= ($testPar ? '?test' : '') ?>" target="_blank" title="Taller 'Pascua para 4patas' de Diana Fonseca">
+								<a href="<?= get_link('/diana-fonseca/taller-pascua-para-4patas/') ?>" target="_blank" title="Taller 'Pascua para 4patas' de Diana Fonseca">
 									<img class="img-responsive img-circle" src="/img/taller-pascuas-para-4patas.jpg" alt="Taller 'Pascua para 4patas' de Diana Fonseca" title="Taller 'Pascua para 4patas' de Diana Fonseca">
 								</a>
 								<div class="adopt-header">
 									<h3>
-										<a href="/diana-fonseca/taller-pascua-para-4patas/<?= ($testPar ? '?test' : '') ?>" target="_blank">
+										<a href="<?= get_link('/diana-fonseca/taller-pascua-para-4patas/') ?>" target="_blank">
 											Taller "Pascua para 4patas"
 										</a>
 									</h3>
@@ -966,7 +966,7 @@
 									<p>
 										Llena de <b>color y sabor</b> la Pascua de tu mascota. Aprende a hacer <b>huevos y dulces pet-friendly</b> con estilo. Convierte esta experiencia en una propuesta original.
 									</p>
-									<a class="btn" target="_blank" href="/diana-fonseca/taller-pascua-para-4patas/<?= ($testPar ? '?test' : '') ?>">
+									<a class="btn" target="_blank" href="<?= get_link('/diana-fonseca/taller-pascua-para-4patas/') ?>">
 										Ver más
 									</a>
 								</div>

@@ -14,20 +14,19 @@ $imgShare = "share.jpg";
 $des = "✓ Petz School. Programas y cursos hechos con amor para tu mascota.";
 $tit = "Programas y cursos de Petz School";
 
-/* esto es para si pasamos parametro test no cargamos pixel */
-
-$testPar = false;
-if( isset( $_GET["test"] ) ){	
-	$testPar = true;
-}
-
-if( !$testing && !$testPar ){	
+if( !$testing ){	
 	ob_start('comprimir_pagina'); 
 }
 
 ?><!DOCTYPE html>
 <html lang="es-ES">
 	<head>
+		<!-- Common Resources for General Pages -->
+		<?php 
+		$base = "";
+		include_once($base . "inc/header-general.php"); 
+		?>
+		
 		<meta charset="utf-8">
 		<!--[if IE]>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -66,42 +65,6 @@ if( !$testing && !$testPar ){
 		<meta name="twitter:description" content="<?= $des ?>">
 		<meta name="twitter:image" content="https://petzschool.com/img/<?= $imgShare; ?>">		
 		
-		<!-- Resource Hints for Performance -->
-		<link rel="preconnect" href="https://connect.facebook.net">
-		<link rel="dns-prefetch" href="https://graph.facebook.com">
-		<link rel="preconnect" href="https://www.google-analytics.com">
-
-		
-		<!-- Facebook Critical - Must load before any bundles -->
-		<?php 
-		$base = "";
-		include_once($base . "inc/facebook-critical.php"); 
-		?>
-		
-		<!-- Emergency fallback script -->
-		<script>
-			// Fallback if Facebook critical fails or bundles don't load
-			setTimeout(function() {
-				if (!window.fbq || typeof window.fbq !== 'function') {
-					var script = document.createElement('script');
-					script.src = '/js/face.js';
-					script.async = true;
-					document.head.appendChild(script);
-				}
-			}, 5000);
-		</script>
-		
-		<!--[if lt IE 9]>
-		<script src="/js/respond.js"></script>
-		<![endif]-->
-		
-		<link href="/css/bootstrap.css" rel="stylesheet" >
-		<link href="/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" >
-		<link href="/fonts/flaticons/flaticon.css" rel="stylesheet" >
-	
-		<link rel="stylesheet" href="/css/preload.css" media="all" />
-		
-		<script src="/js/preload.js"></script>
 	</head>
 	
     <body id="page-top">
@@ -114,276 +77,7 @@ if( !$testing && !$testPar ){
 	  
 	  <?php include_once("inc/nav.php"); ?>
 		
-      <div class="slider-container">
-	  
-         <div class="slider-control left inactive"></div>
-		 
-         <div class="slider-control right"></div>
-		 
-         <ul class="slider-pagi"></ul>
-		 
-         <div class="slider">
-		 
-		 
-            <div class="slide slide-0 active" style="background-image:url('/img/bienvenidos-a-petz-school.jpg')">
-			
-               <div class="slide__bg"></div>
-			   
-               <div class="slide__content">
-			   
-                  <div class="slide__overlay"></div>
-				  
-                  <div class="slide__text">
-				  								
-					<h2 class="slide__text-heading">Amamos a las mascotas</h2>
-
-					<div class="hidden-mobile">
-
-						<p class="lead">Bienvenidos a Petz School. Aquí encontrarás programas educativos y didácticos para mimar a tus mascotas.</p>
-
-						<a href="/programas/<?= ( $testPar ? '?test' : '') ?>" class="btn btn-default">
-							Todos los programas
-						</a>
-
-					</div>
-
-                  </div>
-				  
-               </div>
-			   
-            </div>		 
-		 
-		 
-            <div class="slide slide-1" style="background-image:url('/img/slide-mascotas-sanas-de diana-fonseca.jpg')">
-			
-               <div class="slide__bg"></div>
-			   
-               <div class="slide__content">
-			   
-                  <div class="slide__overlay"></div>
-				  
-                  <div class="slide__text">
-				  
-					<div class="rating-main-box-ratings-qty">
-						<div class="rating rating--title colorText">
-							<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-								<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-							</svg>
-							<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-								<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-							</svg>
-							<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-								<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-							</svg>
-							<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-								<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-							</svg>
-							<span>
-								<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star-half" class="svg-inline--fa fa-star-half fa-w-18 fontawesome-icon star-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-									<path fill="currentColor" d="M288 0c-11.4 0-22.8 5.9-28.7 17.8L194 150.2 47.9 171.4c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.1 23 46 46.4 33.7L288 439.6V0z"></path>
-								</svg>
-								<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star-half" class="svg-inline--fa fa-star-half fa-w-18 fontawesome-icon star-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-									<path fill="currentColor" d="M288 0c-11.4 0-22.8 5.9-28.7 17.8L194 150.2 47.9 171.4c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.1 23 46 46.4 33.7L288 439.6V0z"></path>
-								</svg>
-							</span>
-						</div>
-						
-						<div class="blog-tags">
-							<a>4.7</a>
-						</div>
-						
-					</div>	
-								
-					<h2 class="slide__text-heading">Mascotas Sanas</h2>
-
-					<div class="hidden-mobile">
-
-						<p class="lead">Con el programa MASCOTAS SANAS aprenderás las bases de la nutrición natural casera de perros y gatos. Para que puedas disfrutar de su compañía por mucho tiempo.</p>
-
-						<a href="/diana-fonseca/mascotas-sanas/<?= ( $testPar ? '?test' : '') ?>" target="_blank" class="btn btn-default">
-							Ver más
-						</a>
-
-					</div>
-
-                  </div>
-				  
-               </div>
-			   
-            </div>
-			
-            <div class="slide slide-2" style="background-image:url('/img/slide0.jpg')">
-			
-               <div class="slide__bg"></div>
-			   
-               <div class="slide__content">
-			   
-                  <div class="slide__overlay"></div>
-				  
-                  <div class="slide__text">
-				  
-					<div class="rating-main-box-ratings-qty">
-						<div class="rating rating--title colorText">
-							<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-								<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-							</svg>
-							<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-								<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-							</svg>
-							<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-								<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-							</svg>
-							<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-								<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-							</svg>
-							<span>
-								<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star-half" class="svg-inline--fa fa-star-half fa-w-18 fontawesome-icon star-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-									<path fill="currentColor" d="M288 0c-11.4 0-22.8 5.9-28.7 17.8L194 150.2 47.9 171.4c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.1 23 46 46.4 33.7L288 439.6V0z"></path>
-								</svg>
-								<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star-half" class="svg-inline--fa fa-star-half fa-w-18 fontawesome-icon star-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-									<path fill="currentColor" d="M288 0c-11.4 0-22.8 5.9-28.7 17.8L194 150.2 47.9 171.4c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.1 23 46 46.4 33.7L288 439.6V0z"></path>
-								</svg>
-							</span>
-						</div>
-						
-						<div class="blog-tags">
-							<a>4.7</a>
-						</div>
-						
-					</div>	
-								
-					<h2 class="slide__text-heading">Pasteleria felina y canina</h2>
-
-					<div class="hidden-mobile">
-
-						<p class="lead">Aprende a preparar deliciosos snacks nutritivos y saludables para que tu mascota te ame.</p>
-
-						<a href="/diana-fonseca/pasteleria-canina-y-felina/<?= ( $testPar ? '?test' : '') ?>" target="_blank" class="btn btn-default">
-							Ver más
-						</a>
-
-					</div>
-
-                  </div>
-				  
-               </div>
-			   
-            </div>
-			
-			
-            <div class="slide slide-3" style="background-image:url('/img/slide2.jpg')">
-			
-               <div class="slide__bg"></div>
-			   
-               <div class="slide__content">
-			   
-                  <div class="slide__overlay"></div>
-				  
-                  <div class="slide__text">
-				  
-					<div class="rating-main-box-ratings-qty">
-						<div class="rating rating--title colorText">
-							<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-								<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-							</svg>
-							<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-								<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-							</svg>
-							<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-								<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-							</svg>
-							<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-								<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-							</svg>
-							<span>
-								<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star-half" class="svg-inline--fa fa-star-half fa-w-18 fontawesome-icon star-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-									<path fill="currentColor" d="M288 0c-11.4 0-22.8 5.9-28.7 17.8L194 150.2 47.9 171.4c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.1 23 46 46.4 33.7L288 439.6V0z"></path>
-								</svg>
-								<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star-half" class="svg-inline--fa fa-star-half fa-w-18 fontawesome-icon star-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-									<path fill="currentColor" d="M288 0c-11.4 0-22.8 5.9-28.7 17.8L194 150.2 47.9 171.4c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.1 23 46 46.4 33.7L288 439.6V0z"></path>
-								</svg>
-							</span>
-						</div>
-						
-						<div class="blog-tags">
-							<a>4.7</a>
-						</div>
-						
-					</div>	
-								
-					<h2 class="slide__text-heading">Peluqueria para perros</h2>
-
-					<div class="hidden-mobile">
-
-						<p class="lead">Conviértete en una profesional y trabaja donde quieras con tu propio negocio de peluqueria canina.</p>
-
-						<a href="/fabio-gomez-sepulveda/peluqueria-para-perros/<?= ( $testPar ? '?test' : '') ?>" class="btn btn-default">
-							Ver más
-						</a>
-
-					</div>
-
-                  </div>
-				  
-               </div>
-			   
-            </div>
-			
-            <div class="slide slide-4" style="background-image:url('/img/slide3.jpg')">
-			
-               <div class="slide__bg"></div>
-			   
-               <div class="slide__content">
-			   
-                  <div class="slide__overlay"></div>
-				  
-                  <div class="slide__text">
-				  
-					<div class="rating-main-box-ratings-qty">
-						<div class="rating rating--title colorText"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-							<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-						</svg><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-							<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-						</svg><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-							<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-						</svg><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-							<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-						</svg>
-						<span>
-							<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star-half" class="svg-inline--fa fa-star-half fa-w-18 fontawesome-icon star-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-								<path fill="currentColor" d="M288 0c-11.4 0-22.8 5.9-28.7 17.8L194 150.2 47.9 171.4c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.1 23 46 46.4 33.7L288 439.6V0z"></path>
-							</svg><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star-half" class="svg-inline--fa fa-star-half fa-w-18 fontawesome-icon star-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-								<path fill="currentColor" d="M288 0c-11.4 0-22.8 5.9-28.7 17.8L194 150.2 47.9 171.4c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.1 23 46 46.4 33.7L288 439.6V0z"></path>
-							</svg>
-						</span>
-						</div>
-						
-						<div class="blog-tags">
-							<a>4.7</a>
-						</div>
-						
-					</div>	
-								
-					<h2 class="slide__text-heading">Costura canina y felina</h2>
-
-					<div class="hidden-mobile">
-
-						<p class="lead">Convíertete en una experta en confección de prendas para tú mascota y hazla lucir increíble.</p>
-
-						<a href="/willian-quispe-abarca/costura-canina-y-felina/<?= ( $testPar ? '?test' : '') ?>" class="btn btn-default">
-							Ver más
-						</a>
-
-					</div>
-
-                  </div>
-				  
-               </div>
-			   
-            </div>
-			
-         </div>
-      </div>
+	  <?php include_once("inc/slider-home.php"); ?>
 	  
       <svg id="curveUp" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none" fill="#fff">
          <path d="M0 100 C 20 0 50 0 100 100 Z"/>
@@ -415,14 +109,14 @@ if( !$testing && !$testPar ){
 									<img src="/img/ribbons50off.png" />
 								</div>
 						   
-							  <a href="/diana-fonseca/pasteleria-canina-y-felina/<?= ( $testPar ? '?test' : '') ?>" target="_blank" title="Pasteleria felina y canina con Diana Fonseca">
+							  <a href="<?= get_link('/diana-fonseca/pasteleria-canina-y-felina/') ?>" target="_blank" title="Pasteleria felina y canina con Diana Fonseca">
 								<img class="img-responsive img-circle" src="/img/pasteleria-felina-y-canina.jpg" alt="Pasteleria felina y canina con Diana Fonseca" title="Pasteleria felina y canina con Diana Fonseca">
 							  </a>	
 							  
                               <div class="adopt-header">
 							  
                                 <h3>
-									<a href="/diana-fonseca/pasteleria-canina-y-felina/<?= ( $testPar ? '?test' : '') ?>" target="_blank">
+									<a href="<?= get_link('/diana-fonseca/pasteleria-canina-y-felina/') ?>" target="_blank">
 										Pasteleria canina y felina 
 									</a>
 							   	</h3>	
@@ -492,14 +186,14 @@ if( !$testing && !$testPar ){
 
 								</div>
 						   
-							  <a href="/fabio-gomez-sepulveda/peluqueria-para-perros/<?= ( $testPar ? '?test' : '') ?>" title="Peluquería para perros con Fabio Ernesto Gomez Sepulveda">
+							  <a href="<?= get_link('/fabio-gomez-sepulveda/peluqueria-para-perros/') ?>" title="Peluquería para perros con Fabio Ernesto Gomez Sepulveda">
 								<img class="img-responsive img-circle" src="/img/peluqueria-para-perros.jpg" alt="Peluquería para perros con Fabio Ernesto Gomez Sepulveda" title="Peluquería para perros con Fabio Ernesto Gomez Sepulveda">
 							  </a>	
 							  
                               <div class="adopt-header">
 							  
                                 <h3>
-									<a href="/fabio-gomez-sepulveda/peluqueria-para-perros/<?= ( $testPar ? '?test' : '') ?>" >
+									<a href="<?= get_link('/fabio-gomez-sepulveda/peluqueria-para-perros/') ?>" >
 										Peluquería para perros
 									</a>
 							   	</h3>	
@@ -567,14 +261,14 @@ if( !$testing && !$testPar ){
 									<img src="/img/ribbons50off.png" />
 								</div>
 						   
-							  <a href="/pets-space/primeros-auxilios-para-perros/<?= ($testPar ? '?test' : '') ?>" target="_blank" title="Primeros auxilios para perros">
+							  <a href="<?= get_link('/pets-space/primeros-auxilios-para-perros/') ?>" target="_blank" title="Primeros auxilios para perros">
 								<img class="img-responsive img-circle" src="/img/primeros-auxilios-caninos.jpg" alt="Primeros auxilios para perros" title="Primeros auxilios para perros por Laura Viviana Castro Sabogal">
 							  </a>	
 							  
                               <div class="adopt-header">
 							  
                                 <h3>
-									<a href="/pets-space/primeros-auxilios-para-perros/<?= ($testPar ? '?test' : '') ?>" target="_blank">
+									<a href="<?= get_link('/pets-space/primeros-auxilios-para-perros/') ?>" target="_blank">
 										Primeros auxilios para perros
 									</a>
 							   	</h3>	
@@ -641,7 +335,7 @@ if( !$testing && !$testPar ){
 
 						   
 
-							  <a href="/diana-fonseca/mascotas-sanas/<?= ($testPar ? '?test' : '') ?>" title="Mascotas Sanas con Diana Fonseca">
+							  <a href="<?= get_link('/diana-fonseca/mascotas-sanas/') ?>" title="Mascotas Sanas con Diana Fonseca">
 
 								<img class="img-responsive img-circle" src="/img/mascotas-sanas.jpg" alt="Mascotas Sanas con Diana Fonseca" title="Mascotas Sanas con Diana Fonseca">
 
@@ -655,7 +349,7 @@ if( !$testing && !$testPar ){
 
                                 <h3>
 
-									<a href="/diana-fonseca/mascotas-sanas/<?= ($testPar ? '?test' : '') ?>">
+									<a href="<?= get_link('/diana-fonseca/mascotas-sanas/') ?>">
 
 										Mascotas Sanas 
 
@@ -767,12 +461,12 @@ if( !$testing && !$testPar ){
 									<div class="ribbons50off">
 										<img src="/img/ribbons65off.png" />
 									</div>
-									<a href="/diana-fonseca/deshidratados/<?= ($testPar ? '?test' : '') ?>" target="_blank" title="Curso de deshidratados de Diana Fonseca">
-										<img class="img-responsive img-circle" src="/img/deshidratados.jpg" alt="Curso de deshidratados de Diana Fonseca" title="Curso de deshidratados de Diana Fonseca">
+									<a href="<?= get_link('/diana-fonseca/deshidratados/') ?>" target="_blank" title="Curso de deshidratados de Diana Fonseca">
+										<img class="img-responsive img-circle" src="/img/deshidratados.webp" alt="Curso de deshidratados de Diana Fonseca" title="Curso de deshidratados de Diana Fonseca">
 									</a>
 									<div class="adopt-header">
 										<h3>
-											<a href="/diana-fonseca/deshidratados/<?= ($testPar ? '?test' : '') ?>" target="_blank" title="Curso de deshidratados de Diana Fonseca">
+											<a href="<?= get_link('/diana-fonseca/deshidratados/') ?>" target="_blank" title="Curso de deshidratados de Diana Fonseca">
 												Deshidratados
 											</a>
 										</h3>
@@ -847,13 +541,13 @@ if( !$testing && !$testPar ){
 
 								</div>
 						   
-								<a href="/diana-fonseca/petlados/<?= ( $testPar ? '?test' : '') ?>" title="PETlados con Diana Fonseca">
+								<a href="<?= get_link('/diana-fonseca/petlados/') ?>" title="PETlados con Diana Fonseca">
 									<img class="img-responsive img-circle" src="/img/petlados-con-diana-fonseca.jpg" alt="Helados para perros y gatos" title="Helados para perros y gatos">
 								</a>
 								
 								<div class="adopt-header">
 									<h3>
-										<a href="/diana-fonseca/petlados/<?= ( $testPar ? '?test' : '') ?>" title="Heladeria canina y felina" >
+										<a href="<?= get_link('/diana-fonseca/petlados/') ?>" title="Heladeria canina y felina" >
 											PETlados
 										</a>
 									</h3>	
@@ -945,12 +639,12 @@ if( !$testing && !$testPar ){
 								<div class="ribbons50off">
 									<img src="/img/ribbons65off.png" />
 								</div>
-								<a href="/diana-fonseca/rapi-petlicias/<?= ($testPar ? '?test' : '') ?>" target="_blank" title="Curso Rapi PETLICIAS">
+								<a href="<?= get_link('/diana-fonseca/rapi-petlicias/') ?>" target="_blank" title="Curso Rapi PETLICIAS">
 									<img class="img-responsive img-circle" src="/img/rapi-petlicias.jpg" alt="Curso Rapi PETLICIAS de Diana Fonseca" title="Curso Rapi PETLICIAS de Diana Fonseca">
 								</a>
 								<div class="adopt-header">
 									<h3>
-										<a href="/diana-fonseca/rapi-petlicias/<?= ($testPar ? '?test' : '') ?>" target="_blank">
+										<a href="<?= get_link('/diana-fonseca/rapi-petlicias/') ?>" target="_blank">
 											Rapi PETLICIAS
 										</a>
 									</h3>
@@ -1019,14 +713,14 @@ if( !$testing && !$testPar ){
 									<img src="/img/ribbons50off.png" />
 								</div>
 						   
-							  <a href="/willian-quispe-abarca/costura-canina-y-felina/<?= ( $testPar ? '?test' : '') ?>" title="Costura canina y felina con Willian Quispe Abarca">
+							  <a href="<?= get_link('/willian-quispe-abarca/costura-canina-y-felina/') ?>" title="Costura canina y felina con Willian Quispe Abarca">
 								<img class="img-responsive img-circle" src="/img/costura-canina-y-felina.jpg" alt="Costura canina y felina con Willian Quispe Abarca" title="Costura canina y felina con Willian Quispe Abarca">
 							  </a>	
 							  
                               <div class="adopt-header">
 							  
                                 <h3>
-									<a href="/willian-quispe-abarca/costura-canina-y-felina/<?= ( $testPar ? '?test' : '') ?>">
+									<a href="<?= get_link('/willian-quispe-abarca/costura-canina-y-felina/') ?>">
 										Costura canina y felina
 									</a>
 							   	</h3>	
@@ -1082,7 +776,7 @@ if( !$testing && !$testPar ){
 				  
 				  
 				  <div class="btnCenter">
-					<a class="btn" href="/programas/<?= ( $testPar ? '?test' : '') ?>">Ver todos</a>
+					<a class="btn" href="<?= get_link('/programas/') ?>">Ver todos</a>
 				  </div>
 				  
                </div>
@@ -1282,7 +976,7 @@ if( !$testing && !$testPar ){
                data-center="left:0%;">
                <h3>Amamos a los animales</h3>
                <p><b>Petz school</b> nace de la necesidad de nuclear en un solo lugar <b>diversos programas para adorar, mimar y devolver un poco de todo el amor que nuestras hermosas mascotas nos entregan</b>. Cada Masterclass esta cuidadosamente creado para responder a diferentes necesidades que abordan desde la salud hasta como crear galletas para nuestros peluditos.</p>
-               <a href="/programas/<?= ( $testPar ? '?test' : '') ?>" class="btn">ver programas</a>
+               <a href="<?= get_link('/programas/') ?>" class="btn">ver programas</a>
             </div>
          </div>
       </section>
@@ -1448,7 +1142,7 @@ if( !$testing && !$testPar ){
                         <div class="wrap">
                            <div class="info">
                               <h3 class="name">
-								<a href="/fabio-gomez-sepulveda/<?= ( $testPar ? '?test' : '') ?>" style="color: initial;" >
+								<a href="<?= get_link('/fabio-gomez-sepulveda/') ?>" style="color: initial;" >
 									Fabio Sepulveda
 								</a>	
 							   </h3>
@@ -1470,7 +1164,7 @@ if( !$testing && !$testPar ){
                         <div class="wrap">
                            <div class="info">
 								<h3 class="name">
-									<a href="/diana-fonseca/<?= ( $testPar ? '?test' : '') ?>" style="color: initial;" >
+									<a href="<?= get_link('/diana-fonseca/') ?>" style="color: initial;" >
 										Diana Fonseca
 									</a>
 								</h3>
@@ -1509,7 +1203,7 @@ if( !$testing && !$testPar ){
             </div>
 			
 			  <div class="btnCenter">
-				<a class="btn" href="/instructores/<?= ( $testPar ? '?test' : '') ?>">Ver todos</a>
+				<a class="btn" href="<?= get_link('/instructores/') ?>">Ver todos</a>
 			  </div>
 			
          </div>
@@ -1618,13 +1312,8 @@ if( !$testing && !$testPar ){
 		<script src='/js/custom.js'></script>
 		
 
-		<?php if( !$testing && !$testPar ){ ?>
-		<script src="/js/preventkeys.js"></script>	
-		<?php } ?>
-
-		<?php if( !$testing && !$testPar ){ ?>
-		<script src='/js/analitica-web.js'></script>
-		<?php }?>
+		<?php include_once("inc/preventkeys-conditional.php"); ?>
+		<?php include_once("inc/analitica-web-conditional.php"); ?>
 		
 		<script type="application/ld+json">
 			{
@@ -1661,5 +1350,5 @@ if( !$testing && !$testPar ){
    </body>
 
 </html><?php 
-if( !$testing && !$testPar )	ob_end_flush();
+if( !$testing )	ob_end_flush();
 ?>

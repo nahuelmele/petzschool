@@ -1,26 +1,18 @@
 <?php 
 header("Cache-Control: no-cache");
-include "inc/functions.php";
+require_once "inc/functions.php";
 
 //$testing = true;
 
 $datePublished = "2021-07-10";
 $dateModified = "2021-07-19";
-$imgShare = "share.jpg";
+$imgShare = "instructores-petz-school.jpg";
 
-$des = "✓ Petz School. Conoce a nuestros instructores y te esperamos para que formes parte de esta hermosa comunidad.";
-$tit = "Petz School - Instructores";
+$tit = "Nuestros instructores | Petz School";
+$des = "Conoce nuestros instructores especialistas en mascotas. Diana Fonseca, Fabio Sepulveda, Alejandro Quiceno y Willian Quispe Abarca";
 
-
-/* esto es para si pasamos parametro test no cargamos pixel */
-$testPar = false;
-
-if( isset( $_GET["test"] ) ){
-	$testPar = true;
-}
-
-if( !$testing && !$testPar ){
-	ob_start('comprimir_pagina'); 
+if (!$testing){
+	ob_start('comprimir_pagina');
 }
 
 ?><!DOCTYPE html>
@@ -64,38 +56,11 @@ if( !$testing && !$testPar ){
 		<meta name="twitter:description" content="<?= $des ?>">
 		<meta name="twitter:image" content="https://petzschool.com/img/<?= $imgShare; ?>">		
 		
-		<!-- Resource Hints for Performance -->
-		<link rel="preconnect" href="https://connect.facebook.net">
-		<link rel="dns-prefetch" href="https://graph.facebook.com">
-		<link rel="preconnect" href="https://www.google-analytics.com">
-
-		
-		<!-- Facebook Critical - Must load before any bundles -->
-		<?php include_once("inc/facebook-critical.php"); ?>
-		
-		<!-- Emergency fallback script -->
-		<script>
-			setTimeout(function() {
-				if (!window.fbq || typeof window.fbq !== 'function') {
-					var script = document.createElement('script');
-					script.src = '/js/face.js';
-					script.async = true;
-					document.head.appendChild(script);
-				}
-			}, 5000);
-		</script>
-		
-		<!--[if lt IE 9]>
-		<script src="/js/respond.js"></script>
-		<![endif]-->
-		
-		<link href="/css/bootstrap.css" rel="stylesheet" type="text/css">
-		<link href="/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-		<link href="/fonts/flaticons/flaticon.css" rel="stylesheet" type="text/css">
-	
-		<link rel="stylesheet" href="/css/preload.css" media="all" />
-		
-		<script src="/js/preload.js"></script>
+		<!-- Common Resources for General Pages -->
+		<?php 
+		$base = "";
+		include_once($base . "inc/header-general.php"); 
+		?>
 		
 		<style>
 		
@@ -174,7 +139,7 @@ if( !$testing && !$testPar ){
                         <div class="wrap">
                            <div class="info">
                               <h3 class="name">
-								<a href="/fabio-gomez-sepulveda/<?= ( $testPar ? '?test' : '') ?>" style="color: initial;" >
+								<a href="<?= get_link('/fabio-gomez-sepulveda/') ?>" style="color: initial;" >
 									Fabio Sepulveda
 								</a>	
 							   </h3>
@@ -196,7 +161,7 @@ if( !$testing && !$testPar ){
                         <div class="wrap">
                            <div class="info">
                               <h3 class="name">
-									<a href="/diana-fonseca/<?= ( $testPar ? '?test' : '') ?>" style="color: initial;" >
+									<a href="<?= get_link('/diana-fonseca/') ?>" style="color: initial;" >
 										Diana Fonseca
 									</a>							  
 							  </h3>
@@ -267,14 +232,9 @@ if( !$testing && !$testPar ){
 	
 		<script src='/js/custom.js'></script>
 		
-		<?php if( !$testing && !$testPar ){ ?>
-		<script src="/js/preventkeys.js"></script>	
-		<?php } ?>
+		<?php include_once("inc/preventkeys-conditional.php"); ?>
+		<?php include_once("inc/analitica-web-conditional.php"); ?>
 
-		<?php if( !$testing && !$testPar ){ ?>
-		<script src='/js/analitica-web.js'></script>
-		<?php }?>
-		
 		<script type="application/ld+json">
 			{
 				"@type":"BlogPosting",
@@ -310,7 +270,7 @@ if( !$testing && !$testPar ){
 
 </html><?php 
 
-if( !$testing && !$testPar )
+if (!$testing)
 	ob_end_flush();
 
 ?>

@@ -59,10 +59,10 @@
     
          // Initialize Facebook pixels
      fbq('init', '700996330520730');  // MAIN Petz School
-     fbq('init', '2832144410330423');
-     fbq('init', '372361850883221');
-     fbq('init', '3067315600166617');
-    
+fbq('init', '2832144410330423');
+fbq('init', '372361850883221');
+fbq('init', '3067315600166617');
+
     // Track PageView with synchronized event ID
     fbq('track', 'PageView', {
         eventID: pageViewEventId,

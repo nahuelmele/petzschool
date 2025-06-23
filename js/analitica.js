@@ -28,7 +28,7 @@ if( location.host == "localhost" ){
 function downloadJSAtOnload() {
 */
 	//console.log("b");
-
+	
 	myTimer = setTimeout(function(){
 	
 		for (var i = 1; i < 4; i++) {

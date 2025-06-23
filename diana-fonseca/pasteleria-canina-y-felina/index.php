@@ -186,7 +186,7 @@ if( !$testing && !$testPar )
 			include_once( $base. "inc/nav.php");
 		?>
 
-		<section id="first-scroll" <?php if (!$timer) echo "class='hasMenu'" ?> aria-labelledby="first-scroll-heading" itemscope itemtype="https://schema.org/EducationalOccupationalProgram">
+		<section id="first-scroll" <?php if ($hayMenu || !$timer) echo "class='hasMenu'" ?> aria-labelledby="first-scroll-heading" itemscope itemtype="https://schema.org/EducationalOccupationalProgram">
 			<div class="container back1080">
 
 				<h1 id="first-scroll-heading" itemprop="name">

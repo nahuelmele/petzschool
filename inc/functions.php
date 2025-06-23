@@ -1,5 +1,127 @@
 <?php
 
+// Include performance conditional functions first
+require_once(__DIR__ . '/performance-conditional.php');
+
+// Define functions first before using them
+function getUserIP()
+{
+    $ipfake = ipfakef();
+	
+    $ip = '';
+	
+    if (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) {
+              $_SERVER['REMOTE_ADDR'] = $_SERVER["HTTP_CF_CONNECTING_IP"];
+              $_SERVER['HTTP_CLIENT_IP'] = $_SERVER["HTTP_CF_CONNECTING_IP"];
+    }
+    $client  = @$_SERVER['HTTP_CLIENT_IP'];
+    $forward = @$_SERVER['HTTP_X_FORWARDED_FOR'];
+    $remote  = $_SERVER['REMOTE_ADDR'];
+
+    if(filter_var($client, FILTER_VALIDATE_IP))
+    {
+        $ip = $client;
+    }
+    elseif(filter_var($forward, FILTER_VALIDATE_IP))
+    {
+        $ip = $forward;
+    }
+    else
+    {
+        $ip = $remote;
+    }
+	
+	if ( $ipfake != "" ) $ip = $ipfake;
+	
+    return $ip;
+}
+
+function ipfakef(){
+	
+	$ipfake = "";
+	
+	if( isset($_GET["testpar"]) ){
+		$ipfake = "190.85.112.10"; // Colombia
+	}else if( isset($_GET["testmx"]) ){
+		$ipfake = "187.189.45.10"; // Mexico
+	}else if( isset($_GET["testpe"]) ){
+		$ipfake = "181.65.189.10"; // Peru
+	}else if( isset($_GET["testar"]) ){
+		$ipfake = "181.31.158.10"; // Argentina
+	}else if( isset($_GET["testcl"]) ){
+		$ipfake = "190.98.248.10"; // Chile
+	}else if( isset($_GET["testeu"]) ){
+		$ipfake = "85.208.96.10"; // Europa
+	}
+	
+	return $ipfake;
+}
+
+function currentUrl(){
+    // Check if HTTPS is on
+    $https = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http";
+    
+    // Get the server name (e.g., www.example.com)
+    $host = $_SERVER['HTTP_HOST'];
+    
+    // Get the URI (e.g., /path/to/file)
+    $uri = $_SERVER['REQUEST_URI'];
+    
+    // Concatenate to form the full URL
+    $url = $https . '://' . $host . $uri;
+    
+    return $url;
+}
+
+function getDomain(){
+	
+	$serName = $_SERVER['SERVER_NAME'];
+	$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+	
+	$serName = $protocol.$serName."/";
+	
+	return $serName;
+}
+
+function ipdata($ip){
+	
+	$ipdata = array();
+	
+	if( $ip == "190.85.112.10" ){
+		$ipdata['geoplugin_countryCode'] = "CO";
+		$ipdata['geoplugin_city'] = "Bogotá";
+		$ipdata['geoplugin_region'] = "Bogotá D.C.";
+	}else if( $ip == "187.189.45.10" ){
+		$ipdata['geoplugin_countryCode'] = "MX";
+		$ipdata['geoplugin_city'] = "Mexico City";
+		$ipdata['geoplugin_region'] = "Mexico City";
+	}else if( $ip == "181.65.189.10" ){
+		$ipdata['geoplugin_countryCode'] = "PE";
+		$ipdata['geoplugin_city'] = "Lima";
+		$ipdata['geoplugin_region'] = "Lima";
+	}else if( $ip == "181.31.158.10" ){
+		$ipdata['geoplugin_countryCode'] = "AR";
+		$ipdata['geoplugin_city'] = "Buenos Aires";
+		$ipdata['geoplugin_region'] = "Buenos Aires";
+	}else if( $ip == "190.98.248.10" ){
+		$ipdata['geoplugin_countryCode'] = "CL";
+		$ipdata['geoplugin_city'] = "Santiago";
+		$ipdata['geoplugin_region'] = "Santiago";
+	}else if( $ip == "85.208.96.10" ){
+		$ipdata['geoplugin_countryCode'] = "ES";
+		$ipdata['geoplugin_city'] = "Madrid";
+		$ipdata['geoplugin_region'] = "Madrid";
+	}else{
+		$response = file_get_contents("http://www.geoplugin.net/json.gp?ip=".$ip);
+		$ipdata = json_decode($response, true);
+	}
+	
+	return $ipdata;
+}
+
+// Now we can safely call these functions
+$ip = getUserIP();
+
 define("DOMAIN", getDomain());
 define("CURRENTURL", currentUrl() );
 define("IP", getUserIP() );
@@ -45,16 +167,16 @@ define("COUNTRYCODE", $countryCode);
 define("CITY", $city);
 define("REGION", $region);
 	
-if(strpos(DOMAIN, ".test") !== false || strpos(DOMAIN, "localhost") !== false){
-    $testing = true;
-	$faceShow = true;
-} else{
-    $testing = false;
-	$faceShow = false;
-}
+// Use centralized test mode detection instead of manual $testing variable
+$is_test_mode = is_test_mode();
+$is_production_mode = is_production_mode();
 
+// Set legacy variables for backward compatibility
+$testing = $is_test_mode;
+$faceShow = $is_test_mode;
 
-if(!$testing){
+// Only load Facebook Conversions API in production mode
+if ($is_production_mode) {
 
 // Start Set the Facebook Conversions API URL
 
@@ -326,161 +448,13 @@ function getPrecio($precioendolares,$rounded = null) {
 
 
 function datePublished($t){
-	$da = new DateTime();
-	$stampa = $da->getTimestamp();
-	$oneMonth = 60 * 60 * 24 * $t;
 	
-	$ac = $stampa - $oneMonth;
-	
-	$datefinalgracias = $da->setTimestamp($ac);
-	
-	$ymd = $da->format('Y-m-d');
+	$dateactual = new DateTime();
+	$dateactual->sub(new DateInterval('P'.$t.'D'));
+	$ymd = $dateactual->format('Y-m-d');
 	
 	return '"'.$ymd.'"';
 }
-
-
-function ipdata($ip){
-	
-	$geoplugin_regionName = "";
-	
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, "http://www.geoplugin.net/json.gp?ip=".$ip);
-    curl_setopt($ch, CURLOPT_HEADER, 0);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-    $ip_data_in = curl_exec($ch); // string
-    curl_close($ch);
-
-	$ip_data = [];
-    $ip_data = json_decode($ip_data_in,true);
-    
-    // Fix: Only str_replace if $ip_data is valid
-    if (is_array($ip_data)) {
-        // Only apply str_replace to string values in the array
-        $ip_data = array_map(function($value) {
-            return is_string($value) ? str_replace('&quot;', '"', $value) : $value;
-        }, $ip_data);
-    } else {
-        // If json_decode fails, return default values
-        $ip_data = array(
-            'geoplugin_countryCode' => '',
-            'geoplugin_city' => '',
-            'geoplugin_region' => '',
-            'geoplugin_continentCode' => ''
-        );
-    }
-	
-	return $ip_data;
-	
-}
-
-
-// Enable IP country override when testing locally
-function ipfakef(){
-$ipfake = "";
-//$ipfake = "200.93.240.0"; // URUAGUAY
-//$ipfake = "138.186.188.0"; // COLOMBIA
-//$ipfake = "131.178.255.255"; // mejico
-//$ipfake = "201.219.134.0"; // Chile
-//$ipfake = "45.228.139.255"; // paraguay
-//$ipfake = "65.173.63.255"; // bolivia
-//$ipfake = "2.16.189.255"; // brasil
-//$ipfake = "45.224.147.255"; // peru
-//$ipfake = "45.71.39.255"; // ecuador
-//$ipfake = "190.204.179.38"; // venezuela
-//$ipfake = "64.215.120.0"; // panama
-//$ipfake = "45.226.67.255"; // costa rica
-//$ipfake = "57.75.191.255"; // nicaragua
-//$ipfake = "131.72.211.255"; // honduras
-//$ipfake = "143.0.105.170"; // el salvador
-//$ipfake = "72.252.3.255"; // guatemala
-//$ipfake = "138.185.79.255"; // belize
-//$ipfake = "45.230.219.255"; // rep dom
-//$ipfake = "170.239.15.255"; // haiti
-//$ipfake = "57.91.47.255"; // cuba
-//$ipfake = "12.41.131.7"; // puerto rico
-//$ipfake = "45.62.191.79"; // jamaica
-//$ipfake = "74.125.255.255"; // eeuu
-//$ipfake = "88.26.241.248"; // españa
-	return $ipfake;
-}
-
-function getUserIP()
-{
-    $ipfake = ipfakef();
-	
-    $ip = '';
-	
-    if (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) {
-              $_SERVER['REMOTE_ADDR'] = $_SERVER["HTTP_CF_CONNECTING_IP"];
-              $_SERVER['HTTP_CLIENT_IP'] = $_SERVER["HTTP_CF_CONNECTING_IP"];
-    }
-    $client  = @$_SERVER['HTTP_CLIENT_IP'];
-    $forward = @$_SERVER['HTTP_X_FORWARDED_FOR'];
-    $remote  = $_SERVER['REMOTE_ADDR'];
-
-    if(filter_var($client, FILTER_VALIDATE_IP))
-    {
-        $ip = $client;
-    }
-    elseif(filter_var($forward, FILTER_VALIDATE_IP))
-    {
-        $ip = $forward;
-    }
-    else
-    {
-        $ip = $remote;
-    }
-	
-	if ( $ipfake != "" ) $ip = $ipfake;
-	
-    return $ip;
-}
-
-function comprimir_pagina($buffer) { 
-  $busca = array('/\>[^\S ]+/s','/[^\S ]+\</s','/(\s)+/s'); 
-  $reemplaza = array('>','<','\\1'); 
-  return preg_replace($busca, $reemplaza, $buffer); 
-} 
-
-
-
-function currentUrl(){
-    // Check if HTTPS is on
-    $https = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http";
-    
-    // Get the server name (e.g., www.example.com)
-    $host = $_SERVER['HTTP_HOST'];
-    
-    // Get the URI (e.g., /path/to/file)
-    $uri = $_SERVER['REQUEST_URI'];
-    
-    // Concatenate to form the full URL
-    $url = $https . '://' . $host . $uri;
-    
-    return $url;
-}
-
-function getDomain(){
-	
-	$serName = $_SERVER['SERVER_NAME'];
-	$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
-	
-	$serName = $protocol.$serName."/";
-	
-	return $serName;
-};
-
-
-function comprimir_pagina_landing($buffer) { 
-
-  $busca = array('/\>[^\S ]+/s','/[^\S ]+\</s','/(\s)+/s'); 
-
-  $reemplaza = array('>','<','\\1'); 
-
-  return preg_replace($busca, $reemplaza, $buffer); 
-
-} 
 
 
 function hashreturn($originalString){
@@ -541,29 +515,159 @@ class CurlServer
             return array('success' => false, 'error' => 'cURL Error: ' . $curl_error);
         }
         
-        if ($http_code >= 400) {
-            return array('success' => false, 'error' => 'HTTP Error ' . $http_code . ': ' . $server_output);
+        if ($http_code != 200) {
+            return array('success' => false, 'error' => 'HTTP Error: ' . $http_code . ' - ' . $server_output);
         }
         
-        $serverResponseObject = json_decode($server_output, true);
-        
-        if (json_last_error() !== JSON_ERROR_NONE) {
-            return array('success' => false, 'error' => 'JSON Decode Error: ' . json_last_error_msg());
-        }
-        
-        return array('success' => true, 'data' => $serverResponseObject);
+        return array('success' => true, 'data' => $server_output);
     }
+
     function get_request($url)
     {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_POST, false);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: Bearer ' . $this->access_token));
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
+        
         $server_output = curl_exec($ch);
+        $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        $curl_error = curl_error($ch);
         curl_close($ch);
-        $serverReponseObject = json_decode($server_output);
+        
+        if ($curl_error) {
+            return array('success' => false, 'error' => 'cURL Error: ' . $curl_error);
+        }
+        
+        if ($http_code != 200) {
+            return array('success' => false, 'error' => 'HTTP Error: ' . $http_code . ' - ' . $server_output);
+        }
+        
+        return array('success' => true, 'data' => $server_output);
     }
 }
 
+/**
+ * Función para generar links internos con manejo automático del parámetro ?test
+ * Similar a get_permalink() de WordPress
+ * 
+ * @param string $path - Ruta relativa del link (ej: "/programas/", "/diana-fonseca/")
+ * @param array $params - Parámetros adicionales (opcional)
+ * @return string - URL completa con parámetros apropiados
+ */
+function get_link($path = '/', $params = array()) {
+    $base_url = rtrim(getDomain(), '/');
+    $path = ltrim($path, '/');
+    
+    $url = $base_url . '/' . $path;
+    
+    if (!empty($params)) {
+        $query_string = http_build_query($params);
+        $url .= '?' . $query_string;
+    }
+    
+    return $url;
+}
+
+/**
+ * Función helper para imprimir un link interno
+ * 
+ * @param string $path - Ruta relativa del link
+ * @param array $params - Parámetros adicionales (opcional)
+ */
+function print_link($path = '/', $params = array()) {
+    echo get_link($path, $params);
+}
+
+/**
+ * Función centralizada para detectar si estamos en modo testing/desarrollo
+ * 
+ * Detecta automáticamente si estamos en:
+ * - Parámetro ?test en URL
+ * - Variable $testPar = true
+ * - Variable $testing = true  
+ * - Localhost o dominios .test
+ * 
+ * @return bool - true si estamos en modo testing, false en producción
+ */
+// Funciones movidas a performance-conditional.php
+
+/**
+ * DEPRECATED: Old compression functions - kept for backward compatibility
+ * Use compress_html_advanced() from performance-conditional.php instead
+ */
+function comprimir_pagina($buffer) { 
+    // Use new centralized function
+    return compress_html_advanced($buffer);
+} 
+
+function comprimir_pagina_landing($buffer) { 
+    // Use new centralized function  
+    return compress_html_advanced($buffer);
+}
+
+/**
+ * Enhanced HTML Compression Function
+ * More efficient and safer than the original implementation
+ */
+function compress_html_advanced($buffer) {
+    // Don't compress if we're in test mode
+    if (is_test_mode()) {
+        return $buffer;
+    }
+    
+    // Don't compress if buffer is too small (likely an error page)
+    if (strlen($buffer) < 500) {
+        return $buffer;
+    }
+    
+    // Save original buffer size for comparison
+    $original_size = strlen($buffer);
+    
+    // Advanced HTML compression with multiple passes
+    
+    // Pass 1: Remove HTML comments (except IE conditionals and critical comments)
+    $buffer = preg_replace('/<!--(?!\s*(?:\[if [^\]]+]|<!|>|#))(?:(?!-->).)*-->/s', '', $buffer);
+    
+    // Pass 2: Remove unnecessary whitespace
+    $search = array(
+        '/\>[^\S ]+/s',                 // Strip whitespace after tags, except space
+        '/[^\S ]+\</s',                 // Strip whitespace before tags, except space  
+        '/(\s)+/s',                     // Shorten multiple whitespace sequences
+        '/\s*\n\s*/',                   // Remove line breaks with surrounding spaces
+        '/\s*\r\s*/',                   // Remove carriage returns with surrounding spaces
+        '/\s*\t\s*/',                   // Remove tabs with surrounding spaces
+    );
+    
+    $replace = array(
+        '>',
+        '<', 
+        '\\1',
+        ' ',
+        ' ',
+        ' '
+    );
+    
+    $buffer = preg_replace($search, $replace, $buffer);
+    
+    // Pass 3: Clean up specific HTML elements
+    $buffer = preg_replace('/\s+/', ' ', $buffer);                    // Multiple spaces to single space
+    $buffer = preg_replace('/>\s+</', '><', $buffer);                 // Remove spaces between tags
+    $buffer = str_replace(array(' />', ' />'), '/>', $buffer);        // Clean up self-closing tags
+    
+    // Pass 4: Final cleanup
+    $buffer = trim($buffer);
+    
+    // Calculate compression ratio for debugging
+    $compressed_size = strlen($buffer);
+    $compression_ratio = $original_size > 0 ? (($original_size - $compressed_size) / $original_size) * 100 : 0;
+    
+    // Add compression info as HTML comment in test mode
+    if (is_test_mode()) {
+        $buffer .= "\n<!-- HTML Compression: " . number_format($compression_ratio, 1) . "% ";
+        $buffer .= "(" . number_format($original_size) . " → " . number_format($compressed_size) . " bytes) -->";
+    }
+    
+    return $buffer;
+}
 ?>

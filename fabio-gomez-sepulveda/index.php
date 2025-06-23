@@ -28,13 +28,7 @@ $des = "Fabio Gomez Sepulveda te enseñará todo sobre estética y peluquería p
 $tit = "✓ Aprende desde cero todo sobre estética y Peluquería para Perros y crea tu Propio Negocio - Fabio Gomez Sepulveda - Petz School";
 
 /* esto es para si pasamos parametro test no cargamos pixel */
-$testPar = false;
-
-if( isset( $_GET["test"] ) ){
-	$testPar = true;
-}
-
-if( !$testing && !$testPar ){
+if( !$testing ){
 	ob_start('comprimir_pagina'); 
 }
 
@@ -131,16 +125,8 @@ if( !$testing && !$testPar ){
 		?>
 		
 		<!-- Emergency fallback script -->
-		<script>
-			setTimeout(function() {
-				if (!window.fbq || typeof window.fbq !== 'function') {
-					var script = document.createElement('script');
-					script.src = '/js/face.js';
-					script.async = true;
-					document.head.appendChild(script);
-				}
-			}, 5000);
-		</script>
+		<?php 
+		?>
 
 		<!--[if lt IE 9]>
 
@@ -259,309 +245,14 @@ if( !$testing && !$testPar ){
 
                   <div id="lightbox">
 				  
-                     <div class="col-lg-6 col-sm-6 col-md-6 dog">
-
-                        <div class="isotope-item">
-
-
-
-                           <div class="adoption-thumb oferta50">						   								
-						   
-								<div class="ribbons50off">									
-									<img src="/img/ribbons50off.png" />								
-								</div>
-
-
-
-						   
-
-							  <a href="/fabio-gomez-sepulveda/peluqueria-para-perros/<?= ( $testPar ? '?test' : '') ?>" title="Peluquería para perros con Fabio Ernesto Gomez Sepulveda">
-
-								<img class="img-responsive img-circle" src="/img/peluqueria-para-perros.jpg" alt="Peluquería para perros con Fabio Ernesto Gomez Sepulveda" title="Peluquería para perros con Fabio Ernesto Gomez Sepulveda">
-
-							  </a>	
-
-							  
-
-                              <div class="adopt-header">
-
-							  
-
-                                <h3>
-
-									<a href="/fabio-gomez-sepulveda/peluqueria-para-perros/<?= ( $testPar ? '?test' : '') ?>" >
-
-										Peluquería para perros
-
-									</a>
-
-							   	</h3>	
-
-								
-
-								<div class="rating-main-box-ratings-qty">
-
-									<div class="rating rating--title colorText">
-
-										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-
-											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-
-										</svg>
-
-										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-
-											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-
-										</svg>
-
-										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-
-											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-
-										</svg>
-
-										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-
-											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-
-										</svg>
-
-										<span>
-
-											<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star-half" class="svg-inline--fa fa-star-half fa-w-18 fontawesome-icon star-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-
-												<path fill="currentColor" d="M288 0c-11.4 0-22.8 5.9-28.7 17.8L194 150.2 47.9 171.4c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.1 23 46 46.4 33.7L288 439.6V0z"></path>
-
-											</svg>
-
-											<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star-half" class="svg-inline--fa fa-star-half fa-w-18 fontawesome-icon star-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-
-												<path fill="currentColor" d="M288 0c-11.4 0-22.8 5.9-28.7 17.8L194 150.2 47.9 171.4c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.1 23 46 46.4 33.7L288 439.6V0z"></path>
-
-											</svg>
-
-										</span>
-
-									</div>
-
-									
-
-									<div class="blog-tags">
-
-										<a>4.7</a>
-
-									</div>
-
-									
-
-								</div>								
-
-								 
-
-								<div class="post-info">
-
-									<p><i class="fa fa-clock-o"></i>47 Lecciones</p>
-
-									<p><i class="fa fa-user"></i>Por Fabio Sepulveda</a></p>
-
-									<p><i class="fa fa-comment"></i>321 Evaluaciones</p>
-
-								</div>
-
-								
-
-								<div class="plan-cost">
-
-									<span class="plan-price"><?= $currency ?> <?= getPrecio(25) ?></span>
-
-									<span class="plan-price-discount"><?= $currency ?> <?= getPrecio(50) ?></span>
-
-								</div>									
-
-								
-
-                                <p>
-
-									Conviértete en una profesional y <b>trabaja donde quieras con tu propio negocio</b> de peluqueria canina. Aprende técnicas, procedimientos y estilos por profesionales renombrados.
-
-								</p>
-
-								 
-
-                                <a class="btn" href="/fabio-gomez-sepulveda/peluqueria-para-perros/<?= ( $testPar ? '?test' : '') ?>" >
-
-									Ver más
-
-								</a>
-
-								
-
-                              </div>
-
-							  
-
-                           </div>
-
-
-
-                        </div>
-
-                     </div>
-					 
-					 
-                     <div class="col-lg-6 col-sm-6 col-md-6 cat">
-
-                        <div class="isotope-item">
-
-
-
-                           <div class="adoption-thumb oferta50">
-
-
-
-								<div class="ribbons50off">
-
-									<img src="/img/ribbons50off.png" />
-
-								</div>
-
-						   
-
-							  <a target="_blank" href="https://go.hotmart.com/K53197775W?ap=b25c&offDiscount=031016&hideBillet=1" title="Peluquería para gatos con Fabio Sepulveda">
-
-								<img class="img-responsive img-circle" src="/img/peluqueria-para-gatos.jpg" alt="Peluquería para gatos con Fabio Sepulveda" title="Peluquería para gatos con Fabio Sepulveda">
-
-							  </a>	
-
-							  
-
-                              <div class="adopt-header">
-
-							  
-
-                                <h3>
-
-									<a target="_blank" href="https://go.hotmart.com/K53197775W?ap=b25c&offDiscount=031016&hideBillet=1">
-
-										Peluquería para gatos
-
-									</a>
-
-							   	</h3>	
-
-								
-
-								<div class="rating-main-box-ratings-qty">
-
-									<div class="rating rating--title colorText">
-
-										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-
-											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-
-										</svg>
-
-										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-
-											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-
-										</svg>
-
-										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-
-											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-
-										</svg>
-
-										<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fontawesome-icon star-solid" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-
-											<path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-
-										</svg>
-
-										<span>
-
-											<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star-half" class="svg-inline--fa fa-star-half fa-w-18 fontawesome-icon star-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-
-												<path fill="currentColor" d="M288 0c-11.4 0-22.8 5.9-28.7 17.8L194 150.2 47.9 171.4c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.1 23 46 46.4 33.7L288 439.6V0z"></path>
-
-											</svg>
-
-											<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star-half" class="svg-inline--fa fa-star-half fa-w-18 fontawesome-icon star-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-
-												<path fill="currentColor" d="M288 0c-11.4 0-22.8 5.9-28.7 17.8L194 150.2 47.9 171.4c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.1 23 46 46.4 33.7L288 439.6V0z"></path>
-
-											</svg>
-
-										</span>
-
-									</div>
-
-									
-
-									<div class="blog-tags">
-
-										<a>4.8</a>
-
-									</div>
-
-									
-
-								</div>								
-
-								 
-
-								<div class="post-info">
-
-									<p><i class="fa fa-clock-o"></i>24 Lecciones</p>
-
-									<p><i class="fa fa-user"></i>Por Fabio Sepulveda</a></p>
-
-									<p><i class="fa fa-comment"></i>6 Evaluaciones</p>
-
-								</div>
-
-								
-
-								<div class="plan-cost">
-
-									<span class="plan-price"><?= $currency ?> <?= getPrecio(25) ?></span>
-
-									<span class="plan-price-discount"><?= $currency ?> <?= getPrecio(50) ?></span>
-
-								</div>									
-
-								
-
-                                <p>
-
-									Conviértete en una profesional con el respaldado de Fabio Sepulveda que <b>ha formado a cientos de nuevas estilistas</b> que ya se encuentran trabajando <b>con sus propios emprendimientos</b>.
-
-								</p>
-
-								 
-
-                                <a target="_blank" class="btn" href="https://go.hotmart.com/K53197775W?ap=b25c&offDiscount=031016&hideBillet=1">
-
-									Ver más
-
-								</a>
-
-								
-
-                              </div>
-
-							  
-
-                           </div>
-
-
-
-                        </div>
-
-                     </div>				 
-					 
+				  <?php
+				  // Configuration for fabio-gomez-sepulveda/index.php - Only Fabio Gomez Sepulveda courses
+				  $courses_to_show = [
+					  'fabio-gomez-sepulveda/peluqueria-para-perros',
+					  'fabio-gomez-sepulveda/peluqueria-para-gatos'
+				  ];
+				  include_once("../inc/course-renderer.php");
+				  ?>
 					 
                   </div>
 
@@ -777,21 +468,9 @@ if( !$testing && !$testPar ){
 		<script src='/js/custom.js'></script>
 
 		<script type="module" src="/js/lite-vimeo.js"></script>
-		<?php if( !$testing && !$testPar ){ ?>
-
-		<script src="/js/preventkeys.js"></script>	
-
-		<?php } ?>
-
-
-
-		<?php if( !$testing && !$testPar ){ ?>
-
-		<script src='/js/analitica-web.js'></script>
-
-		<?php }?>
-
 		
+		<?php include_once("../inc/preventkeys-conditional.php"); ?>
+		<?php include_once("../inc/analitica-web-conditional.php"); ?>
 
 		<script type="application/ld+json">
 
@@ -863,7 +542,7 @@ if( !$testing && !$testPar ){
 
 
 
-if( !$testing && !$testPar )
+if( !$testing )
 	ob_end_flush();
 
 

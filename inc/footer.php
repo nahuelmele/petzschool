@@ -14,7 +14,7 @@
 				   <div class="social-media">
 					  <a href="https://www.facebook.com/petzschool/" target="_blank" title="Facebook de Petz School"><i class="fa fa-facebook"></i></a>
 					  <a href="https://www.instagram.com/petz.school/" target="_blank" title="Instagram de Petz School"><i class="fa fa-instagram"></i></a>
-					  <a href="/contacto/<?= ( $testPar ? '?test' : '') ?>" target="_blank" title="Contacto con Petz School"><i class="fa fa-envelope"></i></a>
+					  <a href="<?= get_link('/contacto/') ?>" target="_blank" title="Contacto con Petz School"><i class="fa fa-envelope"></i></a>
 				   </div>
 				</div>
 			</div>

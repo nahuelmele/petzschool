@@ -138,7 +138,7 @@ if (strpos($currentPath, 'pasteleria-canina-y-felina') !== false) {
 <link rel="preload" href="/dist/landing.bundle.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="/dist/landing.bundle.css"></noscript>
 
-<!-- Minimal critical CSS inline - Only hero background -->
+<!-- Minimal critical CSS inline - Hero background and navbar if needed -->
 <style>
 section#first-scroll {
 	position: relative;
@@ -176,29 +176,473 @@ section#first-scroll h1 {
 	margin: 30px 0 10px;
 	text-align: center;
 }
+section#first-scroll.hasMenu {
+	padding-top: 150px;
+}
+@media (max-width: 992px) {
+	section#first-scroll.hasMenu {
+		padding-top: 165px;
+	}
+}
 @media (max-width: 768px) {
 	section#first-scroll {
 		padding: 90px 0 25px;
+	}
+	section#first-scroll.hasMenu {
+		padding-top: 150px;
 	}
 	section#first-scroll h1 {
 		font-size: 40px;
 		line-height: 47px;
 	}
 }
+@media (max-width: 480px) {
+	section#first-scroll.hasMenu {
+		padding-top: 140px;
+	}
+}
+@media (max-width: 360px) {
+	section#first-scroll.hasMenu {
+		padding-top: 130px;
+	}
+}
+
+<?php if (isset($hayMenu) && $hayMenu): ?>
+/* NAVBAR CRITICAL STYLES - COMPLETE INTEGRATION */
+
+/* Bootstrap navbar foundation */
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+}
+@media (min-width: 768px) {
+    .navbar {
+        border-radius: 4px;
+    }
+}
+
+/* Navbar header and toggle */
+.navbar-header {
+    @media (min-width: 768px) {
+        float: left;
+    }
+}
+.navbar-header i.fa-bars {
+    color: #ffffff;
+}
+.navbar-toggle {
+    position: relative;
+    float: right;
+    padding: 9px 10px;
+    margin: 13px 15px 13px 0;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-size: 35px;
+    color: #fff;
+    transition: all .2s ease-in-out;
+    line-height: 35px;
+}
+.navbar-toggle .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #888;
+}
+.navbar-toggle .icon-bar + .icon-bar {
+    margin-top: 4px;
+}
+.navbar-toggle .fa {
+    color: #f19f1f;
+    font-size: 20px;
+}
+.navbar-toggle:focus,
+.navbar-toggle:hover {
+    background: transparent !important;
+    outline: 0;
+}
+@media (min-width: 768px) {
+    .navbar-toggle {
+        display: none;
+    }
+}
+
+/* Navbar collapse */
+.navbar-collapse {
+    padding-right: 15px;
+    padding-left: 15px;
+    overflow-x: visible;
+    -webkit-overflow-scrolling: touch;
+    border-top: 1px solid transparent;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
+}
+.navbar-collapse.in {
+    overflow-y: auto;
+}
+@media (min-width: 768px) {
+    .navbar-collapse {
+        width: auto;
+        border-top: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+    .navbar-collapse.collapse {
+        display: block !important;
+        height: auto !important;
+        padding-bottom: 0;
+        overflow: visible !important;
+    }
+    .navbar-collapse.in {
+        overflow-y: visible;
+    }
+}
+
+/* Fixed navbar */
+.navbar-fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    border-width: 0 0 1px;
+}
+@media (min-width: 768px) {
+    .navbar-fixed-top {
+        border-radius: 0;
+    }
+}
+
+/* Navbar navigation */
+.navbar-nav {
+    margin: 7.5px -15px;
+}
+.navbar-nav > li {
+    position: relative;
+    display: block;
+}
+.navbar-nav > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    line-height: 20px;
+}
+.navbar-nav > li > a:focus,
+.navbar-nav > li > a:hover {
+    text-decoration: none;
+    background-color: #eee;
+}
+@media (min-width: 768px) {
+    .navbar-nav {
+        float: left;
+        margin: 0;
+    }
+    .navbar-nav > li {
+        float: left;
+    }
+    .navbar-nav > li > a {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
+@media (max-width: 767px) {
+    .navbar-nav .open .dropdown-menu {
+        position: static;
+        float: none;
+        width: auto;
+        margin-top: 0;
+        background-color: transparent;
+        border: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+}
+
+/* Navbar brand */
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 15px;
+    font-size: 18px;
+    line-height: 20px;
+}
+.navbar-brand:focus,
+.navbar-brand:hover {
+    text-decoration: none;
+}
+.navbar-brand img {
+    max-height: 40px;
+    width: auto;
+}
+nav .navbar-brand img {
+    max-width: 180px;
+}
+@media (min-width: 768px) {
+    .navbar > .container .navbar-brand,
+    .navbar > .container-fluid .navbar-brand {
+        margin-left: -15px;
+    }
+}
+
+/* Navigation link styles */
+nav a {
+    font-size: 17px;
+    padding-bottom: 35px !important;
+    padding-top: 35px !important;
+    transition: all 0.1s ease;
+}
+
+/* Custom navbar styles */
+.navbar-custom {
+    background-color: #fff;
+    border-bottom: 1px solid #e7e7e7;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: 1px;
+}
+.navbar-custom .container {
+    max-width: 1200px;
+}
+.navbar-custom .container .navbar-right {
+    margin-right: 0;
+}
+.navbar-custom .navbar-nav > li > a {
+    color: #777;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.navbar-custom .navbar-nav > li > a.current {
+    color: #f19f1f;
+}
+.navbar-custom .nav > .active > a, 
+.navbar-custom ul.nav li a:hover {
+    background-color: transparent;
+    color: #f19f1f;
+}
+.navbar.navbar-custom.navbar-fixed-top {
+    -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+    -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+    transition: background .5s ease-in-out, padding .5s ease-in-out;
+}
+
+/* CRITICAL: Main navbar background color from maincolors.css */
+.navbar {
+    background-color: #F19F1F;
+}
+
+/* CRITICAL STYLES FROM style.css */
+.navbar-custom .navbar-nav > li > a {
+    color: #fff;
+    padding: 30px;
+    transition: all .2s ease-in-out;
+}
+
+.navbar-custom ul.nav li a:hover,
+.navbar-custom .nav > .active > a {
+    color: #fff;
+    padding: 30px;
+}
+
+.navbar-custom {
+    border: 0px;
+    font-family: 'Baloo Thambi', sans-serif;
+    font-weight: 400;
+}
+
+/* Dropdown functionality - CRITICAL */
+.dropdownMenu:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdownMenu .dropdown-menu {
+    min-width: 170px;
+}
+
+.dropdown-menu {
+    background-color: #F5F3EE;
+    border: 1px solid #e7e7e7;
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    list-style: none;
+    text-align: left;
+    background-clip: padding-box;
+}
+
+/* Dropdown link styles - UNIFIED */
+.navbar ul.dropdown-menu > li > a {
+    display: block;
+    padding: 13px 10px;
+    clear: both;
+    font-size: 14.5px !important;
+    font-weight: 400;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: 0px;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    transition: all .2s ease-in-out;
+}
+
+.dropdown-menu > li > a:focus,
+.dropdown-menu > li > a:hover,
+.navbar-custom ul.nav ul.dropdown-menu li a:hover {
+    background-color: #EF5030;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav a {
+    font-size: 17px;
+    padding-bottom: 35px !important;
+    padding-top: 35px !important;
+    transition: all 0.1s ease;
+}
+
+nav.navbar.shrink a,
+nav.navbar.shrinkCustom a {
+    font-size: 15px;
+    padding-bottom: 20px !important;
+    padding-top: 20px !important;
+}
+
+/* Additional navbar and form colors */
+.nav > li > a:focus {
+    background-color: #F19F1F;
+}
+
+.form-control:focus {
+    border-color: #EF5030;
+}
+
+/* Button styles */
+.btn {
+    box-shadow: inset 9px 0px 0px 0px #F19F1F;
+    background-color: #EF5030;
+}
+
+/* Special promo button */
+nav.navbar ul.navbar-nav .promositem a {
+    color: #fff;
+    background-image: url(../img/illustrations/pattern.png);
+    border-radius: 100%;
+    border: 4px solid #fff;
+    margin-top: 10px;
+    background: #108896;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+}
+
+/* Responsive styles */
+@media (max-width: 1150px) {
+    .navbar-custom .container {
+        width: 100%;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .navbar-custom .container .navbar-right {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 992px) {
+    .nav > li {
+        float: none;
+        width: 100%;
+    }
+    .navbar-brand {
+        float: none;
+        display: block;
+        text-align: center;
+        padding: 10px 15px;
+        height: auto;
+    }
+    nav .navbar-brand img {
+        max-width: 150px;
+    }
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+    .navbar-collapse.collapse.in {
+        display: block !important;
+        overflow-y: auto !important;
+    }
+    .navbar-right {
+        float: none !important;
+        margin-right: 0;
+    }
+    .navbar-nav li {
+        float: none;
+    }
+    nav a {
+        padding-bottom: 10px !important;
+        padding-top: 10px !important;
+    }
+    .navbar-custom .container {
+        width: 100%;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .navbar-custom .container .navbar-right {
+        margin-right: 0;
+    }
+    .dropdownMenu .dropdown-menu {
+        display: block !important;
+        margin: 5px 0;
+    }
+    .navbar ul.dropdown-menu > li > a {
+        font-size: 15px !important;
+        background: #f19f1f;
+        padding-top: 12px !important;
+        padding-bottom: 12px !important;
+        line-height: 10px;
+    }
+    nav.navbar ul.navbar-nav .promositem a {
+        margin-top: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+    }
+    .navbar-collapse {
+        border-top: 1px solid #e7e7e7;
+        margin-top: 10px;
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar.navbar-custom.navbar-fixed-top {
+        min-height: 50px;
+    }
+}
+<?php endif; ?>
 </style>
 
 <?php include_once($base . "inc/facebook-critical.php"); ?>
 
-<script>
-setTimeout(function() {
-	if (!window.fbq || typeof window.fbq !== 'function') {
-		var script = document.createElement('script');
-		script.src = '/js/face.js';
-		script.async = true;
-		document.head.appendChild(script);
-	}
-}, 5000);
-</script>
+<!-- Carga condicional de preventkeys.js -->
+<?php include_once($base . "inc/preventkeys-conditional.php"); ?>
+
+<!-- Emergency fallback script -->
 
 <script>
 // Load preloader CSS immediately
@@ -207,6 +651,9 @@ link.rel = 'stylesheet';
 link.media = 'all';
 link.href = '/css/preload.css';
 document.head.appendChild(link);
+
+// Pass test mode to JavaScript - CRITICAL for bundle loading
+window.PETZ_TEST_MODE = <?= is_test_mode() ? 'true' : 'false' ?>;
 
 // Load preload script but prevent critical CSS reloading
 window.CRITICAL_CSS_LOADED = true;
